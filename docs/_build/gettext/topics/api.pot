@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008–2018, Scrapy developers
+# This file is distributed under the same license as the Scrapy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrapy \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../topics/api.rst:5
+msgid "Core API"
+msgstr ""
+
+#: ../../topics/api.rst:9
+msgid "This section documents the Scrapy core API, and it's intended for developers of extensions and middlewares."
+msgstr ""
+
+#: ../../topics/api.rst:15
+msgid "Crawler API"
+msgstr ""
+
+#: ../../topics/api.rst:17
+msgid "The main entry point to Scrapy API is the :class:`~scrapy.crawler.Crawler` object, passed to extensions through the ``from_crawler`` class method. This object provides access to all Scrapy core components, and it's the only way for extensions to access them and hook their functionality into Scrapy."
+msgstr ""
+
+#: ../../topics/api.rst:25
+msgid "The Extension Manager is responsible for loading and keeping track of installed extensions and it's configured through the :setting:`EXTENSIONS` setting which contains a dictionary of all available extensions and their order similar to how you :ref:`configure the downloader middlewares <topics-downloader-middleware-setting>`."
+msgstr ""
+
+#: ../../topics/api.rst:33
+msgid "The Crawler object must be instantiated with a :class:`scrapy.spiders.Spider` subclass and a :class:`scrapy.settings.Settings` object."
+msgstr ""
+
+#: ../../topics/api.rst:39
+msgid "The settings manager of this crawler."
+msgstr ""
+
+#: ../../topics/api.rst:41
+msgid "This is used by extensions & middlewares to access the Scrapy settings of this crawler."
+msgstr ""
+
+#: ../../topics/api.rst:44
+msgid "For an introduction on Scrapy settings see :ref:`topics-settings`."
+msgstr ""
+
+#: ../../topics/api.rst:46
+msgid "For the API see :class:`~scrapy.settings.Settings` class."
+msgstr ""
+
+#: ../../topics/api.rst:50
+msgid "The signals manager of this crawler."
+msgstr ""
+
+#: ../../topics/api.rst:52
+msgid "This is used by extensions & middlewares to hook themselves into Scrapy functionality."
+msgstr ""
+
+#: ../../topics/api.rst:55
+msgid "For an introduction on signals see :ref:`topics-signals`."
+msgstr ""
+
+#: ../../topics/api.rst:57
+msgid "For the API see :class:`~scrapy.signalmanager.SignalManager` class."
+msgstr ""
+
+#: ../../topics/api.rst:61
+msgid "The stats collector of this crawler."
+msgstr ""
+
+#: ../../topics/api.rst:63
+msgid "This is used from extensions & middlewares to record stats of their behaviour, or access stats collected by other extensions."
+msgstr ""
+
+#: ../../topics/api.rst:66
+msgid "For an introduction on stats collection see :ref:`topics-stats`."
+msgstr ""
+
+#: ../../topics/api.rst:68
+msgid "For the API see :class:`~scrapy.statscollectors.StatsCollector` class."
+msgstr ""
+
+#: ../../topics/api.rst:72
+msgid "The extension manager that keeps track of enabled extensions."
+msgstr ""
+
+#: ../../topics/api.rst:74
+msgid "Most extensions won't need to access this attribute."
+msgstr ""
+
+#: ../../topics/api.rst:76
+msgid "For an introduction on extensions and a list of available extensions on Scrapy see :ref:`topics-extensions`."
+msgstr ""
+
+#: ../../topics/api.rst:81
+msgid "The execution engine, which coordinates the core crawling logic between the scheduler, downloader and spiders."
+msgstr ""
+
+#: ../../topics/api.rst:84
+msgid "Some extension may want to access the Scrapy engine, to inspect  or modify the downloader and scheduler behaviour, although this is an advanced use and this API is not yet stable."
+msgstr ""
+
+#: ../../topics/api.rst:90
+msgid "Spider currently being crawled. This is an instance of the spider class provided while constructing the crawler, and it is created after the arguments given in the :meth:`crawl` method."
+msgstr ""
+
+#: ../../topics/api.rst:96
+msgid "Starts the crawler by instantiating its spider class with the given ``args`` and ``kwargs`` arguments, while setting the execution engine in motion."
+msgstr ""
+
+#: ../../topics/api.rst:100
+msgid "Returns a deferred that is fired when the crawl is finished."
+msgstr ""
+
+#: ../../topics/api.rst:115
+msgid "Settings API"
+msgstr ""
+
+#: ../../topics/api.rst:122
+msgid "Dictionary that sets the key name and priority level of the default settings priorities used in Scrapy."
+msgstr ""
+
+#: ../../topics/api.rst:125
+msgid "Each item defines a settings entry point, giving it a code name for identification and an integer priority. Greater priorities take more precedence over lesser ones when setting and retrieving values in the :class:`~scrapy.settings.Settings` class."
+msgstr ""
+
+#: ../../topics/api.rst:142
+msgid "For a detailed explanation on each settings sources, see: :ref:`topics-settings`."
+msgstr ""
+
+#: ../../topics/api.rst:157
+msgid "SpiderLoader API"
+msgstr ""
+
+#: ../../topics/api.rst:164
+msgid "This class is in charge of retrieving and handling the spider classes defined across the project."
+msgstr ""
+
+#: ../../topics/api.rst:167
+msgid "Custom spider loaders can be employed by specifying their path in the :setting:`SPIDER_LOADER_CLASS` project setting. They must fully implement the :class:`scrapy.interfaces.ISpiderLoader` interface to guarantee an errorless execution."
+msgstr ""
+
+#: ../../topics/api.rst:174
+msgid "This class method is used by Scrapy to create an instance of the class. It's called with the current project settings, and it loads the spiders found recursively in the modules of the :setting:`SPIDER_MODULES` setting."
+msgstr ""
+
+#: ../../topics/api.rst:0
+#: ../../topics/api.rst:0
+#: ../../topics/api.rst:0
+msgid "パラメータ"
+msgstr ""
+
+#: ../../topics/api.rst:179
+msgid "project settings"
+msgstr ""
+
+#: ../../topics/api.rst:184
+msgid "Get the Spider class with the given name. It'll look into the previously loaded spiders for a spider class with name ``spider_name`` and will raise a KeyError if not found."
+msgstr ""
+
+#: ../../topics/api.rst:188
+msgid "spider class name"
+msgstr ""
+
+#: ../../topics/api.rst:193
+msgid "Get the names of the available spiders in the project."
+msgstr ""
+
+#: ../../topics/api.rst:197
+msgid "List the spiders' names that can handle the given request. Will try to match the request's url against the domains of the spiders."
+msgstr ""
+
+#: ../../topics/api.rst:200
+msgid "queried request"
+msgstr ""
+
+#: ../../topics/api.rst:206
+msgid "Signals API"
+msgstr ""
+
+#: ../../topics/api.rst:216
+msgid "Stats Collector API"
+msgstr ""
+
+#: ../../topics/api.rst:218
+msgid "There are several Stats Collectors available under the :mod:`scrapy.statscollectors` module and they all implement the Stats Collector API defined by the :class:`~scrapy.statscollectors.StatsCollector` class (which they all inherit from)."
+msgstr ""
+
+#: ../../topics/api.rst:230
+msgid "Return the value for the given stats key or default if it doesn't exist."
+msgstr ""
+
+#: ../../topics/api.rst:234
+msgid "Get all stats from the currently running spider as a dict."
+msgstr ""
+
+#: ../../topics/api.rst:238
+msgid "Set the given value for the given stats key."
+msgstr ""
+
+#: ../../topics/api.rst:242
+msgid "Override the current stats with the dict passed in ``stats`` argument."
+msgstr ""
+
+#: ../../topics/api.rst:246
+msgid "Increment the value of the given stats key, by the given count, assuming the start value given (when it's not set)."
+msgstr ""
+
+#: ../../topics/api.rst:251
+msgid "Set the given value for the given key only if current value for the same key is lower than value. If there is no current value for the given key, the value is always set."
+msgstr ""
+
+#: ../../topics/api.rst:257
+msgid "Set the given value for the given key only if current value for the same key is greater than value. If there is no current value for the given key, the value is always set."
+msgstr ""
+
+#: ../../topics/api.rst:263
+msgid "Clear all stats."
+msgstr ""
+
+#: ../../topics/api.rst:265
+msgid "The following methods are not part of the stats collection api but instead used when implementing custom stats collectors:"
+msgstr ""
+
+#: ../../topics/api.rst:270
+msgid "Open the given spider for stats collection."
+msgstr ""
+
+#: ../../topics/api.rst:274
+msgid "Close the given spider. After this is called, no more specific stats can be accessed or collected."
+msgstr ""
+

@@ -1,0 +1,636 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008–2018, Scrapy developers
+# This file is distributed under the same license as the Scrapy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrapy \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../topics/selectors.rst:5
+msgid "Selectors"
+msgstr ""
+
+#: ../../topics/selectors.rst:7
+msgid "When you're scraping web pages, the most common task you need to perform is to extract data from the HTML source. There are several libraries available to achieve this, such as:"
+msgstr ""
+
+#: ../../topics/selectors.rst:11
+msgid "`BeautifulSoup`_ is a very popular web scraping library among Python programmers which constructs a Python object based on the structure of the HTML code and also deals with bad markup reasonably well, but it has one drawback: it's slow."
+msgstr ""
+
+#: ../../topics/selectors.rst:16
+msgid "`lxml`_ is an XML parsing library (which also parses HTML) with a pythonic API based on `ElementTree`_. (lxml is not part of the Python standard library.)"
+msgstr ""
+
+#: ../../topics/selectors.rst:20
+msgid "Scrapy comes with its own mechanism for extracting data. They're called selectors because they \"select\" certain parts of the HTML document specified either by `XPath`_ or `CSS`_ expressions."
+msgstr ""
+
+#: ../../topics/selectors.rst:24
+msgid "`XPath`_ is a language for selecting nodes in XML documents, which can also be used with HTML. `CSS`_ is a language for applying styles to HTML documents. It defines selectors to associate those styles with specific HTML elements."
+msgstr ""
+
+#: ../../topics/selectors.rst:29
+msgid "Scrapy Selectors is a thin wrapper around `parsel`_ library; the purpose of this wrapper is to provide better integration with Scrapy Response objects."
+msgstr ""
+
+#: ../../topics/selectors.rst:32
+msgid "`parsel`_ is a stand-alone web scraping library which can be used without Scrapy. It uses `lxml`_ library under the hood, and implements an easy API on top of lxml API. It means Scrapy selectors are very similar in speed and parsing accuracy to lxml."
+msgstr ""
+
+#: ../../topics/selectors.rst:46
+#: ../../topics/selectors.rst:97
+msgid "Using selectors"
+msgstr ""
+
+#: ../../topics/selectors.rst:49
+msgid "Constructing selectors"
+msgstr ""
+
+#: ../../topics/selectors.rst:53
+msgid "Response objects expose a :class:`~scrapy.selector.Selector` instance on ``.selector`` attribute::"
+msgstr ""
+
+#: ../../topics/selectors.rst:59
+msgid "Querying responses using XPath and CSS is so common that responses include two more shortcuts: ``response.xpath()`` and ``response.css()``::"
+msgstr ""
+
+#: ../../topics/selectors.rst:67
+msgid "Scrapy selectors are instances of :class:`~scrapy.selector.Selector` class constructed by passing either :class:`~scrapy.http.TextResponse` object or markup as an unicode string (in ``text`` argument). Usually there is no need to construct Scrapy selectors manually: ``response`` object is available in Spider callbacks, so in most cases it is more convenient to use ``response.css()`` and ``response.xpath()`` shortcuts. By using ``response.selector`` or one of these shortcuts you can also ensure the response body is parsed only once."
+msgstr ""
+
+#: ../../topics/selectors.rst:76
+msgid "But if required, it is possible to use ``Selector`` directly. Constructing from text::"
+msgstr ""
+
+#: ../../topics/selectors.rst:84
+msgid "Constructing from response - :class:`~scrapy.http.HtmlResponse` is one of :class:`~scrapy.http.TextResponse` subclasses::"
+msgstr ""
+
+#: ../../topics/selectors.rst:93
+msgid "``Selector`` automatically chooses the best parsing rules (XML vs HTML) based on input type."
+msgstr ""
+
+#: ../../topics/selectors.rst:99
+msgid "To explain how to use the selectors we'll use the ``Scrapy shell`` (which provides interactive testing) and an example page located in the Scrapy documentation server:"
+msgstr ""
+
+#: ../../topics/selectors.rst:103
+msgid "https://docs.scrapy.org/en/latest/_static/selectors-sample1.html"
+msgstr ""
+
+#: ../../topics/selectors.rst:107
+msgid "For the sake of completeness, here's its full HTML code:"
+msgstr ""
+
+#: ../../topics/selectors.rst:114
+msgid "First, let's open the shell::"
+msgstr ""
+
+#: ../../topics/selectors.rst:118
+msgid "Then, after the shell loads, you'll have the response available as ``response`` shell variable, and its attached selector in ``response.selector`` attribute."
+msgstr ""
+
+#: ../../topics/selectors.rst:121
+msgid "Since we're dealing with HTML, the selector will automatically use an HTML parser."
+msgstr ""
+
+#: ../../topics/selectors.rst:125
+msgid "So, by looking at the :ref:`HTML code <topics-selectors-htmlcode>` of that page, let's construct an XPath for selecting the text inside the title tag::"
+msgstr ""
+
+#: ../../topics/selectors.rst:131
+msgid "To actually extract the textual data, you must call the selector ``.get()`` or ``.getall()`` methods, as follows::"
+msgstr ""
+
+#: ../../topics/selectors.rst:139
+msgid "``.get()`` always returns a single result; if there are several matches, content of a first match is returned; if there are no matches, None is returned. ``.getall()`` returns a list with all results."
+msgstr ""
+
+#: ../../topics/selectors.rst:143
+msgid "Notice that CSS selectors can select text or attribute nodes using CSS3 pseudo-elements::"
+msgstr ""
+
+#: ../../topics/selectors.rst:149
+msgid "As you can see, ``.xpath()`` and ``.css()`` methods return a :class:`~scrapy.selector.SelectorList` instance, which is a list of new selectors. This API can be used for quickly selecting nested data::"
+msgstr ""
+
+#: ../../topics/selectors.rst:160
+msgid "If you want to extract only the first matched element, you can call the selector ``.get()`` (or its alias ``.extract_first()`` commonly used in previous Scrapy versions)::"
+msgstr ""
+
+#: ../../topics/selectors.rst:167
+msgid "It returns ``None`` if no element was found::"
+msgstr ""
+
+#: ../../topics/selectors.rst:172
+msgid "A default return value can be provided as an argument, to be used instead of ``None``:"
+msgstr ""
+
+#: ../../topics/selectors.rst:178
+msgid "Instead of using e.g. ``'@src'`` XPath it is possible to query for attributes using ``.attrib`` property of a :class:`~scrapy.selector.Selector`::"
+msgstr ""
+
+#: ../../topics/selectors.rst:188
+msgid "As a shortcut, ``.attrib`` is also available on SelectorList directly; it returns attributes for the first matching element::"
+msgstr ""
+
+#: ../../topics/selectors.rst:194
+msgid "This is most useful when only a single result is expected, e.g. when selecting by id, or selecting unique elements on a web page::"
+msgstr ""
+
+#: ../../topics/selectors.rst:200
+msgid "Now we're going to get the base URL and some image links::"
+msgstr ""
+
+#: ../../topics/selectors.rst:242
+msgid "Extensions to CSS Selectors"
+msgstr ""
+
+#: ../../topics/selectors.rst:244
+msgid "Per W3C standards, `CSS selectors`_ do not support selecting text nodes or attribute values. But selecting these is so essential in a web scraping context that Scrapy (parsel) implements a couple of **non-standard pseudo-elements**:"
+msgstr ""
+
+#: ../../topics/selectors.rst:249
+msgid "to select text nodes, use ``::text``"
+msgstr ""
+
+#: ../../topics/selectors.rst:250
+msgid "to select attribute values, use ``::attr(name)`` where *name* is the name of the attribute that you want the value of"
+msgstr ""
+
+#: ../../topics/selectors.rst:254
+msgid "These pseudo-elements are Scrapy-/Parsel-specific. They will most probably not work with other libraries like `lxml`_ or `PyQuery`_."
+msgstr ""
+
+#: ../../topics/selectors.rst:260
+msgid "Examples:"
+msgstr ""
+
+#: ../../topics/selectors.rst:262
+msgid "``title::text`` selects children text nodes of a descendant ``<title>`` element::"
+msgstr ""
+
+#: ../../topics/selectors.rst:267
+msgid "``*::text`` selects all descendant text nodes of the current selector context::"
+msgstr ""
+
+#: ../../topics/selectors.rst:282
+msgid "``foo::text`` returns no results if ``foo`` element exists, but contains no text (i.e. text is empty)::"
+msgstr ""
+
+#: ../../topics/selectors.rst:288
+msgid "This means ``.css('foo::text').get()`` could return None even if an element exists. Use ``default=''`` if you always want a string::"
+msgstr ""
+
+#: ../../topics/selectors.rst:295
+msgid "``a::attr(href)`` selects the *href* attribute value of descendant links::"
+msgstr ""
+
+#: ../../topics/selectors.rst:305
+msgid "See also: :ref:`selecting-attributes`."
+msgstr ""
+
+#: ../../topics/selectors.rst:308
+msgid "You cannot chain these pseudo-elements. But in practice it would not make much sense: text nodes do not have attributes, and attribute values are string values already and do not have children nodes."
+msgstr ""
+
+#: ../../topics/selectors.rst:317
+msgid "Nesting selectors"
+msgstr ""
+
+#: ../../topics/selectors.rst:319
+msgid "The selection methods (``.xpath()`` or ``.css()``) return a list of selectors of the same type, so you can call the selection methods for those selectors too. Here's an example::"
+msgstr ""
+
+#: ../../topics/selectors.rst:344
+msgid "Selecting element attributes"
+msgstr ""
+
+#: ../../topics/selectors.rst:346
+msgid "There are several ways to get a value of an attribute. First, one can use XPath syntax::"
+msgstr ""
+
+#: ../../topics/selectors.rst:352
+msgid "XPath syntax has a few advantages: it is a standard XPath feature, and ``@attributes`` can be used in other parts of an XPath expression - e.g. it is possible to filter by attribute value."
+msgstr ""
+
+#: ../../topics/selectors.rst:356
+msgid "Scrapy also provides an extension to CSS selectors (``::attr(...)``) which allows to get attribute values::"
+msgstr ""
+
+#: ../../topics/selectors.rst:362
+msgid "In addition to that, there is a ``.attrib`` property of Selector. You can use it if you prefer to lookup attributes in Python code, without using XPaths or CSS extensions::"
+msgstr ""
+
+#: ../../topics/selectors.rst:369
+msgid "This property is also available on SelectorList; it returns a dictionary with attributes of a first matching element. It is convenient to use when a selector is expected to give a single result (e.g. when selecting by element ID, or when selecting an unique element on a page)::"
+msgstr ""
+
+#: ../../topics/selectors.rst:379
+msgid "``.attrib`` property of an empty SelectorList is empty::"
+msgstr ""
+
+#: ../../topics/selectors.rst:385
+msgid "Using selectors with regular expressions"
+msgstr ""
+
+#: ../../topics/selectors.rst:387
+msgid ":class:`~scrapy.selector.Selector` also has a ``.re()`` method for extracting data using regular expressions. However, unlike using ``.xpath()`` or ``.css()`` methods, ``.re()`` returns a list of unicode strings. So you can't construct nested ``.re()`` calls."
+msgstr ""
+
+#: ../../topics/selectors.rst:392
+msgid "Here's an example used to extract image names from the :ref:`HTML code <topics-selectors-htmlcode>` above::"
+msgstr ""
+
+#: ../../topics/selectors.rst:402
+msgid "There's an additional helper reciprocating ``.get()`` (and its alias ``.extract_first()``) for ``.re()``, named ``.re_first()``. Use it to extract just the first matching string::"
+msgstr ""
+
+#: ../../topics/selectors.rst:412
+msgid "extract() and extract_first()"
+msgstr ""
+
+#: ../../topics/selectors.rst:414
+msgid "If you're a long-time Scrapy user, you're probably familiar with ``.extract()`` and ``.extract_first()`` selector methods. Many blog posts and tutorials are using them as well. These methods are still supported by Scrapy, there are **no plans** to deprecate them."
+msgstr ""
+
+#: ../../topics/selectors.rst:419
+msgid "However, Scrapy usage docs are now written using ``.get()`` and ``.getall()`` methods. We feel that these new methods result in a more concise and readable code."
+msgstr ""
+
+#: ../../topics/selectors.rst:423
+msgid "The following examples show how these methods map to each other."
+msgstr ""
+
+#: ../../topics/selectors.rst:425
+msgid "``SelectorList.get()`` is the same as ``SelectorList.extract_first()``::"
+msgstr ""
+
+#: ../../topics/selectors.rst:432
+msgid "``SelectorList.getall()`` is the same as ``SelectorList.extract()``::"
+msgstr ""
+
+#: ../../topics/selectors.rst:439
+msgid "``Selector.get()`` is the same as ``Selector.extract()``::"
+msgstr ""
+
+#: ../../topics/selectors.rst:446
+msgid "For consistency, there is also ``Selector.getall()``, which returns a list::"
+msgstr ""
+
+#: ../../topics/selectors.rst:451
+msgid "So, the main difference is that output of ``.get()`` and ``.getall()`` methods is more predictable: ``.get()`` always returns a single result, ``.getall()`` always returns a list of all extracted results. With ``.extract()`` method it was not always obvious if a result is a list or not; to get a single result either ``.extract()`` or ``.extract_first()`` should be called."
+msgstr ""
+
+#: ../../topics/selectors.rst:461
+msgid "Working with XPaths"
+msgstr ""
+
+#: ../../topics/selectors.rst:463
+msgid "Here are some tips which may help you to use XPath with Scrapy selectors effectively. If you are not much familiar with XPath yet, you may want to take a look first at this `XPath tutorial`_."
+msgstr ""
+
+#: ../../topics/selectors.rst:468
+msgid "Some of the tips are based on `this post from ScrapingHub's blog`_."
+msgstr ""
+
+#: ../../topics/selectors.rst:477
+msgid "Working with relative XPaths"
+msgstr ""
+
+#: ../../topics/selectors.rst:479
+msgid "Keep in mind that if you are nesting selectors and use an XPath that starts with ``/``, that XPath will be absolute to the document and not relative to the ``Selector`` you're calling it from."
+msgstr ""
+
+#: ../../topics/selectors.rst:483
+msgid "For example, suppose you want to extract all ``<p>`` elements inside ``<div>`` elements. First, you would get all ``<div>`` elements::"
+msgstr ""
+
+#: ../../topics/selectors.rst:488
+msgid "At first, you may be tempted to use the following approach, which is wrong, as it actually extracts all ``<p>`` elements from the document, not only those inside ``<div>`` elements::"
+msgstr ""
+
+#: ../../topics/selectors.rst:495
+msgid "This is the proper way to do it (note the dot prefixing the ``.//p`` XPath)::"
+msgstr ""
+
+#: ../../topics/selectors.rst:500
+msgid "Another common case would be to extract all direct ``<p>`` children::"
+msgstr ""
+
+#: ../../topics/selectors.rst:505
+msgid "For more details about relative XPaths see the `Location Paths`_ section in the XPath specification."
+msgstr ""
+
+#: ../../topics/selectors.rst:511
+msgid "When querying by class, consider using CSS"
+msgstr ""
+
+#: ../../topics/selectors.rst:513
+msgid "Because an element can contain multiple CSS classes, the XPath way to select elements by class is the rather verbose::"
+msgstr ""
+
+#: ../../topics/selectors.rst:518
+msgid "If you use ``@class='someclass'`` you may end up missing elements that have other classes, and if you just use ``contains(@class, 'someclass')`` to make up for that you may end up with more elements that you want, if they have a different class name that shares the string ``someclass``."
+msgstr ""
+
+#: ../../topics/selectors.rst:523
+msgid "As it turns out, Scrapy selectors allow you to chain selectors, so most of the time you can just select by class using CSS and then switch to XPath when needed::"
+msgstr ""
+
+#: ../../topics/selectors.rst:531
+msgid "This is cleaner than using the verbose XPath trick shown above. Just remember to use the ``.`` in the XPath expressions that will follow."
+msgstr ""
+
+#: ../../topics/selectors.rst:535
+msgid "Beware of the difference between //node[1] and (//node)[1]"
+msgstr ""
+
+#: ../../topics/selectors.rst:537
+msgid "``//node[1]`` selects all the nodes occurring first under their respective parents."
+msgstr ""
+
+#: ../../topics/selectors.rst:539
+msgid "``(//node)[1]`` selects all the nodes in the document, and then gets only the first of them."
+msgstr ""
+
+#: ../../topics/selectors.rst:541
+#: ../../topics/selectors.rst:587
+msgid "Example::"
+msgstr ""
+
+#: ../../topics/selectors.rst:557
+msgid "This gets all first ``<li>``  elements under whatever it is its parent::"
+msgstr ""
+
+#: ../../topics/selectors.rst:562
+msgid "And this gets the first ``<li>``  element in the whole document::"
+msgstr ""
+
+#: ../../topics/selectors.rst:567
+msgid "This gets all first ``<li>``  elements under an ``<ul>``  parent::"
+msgstr ""
+
+#: ../../topics/selectors.rst:572
+msgid "And this gets the first ``<li>``  element under an ``<ul>``  parent in the whole document::"
+msgstr ""
+
+#: ../../topics/selectors.rst:578
+msgid "Using text nodes in a condition"
+msgstr ""
+
+#: ../../topics/selectors.rst:580
+msgid "When you need to use the text content as argument to an `XPath string function`_, avoid using ``.//text()`` and use just ``.`` instead."
+msgstr ""
+
+#: ../../topics/selectors.rst:583
+msgid "This is because the expression ``.//text()`` yields a collection of text elements -- a *node-set*. And when a node-set is converted to a string, which happens when it is passed as argument to a string function like ``contains()`` or ``starts-with()``, it results in the text for the first element only."
+msgstr ""
+
+#: ../../topics/selectors.rst:592
+msgid "Converting a *node-set* to string::"
+msgstr ""
+
+#: ../../topics/selectors.rst:599
+msgid "A *node* converted to a string, however, puts together the text of itself plus of all its descendants::"
+msgstr ""
+
+#: ../../topics/selectors.rst:606
+msgid "So, using the ``.//text()`` node-set won't select anything in this case::"
+msgstr ""
+
+#: ../../topics/selectors.rst:611
+msgid "But using the ``.`` to mean the node, works::"
+msgstr ""
+
+#: ../../topics/selectors.rst:621
+msgid "Variables in XPath expressions"
+msgstr ""
+
+#: ../../topics/selectors.rst:623
+msgid "XPath allows you to reference variables in your XPath expressions, using the ``$somevariable`` syntax. This is somewhat similar to parameterized queries or prepared statements in the SQL world where you replace some arguments in your queries with placeholders like ``?``, which are then substituted with values passed with the query."
+msgstr ""
+
+#: ../../topics/selectors.rst:629
+msgid "Here's an example to match an element based on its \"id\" attribute value, without hard-coding it (that was shown previously)::"
+msgstr ""
+
+#: ../../topics/selectors.rst:636
+msgid "Here's another example, to find the \"id\" attribute of a ``<div>`` tag containing five ``<a>`` children (here we pass the value ``5`` as an integer)::"
+msgstr ""
+
+#: ../../topics/selectors.rst:642
+msgid "All variable references must have a binding value when calling ``.xpath()`` (otherwise you'll get a ``ValueError: XPath error:`` exception). This is done by passing as many named arguments as necessary."
+msgstr ""
+
+#: ../../topics/selectors.rst:646
+msgid "`parsel`_, the library powering Scrapy selectors, has more details and examples on `XPath variables`_."
+msgstr ""
+
+#: ../../topics/selectors.rst:655
+msgid "Removing namespaces"
+msgstr ""
+
+#: ../../topics/selectors.rst:657
+msgid "When dealing with scraping projects, it is often quite convenient to get rid of namespaces altogether and just work with element names, to write more simple/convenient XPaths. You can use the :meth:`Selector.remove_namespaces` method for that."
+msgstr ""
+
+#: ../../topics/selectors.rst:662
+msgid "Let's show an example that illustrates this with the Python Insider blog atom feed."
+msgstr ""
+
+#: ../../topics/selectors.rst:666
+msgid "First, we open the shell with the url we want to scrape::"
+msgstr ""
+
+#: ../../topics/selectors.rst:670
+msgid "This is how the file starts::"
+msgstr ""
+
+#: ../../topics/selectors.rst:683
+msgid "You can see several namespace declarations including a default \"http://www.w3.org/2005/Atom\" and another one using the \"gd:\" prefix for \"http://schemas.google.com/g/2005\"."
+msgstr ""
+
+#: ../../topics/selectors.rst:689
+msgid "Once in the shell we can try selecting all ``<link>`` objects and see that it doesn't work (because the Atom XML namespace is obfuscating those nodes)::"
+msgstr ""
+
+#: ../../topics/selectors.rst:695
+msgid "But once we call the :meth:`Selector.remove_namespaces` method, all nodes can be accessed directly by their names::"
+msgstr ""
+
+#: ../../topics/selectors.rst:704
+msgid "If you wonder why the namespace removal procedure isn't always called by default instead of having to call it manually, this is because of two reasons, which, in order of relevance, are:"
+msgstr ""
+
+#: ../../topics/selectors.rst:708
+msgid "Removing namespaces requires to iterate and modify all nodes in the document, which is a reasonably expensive operation to perform by default for all documents crawled by Scrapy"
+msgstr ""
+
+#: ../../topics/selectors.rst:712
+msgid "There could be some cases where using namespaces is actually required, in case some element names clash between namespaces. These cases are very rare though."
+msgstr ""
+
+#: ../../topics/selectors.rst:718
+msgid "Using EXSLT extensions"
+msgstr ""
+
+#: ../../topics/selectors.rst:720
+msgid "Being built atop `lxml`_, Scrapy selectors support some `EXSLT`_ extensions and come with these pre-registered namespaces to use in XPath expressions:"
+msgstr ""
+
+#: ../../topics/selectors.rst:725
+msgid "prefix"
+msgstr ""
+
+#: ../../topics/selectors.rst:725
+msgid "namespace"
+msgstr ""
+
+#: ../../topics/selectors.rst:725
+msgid "usage"
+msgstr ""
+
+#: ../../topics/selectors.rst:727
+msgid "re"
+msgstr ""
+
+#: ../../topics/selectors.rst:727
+msgid "\\http://exslt.org/regular-expressions"
+msgstr ""
+
+#: ../../topics/selectors.rst:727
+msgid "`regular expressions`_"
+msgstr ""
+
+#: ../../topics/selectors.rst:728
+msgid "set"
+msgstr ""
+
+#: ../../topics/selectors.rst:728
+msgid "\\http://exslt.org/sets"
+msgstr ""
+
+#: ../../topics/selectors.rst:728
+msgid "`set manipulation`_"
+msgstr ""
+
+#: ../../topics/selectors.rst:732
+msgid "Regular expressions"
+msgstr ""
+
+#: ../../topics/selectors.rst:734
+msgid "The ``test()`` function, for example, can prove quite useful when XPath's ``starts-with()`` or ``contains()`` are not sufficient."
+msgstr ""
+
+#: ../../topics/selectors.rst:737
+msgid "Example selecting links in list item with a \"class\" attribute ending with a digit::"
+msgstr ""
+
+#: ../../topics/selectors.rst:758
+msgid "C library ``libxslt`` doesn't natively support EXSLT regular expressions so `lxml`_'s implementation uses hooks to Python's ``re`` module. Thus, using regexp functions in your XPath expressions may add a small performance penalty."
+msgstr ""
+
+#: ../../topics/selectors.rst:764
+msgid "Set operations"
+msgstr ""
+
+#: ../../topics/selectors.rst:766
+msgid "These can be handy for excluding parts of a document tree before extracting text elements for example."
+msgstr ""
+
+#: ../../topics/selectors.rst:769
+msgid "Example extracting microdata (sample content taken from http://schema.org/Product) with groups of itemscopes and corresponding itemprops::"
+msgstr ""
+
+#: ../../topics/selectors.rst:854
+msgid "Here we first iterate over ``itemscope`` elements, and for each one, we look for all ``itemprops`` elements and exclude those that are themselves inside another ``itemscope``."
+msgstr ""
+
+#: ../../topics/selectors.rst:863
+msgid "Other XPath extensions"
+msgstr ""
+
+#: ../../topics/selectors.rst:865
+msgid "Scrapy selectors also provide a sorely missed XPath extension function ``has-class`` that returns ``True`` for nodes that have all of the specified HTML classes."
+msgstr ""
+
+#: ../../topics/selectors.rst:871
+msgid "For the following HTML::"
+msgstr ""
+
+#: ../../topics/selectors.rst:880
+msgid "You can use it like this::"
+msgstr ""
+
+#: ../../topics/selectors.rst:890
+msgid "So XPath ``//p[has-class(\"foo\", \"bar-baz\")]`` is roughly equivalent to CSS ``p.foo.bar-baz``.  Please note, that it is slower in most of the cases, because it's a pure-Python function that's invoked for every node in question whereas the CSS lookup is translated into XPath and thus runs more efficiently, so performance-wise its uses are limited to situations that are not easily described with CSS selectors."
+msgstr ""
+
+#: ../../topics/selectors.rst:897
+msgid "Parsel also simplifies adding your own XPath extensions."
+msgstr ""
+
+#: ../../topics/selectors.rst:905
+msgid "Built-in Selectors reference"
+msgstr ""
+
+#: ../../topics/selectors.rst:911
+msgid "Selector objects"
+msgstr ""
+
+#: ../../topics/selectors.rst:951
+msgid "SelectorList objects"
+msgstr ""
+
+#: ../../topics/selectors.rst:978
+msgid "Examples"
+msgstr ""
+
+#: ../../topics/selectors.rst:983
+msgid "Selector examples on HTML response"
+msgstr ""
+
+#: ../../topics/selectors.rst:985
+msgid "Here are some :class:`Selector` examples to illustrate several concepts. In all cases, we assume there is already a :class:`Selector` instantiated with a :class:`~scrapy.http.HtmlResponse` object like this::"
+msgstr ""
+
+#: ../../topics/selectors.rst:991
+msgid "Select all ``<h1>`` elements from an HTML response body, returning a list of :class:`Selector` objects (ie. a :class:`SelectorList` object)::"
+msgstr ""
+
+#: ../../topics/selectors.rst:996
+msgid "Extract the text of all ``<h1>`` elements from an HTML response body, returning a list of unicode strings::"
+msgstr ""
+
+#: ../../topics/selectors.rst:1002
+msgid "Iterate over all ``<p>`` tags and print their class attribute::"
+msgstr ""
+
+#: ../../topics/selectors.rst:1011
+msgid "Selector examples on XML response"
+msgstr ""
+
+#: ../../topics/selectors.rst:1013
+msgid "Here are some examples to illustrate concepts for :class:`Selector` objects instantiated with an :class:`~scrapy.http.XmlResponse` object::"
+msgstr ""
+
+#: ../../topics/selectors.rst:1018
+msgid "Select all ``<product>`` elements from an XML response body, returning a list of :class:`Selector` objects (ie. a :class:`SelectorList` object)::"
+msgstr ""
+
+#: ../../topics/selectors.rst:1023
+msgid "Extract all prices from a `Google Base XML feed`_ which requires registering a namespace::"
+msgstr ""
+

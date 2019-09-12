@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008–2018, Scrapy developers
+# This file is distributed under the same license as the Scrapy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrapy \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"PO-Revision-Date: 2019-09-12 16:24+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../topics/contracts.rst:5
+msgid "Spiders Contracts"
+msgstr "スパイダー コントラクト"
+
+#: ../../topics/contracts.rst:9
+msgid ""
+"This is a new feature (introduced in Scrapy 0.15) and may be subject to "
+"minor functionality/API updates. Check the :ref:`release notes <news>` to"
+" be notified of updates."
+msgstr "これは新機能(Scrapy 0.15で導入)であり、細かい機能やAPIの更新が行われる場合があります。更新を知る為に :ref:`リリースノート<news>` をチェックしてください。"
+
+#: ../../topics/contracts.rst:13
+msgid ""
+"Testing spiders can get particularly annoying and while nothing prevents "
+"you from writing unit tests the task gets cumbersome quickly. Scrapy "
+"offers an integrated way of testing your spiders by the means of "
+"contracts."
+msgstr "スパイダーのテストは特にウンコで、単体テストを書くのは楽チンだけど、テスト作業はマンドクサ。Scrapyはコントラクト(訳注:contract;取り決め)によってスパイダーを統一的にテストする方法を提供します。"
+
+#: ../../topics/contracts.rst:17
+msgid ""
+"This allows you to test each callback of your spider by hardcoding a "
+"sample url and check various constraints for how the callback processes "
+"the response. Each contract is prefixed with an ``@`` and included in the"
+" docstring. See the following example::"
+msgstr "これにより、サンプルURLをハードコーディングしてスパイダーの各コールバックをテストし、コールバックが応答を処理する方法のさまざまな制約を確認できます。各コントラクトはdocstringに含め、各コントラクトの先頭には ``@`` が付けられています。次の例をご覧ください::"
+
+#: ../../topics/contracts.rst:32
+msgid "This callback is tested using three built-in contracts:"
+msgstr "このコールバックは、3つの組み込みコントラクトを使用してテストされます。:"
+
+#: ../../topics/contracts.rst:38
+msgid ""
+"This contract (``@url``) sets the sample URL used when checking other "
+"contract conditions for this spider. This contract is mandatory. All "
+"callbacks lacking this contract are ignored when running the checks::"
+msgstr "このコントラクト(``@url``)は、このスパイダーの他のコントラクト条件をチェックするときに使用されるサンプルURLを設定します。 このコントラクトは必須です。 チェックを実行する場合、このコントラクトがないコールバックはすべて無視されます::"
+
+#: ../../topics/contracts.rst:46
+msgid ""
+"This contract (``@cb_kwargs``) sets the :attr:`cb_kwargs "
+"<scrapy.http.Request.cb_kwargs>` attribute for the sample request. It "
+"must be a valid JSON dictionary. ::"
+msgstr "このコントラクト(``@cb_kwargs``)は、サンプルリクエストの :attr:`cb_kwargs <scrapy.http.Request.cb_kwargs>` 属性を設定します。 有効なJSON辞書である必要があります。::"
+
+#: ../../topics/contracts.rst:54
+msgid ""
+"This contract (``@returns``) sets lower and upper bounds for the items "
+"and requests returned by the spider. The upper bound is optional::"
+msgstr "このコントラクト(``@returns``)は、スパイダーによって返されるアイテムとリクエストの下限と上限を設定します。 上限はオプションです。::"
+
+#: ../../topics/contracts.rst:61
+msgid ""
+"This contract (``@scrapes``) checks that all the items returned by the "
+"callback have the specified fields::"
+msgstr "このコントラクト(``@scrapes``)は、コールバックによって返されたすべてのアイテムに指定されたフィールドがあることを確認します。::"
+
+#: ../../topics/contracts.rst:66
+msgid "Use the :command:`check` command to run the contract checks."
+msgstr " :command:`check` コマンドを使用して、コントラクトチェックを実行します。"
+
+#: ../../topics/contracts.rst:69
+msgid "Custom Contracts"
+msgstr "カスタム コントラクト"
+
+#: ../../topics/contracts.rst:71
+msgid ""
+"If you find you need more power than the built-in scrapy contracts you "
+"can create and load your own contracts in the project by using the "
+":setting:`SPIDER_CONTRACTS` setting::"
+msgstr "うぬはチカラが欲しくないか？ 組み込みScrapyコントラクトよりも多くのチカラを。その場合は、 :setting:`SPIDER_CONTRACTS` 設定を使用して、プロジェクトに独自のコントラクトを作成してロードできます::"
+
+#: ../../topics/contracts.rst:80
+msgid ""
+"Each contract must inherit from :class:`~scrapy.contracts.Contract` and "
+"can override three methods:"
+msgstr "各コントラクトは :class:`~scrapy.contracts.Contract` から継承する必要があり、3つのメソッドをオーバーライドできます。:"
+
+#: ../../topics/contracts.rst
+msgid "パラメータ"
+msgstr "パラメータ"
+
+#: ../../topics/contracts.rst:87
+msgid "callback function to which the contract is associated"
+msgstr "コントラクトが関連付けられているコールバック関数"
+
+#: ../../topics/contracts.rst:90
+msgid "list of arguments passed into the docstring (whitespace separated)"
+msgstr "docstringに渡される引数のリスト(空白区切り)"
+
+#: ../../topics/contracts.rst:96
+msgid ""
+"This receives a ``dict`` as an argument containing default arguments for "
+"request object. :class:`~scrapy.http.Request` is used by default, but "
+"this can be changed with the ``request_cls`` attribute. If multiple "
+"contracts in chain have this attribute defined, the last one is used."
+msgstr "これは、リクエストオブジェクトのデフォルト引数を含む引数として ``dict`` を受け取ります。 :class:`~scrapy.http.Request` はデフォルトで使用されますが、これは ``request_cls`` 属性で変更できます。 チェーン内の複数のコントラクトにこの属性が定義されている場合、最後のコントラクトが使用されます。"
+
+#: ../../topics/contracts.rst:101
+msgid "Must return the same or a modified version of it."
+msgstr "同じまたは変更されたバージョンを返す必要があります。"
+
+#: ../../topics/contracts.rst:105
+msgid ""
+"This allows hooking in various checks on the response received from the "
+"sample request, before it's being passed to the callback."
+msgstr "これにより、コールバックに渡される前に、サンプルリクエストから受信したレスポンスのさまざまなチェックをフックすることを許します。"
+
+#: ../../topics/contracts.rst:110
+msgid ""
+"This allows processing the output of the callback. Iterators are "
+"converted listified before being passed to this hook."
+msgstr "これにより、コールバックの出力を処理できます。 イテレータは、このフックに渡される前に変換されてリスト化されます。"
+
+#: ../../topics/contracts.rst:113
+msgid ""
+"Raise :class:`~scrapy.exceptions.ContractFail` from "
+":class:`~scrapy.contracts.Contract.pre_process` or "
+":class:`~scrapy.contracts.Contract.post_process` if expectations are not "
+"met:"
+msgstr "期待どおりで無い場合、 :class:`~scrapy.contracts.Contract.pre_process` または :class:`~scrapy.contracts.Contract.post_process` から :class:`~scrapy.exceptions.ContractFail` 例外が送出されます。"
+
+#: ../../topics/contracts.rst:119
+msgid ""
+"Here is a demo contract which checks the presence of a custom header in "
+"the response received::"
+msgstr "以下に、受信した応答のカスタムヘッダーの存在を確認するデモ・コントラクトを示します。::"
+
+#: ../../topics/contracts.rst:140
+msgid "Detecting check runs"
+msgstr "チェック実行の検出"
+
+#: ../../topics/contracts.rst:142
+msgid ""
+"When ``scrapy check`` is running, the ``SCRAPY_CHECK`` environment "
+"variable is set to the ``true`` string. You can use `os.environ`_ to "
+"perform any change to your spiders or your settings when ``scrapy check``"
+" is used::"
+msgstr "``scrapy check`` が実行されているとき、 ``SCRAPY_CHECK`` 環境変数は ``true`` 文字列に設定されます。 ``scrapy check`` が使用されている場合、 `os.environ`_ を使用して、スパイダーや設定に変更を加えることができます。::"
+

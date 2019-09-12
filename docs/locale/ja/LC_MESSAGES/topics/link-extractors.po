@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008–2018, Scrapy developers
+# This file is distributed under the same license as the Scrapy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrapy \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../topics/link-extractors.rst:5
+msgid "Link Extractors"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:7
+msgid ""
+"Link extractors are objects whose only purpose is to extract links from "
+"web pages (:class:`scrapy.http.Response` objects) which will be "
+"eventually followed."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:11
+msgid ""
+"There is ``scrapy.linkextractors.LinkExtractor`` available in Scrapy, but"
+" you can create your own custom Link Extractors to suit your needs by "
+"implementing a simple interface."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:15
+msgid ""
+"The only public method that every link extractor has is "
+"``extract_links``, which receives a :class:`~scrapy.http.Response` object"
+" and returns a list of :class:`scrapy.link.Link` objects. Link extractors"
+" are meant to be instantiated once and their ``extract_links`` method "
+"called several times with different responses to extract links to follow."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:21
+msgid ""
+"Link extractors are used in the :class:`~scrapy.spiders.CrawlSpider` "
+"class (available in Scrapy), through a set of rules, but you can also use"
+" it in your spiders, even if you don't subclass from "
+":class:`~scrapy.spiders.CrawlSpider`, as its purpose is very simple: to "
+"extract links."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:31
+msgid "Built-in link extractors reference"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:36
+msgid ""
+"Link extractors classes bundled with Scrapy are provided in the "
+":mod:`scrapy.linkextractors` module."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:39
+msgid ""
+"The default link extractor is ``LinkExtractor``, which is the same as "
+":class:`~.LxmlLinkExtractor`::"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:44
+msgid ""
+"There used to be other link extractor classes in previous Scrapy "
+"versions, but they are deprecated now."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:48
+msgid "LxmlLinkExtractor"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:56
+msgid ""
+"LxmlLinkExtractor is the recommended link extractor with handy filtering "
+"options. It is implemented using lxml's robust HTMLParser."
+msgstr ""
+
+#: ../../topics/link-extractors.rst
+msgid "パラメータ"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:59
+msgid ""
+"a single regular expression (or list of regular expressions) that the "
+"(absolute) urls must match in order to be extracted. If not given (or "
+"empty), it will match all links."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:64
+msgid ""
+"a single regular expression (or list of regular expressions) that the "
+"(absolute) urls must match in order to be excluded (ie. not extracted). "
+"It has precedence over the ``allow`` parameter. If not given (or empty) "
+"it won't exclude any links."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:70
+msgid ""
+"a single value or a list of string containing domains which will be "
+"considered for extracting the links"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:74
+msgid ""
+"a single value or a list of strings containing domains which won't be "
+"considered for extracting the links"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:78
+msgid ""
+"a single value or list of strings containing extensions that should be "
+"ignored when extracting links. If not given, it will default to the "
+"``IGNORED_EXTENSIONS`` list defined in the `scrapy.linkextractors`_ "
+"package."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:85
+msgid ""
+"is an XPath (or list of XPath's) which defines regions inside the "
+"response where links should be extracted from. If given, only the text "
+"selected by those XPath will be scanned for links. See examples below."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:91
+msgid ""
+"a CSS selector (or list of selectors) which defines regions inside the "
+"response where links should be extracted from. Has the same behaviour as "
+"``restrict_xpaths``."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:96
+msgid ""
+"a single regular expression (or list of regular expressions) that the "
+"link's text must match in order to be extracted. If not given (or empty),"
+" it will match all links. If a list of regular expressions is given, the "
+"link will be extracted if it matches at least one."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:102
+msgid ""
+"a tag or a list of tags to consider when extracting links. Defaults to "
+"``('a', 'area')``."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:106
+msgid ""
+"an attribute or list of attributes which should be considered when "
+"looking for links to extract (only for those tags specified in the "
+"``tags`` parameter). Defaults to ``('href',)``"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:111
+msgid ""
+"canonicalize each extracted url (using w3lib.url.canonicalize_url). "
+"Defaults to ``False``. Note that canonicalize_url is meant for duplicate "
+"checking; it can change the URL visible at server side, so the response "
+"can be different for requests with canonicalized and raw URLs. If you're "
+"using LinkExtractor to follow links it is more robust to keep the default"
+" ``canonicalize=False``."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:120
+msgid "whether duplicate filtering should be applied to extracted links."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:124
+msgid ""
+"a function which receives each value extracted from the tag and "
+"attributes scanned and can modify the value and return a new one, or "
+"return ``None`` to ignore the link altogether. If not given, "
+"``process_value`` defaults to ``lambda x: x``.  .. highlight:: html  For "
+"example, to extract links from this code::      <a "
+"href=\"javascript:goToPage('../other/page.html'); return false\">Link "
+"text</a>  .. highlight:: python  You can use the following function in "
+"``process_value``::      def process_value(value):         m = "
+"re.search(\"javascript:goToPage\\('(.*?)'\", value)         if m:"
+"             return m.group(1)"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:124
+msgid ""
+"a function which receives each value extracted from the tag and "
+"attributes scanned and can modify the value and return a new one, or "
+"return ``None`` to ignore the link altogether. If not given, "
+"``process_value`` defaults to ``lambda x: x``."
+msgstr ""
+
+#: ../../topics/link-extractors.rst:131
+msgid "For example, to extract links from this code::"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:137
+msgid "You can use the following function in ``process_value``::"
+msgstr ""
+
+#: ../../topics/link-extractors.rst:146
+msgid ""
+"whether to strip whitespaces from extracted attributes. According to "
+"HTML5 standard, leading and trailing whitespaces must be stripped from "
+"``href`` attributes of ``<a>``, ``<area>`` and many other elements, "
+"``src`` attribute of ``<img>``, ``<iframe>`` elements, etc., so "
+"LinkExtractor strips space chars by default. Set ``strip=False`` to turn "
+"it off (e.g. if you're extracting urls from elements or attributes which "
+"allow leading/trailing whitespaces)."
+msgstr ""
+

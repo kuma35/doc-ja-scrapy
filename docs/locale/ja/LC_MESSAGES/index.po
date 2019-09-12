@@ -1,0 +1,447 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008–2018, Scrapy developers
+# This file is distributed under the same license as the Scrapy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrapy \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"PO-Revision-Date: 2019-09-12 16:03+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../index.rst:36 ../../index.rst:38
+msgid "First steps"
+msgstr "入門"
+
+#: ../../index.rst:62 ../../index.rst:64
+msgid "Basic concepts"
+msgstr "基本の概念"
+
+#: ../../index.rst:120 ../../index.rst:122
+msgid "Built-in services"
+msgstr "組み込み済サービス群"
+
+#: ../../index.rst:149 ../../index.rst:151
+msgid "Solving specific problems"
+msgstr "特定の問題の解決"
+
+#: ../../index.rst:211 ../../index.rst:213
+msgid "Extending Scrapy"
+msgstr "Scrapyの拡張"
+
+#: ../../index.rst:249 ../../index.rst:251
+msgid "All the rest"
+msgstr "その他すべて"
+
+#: ../../index.rst:5
+msgid "Scrapy |version| documentation"
+msgstr "Scrapy |version| 文書"
+
+#: ../../index.rst:7
+msgid ""
+"Scrapy is a fast high-level `web crawling`_ and `web scraping`_ "
+"framework, used to crawl websites and extract structured data from their "
+"pages. It can be used for a wide range of purposes, from data mining to "
+"monitoring and automated testing."
+msgstr "Scrapyは高速で高レベルのウェブクロール(`web crawling`_)およびウェブスクレイピング(`web scraping`_)フレームワークであり、ウェブサイトをクロールし、ページから構造化データを抽出するために使用されます。 データマイニングから監視、自動テストまで、幅広い目的に使用できます。"
+
+#: ../../index.rst:16
+msgid "Getting help"
+msgstr "お助け"
+
+#: ../../index.rst:18
+msgid "Having trouble? We'd like to help!"
+msgstr "問題がありますか？ でしたらこれらが助けになるでしょう。"
+
+#: ../../index.rst:20
+msgid "Try the :doc:`FAQ <faq>` -- it's got answers to some common questions."
+msgstr "まず、 :doc:`FAQ <faq>` を見て下さい。一般的な質問に対する回答があります。"
+
+#: ../../index.rst:21
+msgid ""
+"Looking for specific information? Try the :ref:`genindex` or "
+":ref:`modindex`."
+msgstr "特定の情報をお探しですか？ それでしたら :ref:`genindex` や :ref:`modindex` をご覧ください。"
+
+#: ../../index.rst:22
+msgid "Ask or search questions in `StackOverflow using the scrapy tag`_."
+msgstr "StackOverflowで scrapy タグを付けて質問するか検索します(`StackOverflow using the scrapy tag`_)。"
+
+#: ../../index.rst:23
+msgid "Ask or search questions in the `Scrapy subreddit`_."
+msgstr "`Scrapy subreddit`_ で質問するか検索してください。"
+
+#: ../../index.rst:24
+msgid "Search for questions on the archives of the `scrapy-users mailing list`_."
+msgstr "`scrapy-users mailing list`_ のアーカイブで質問を検索します。"
+
+#: ../../index.rst:25
+msgid "Ask a question in the `#scrapy IRC channel`_,"
+msgstr "`#scrapy IRC channel`_ で質問します。"
+
+#: ../../index.rst:26
+msgid "Report bugs with Scrapy in our `issue tracker`_."
+msgstr "`issue tracker`_ でScrapyのバグを報告してください。"
+
+#: ../../index.rst:48
+msgid ":doc:`intro/overview`"
+msgstr ":doc:`intro/overview`"
+
+#: ../../index.rst:48
+msgid "Understand what Scrapy is and how it can help you."
+msgstr "Scrapyとは何か、それがどのようにあなたに役立つかの理解。"
+
+#: ../../index.rst:51
+msgid ":doc:`intro/install`"
+msgstr ":doc:`intro/install`"
+
+#: ../../index.rst:51
+msgid "Get Scrapy installed on your computer."
+msgstr "Scrapyをあなたのコンピュータにインストール。"
+
+#: ../../index.rst:54
+msgid ":doc:`intro/tutorial`"
+msgstr ":doc:`intro/tutorial`"
+
+#: ../../index.rst:54
+msgid "Write your first Scrapy project."
+msgstr "あたたは最初のScrapyプロジェクトを書きます。"
+
+#: ../../index.rst:57
+msgid ":doc:`intro/examples`"
+msgstr ":doc:`intro/examples`"
+
+#: ../../index.rst:57
+msgid "Learn more by playing with a pre-made Scrapy project."
+msgstr "作成済みのScrapyプロジェクトを題材に、もっともっと学びます。"
+
+#: ../../index.rst:83
+msgid ":doc:`topics/commands`"
+msgstr ":doc:`topics/commands`"
+
+#: ../../index.rst:83
+msgid "Learn about the command-line tool used to manage your Scrapy project."
+msgstr "Scrapyプロジェクトの管理に使用するコマンドラインツールについて学習します。"
+
+#: ../../index.rst:86
+msgid ":doc:`topics/spiders`"
+msgstr ":doc:`topics/spiders`"
+
+#: ../../index.rst:86
+msgid "Write the rules to crawl your websites."
+msgstr "Webサイトをクロールするルールを作成します。"
+
+#: ../../index.rst:89
+msgid ":doc:`topics/selectors`"
+msgstr ":doc:`topics/selectors`"
+
+#: ../../index.rst:89
+msgid "Extract the data from web pages using XPath."
+msgstr "XPathを使用してWebページからデータを抽出します。"
+
+#: ../../index.rst:92
+msgid ":doc:`topics/shell`"
+msgstr ":doc:`topics/shell`"
+
+#: ../../index.rst:92
+msgid "Test your extraction code in an interactive environment."
+msgstr "対話環境で抽出コードをテストします。"
+
+#: ../../index.rst:95
+msgid ":doc:`topics/items`"
+msgstr ":doc:`topics/items`"
+
+#: ../../index.rst:95
+msgid "Define the data you want to scrape."
+msgstr "あなたがスクレイピングしたいと欲するデータを定義します。"
+
+#: ../../index.rst:98
+msgid ":doc:`topics/loaders`"
+msgstr ":doc:`topics/loaders`"
+
+#: ../../index.rst:98
+msgid "Populate your items with the extracted data."
+msgstr "抽出したデータをあなたのアイテムに入れます。"
+
+#: ../../index.rst:101
+msgid ":doc:`topics/item-pipeline`"
+msgstr ":doc:`topics/item-pipeline`"
+
+#: ../../index.rst:101
+msgid "Post-process and store your scraped data."
+msgstr "スクレイピングしたデータを後処理して保存します。"
+
+#: ../../index.rst:104
+msgid ":doc:`topics/feed-exports`"
+msgstr ":doc:`topics/feed-exports`"
+
+#: ../../index.rst:104
+msgid "Output your scraped data using different formats and storages."
+msgstr "さまざまな形式を使用して、さまざまストレージに、スクレイピングされたデータを出力します。"
+
+#: ../../index.rst:107
+msgid ":doc:`topics/request-response`"
+msgstr ":doc:`topics/request-response`"
+
+#: ../../index.rst:107
+msgid "Understand the classes used to represent HTTP requests and responses."
+msgstr "HTTPリクエストとレスポンスを表すために使用されるクラスを理解します。"
+
+#: ../../index.rst:110
+msgid ":doc:`topics/link-extractors`"
+msgstr ":doc:`topics/link-extractors`"
+
+#: ../../index.rst:110
+msgid "Convenient classes to extract links to follow from pages."
+msgstr "ページからたどるリンクを抽出する便利なクラス。"
+
+#: ../../index.rst:113
+msgid ":doc:`topics/settings`"
+msgstr ":doc:`topics/settings`"
+
+#: ../../index.rst:113
+msgid ""
+"Learn how to configure Scrapy and see all :ref:`available settings "
+"<topics-settings-ref>`."
+msgstr "Scrapyをどのように設定するか学びます。 :ref:`available settings <topics-settings-ref>` 参照。"
+
+#: ../../index.rst:117
+msgid ":doc:`topics/exceptions`"
+msgstr ":doc:`topics/exceptions`"
+
+#: ../../index.rst:116
+msgid "See all available exceptions and their meaning."
+msgstr "存在する全ての例外とその意味"
+
+#: ../../index.rst:133
+msgid ":doc:`topics/logging`"
+msgstr ":doc:`topics/logging`"
+
+#: ../../index.rst:133
+msgid "Learn how to use Python's builtin logging on Scrapy."
+msgstr "ScrapyでPython組み込みのロギングを使う方法を習います。"
+
+#: ../../index.rst:136
+msgid ":doc:`topics/stats`"
+msgstr ":doc:`topics/stats`"
+
+#: ../../index.rst:136
+msgid "Collect statistics about your scraping crawler."
+msgstr "あなたのスクレイピングクローラーについての統計情報を収集します。"
+
+#: ../../index.rst:139
+msgid ":doc:`topics/email`"
+msgstr ":doc:`topics/email`"
+
+#: ../../index.rst:139
+msgid "Send email notifications when certain events occur."
+msgstr "特定のイベントが発生したときに電子メール通知を送信します。"
+
+#: ../../index.rst:142
+msgid ":doc:`topics/telnetconsole`"
+msgstr ":doc:`topics/telnetconsole`"
+
+#: ../../index.rst:142
+msgid "Inspect a running crawler using a built-in Python console."
+msgstr "組み込みのPythonコンソールを使って、実行している最中のクローラーを詳しく調べます。"
+
+#: ../../index.rst:146
+msgid ":doc:`topics/webservice`"
+msgstr ":doc:`topics/webservice`"
+
+#: ../../index.rst:145
+msgid "Monitor and control a crawler using a web service."
+msgstr "Webサービスを使用してクローラーを監視および制御します。"
+
+#: ../../index.rst:170
+msgid ":doc:`faq`"
+msgstr ":doc:`faq`"
+
+#: ../../index.rst:170
+msgid "Get answers to most frequently asked questions."
+msgstr "F.A.Q.に対する回答を得ます。"
+
+#: ../../index.rst:173
+msgid ":doc:`topics/debug`"
+msgstr ":doc:`topics/debug`"
+
+#: ../../index.rst:173
+msgid "Learn how to debug common problems of your scrapy spider."
+msgstr "scrapyスパイダーの一般的な問題をデバッグする方法を学びます。"
+
+#: ../../index.rst:176
+msgid ":doc:`topics/contracts`"
+msgstr ":doc:`topics/contracts`"
+
+#: ../../index.rst:176
+msgid "Learn how to use contracts for testing your spiders."
+msgstr "スパイダーをテストするためにコントラクト(訳注: ``@url`` などの ``@`` で始まる、テスト用に用意された属性指定子)を使用する方法を学びます。"
+
+#: ../../index.rst:179
+msgid ":doc:`topics/practices`"
+msgstr ":doc:`topics/practices`"
+
+#: ../../index.rst:179
+msgid "Get familiar with some Scrapy common practices."
+msgstr "Scrapyのいくつかの一般的な慣例に親しみます。"
+
+#: ../../index.rst:182
+msgid ":doc:`topics/broad-crawls`"
+msgstr ":doc:`topics/broad-crawls`"
+
+#: ../../index.rst:182
+msgid "Tune Scrapy for crawling a lot domains in parallel."
+msgstr "多数のドメインを並行してクロールするためのScrapyの調整。"
+
+#: ../../index.rst:185
+msgid ":doc:`topics/developer-tools`"
+msgstr ":doc:`topics/developer-tools`"
+
+#: ../../index.rst:185
+msgid "Learn how to scrape with your browser's developer tools."
+msgstr "あなたのブラウザの開発ツールを使用してスクレイプする方法を学びます。"
+
+#: ../../index.rst:188
+msgid ":doc:`topics/dynamic-content`"
+msgstr ":doc:`topics/dynamic-content`"
+
+#: ../../index.rst:188
+msgid "Read webpage data that is loaded dynamically."
+msgstr "動的にロードされるWebページデータを読み取ります。"
+
+#: ../../index.rst:191
+msgid ":doc:`topics/leaks`"
+msgstr ":doc:`topics/leaks`"
+
+#: ../../index.rst:191
+msgid "Learn how to find and get rid of memory leaks in your crawler."
+msgstr "クローラーで、どのようにメモリリークを探して、そしてどのように取り除くかを学びます。"
+
+#: ../../index.rst:194
+msgid ":doc:`topics/media-pipeline`"
+msgstr ":doc:`topics/media-pipeline`"
+
+#: ../../index.rst:194
+msgid "Download files and/or images associated with your scraped items."
+msgstr "あなたがスクレイプしたアイテムに関連するファイルや画像をダウンロードします。"
+
+#: ../../index.rst:197
+msgid ":doc:`topics/deploy`"
+msgstr ":doc:`topics/deploy`"
+
+#: ../../index.rst:197
+msgid "Deploying your Scrapy spiders and run them in a remote server."
+msgstr "リモートサーバに、あなたのScrapyスパイダーを配置し実行します。"
+
+#: ../../index.rst:200
+msgid ":doc:`topics/autothrottle`"
+msgstr ":doc:`topics/autothrottle`"
+
+#: ../../index.rst:200
+msgid "Adjust crawl rate dynamically based on load."
+msgstr "負荷に応じてクロール速度を動的に調整します。"
+
+#: ../../index.rst:203
+msgid ":doc:`topics/benchmarking`"
+msgstr ":doc:`topics/benchmarking`"
+
+#: ../../index.rst:203
+msgid "Check how Scrapy performs on your hardware."
+msgstr "Scrapyがあなたのハードウェアでどのように機能するかをチェックします。"
+
+#: ../../index.rst:206
+msgid ":doc:`topics/jobs`"
+msgstr ":doc:`topics/jobs`"
+
+#: ../../index.rst:206
+msgid "Learn how to pause and resume crawls for large spiders."
+msgstr "大きなスパイダーのクロールを一時停止および再開する方法を学習します。"
+
+#: ../../index.rst:227
+msgid ":doc:`topics/architecture`"
+msgstr ":doc:`topics/architecture`"
+
+#: ../../index.rst:227
+msgid "Understand the Scrapy architecture."
+msgstr "Scrapyアーキテクチャを理解する。"
+
+#: ../../index.rst:230
+msgid ":doc:`topics/downloader-middleware`"
+msgstr ":doc:`topics/downloader-middleware`"
+
+#: ../../index.rst:230
+msgid "Customize how pages get requested and downloaded."
+msgstr "ページのリクエストとダウンロードの方法をカスタマイズします。"
+
+#: ../../index.rst:233
+msgid ":doc:`topics/spider-middleware`"
+msgstr ":doc:`topics/spider-middleware`"
+
+#: ../../index.rst:233
+msgid "Customize the input and output of your spiders."
+msgstr "あなたのスパイダーの入力と出力をカスタマイズします。"
+
+#: ../../index.rst:236
+msgid ":doc:`topics/extensions`"
+msgstr ":doc:`topics/extensions`"
+
+#: ../../index.rst:236
+msgid "Extend Scrapy with your custom functionality"
+msgstr "あなたのカスタム機能でScrapyを拡張する。"
+
+#: ../../index.rst:239
+msgid ":doc:`topics/api`"
+msgstr ":doc:`topics/api`"
+
+#: ../../index.rst:239
+msgid "Use it on extensions and middlewares to extend Scrapy functionality"
+msgstr "Scrapy機能を拡張するために拡張機能やミドルウェアを使用します。"
+
+#: ../../index.rst:242
+msgid ":doc:`topics/signals`"
+msgstr ":doc:`topics/signals`"
+
+#: ../../index.rst:242
+msgid "See all available signals and how to work with them."
+msgstr "利用可能なすべてのシグナルとそれらがどのように動くかをご覧下さい。"
+
+#: ../../index.rst:246
+msgid ":doc:`topics/exporters`"
+msgstr ":doc:`topics/exporters`"
+
+#: ../../index.rst:245
+msgid "Quickly export your scraped items to a file (XML, CSV, etc)."
+msgstr "スクレイプしたアイテムをファイル（XML、CSVなど）にすばやくエクスポートします。"
+
+#: ../../index.rst:260
+msgid ":doc:`news`"
+msgstr ":doc:`news`"
+
+#: ../../index.rst:260
+msgid "See what has changed in recent Scrapy versions."
+msgstr "最近のScrapyバージョンの変更点をご覧ください。"
+
+#: ../../index.rst:263
+msgid ":doc:`contributing`"
+msgstr ":doc:`contributing`"
+
+#: ../../index.rst:263
+msgid "Learn how to contribute to the Scrapy project."
+msgstr "Scrapyプロジェクトに貢献する方法を学びます。"
+
+#: ../../index.rst:265
+msgid ":doc:`versioning`"
+msgstr ":doc:`versioning`"
+
+#: ../../index.rst:266
+msgid "Understand Scrapy versioning and API stability."
+msgstr "Scrapyのバージョン管理とAPIの安定性を理解します。"
+
