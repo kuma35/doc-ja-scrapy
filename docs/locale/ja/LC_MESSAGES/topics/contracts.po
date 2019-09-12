@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-09-12 16:24+0900\n"
+"PO-Revision-Date: 2019-09-13 00:52+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -76,7 +76,7 @@ msgstr "このコントラクト(``@scrapes``)は、コールバックによっ�
 
 #: ../../topics/contracts.rst:66
 msgid "Use the :command:`check` command to run the contract checks."
-msgstr " :command:`check` コマンドを使用して、コントラクトチェックを実行します。"
+msgstr ":command:`check` コマンドを使用して、コントラクトチェックを実行します。"
 
 #: ../../topics/contracts.rst:69
 msgid "Custom Contracts"
@@ -147,7 +147,7 @@ msgstr "以下に、受信した応答のカスタムヘッダーの存在を確
 
 #: ../../topics/contracts.rst:140
 msgid "Detecting check runs"
-msgstr "チェック実行の検出"
+msgstr "``scrapy check`` 実行の検出"
 
 #: ../../topics/contracts.rst:142
 msgid ""
@@ -155,5 +155,5 @@ msgid ""
 "variable is set to the ``true`` string. You can use `os.environ`_ to "
 "perform any change to your spiders or your settings when ``scrapy check``"
 " is used::"
-msgstr "``scrapy check`` が実行されているとき、 ``SCRAPY_CHECK`` 環境変数は ``true`` 文字列に設定されます。 ``scrapy check`` が使用されている場合、 `os.environ`_ を使用して、スパイダーや設定に変更を加えることができます。::"
+msgstr "``scrapy check`` が実行されているとき、 ``SCRAPY_CHECK`` 環境変数を ``true`` 文字列に設定します。 ``scrapy check`` が使用されている場合、 `os.environ`_ を使用して、スパイダーや設定に変更を加えることができます。::"
 
