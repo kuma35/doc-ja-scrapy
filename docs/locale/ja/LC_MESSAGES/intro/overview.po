@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 08:59+0900\n"
-"PO-Revision-Date: 2019-09-10 20:56+0900\n"
+"PO-Revision-Date: 2019-09-14 02:50+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -62,25 +62,25 @@ msgstr "以下は、Webサイトhttp://quotes.toscrape.comから有名な引用�
 msgid ""
 "Put this in a text file, name it to something like ``quotes_spider.py`` "
 "and run the spider using the :command:`runspider` command::"
-msgstr ""
+msgstr "これをテキストファイルに入れ、「quotes_spider.py」などの名前を付けて、 :command:`runspider` コマンドを使用してスパイダーを実行します。::"
 
 #: ../../intro/overview.rst:52
 msgid ""
 "When this finishes you will have in the ``quotes.json`` file a list of "
 "the quotes in JSON format, containing text and author, looking like this "
 "(reformatted here for better readability)::"
-msgstr ""
+msgstr "これが完了すると、quotes.jsonファイルに、以下のようなテキストと著者を含むJSON形式の引用のリストができます(読みやすくするために整え直してあります)::"
 
 #: ../../intro/overview.rst:72
 msgid "What just happened?"
-msgstr ""
+msgstr "あ…ありのまま 今 起こった事を話すぜ！"
 
 #: ../../intro/overview.rst:74
 msgid ""
 "When you ran the command ``scrapy runspider quotes_spider.py``, Scrapy "
 "looked for a Spider definition inside it and ran it through its crawler "
 "engine."
-msgstr ""
+msgstr "あなたがコマンド ``scrapy runspider quotes_spider.py`` を実行すると、Scrapyはその内部でスパイダー定義を探し、そのクローラーエンジンを介して実行しました。"
 
 #: ../../intro/overview.rst:77
 msgid ""
@@ -92,7 +92,7 @@ msgid ""
 "dict with the extracted quote text and author, look for a link to the "
 "next page and schedule another request using the same ``parse`` method as"
 " callback."
-msgstr ""
+msgstr "クロールは ``start_urls`` 属性で定義されたURL群(この場合、 *humor* カテゴリのquoteのURLのみ)にリクエストを行うことで開始し、デフォルトのコールバックメソッド ``parse`` を呼び出して、引数としてレスポンスオブジェクトを渡します。 ``parse`` コールバックでは、CSSセレクターを使用してquote要素をループし、抽出されたquoteテキストと著者を含むPython dictを生成(yield)し、次のページへのリンクを探し、同一のコールバックメソッド ``parse`` を使用して次のリクエストをスケジュールします。"
 
 #: ../../intro/overview.rst:85
 msgid ""
@@ -102,8 +102,10 @@ msgid ""
 "and processed, it can send another request or do other things in the "
 "meantime. This also means that other requests can keep going even if some"
 " request fails or an error happens while handling it."
-msgstr ""
+msgstr "ここで、Scrapyの主な利点の1つに気付きます。リクエストは :ref:`スケジューリングと処理は非同期<topics-architecture>` です。つまり、Scrapyはリクエストが終了して処理されるのを待つ必要がなく、その間に別のリクエストを送信したり、他のことを実行したりできます。 これは、一部のリクエストが失敗したり、処理中にエラーが発生した場合でも、他のリクエストが続行できることも意味します。"
 
+# B&Lポライトネス理論
+# 彼らのポライトネス理論とは、“polite”という一般用語とは異なり、「円滑な人間関係を確立・維持するための言語行動」（宇佐美2002）と定義される、語用論の枠組みの中での概念である。(wikipedia)
 #: ../../intro/overview.rst:92
 msgid ""
 "While this enables you to do very fast crawls (sending multiple "
@@ -114,7 +116,7 @@ msgid ""
 "requests per domain or per IP, and even :ref:`using an auto-throttling "
 "extension <topics-autothrottle>` that tries to figure out these "
 "automatically."
-msgstr ""
+msgstr "これにより、非常に高速なクロール（フォールトトレラントな方法で複数の同時要求を同時に送信）が可能になりますが、Scrapyでは :ref:`いくつかの設定<topics-settings-ref>` を通してクロールのポライトネス(訳注:円滑な人間関係を確立・維持するための言語行動)を制御することもできます。各リクエスト間にダウンロード遅延を設定したり、ドメインごとまたはIPごとの同時リクエストの量を制限したり、これらを自動的に把握しようとする :ref:`自動スロットル拡張の使用<topics-autothrottle>` も可能です。"
 
 #: ../../intro/overview.rst:102
 msgid ""
@@ -123,45 +125,45 @@ msgid ""
 "example) or the storage backend (FTP or `Amazon S3`_, for example).  You "
 "can also write an :ref:`item pipeline <topics-item-pipeline>` to store "
 "the items in a database."
-msgstr ""
+msgstr "これは :ref:`feed exports <topics-feed-exports>` を使用してJSONファイルを生成します。エクスポート形式(例えばXMLやCSVなど)またはストレージバックエンド(例えば(FTPや `Amazon S3`_ )。あなたは  :ref:`item pipeline <topics-item-pipeline>` を記述して、アイテムをデータベースに保存することもできます。"
 
 #: ../../intro/overview.rst:111
 msgid "What else?"
-msgstr ""
+msgstr "他に何かある？"
 
 #: ../../intro/overview.rst:113
 msgid ""
 "You've seen how to extract and store items from a website using Scrapy, "
 "but this is just the surface. Scrapy provides a lot of powerful features "
 "for making scraping easy and efficient, such as:"
-msgstr ""
+msgstr "Scrapyを使用してWebサイトからアイテムを抽出および保存する方法を見てきましたが、これはほんのさわりです。 Scrapyはスクレイピングを簡単かつ効率的にするための次のような強力な機能を多数提供します。:"
 
 #: ../../intro/overview.rst:117
 msgid ""
 "Built-in support for :ref:`selecting and extracting <topics-selectors>` "
 "data from HTML/XML sources using extended CSS selectors and XPath "
 "expressions, with helper methods to extract using regular expressions."
-msgstr ""
+msgstr "HTML/XMLソースに対して、正規表現を使って抽出するヘルパーメソッドを有する、拡張されたCSSセレクタとXPath式を使ったデータの、組み込み済の :ref:`選択と抽出<topics-selectors>` のサポート。"
 
 #: ../../intro/overview.rst:121
 msgid ""
 "An :ref:`interactive shell console <topics-shell>` (IPython aware) for "
 "trying out the CSS and XPath expressions to scrape data, very useful when"
 " writing or debugging your spiders."
-msgstr ""
+msgstr ":ref:`対話シェル<topics-shell>` (IPython対応)は、CSSおよびXPath式を試してデータをスクレイピングするためのもので、スパイダーを作成またはデバッグするときに非常に便利です。"
 
 #: ../../intro/overview.rst:125
 msgid ""
 "Built-in support for :ref:`generating feed exports <topics-feed-exports>`"
 " in multiple formats (JSON, CSV, XML) and storing them in multiple "
 "backends (FTP, S3, local filesystem)"
-msgstr ""
+msgstr "複数の形式(JSON、CSV、XML)で生成し、複数のバックエンド(FTP、S3、ローカルファイルシステム)に保存するための :ref:`フィードエクスポート生成<topics-feed-exports>` を組み込みでサポート。"
 
 #: ../../intro/overview.rst:129
 msgid ""
 "Robust encoding support and auto-detection, for dealing with foreign, "
 "non-standard and broken encoding declarations."
-msgstr ""
+msgstr "外部の非標準の壊れたエンコーディング宣言を処理するための、堅牢なエンコーディングのサポートと自動検出。"
 
 #: ../../intro/overview.rst:132
 msgid ""
@@ -169,42 +171,42 @@ msgid ""
 "plug in your own functionality using :ref:`signals <topics-signals>` and "
 "a well-defined API (middlewares, :ref:`extensions <topics-extensions>`, "
 "and :ref:`pipelines <topics-item-pipeline>`)."
-msgstr ""
+msgstr ":ref:`強力な拡張性サポート<extending-scrapy>` により、 :ref:`シグナル<topics-signals>` と明確に定義されたAPI(ミドルウェアと :ref:`拡張機能<topics-extensions>` と :ref:`パイプライン<topics-item-pipeline>`)を使用して、あなた独自の機能をプラグインできます。"
 
 #: ../../intro/overview.rst:137
 msgid "Wide range of built-in extensions and middlewares for handling:"
-msgstr ""
+msgstr "幅広い組み込みの拡張機能と処理用のミドルウェア:"
 
 #: ../../intro/overview.rst:139
 msgid "cookies and session handling"
-msgstr ""
+msgstr "クッキーやセッションの取扱"
 
 #: ../../intro/overview.rst:140
 msgid "HTTP features like compression, authentication, caching"
-msgstr ""
+msgstr "圧縮、認証、キャッシングなどのHTTP機能"
 
 #: ../../intro/overview.rst:141
 msgid "user-agent spoofing"
-msgstr ""
+msgstr "user-agentのなりすまし(spoofing)"
 
 #: ../../intro/overview.rst:142
 msgid "robots.txt"
-msgstr ""
+msgstr "robots.txt"
 
 #: ../../intro/overview.rst:143
 msgid "crawl depth restriction"
-msgstr ""
+msgstr "クロールの深さの制限"
 
 #: ../../intro/overview.rst:144
 msgid "and more"
-msgstr ""
+msgstr "などなど"
 
 #: ../../intro/overview.rst:146
 msgid ""
 "A :ref:`Telnet console <topics-telnetconsole>` for hooking into a Python "
 "console running inside your Scrapy process, to introspect and debug your "
 "crawler"
-msgstr ""
+msgstr ":ref:`Telnet<topics-telnetconsole>` は、クローラー内部の調査およびデバッグのために、あなたのScrapyプロセス内で実行されているPythonコンソールにフックします。"
 
 #: ../../intro/overview.rst:150
 msgid ""
@@ -212,11 +214,11 @@ msgid ""
 "and XML/CSV feeds, a media pipeline for :ref:`automatically downloading "
 "images <topics-media-pipeline>` (or any other media) associated with the "
 "scraped items, a caching DNS resolver, and much more!"
-msgstr ""
+msgstr "さらに、その他の便利な機能として、サイトマップ(`Sitemaps`_)およびXML/CSVフィードからサイトをクロールするための再利用可能なスパイダーや、 スクレイプされたアイテムに関連付けられている、 :ref:`画像を自動ダウンロード<topics-media-pipeline>` のためのメディアパイプライン(またはその他のメディア)や、DNSリゾルバのキャッシングなど、その他多数あります！"
 
 #: ../../intro/overview.rst:156
 msgid "What's next?"
-msgstr ""
+msgstr "さてお次は？"
 
 #: ../../intro/overview.rst:158
 msgid ""
@@ -224,5 +226,5 @@ msgid ""
 ":ref:`follow through the tutorial <intro-tutorial>` to learn how to "
 "create a full-blown Scrapy project and `join the community`_. Thanks for "
 "your interest!"
-msgstr ""
+msgstr "お次は、 :ref:`Scrapyインストール<intro-install>` を行い :ref:`チュートリアル<intro-tutorial>` で本格的なScrapyプロジェクトを作成する方法を学び、Scrapyコミュニティに参加(`join the community`_)します。Scrapyに興味を持ってくれてありがとな！"
 
