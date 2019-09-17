@@ -1,5 +1,3 @@
 #!/bin/bash
-pushd $HOME/work/thinking-forth-translate
 make gettext
 sphinx-intl update -p _build/gettext
-popd
