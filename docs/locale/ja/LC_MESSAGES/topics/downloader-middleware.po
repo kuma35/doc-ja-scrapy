@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"POT-Creation-Date: 2019-09-16 22:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,7 +153,9 @@ msgid ""
 "raised exception, it is ignored and not logged (unlike other exceptions)."
 msgstr ""
 
-#: ../../topics/downloader-middleware.rst
+#: ../../topics/downloader-middleware.rst of
+#: scrapy.robotstxt.RobotParser.allowed
+#: scrapy.robotstxt.RobotParser.from_crawler
 msgid "パラメータ"
 msgstr ""
 
@@ -1492,6 +1494,34 @@ msgid ""
 "You can implement support for a new robots.txt_ parser by subclassing the"
 " abstract base class :class:`~scrapy.robotstxt.RobotParser` and "
 "implementing the methods described below."
+msgstr ""
+
+#: of scrapy.robotstxt.RobotParser.allowed:1
+msgid ""
+"Return ``True`` if  ``user_agent`` is allowed to crawl ``url``, otherwise"
+" return ``False``."
+msgstr ""
+
+#: of scrapy.robotstxt.RobotParser.allowed:3
+msgid "Absolute URL"
+msgstr ""
+
+#: of scrapy.robotstxt.RobotParser.allowed:6
+msgid "User agent"
+msgstr ""
+
+#: of scrapy.robotstxt.RobotParser.from_crawler:1
+msgid ""
+"Parse the content of a robots.txt_ file as bytes. This must be a class "
+"method. It must return a new instance of the parser backend."
+msgstr ""
+
+#: of scrapy.robotstxt.RobotParser.from_crawler:4
+msgid "crawler which made the request"
+msgstr ""
+
+#: of scrapy.robotstxt.RobotParser.from_crawler:7
+msgid "content of a robots.txt_ file."
 msgstr ""
 
 #: ../../topics/downloader-middleware.rst:1105

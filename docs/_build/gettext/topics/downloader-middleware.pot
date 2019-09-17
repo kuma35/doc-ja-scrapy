@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Scrapy \n"
+"Project-Id-Version: Scrapy 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"POT-Creation-Date: 2019-09-16 22:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,6 +100,8 @@ msgstr ""
 #: ../../topics/downloader-middleware.rst:0
 #: ../../topics/downloader-middleware.rst:0
 #: ../../topics/downloader-middleware.rst:0
+#: ../../../scrapy/robotstxt.py:docstring of scrapy.robotstxt.RobotParser.allowed:0
+#: ../../../scrapy/robotstxt.py:docstring of scrapy.robotstxt.RobotParser.from_crawler:0
 msgid "パラメータ"
 msgstr ""
 
@@ -1135,6 +1137,30 @@ msgstr ""
 
 #: ../../topics/downloader-middleware.rst:1092
 msgid "You can implement support for a new robots.txt_ parser by subclassing the abstract base class :class:`~scrapy.robotstxt.RobotParser` and implementing the methods described below."
+msgstr ""
+
+#: ../../../scrapy/robotstxt.py:docstring of scrapy.robotstxt.RobotParser.allowed:1
+msgid "Return ``True`` if  ``user_agent`` is allowed to crawl ``url``, otherwise return ``False``."
+msgstr ""
+
+#: ../../../scrapy/robotstxt.py:docstring of scrapy.robotstxt.RobotParser.allowed:3
+msgid "Absolute URL"
+msgstr ""
+
+#: ../../../scrapy/robotstxt.py:docstring of scrapy.robotstxt.RobotParser.allowed:6
+msgid "User agent"
+msgstr ""
+
+#: ../../../scrapy/robotstxt.py:docstring of scrapy.robotstxt.RobotParser.from_crawler:1
+msgid "Parse the content of a robots.txt_ file as bytes. This must be a class method. It must return a new instance of the parser backend."
+msgstr ""
+
+#: ../../../scrapy/robotstxt.py:docstring of scrapy.robotstxt.RobotParser.from_crawler:4
+msgid "crawler which made the request"
+msgstr ""
+
+#: ../../../scrapy/robotstxt.py:docstring of scrapy.robotstxt.RobotParser.from_crawler:7
+msgid "content of a robots.txt_ file."
 msgstr ""
 
 #: ../../topics/downloader-middleware.rst:1105

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Scrapy \n"
+"Project-Id-Version: Scrapy 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"POT-Creation-Date: 2019-09-16 22:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -179,6 +179,18 @@ msgstr ""
 
 #: ../../topics/request-response.rst:191
 msgid "Return a Request object with the same members, except for those members given new values by whichever keyword arguments are specified. The :attr:`Request.cb_kwargs` and :attr:`Request.meta` attributes are shallow copied by default (unless new values are given as arguments). See also :ref:`topics-request-response-ref-request-callback-arguments`."
+msgstr ""
+
+#: ../../../scrapy/http/request/__init__.py:docstring of scrapy.http.Request.from_curl:1
+msgid "Create a Request object from a string containing a `cURL <https://curl.haxx.se/>`_ command. It populates the HTTP method, the URL, the headers, the cookies and the body. It accepts the same arguments as the :class:`Request` class, taking preference and overriding the values of the same arguments contained in the cURL command."
+msgstr ""
+
+#: ../../../scrapy/http/request/__init__.py:docstring of scrapy.http.Request.from_curl:8
+msgid "Unrecognized options are ignored by default. To raise an error when finding unknown options call this method by passing ``ignore_unknown_options=False``."
+msgstr ""
+
+#: ../../../scrapy/http/request/__init__.py:docstring of scrapy.http.Request.from_curl:12
+msgid "Using :meth:`from_curl` from :class:`~scrapy.http.Request` subclasses, such as :class:`~scrapy.http.JSONRequest`, or :class:`~scrapy.http.XmlRpcRequest`, as well as having :ref:`downloader middlewares <topics-downloader-middleware>` and :ref:`spider middlewares <topics-spider-middleware>` enabled, such as :class:`~scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware`, :class:`~scrapy.downloadermiddlewares.useragent.UserAgentMiddleware`, or :class:`~scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware`, may modify the :class:`~scrapy.http.Request` object."
 msgstr ""
 
 #: ../../topics/request-response.rst:202
@@ -601,6 +613,14 @@ msgstr ""
 msgid "This is a wrapper over `urlparse.urljoin`_, it's merely an alias for making this call::"
 msgstr ""
 
+#: ../../../scrapy/http/response/__init__.py:docstring of scrapy.http.Response.follow:1
+msgid "Return a :class:`~.Request` instance to follow a link ``url``. It accepts the same arguments as ``Request.__init__`` method, but ``url`` can be a relative URL or a ``scrapy.link.Link`` object, not only an absolute URL."
+msgstr ""
+
+#: ../../../scrapy/http/response/__init__.py:docstring of scrapy.http.Response.follow:6
+msgid ":class:`~.TextResponse` provides a :meth:`~.TextResponse.follow`  method which supports selectors in addition to absolute/relative URLs and Link objects."
+msgstr ""
+
 #: ../../topics/request-response.rst:706
 msgid "Response subclasses"
 msgstr ""
@@ -675,6 +695,30 @@ msgstr ""
 
 #: ../../topics/request-response.rst:783
 msgid "A shortcut to ``TextResponse.selector.css(query)``::"
+msgstr ""
+
+#: ../../../scrapy/http/response/text.py:docstring of scrapy.http.TextResponse.follow:1
+msgid "Return a :class:`~.Request` instance to follow a link ``url``. It accepts the same arguments as ``Request.__init__`` method, but ``url`` can be not only an absolute URL, but also"
+msgstr ""
+
+#: ../../../scrapy/http/response/text.py:docstring of scrapy.http.TextResponse.follow:5
+msgid "a relative URL;"
+msgstr ""
+
+#: ../../../scrapy/http/response/text.py:docstring of scrapy.http.TextResponse.follow:6
+msgid "a scrapy.link.Link object (e.g. a link extractor result);"
+msgstr ""
+
+#: ../../../scrapy/http/response/text.py:docstring of scrapy.http.TextResponse.follow:7
+msgid "an attribute Selector (not SelectorList) - e.g. ``response.css('a::attr(href)')[0]`` or ``response.xpath('//img/@src')[0]``."
+msgstr ""
+
+#: ../../../scrapy/http/response/text.py:docstring of scrapy.http.TextResponse.follow:10
+msgid "a Selector for ``<a>`` or ``<link>`` element, e.g. ``response.css('a.my_link')[0]``."
+msgstr ""
+
+#: ../../../scrapy/http/response/text.py:docstring of scrapy.http.TextResponse.follow:13
+msgid "See :ref:`response-follow-example` for usage examples."
 msgstr ""
 
 #: ../../topics/request-response.rst:791

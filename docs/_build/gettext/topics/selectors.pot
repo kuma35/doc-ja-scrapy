@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Scrapy \n"
+"Project-Id-Version: Scrapy 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"POT-Creation-Date: 2019-09-16 22:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -198,6 +198,8 @@ msgid "``a::attr(href)`` selects the *href* attribute value of descendant links:
 msgstr ""
 
 #: ../../topics/selectors.rst:305
+#: ../../topics/selectors.rst:933
+#: ../../topics/selectors.rst:973
 msgid "See also: :ref:`selecting-attributes`."
 msgstr ""
 
@@ -582,6 +584,22 @@ msgstr ""
 msgid "Parsel also simplifies adding your own XPath extensions."
 msgstr ""
 
+#: ../../../venv/lib/python3.6/site-packages/parsel/xpathfuncs.py:docstring of parsel.xpathfuncs.set_xpathfunc:1
+msgid "Register a custom extension function to use in XPath expressions."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/xpathfuncs.py:docstring of parsel.xpathfuncs.set_xpathfunc:3
+msgid "The function ``func`` registered under ``fname`` identifier will be called for every matching node, being passed a ``context`` parameter as well as any parameters passed from the corresponding XPath expression."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/xpathfuncs.py:docstring of parsel.xpathfuncs.set_xpathfunc:7
+msgid "If ``func`` is ``None``, the extension function will be removed."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/xpathfuncs.py:docstring of parsel.xpathfuncs.set_xpathfunc:9
+msgid "See more `in lxml documentation`_."
+msgstr ""
+
 #: ../../topics/selectors.rst:905
 msgid "Built-in Selectors reference"
 msgstr ""
@@ -590,8 +608,182 @@ msgstr ""
 msgid "Selector objects"
 msgstr ""
 
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector:1
+msgid "An instance of :class:`Selector` is a wrapper over response to select certain parts of its content."
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector:4
+msgid "``response`` is an :class:`~scrapy.http.HtmlResponse` or an :class:`~scrapy.http.XmlResponse` object that will be used for selecting and extracting data."
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector:8
+msgid "``text`` is a unicode string or utf-8 encoded text for cases when a ``response`` isn't available. Using ``text`` and ``response`` together is undefined behavior."
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector:12
+msgid "``type`` defines the selector type, it can be ``\"html\"``, ``\"xml\"`` or ``None`` (default)."
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector:15
+msgid "If ``type`` is ``None``, the selector automatically chooses the best type based on ``response`` type (see below), or defaults to ``\"html\"`` in case it is used together with ``text``."
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector:19
+msgid "If ``type`` is ``None`` and a ``response`` is passed, the selector type is inferred from the response type as follows:"
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector:22
+msgid "``\"html\"`` for :class:`~scrapy.http.HtmlResponse` type"
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector:23
+msgid "``\"xml\"`` for :class:`~scrapy.http.XmlResponse` type"
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector:24
+msgid "``\"html\"`` for anything else"
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector:26
+msgid "Otherwise, if ``type`` is set, the selector type will be forced and no detection will occur."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.xpath:1
+msgid "Find nodes matching the xpath ``query`` and return the result as a :class:`SelectorList` instance with all elements flattened. List elements implement :class:`Selector` interface too."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.xpath:5
+msgid "``query`` is a string containing the XPATH query to apply."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.xpath:7
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.xpath:6
+msgid "``namespaces`` is an optional ``prefix: namespace-uri`` mapping (dict) for additional prefixes to those registered with ``register_namespace(prefix, uri)``. Contrary to ``register_namespace()``, these prefixes are not saved for future calls."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.xpath:12
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.xpath:11
+msgid "Any additional named arguments can be used to pass values for XPath variables in the XPath expression, e.g.::"
+msgstr ""
+
+#: ../../topics/selectors.rst:919
+msgid "For convenience, this method can be called as ``response.xpath()``"
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.css:1
+msgid "Apply the given CSS selector and return a :class:`SelectorList` instance."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.css:3
+msgid "``query`` is a string containing the CSS selector to apply."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.css:5
+msgid "In the background, CSS queries are translated into XPath queries using `cssselect`_ library and run ``.xpath()`` method."
+msgstr ""
+
+#: ../../topics/selectors.rst:925
+msgid "For convenience, this method can be called as ``response.css()``"
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.get:1
+msgid "Serialize and return the matched nodes in a single unicode string. Percent encoded content is unquoted."
+msgstr ""
+
+#: ../../topics/selectors.rst:929
+#: ../../topics/selectors.rst:961
+#: ../../topics/selectors.rst:965
+msgid "See also: :ref:`old-extraction-api`"
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.Selector.attrib:1
+msgid "Return the attributes dictionary for underlying element."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.re:1
+msgid "Apply the given regex and return a list of unicode strings with the matches."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.re:4
+msgid "``regex`` can be either a compiled regular expression or a string which will be compiled to a regular expression using ``re.compile(regex)``."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.re:7
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.re_first:5
+msgid "By default, character entity references are replaced by their corresponding character (except for ``&amp;`` and ``&lt;``). Passing ``replace_entities`` as ``False`` switches off these replacements."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.re_first:1
+msgid "Apply the given regex and return the first unicode string which matches. If there is no match, return the default value (``None`` if the argument is not provided)."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.register_namespace:1
+msgid "Register the given namespace to be used in this :class:`Selector`. Without registering namespaces you can't select or extract data from non-standard namespaces. See :ref:`selector-examples-xml`."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.remove_namespaces:1
+msgid "Remove all namespaces, allowing to traverse the document using namespace-less xpaths. See :ref:`removing-namespaces`."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.__bool__:1
+msgid "Return ``True`` if there is any real content selected or ``False`` otherwise.  In other words, the boolean value of a :class:`Selector` is given by the contents it selects."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.Selector.getall:1
+msgid "Serialize and return the matched node in a 1-element list of unicode strings."
+msgstr ""
+
+#: ../../topics/selectors.rst:947
+msgid "This method is added to Selector for consistency; it is more useful with SelectorList. See also: :ref:`old-extraction-api`"
+msgstr ""
+
 #: ../../topics/selectors.rst:951
 msgid "SelectorList objects"
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.SelectorList:1
+msgid "The :class:`SelectorList` class is a subclass of the builtin ``list`` class, which provides a few additional methods."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.xpath:1
+msgid "Call the ``.xpath()`` method for each element in this list and return their results flattened as another :class:`SelectorList`."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.xpath:4
+msgid "``query`` is the same argument as the one in :meth:`Selector.xpath`"
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.css:1
+msgid "Call the ``.css()`` method for each element in this list and return their results flattened as another :class:`SelectorList`."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.css:4
+msgid "``query`` is the same argument as the one in :meth:`Selector.css`"
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.getall:1
+msgid "Call the ``.get()`` method for each element is this list and return their results flattened, as a list of unicode strings."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.get:1
+msgid "Return the result of ``.get()`` for the first element in this list. If the list is empty, return the default value."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.re:1
+msgid "Call the ``.re()`` method for each element in this list and return their results flattened, as a list of unicode strings."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.re:4
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.re_first:6
+msgid "By default, character entity references are replaced by their corresponding character (except for ``&amp;`` and ``&lt;``. Passing ``replace_entities`` as ``False`` switches off these replacements."
+msgstr ""
+
+#: ../../../venv/lib/python3.6/site-packages/parsel/selector.py:docstring of scrapy.selector.SelectorList.re_first:1
+msgid "Call the ``.re()`` method for the first element in this list and return the result in an unicode string. If the list is empty or the regex doesn't match anything, return the default value (``None`` if the argument is not provided)."
+msgstr ""
+
+#: ../../../scrapy/selector/unified.py:docstring of scrapy.selector.SelectorList.attrib:1
+msgid "Return the attributes dictionary for the first element. If the list is empty, return an empty dict."
 msgstr ""
 
 #: ../../topics/selectors.rst:978

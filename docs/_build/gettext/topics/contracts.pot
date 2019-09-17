@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Scrapy \n"
+"Project-Id-Version: Scrapy 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"POT-Creation-Date: 2019-09-16 22:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,6 +98,10 @@ msgstr ""
 
 #: ../../topics/contracts.rst:113
 msgid "Raise :class:`~scrapy.exceptions.ContractFail` from :class:`~scrapy.contracts.Contract.pre_process` or :class:`~scrapy.contracts.Contract.post_process` if expectations are not met:"
+msgstr ""
+
+#: ../../../scrapy/exceptions.py:docstring of scrapy.exceptions.ContractFail:1
+msgid "Error raised in case of a failing contract"
 msgstr ""
 
 #: ../../topics/contracts.rst:119

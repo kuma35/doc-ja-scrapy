@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"POT-Creation-Date: 2019-09-16 22:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -582,6 +582,13 @@ msgstr ""
 msgid ":class:`scrapy.spidermiddlewares.referer.UnsafeUrlPolicy`"
 msgstr ""
 
+#: of scrapy.spidermiddlewares.referer.DefaultReferrerPolicy:1
+msgid ""
+"A variant of \"no-referrer-when-downgrade\", with the addition that "
+"\"Referer\" is not sent if the parent request was using ``file://`` or "
+"``s3://`` scheme."
+msgstr ""
+
 #: ../../topics/spider-middleware.rst:397
 msgid ""
 "Scrapy's default referrer policy — just like `\"no-referrer-when-"
@@ -596,6 +603,44 @@ msgid ""
 "information for cross-domain requests."
 msgstr ""
 
+#: of scrapy.spidermiddlewares.referer.NoReferrerPolicy:1
+msgid "https://www.w3.org/TR/referrer-policy/#referrer-policy-no-referrer"
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.NoReferrerPolicy:3
+msgid ""
+"The simplest policy is \"no-referrer\", which specifies that no referrer "
+"information is to be sent along with requests made from a particular "
+"request client to any origin. The header will be omitted entirely."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.NoReferrerWhenDowngradePolicy:1
+msgid ""
+"https://www.w3.org/TR/referrer-policy/#referrer-policy-no-referrer-when-"
+"downgrade"
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.NoReferrerWhenDowngradePolicy:3
+msgid ""
+"The \"no-referrer-when-downgrade\" policy sends a full URL along with "
+"requests from a TLS-protected environment settings object to a "
+"potentially trustworthy URL, and requests from clients which are not TLS-"
+"protected to any origin."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.NoReferrerWhenDowngradePolicy:7
+msgid ""
+"Requests from TLS-protected clients to non-potentially trustworthy URLs, "
+"on the other hand, will contain no referrer information. A Referer HTTP "
+"header will not be sent."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.NoReferrerWhenDowngradePolicy:11
+msgid ""
+"This is a user agent's default behavior, if no policy is otherwise "
+"specified."
+msgstr ""
+
 #: ../../topics/spider-middleware.rst:409
 msgid ""
 "\"no-referrer-when-downgrade\" policy is the W3C-recommended default, and"
@@ -606,6 +651,121 @@ msgstr ""
 msgid ""
 "However, it is NOT Scrapy's default referrer policy (see "
 ":class:`DefaultReferrerPolicy`)."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.SameOriginPolicy:1
+msgid "https://www.w3.org/TR/referrer-policy/#referrer-policy-same-origin"
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.SameOriginPolicy:3
+msgid ""
+"The \"same-origin\" policy specifies that a full URL, stripped for use as"
+" a referrer, is sent as referrer information when making same-origin "
+"requests from a particular request client."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.SameOriginPolicy:6
+msgid ""
+"Cross-origin requests, on the other hand, will contain no referrer "
+"information. A Referer HTTP header will not be sent."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.OriginPolicy:1
+msgid "https://www.w3.org/TR/referrer-policy/#referrer-policy-origin"
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.OriginPolicy:3
+msgid ""
+"The \"origin\" policy specifies that only the ASCII serialization of the "
+"origin of the request client is sent as referrer information when making "
+"both same-origin requests and cross-origin requests from a particular "
+"request client."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.StrictOriginPolicy:1
+msgid "https://www.w3.org/TR/referrer-policy/#referrer-policy-strict-origin"
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.StrictOriginPolicy:3
+msgid ""
+"The \"strict-origin\" policy sends the ASCII serialization of the origin "
+"of the request client when making requests: - from a TLS-protected "
+"environment settings object to a potentially trustworthy URL, and - from "
+"non-TLS-protected environment settings objects to any origin."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.StrictOriginPolicy:8
+msgid ""
+"Requests from TLS-protected request clients to non- potentially "
+"trustworthy URLs, on the other hand, will contain no referrer "
+"information. A Referer HTTP header will not be sent."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.OriginWhenCrossOriginPolicy:1
+msgid ""
+"https://www.w3.org/TR/referrer-policy/#referrer-policy-origin-when-cross-"
+"origin"
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.OriginWhenCrossOriginPolicy:3
+msgid ""
+"The \"origin-when-cross-origin\" policy specifies that a full URL, "
+"stripped for use as a referrer, is sent as referrer information when "
+"making same-origin requests from a particular request client, and only "
+"the ASCII serialization of the origin of the request client is sent as "
+"referrer information when making cross-origin requests from a particular "
+"request client."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy:1
+msgid ""
+"https://www.w3.org/TR/referrer-policy/#referrer-policy-strict-origin-"
+"when-cross-origin"
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy:3
+msgid ""
+"The \"strict-origin-when-cross-origin\" policy specifies that a full URL,"
+" stripped for use as a referrer, is sent as referrer information when "
+"making same-origin requests from a particular request client, and only "
+"the ASCII serialization of the origin of the request client when making "
+"cross-origin requests:"
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy:9
+msgid ""
+"from a TLS-protected environment settings object to a potentially "
+"trustworthy URL, and"
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy:10
+msgid "from non-TLS-protected environment settings objects to any origin."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy:12
+msgid ""
+"Requests from TLS-protected clients to non- potentially trustworthy URLs,"
+" on the other hand, will contain no referrer information. A Referer HTTP "
+"header will not be sent."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.UnsafeUrlPolicy:1
+msgid "https://www.w3.org/TR/referrer-policy/#referrer-policy-unsafe-url"
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.UnsafeUrlPolicy:3
+msgid ""
+"The \"unsafe-url\" policy specifies that a full URL, stripped for use as "
+"a referrer, is sent along with both cross-origin requests and same-origin"
+" requests made from a particular request client."
+msgstr ""
+
+#: of scrapy.spidermiddlewares.referer.UnsafeUrlPolicy:7
+msgid ""
+"Note: The policy's name doesn't lie; it is unsafe. This policy will leak "
+"origins and paths from TLS-protected resources to insecure origins. "
+"Carefully consider the impact of setting such a policy for potentially "
+"sensitive documents."
 msgstr ""
 
 #: ../../topics/spider-middleware.rst:426

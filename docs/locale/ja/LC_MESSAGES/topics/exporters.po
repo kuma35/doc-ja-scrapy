@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"POT-Creation-Date: 2019-09-16 22:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,7 +183,7 @@ msgid ""
 "``str`` using the encoding declared in the :attr:`encoding` attribute."
 msgstr ""
 
-#: ../../topics/exporters.rst
+#: ../../topics/exporters.rst of scrapy.exporters.MarshalItemExporter
 msgid "パラメータ"
 msgstr ""
 
@@ -278,6 +278,18 @@ msgstr ""
 
 #: ../../topics/exporters.rst:227
 msgid "PythonItemExporter"
+msgstr ""
+
+#: of scrapy.exporters.PythonItemExporter:1
+msgid ""
+"This is a base class for item exporters that extends "
+":class:`BaseItemExporter` with support for nested items."
+msgstr ""
+
+#: of scrapy.exporters.PythonItemExporter:4
+msgid ""
+"It serializes items to built-in Python types, so that any serialization "
+"library (e.g. :mod:`json` or msgpack_) can be used on top of it."
 msgstr ""
 
 #: ../../topics/exporters.rst:235
@@ -443,5 +455,16 @@ msgstr ""
 
 #: ../../topics/exporters.rst:421
 msgid "MarshalItemExporter"
+msgstr ""
+
+#: of scrapy.exporters.MarshalItemExporter:1
+msgid "Exports items in a Python-specific binary format (see :mod:`marshal`)."
+msgstr ""
+
+#: of scrapy.exporters.MarshalItemExporter:4
+msgid ""
+"The file-like object to use for exporting the data. Its ``write`` method "
+"should accept :class:`bytes` (a disk file opened in binary mode, a "
+":class:`~io.BytesIO` object, etc)"
 msgstr ""
 
