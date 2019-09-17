@@ -15,6 +15,6 @@ You can find more information about it in the project's README.
 
 If you're familiar with git, you can checkout the code. Otherwise you can
 download the project as a zip file by clicking
-`here <https://github.com/scrapy/quotesbot/archive/master.zip>`_.
+`<https://github.com/scrapy/quotesbot/archive/master.zip>`_.
 
 .. _quotesbot: https://github.com/scrapy/quotesbot

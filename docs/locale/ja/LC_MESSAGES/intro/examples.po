@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2019-09-16 22:00+0900\n"
+"PO-Revision-Date: 2019-09-16 22:03+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../intro/examples.rst:5
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../intro/examples.rst:7
 msgid ""
@@ -29,6 +30,9 @@ msgid ""
 "for http://quotes.toscrape.com, one using CSS selectors and another one "
 "using XPath expressions."
 msgstr ""
+"学ぶための最良の方法は例であり、Scrapyも例外ではありません。 このため、 quotesbot_ "
+"という名前のサンプルScrapyプロジェクトがあります。あなたはこのプロジェクトを使用して、Scrapyをプレイし、学習することができます。 "
+"これには、http：//quotes.toscrape.comの2つのスパイダーが含まれています。1つはCSSセレクターを使用し、もう1つはXPath式を使用します。"
 
 #: ../../intro/examples.rst:13
 msgid ""
@@ -36,11 +40,13 @@ msgid ""
 "https://github.com/scrapy/quotesbot. You can find more information about "
 "it in the project's README."
 msgstr ""
+"quotesbot_ プロジェクトは、https：//github.com/scrapy/quotesbotで入手できます。 "
+"プロジェクトのREADMEで詳細を確認できます。"
 
 #: ../../intro/examples.rst:16
 msgid ""
 "If you're familiar with git, you can checkout the code. Otherwise you can"
-" download the project as a zip file by clicking `here "
-"<https://github.com/scrapy/quotesbot/archive/master.zip>`_."
-msgstr ""
+" download the project as a zip file by clicking "
+"`<https://github.com/scrapy/quotesbot/archive/master.zip>`_."
+msgstr "あなたがgitに精通している場合は、コードをチェックアウトできます。 それ以外の場合は、 `<https://github.com/scrapy/quotesbot/archive/master.zip>`_ をクリックして、プロジェクトをzipファイルとしてダウンロードできます。"
 

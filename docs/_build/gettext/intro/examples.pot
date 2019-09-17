@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Scrapy \n"
+"Project-Id-Version: Scrapy 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"POT-Creation-Date: 2019-09-16 22:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,6 @@ msgid "The quotesbot_ project is available at: https://github.com/scrapy/quotesb
 msgstr ""
 
 #: ../../intro/examples.rst:16
-msgid "If you're familiar with git, you can checkout the code. Otherwise you can download the project as a zip file by clicking `here <https://github.com/scrapy/quotesbot/archive/master.zip>`_."
+msgid "If you're familiar with git, you can checkout the code. Otherwise you can download the project as a zip file by clicking `<https://github.com/scrapy/quotesbot/archive/master.zip>`_."
 msgstr ""
 
