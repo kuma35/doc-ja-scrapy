@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-18 15:47+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,179 +19,179 @@ msgstr ""
 
 #: ../../topics/commands.rst:5
 msgid "Command line tool"
-msgstr ""
+msgstr "コマンドラインツール"
 
 #: ../../topics/commands.rst:9
 msgid ""
 "Scrapy is controlled through the ``scrapy`` command-line tool, to be "
 "referred here as the \"Scrapy tool\" to differentiate it from the sub-"
 "commands, which we just call \"commands\" or \"Scrapy commands\"."
-msgstr ""
+msgstr "Scrapyは、 ``scrapy`` コマンドラインツール（ここでは「Scrapyツール」と呼びます）を通じて制御され、単に「コマンド」または「Scrapyコマンド」と呼ばれるサブコマンドと区別します。"
 
 #: ../../topics/commands.rst:13
 msgid ""
 "The Scrapy tool provides several commands, for multiple purposes, and "
 "each one accepts a different set of arguments and options."
-msgstr ""
+msgstr "Scrapyツールは複数の目的のためにいくつかのコマンドを提供し、それぞれが異なる引数とオプションの組を受け入れます。"
 
 #: ../../topics/commands.rst:16
 msgid ""
 "(The ``scrapy deploy`` command has been removed in 1.0 in favor of the "
 "standalone ``scrapyd-deploy``. See `Deploying your project`_.)"
-msgstr ""
+msgstr "(「scrapy deploy」コマンドは1.0で削除され、スタンドアロンの「scrapyd-deploy」に置き換えられました。 `Deploying your project`_ を参照してください。)"
 
 #: ../../topics/commands.rst:22
 msgid "Configuration settings"
-msgstr ""
+msgstr "構成(configuration)の設定"
 
 #: ../../topics/commands.rst:24
 msgid ""
 "Scrapy will look for configuration parameters in ini-style ``scrapy.cfg``"
 " files in standard locations:"
-msgstr ""
+msgstr "Scrapyは、標準の場所にあるはずの、iniファイルスタイルの ``scrapy.cfg`` ファイルの構成パラメーターを探します。:"
 
 #: ../../topics/commands.rst:27
 msgid "``/etc/scrapy.cfg`` or ``c:\\scrapy\\scrapy.cfg`` (system-wide),"
-msgstr ""
+msgstr "``/etc/scrapy.cfg`` または ``c:\\scrapy\\scrapy.cfg`` (お使いのコンピューターシステム全体の設定)、"
 
 #: ../../topics/commands.rst:28
 msgid ""
 "``~/.config/scrapy.cfg`` (``$XDG_CONFIG_HOME``) and ``~/.scrapy.cfg`` "
 "(``$HOME``) for global (user-wide) settings, and"
-msgstr ""
+msgstr "``~/.config/scrapy.cfg`` (``$XDG_CONFIG_HOME``) and ``~/.scrapy.cfg`` (``$HOME``) は、当該ユーザー全体の設定で、"
 
 #: ../../topics/commands.rst:30
 msgid "``scrapy.cfg`` inside a scrapy project's root (see next section)."
-msgstr ""
+msgstr "(あなたの)Scrapyプロジェクトのルート内にある ``scrapy.cfg`` (詳しくは次節参照)。"
 
 #: ../../topics/commands.rst:32
 msgid ""
 "Settings from these files are merged in the listed order of preference: "
 "user-defined values have higher priority than system-wide defaults and "
 "project-wide settings will override all others, when defined."
-msgstr ""
+msgstr "これらのファイルの設定は、リストされている優先順位でマージされます。ユーザー定義の値は、システム全体のデフォルトよりも優先度が高く、プロジェクト全体の設定は、定義時に他のすべてを上書きします。"
 
 #: ../../topics/commands.rst:36
 msgid ""
 "Scrapy also understands, and can be configured through, a number of "
 "environment variables. Currently these are:"
-msgstr ""
+msgstr "Scrapyは、多くの環境変数もまた理解しており、それらを使用して構成できます。 現在、これらは以下のとおりです。:"
 
 #: ../../topics/commands.rst:39
 msgid "``SCRAPY_SETTINGS_MODULE`` (see :ref:`topics-settings-module-envvar`)"
-msgstr ""
+msgstr "``SCRAPY_SETTINGS_MODULE`` (:ref:`topics-settings-module-envvar` 参照)"
 
 #: ../../topics/commands.rst:40
 msgid "``SCRAPY_PROJECT`` (see :ref:`topics-project-envvar`)"
-msgstr ""
+msgstr "``SCRAPY_PROJECT`` (:ref:`topics-project-envvar` 参照)"
 
 #: ../../topics/commands.rst:41
 msgid "``SCRAPY_PYTHON_SHELL`` (see :ref:`topics-shell`)"
-msgstr ""
+msgstr "``SCRAPY_PYTHON_SHELL`` (:ref:`topics-shell` 参照)"
 
 #: ../../topics/commands.rst:46
 msgid "Default structure of Scrapy projects"
-msgstr ""
+msgstr "Scrapyプロジェクトのデフォルト構造"
 
 #: ../../topics/commands.rst:48
 msgid ""
 "Before delving into the command-line tool and its sub-commands, let's "
 "first understand the directory structure of a Scrapy project."
-msgstr ""
+msgstr "コマンドラインツールとそのサブコマンドを掘り下げる前に、まずScrapyプロジェクトのディレクトリ構造を理解しましょう。"
 
 #: ../../topics/commands.rst:51
 msgid ""
 "Though it can be modified, all Scrapy projects have the same file "
 "structure by default, similar to this::"
-msgstr ""
+msgstr "変更も可能ではありますが、すべてのScrapyプロジェクトはデフォルトでは同じファイル構造を持ち、以下のようになります。::"
 
 #: ../../topics/commands.rst:67
 msgid ""
 "The directory where the ``scrapy.cfg`` file resides is known as the "
 "*project root directory*. That file contains the name of the python "
 "module that defines the project settings. Here is an example::"
-msgstr ""
+msgstr "``scrapy.cfg`` ファイルが存在するディレクトリは *プロジェクトルートディレクトリ* と呼ばれます。 そのファイルには、プロジェクト設定を定義するpythonモジュールの名前が含まれています。 以下に例を示します。::"
 
 #: ../../topics/commands.rst:77
 msgid "Sharing the root directory between projects"
-msgstr ""
+msgstr "プロジェクト間でルートディレクトリを共有する"
 
 #: ../../topics/commands.rst:79
 msgid ""
 "A project root directory, the one that contains the ``scrapy.cfg``, may "
 "be shared by multiple Scrapy projects, each with its own settings module."
-msgstr ""
+msgstr "``scrapy.cfg`` を含むプロジェクトルートディレクトリは、それぞれ独自の設定モジュールを持つ複数のScrapyプロジェクトで共有できます。"
 
 #: ../../topics/commands.rst:82
 msgid ""
 "In that case, you must define one or more aliases for those settings "
 "modules under ``[settings]`` in your ``scrapy.cfg`` file::"
-msgstr ""
+msgstr "その場合、あなたの ``scrapy.cfg`` ファイルの ``[settings]`` の下で、これらの設定モジュールの1つ以上のエイリアスを定義する必要があります。::"
 
 #: ../../topics/commands.rst:90
 msgid ""
 "By default, the ``scrapy`` command-line tool will use the ``default`` "
 "settings. Use the ``SCRAPY_PROJECT`` environment variable to specify a "
 "different project for ``scrapy`` to use::"
-msgstr ""
+msgstr "デフォルトでは、 ``scrapy`` コマンドラインツールは ``default`` 設定を使用します。 ``scrapy`` コマンドラインツールを別プロジェクトのために使うには ``SCRAPY_PROJECT`` 環境変数を設定します。::"
 
 #: ../../topics/commands.rst:102
 msgid "Using the ``scrapy`` tool"
-msgstr ""
+msgstr "Scrapyツールの使用"
 
 #: ../../topics/commands.rst:104
 msgid ""
 "You can start by running the Scrapy tool with no arguments and it will "
 "print some usage help and the available commands::"
-msgstr ""
+msgstr "あなたは引数なしでScrapyツールを実行することから始める事ができます。そうすると、いくつかの使用方法のヘルプと使用可能なコマンドが出力されます。::"
 
 #: ../../topics/commands.rst:117
 msgid ""
 "The first line will print the currently active project if you're inside a"
 " Scrapy project. In this example it was run from outside a project. If "
 "run from inside a project it would have printed something like this::"
-msgstr ""
+msgstr "Scrapyプロジェクト内にいる場合、最初の行は現在アクティブなプロジェクトを印刷します。 上の例では、プロジェクトの外部から実行されました。 プロジェクト内から実行すると、以下のようなものが出力されます。::"
 
 #: ../../topics/commands.rst:129
 msgid "Creating projects"
-msgstr ""
+msgstr "プロジェクトの作成"
 
 #: ../../topics/commands.rst:131
 msgid ""
 "The first thing you typically do with the ``scrapy`` tool is create your "
 "Scrapy project::"
-msgstr ""
+msgstr "Scrapyツールで通常最初に行うことは、Scrapyプロジェクトの作成です。::"
 
 #: ../../topics/commands.rst:136
 msgid ""
 "That will create a Scrapy project under the ``project_dir`` directory. If"
 " ``project_dir`` wasn't specified, ``project_dir`` will be the same as "
 "``myproject``."
-msgstr ""
+msgstr "これは ``project_dir`` ディレクトリの下にScrapyプロジェクトを作成します。 ``project_dir`` を指定しなかった場合、 ``project_dir`` は ``myproject`` と同じになります。"
 
 #: ../../topics/commands.rst:139
 msgid "Next, you go inside the new project directory::"
-msgstr ""
+msgstr "次に、あなたは新しいプロジェクトディレクトリ内に移動します。::"
 
 #: ../../topics/commands.rst:143
 msgid ""
 "And you're ready to use the ``scrapy`` command to manage and control your"
 " project from there."
-msgstr ""
+msgstr "いまや、 あなたは、 ``scrapy`` コマンドを使用して、プロジェクトを管理および制御する準備が整いました。"
 
 #: ../../topics/commands.rst:147
 msgid "Controlling projects"
-msgstr ""
+msgstr "プロジェクトの制御"
 
 #: ../../topics/commands.rst:149
 msgid ""
 "You use the ``scrapy`` tool from inside your projects to control and "
 "manage them."
-msgstr ""
+msgstr "あなたはプロジェクト内でScrapyツールを使用して、プロジェクトを制御および管理します。"
 
 #: ../../topics/commands.rst:152
 msgid "For example, to create a new spider::"
-msgstr ""
+msgstr "例えば、新しいスパイダーを作成するには、::"
 
 #: ../../topics/commands.rst:156
 msgid ""
@@ -199,7 +199,7 @@ msgid ""
 "Scrapy project. See the :ref:`commands reference <topics-commands-ref>` "
 "below for more information on which commands must be run from inside "
 "projects, and which not."
-msgstr ""
+msgstr "一部のScrapyコマンド(:command:`crawl` のような)は、Scrapyプロジェクト内から実行する必要があります。 プロジェクト内から実行する必要があるコマンドと実行しないコマンドの詳細については、 :ref:`コマンド リファレンス<topics-commands-ref>` をご覧ください。"
 
 #: ../../topics/commands.rst:160
 msgid ""
@@ -210,22 +210,22 @@ msgid ""
 "fetched is associated with some specific spider. This is intentional, as "
 "the ``fetch`` command is meant to be used to check how spiders are "
 "downloading pages."
-msgstr ""
+msgstr "また、一部のコマンドは、プロジェクト内から実行する場合、動作が若干異なる場合があることに注意してください。 たとえば、フェッチされるURLが特定のスパイダーに関連付けられている場合、fetchコマンドはスパイダーによってオーバーライドされる動作(user-agentをオーバーライドする ``user_agent`` 属性など)を使用します。 ``fetch`` コマンドはスパイダーがどのようにページをダウンロードしているかを確認するために使用されることを意図しているため、これは意図的なものです。"
 
 #: ../../topics/commands.rst:170
 msgid "Available tool commands"
-msgstr ""
+msgstr "利用可能なツールコマンド"
 
 #: ../../topics/commands.rst:172
 msgid ""
 "This section contains a list of the available built-in commands with a "
 "description and some usage examples. Remember, you can always get more "
 "info about each command by running::"
-msgstr ""
+msgstr "この節には、使用可能な組み込みコマンドの一覧とその説明および使用例が含まれています。 以下のコマンドを実行すると、いつでも各コマンドに関する詳細情報を見ることができます。::"
 
 #: ../../topics/commands.rst:178
 msgid "And you can see all available commands with::"
-msgstr ""
+msgstr "そして、以下のコマンドですべての利用可能なコマンドの一覧を見ることができます。:"
 
 #: ../../topics/commands.rst:182
 msgid ""
@@ -234,79 +234,79 @@ msgid ""
 "without an active Scrapy project (Global commands), though they may "
 "behave slightly different when running from inside a project (as they "
 "would use the project overridden settings)."
-msgstr ""
+msgstr "コマンドには2種類あります。Scrapyプロジェクト内からのみ動作するコマンド（プロジェクト固有のコマンド）とアクティブなScrapyプロジェクトなしで動作するコマンド（グローバルコマンド）です。ただし、プロジェクト内から実行すると動作が若干異なる場合があります(プロジェクトのオーバーライドされた設定を使用するため)。"
 
 #: ../../topics/commands.rst:188
 msgid "Global commands:"
-msgstr ""
+msgstr "グローバルコマンド"
 
 #: ../../topics/commands.rst:190
 msgid ":command:`startproject`"
-msgstr ""
+msgstr ":command:`startproject`"
 
 #: ../../topics/commands.rst:191
 msgid ":command:`genspider`"
-msgstr ""
+msgstr ":command:`genspider`"
 
 #: ../../topics/commands.rst:192
 msgid ":command:`settings`"
-msgstr ""
+msgstr ":command:`settings`"
 
 #: ../../topics/commands.rst:193
 msgid ":command:`runspider`"
-msgstr ""
+msgstr ":command:`runspider`"
 
 #: ../../topics/commands.rst:194
 msgid ":command:`shell`"
-msgstr ""
+msgstr ":command:`shell`"
 
 #: ../../topics/commands.rst:195
 msgid ":command:`fetch`"
-msgstr ""
+msgstr ":command:`fetch`"
 
 #: ../../topics/commands.rst:196
 msgid ":command:`view`"
-msgstr ""
+msgstr ":command:`view`"
 
 #: ../../topics/commands.rst:197
 msgid ":command:`version`"
-msgstr ""
+msgstr ":command:`version`"
 
 #: ../../topics/commands.rst:199
 msgid "Project-only commands:"
-msgstr ""
+msgstr "プロジェクト内のみのコマンド"
 
 #: ../../topics/commands.rst:201
 msgid ":command:`crawl`"
-msgstr ""
+msgstr ":command:`crawl`"
 
 #: ../../topics/commands.rst:202
 msgid ":command:`check`"
-msgstr ""
+msgstr ":command:`check`"
 
 #: ../../topics/commands.rst:203
 msgid ":command:`list`"
-msgstr ""
+msgstr ":command:`list`"
 
 #: ../../topics/commands.rst:204
 msgid ":command:`edit`"
-msgstr ""
+msgstr ":command:`edit`"
 
 #: ../../topics/commands.rst:205
 msgid ":command:`parse`"
-msgstr ""
+msgstr ":command:`parse`"
 
 #: ../../topics/commands.rst:206
 msgid ":command:`bench`"
-msgstr ""
+msgstr ":command:`bench`"
 
 #: ../../topics/commands.rst:211
 msgid "startproject"
-msgstr ""
+msgstr "startproject"
 
 #: ../../topics/commands.rst:213
 msgid "Syntax: ``scrapy startproject <project_name> [project_dir]``"
-msgstr ""
+msgstr "文法: ``scrapy startproject <project_name> [project_dir]``"
 
 #: ../../topics/commands.rst:214 ../../topics/commands.rst:230
 #: ../../topics/commands.rst:339 ../../topics/commands.rst:383
@@ -314,29 +314,29 @@ msgstr ""
 #: ../../topics/commands.rst:525 ../../topics/commands.rst:541
 #: ../../topics/commands.rst:554
 msgid "Requires project: *no*"
-msgstr ""
+msgstr "Scrapyプロジェクト内で実行させる必要があるか: *いいえ*"
 
 #: ../../topics/commands.rst:216
 msgid ""
 "Creates a new Scrapy project named ``project_name``, under the "
 "``project_dir`` directory. If ``project_dir`` wasn't specified, "
 "``project_dir`` will be the same as ``project_name``."
-msgstr ""
+msgstr "``project_dir`` ディレクトリの下に ``project_name`` という名前の新しいScrapyプロジェクトを作成します。 ``project_dir`` を指定しなかった場合、 ``project_dir`` は ``project_name`` と同じになります。"
 
 #: ../../topics/commands.rst:220 ../../topics/commands.rst:234
 #: ../../topics/commands.rst:308 ../../topics/commands.rst:329
 #: ../../topics/commands.rst:395 ../../topics/commands.rst:423
 #: ../../topics/commands.rst:484
 msgid "Usage example::"
-msgstr ""
+msgstr "使用例::"
 
 #: ../../topics/commands.rst:227
 msgid "genspider"
-msgstr ""
+msgstr "genspider"
 
 #: ../../topics/commands.rst:229
 msgid "Syntax: ``scrapy genspider [-t template] <name> <domain>``"
-msgstr ""
+msgstr "文法: ``scrapy genspider [-t template] <name> <domain>``"
 
 #: ../../topics/commands.rst:232
 msgid ""
@@ -344,7 +344,7 @@ msgid ""
 "``spiders`` folder, if called from inside a project. The ``<name>`` "
 "parameter is set as the spider's ``name``, while ``<domain>`` is used to "
 "generate the ``allowed_domains`` and ``start_urls`` spider's attributes."
-msgstr ""
+msgstr "プロジェクト内から呼び出された場合、現在のフォルダーまたは現在のプロジェクトの ``spiders`` フォルダーに新しいスパイダーを作成します。 ``<name>`` パラメーターはスパイダーの ``name`` として設定され、 ``<domain>``はスパイダー属性の ``allowed_domains`` および ``start_urls`` を生成するために使用されます。"
 
 #: ../../topics/commands.rst:249
 msgid ""
@@ -352,143 +352,144 @@ msgid ""
 " pre-defined templates, but certainly not the only way to create spiders."
 " You can just create the spider source code files yourself, instead of "
 "using this command."
-msgstr ""
+msgstr "これは、事前定義されたテンプレートに基づいてスパイダーを作成する便利なショートカットコマンドですが、スパイダーを作成する唯一の方法ではありません。 このコマンドを使用する代わりに、自分でスパイダーソースコードファイルを作成することもできます。"
 
 #: ../../topics/commands.rst:257
 msgid "crawl"
-msgstr ""
+msgstr "crawl"
 
 #: ../../topics/commands.rst:259
 msgid "Syntax: ``scrapy crawl <spider>``"
-msgstr ""
+msgstr "文法: ``scrapy crawl <spider>``"
 
 #: ../../topics/commands.rst:260 ../../topics/commands.rst:276
 #: ../../topics/commands.rst:303 ../../topics/commands.rst:320
 #: ../../topics/commands.rst:447
 msgid "Requires project: *yes*"
-msgstr ""
+msgstr "Scrapyプロジェクト内で実行させる必要があるか: *はい*"
 
 #: ../../topics/commands.rst:262
 msgid "Start crawling using a spider."
-msgstr ""
+msgstr "スパイダーを使用してクロールを開始します。"
 
 #: ../../topics/commands.rst:264 ../../topics/commands.rst:280
 #: ../../topics/commands.rst:361
 msgid "Usage examples::"
-msgstr ""
+msgstr "使用例::"
 
 #: ../../topics/commands.rst:273
 msgid "check"
-msgstr ""
+msgstr "check"
 
 #: ../../topics/commands.rst:275
 msgid "Syntax: ``scrapy check [-l] <spider>``"
-msgstr ""
+msgstr "文法: ``scrapy check [-l] <spider>``"
 
 #: ../../topics/commands.rst:278
 msgid "Run contract checks."
-msgstr ""
+msgstr "スパイダーコントラクト チェック を実行します。"
 
 #: ../../topics/commands.rst:300
 msgid "list"
-msgstr ""
+msgstr "list"
 
 #: ../../topics/commands.rst:302
 msgid "Syntax: ``scrapy list``"
-msgstr ""
+msgstr "文法: ``scrapy list``"
 
 #: ../../topics/commands.rst:305
 msgid ""
 "List all available spiders in the current project. The output is one "
 "spider per line."
-msgstr ""
+msgstr "現在のプロジェクトで利用可能なすべてのスパイダーをリストします。 出力は1行につき1つのスパイダーです。"
 
 #: ../../topics/commands.rst:317
 msgid "edit"
-msgstr ""
+msgstr "edit"
 
 #: ../../topics/commands.rst:319
 msgid "Syntax: ``scrapy edit <spider>``"
-msgstr ""
+msgstr "文法: ``scrapy edit <spider>``"
 
 #: ../../topics/commands.rst:322
 msgid ""
 "Edit the given spider using the editor defined in the ``EDITOR`` "
 "environment variable or (if unset) the :setting:`EDITOR` setting."
-msgstr ""
+msgstr "``EDITOR`` 環境変数または、(未設定の場合) :setting:`EDITOR` 設定で定義されているエディターを使用して、指定されたスパイダーを編集します。"
 
 #: ../../topics/commands.rst:325
 msgid ""
 "This command is provided only as a convenience shortcut for the most "
 "common case, the developer is of course free to choose any tool or IDE to"
 " write and debug spiders."
-msgstr ""
+msgstr "このコマンドは、最も一般的な場合の便利なショートカットとしてのみ提供されています。もちろん開発者は、スパイダーを作成およびデバッグするためのツールまたはIDEを自由に選択できます。"
 
 #: ../../topics/commands.rst:336
 msgid "fetch"
-msgstr ""
+msgstr "fetch"
 
 #: ../../topics/commands.rst:338
 msgid "Syntax: ``scrapy fetch <url>``"
-msgstr ""
+msgstr "文法: ``scrapy fetch <url>``"
 
 #: ../../topics/commands.rst:341
 msgid ""
 "Downloads the given URL using the Scrapy downloader and writes the "
 "contents to standard output."
-msgstr ""
+msgstr "Scrapyダウンローダーを使用して指定されたURLをダウンロードし、コンテンツを標準出力に書き込みます。"
 
+# 直訳は意味不明なので文脈的に大胆に意訳:-)
 #: ../../topics/commands.rst:344
 msgid ""
 "The interesting thing about this command is that it fetches the page how "
 "the spider would download it. For example, if the spider has a "
 "``USER_AGENT`` attribute which overrides the User Agent, it will use that"
 " one."
-msgstr ""
+msgstr "このコマンドの興味深い点は、ページを取得するのに、あなたのスパイダーを使ってどのようにダウンロードするかを示すということです。たとえば、スパイダーがユーザーエージェントを上書きするUSER_AGENT属性を持っていた場合、上書きしたその属性を使用します。"
 
 #: ../../topics/commands.rst:348
 msgid ""
 "So this command can be used to \"see\" how your spider would fetch a "
 "certain page."
-msgstr ""
+msgstr "したがって、このコマンドを使用して、あなたは、あなたのスパイダーが特定のページを取得する方法を「見る」ことができます。"
 
 #: ../../topics/commands.rst:350
 msgid ""
 "If used outside a project, no particular per-spider behaviour would be "
 "applied and it will just use the default Scrapy downloader settings."
-msgstr ""
+msgstr "もし、このコマンドがプロジェクトの外部で使用される場合、特定のスパイダーごとの動作は適用されず、デフォルトのScrapyダウンローダー設定が使用されます。"
 
 #: ../../topics/commands.rst:353 ../../topics/commands.rst:389
 #: ../../topics/commands.rst:413 ../../topics/commands.rst:452
 msgid "Supported options:"
-msgstr ""
+msgstr "コマンドラインオプション:"
 
 #: ../../topics/commands.rst:355 ../../topics/commands.rst:391
 #: ../../topics/commands.rst:415 ../../topics/commands.rst:454
 msgid ""
 "``--spider=SPIDER``: bypass spider autodetection and force use of "
 "specific spider"
-msgstr ""
+msgstr "``--spider=SPIDER``: スパイダーの自動検出をバイパスし、指定のスパイダーの使用を強制する。"
 
 #: ../../topics/commands.rst:357
 msgid ""
 "``--headers``: print the response's HTTP headers instead of the "
 "response's body"
-msgstr ""
+msgstr "``--headers``: レスポンス・ボディではなく、レスポンスのHTTPヘッダーを出力します。"
 
 #: ../../topics/commands.rst:359 ../../topics/commands.rst:393
 msgid ""
 "``--no-redirect``: do not follow HTTP 3xx redirects (default is to follow"
 " them)"
-msgstr ""
+msgstr "``--no-redirect``: HTTP 3xxリダイレクトに従わない(デフォルトではそれらに従う)。"
 
 #: ../../topics/commands.rst:380
 msgid "view"
-msgstr ""
+msgstr "view"
 
 #: ../../topics/commands.rst:382
 msgid "Syntax: ``scrapy view <url>``"
-msgstr ""
+msgstr "文法: ``scrapy view <url>``"
 
 #: ../../topics/commands.rst:385
 msgid ""
@@ -496,15 +497,15 @@ msgid ""
 " Sometimes spiders see pages differently from regular users, so this can "
 "be used to check what the spider \"sees\" and confirm it's what you "
 "expect."
-msgstr ""
+msgstr "あなたのScrapyスパイダーが「見ている」ように、指定されたURLをブラウザーで開きます。 スパイダーは通常のユーザーとは異なるページを見ることがあるので、これを使用してスパイダーが「見ている」ものを確認し、期待どおりであることを確認できます。"
 
 #: ../../topics/commands.rst:403
 msgid "shell"
-msgstr ""
+msgstr "shell"
 
 #: ../../topics/commands.rst:405
 msgid "Syntax: ``scrapy shell [url]``"
-msgstr ""
+msgstr "文法: ``scrapy shell [url]``"
 
 #: ../../topics/commands.rst:408
 msgid ""
@@ -512,11 +513,11 @@ msgid ""
 "is given. Also supports UNIX-style local file paths, either relative with"
 " ``./`` or ``../`` prefixes or absolute file paths. See :ref:`topics-"
 "shell` for more info."
-msgstr ""
+msgstr "(指定されている場合)指定したURLでScrapyシェルを開始します。URLが指定されていない場合は空です。 また、UNIXスタイルのローカルファイルパス(「./」または「../」プレフィックス付きの相対パス、または絶対ファイルパス)をサポートします。 詳細については、 :ref:`topics-shell` を参照してください。"
 
 #: ../../topics/commands.rst:417
 msgid "``-c code``: evaluate the code in the shell, print the result and exit"
-msgstr ""
+msgstr "``-c code``: シェル内でcodeを評価し、結果を出力してexitする。"
 
 #: ../../topics/commands.rst:419
 msgid ""
@@ -524,187 +525,187 @@ msgid ""
 " them); this only affects the URL you may pass as argument on the command"
 " line; once you are inside the shell, ``fetch(url)`` will still follow "
 "HTTP redirects by default."
-msgstr ""
+msgstr "``--no-redirect``: HTTP 3xxリダイレクトに従いません(デフォルトではそれらに従います)。 これは、コマンドラインで引数として渡すことができるURLにのみ影響します。 シェル内に入ると、 ``fetch(url)`` はデフォルトでHTTPリダイレクトに従います。"
 
 #: ../../topics/commands.rst:444
 msgid "parse"
-msgstr ""
+msgstr "parse"
 
 #: ../../topics/commands.rst:446
 msgid "Syntax: ``scrapy parse <url> [options]``"
-msgstr ""
+msgstr "文法: ``scrapy parse <url> [options]``"
 
 #: ../../topics/commands.rst:449
 msgid ""
 "Fetches the given URL and parses it with the spider that handles it, "
 "using the method passed with the ``--callback`` option, or ``parse`` if "
 "not given."
-msgstr ""
+msgstr "指定されたURLを取得し、 ``--callback`` オプションで渡されたメソッドを使用して、または指定されていない場合は ``parse`` を使用して、それを処理するスパイダーで解析します。"
 
 #: ../../topics/commands.rst:456
 msgid "``--a NAME=VALUE``: set spider argument (may be repeated)"
-msgstr ""
+msgstr "``--a NAME=VALUE``: スパイダー引数を設定(繰り返し指定可能)"
 
 #: ../../topics/commands.rst:458
 msgid ""
 "``--callback`` or ``-c``: spider method to use as callback for parsing "
 "the response"
-msgstr ""
+msgstr "``--callback`` または ``-c``: レスポンスを解析するためのコールバックとして使用するスパイダーメソッド"
 
 #: ../../topics/commands.rst:461
 msgid ""
 "``--meta`` or ``-m``: additional request meta that will be passed to the "
 "callback request. This must be a valid json string. Example: "
 "--meta='{\"foo\" : \"bar\"}'"
-msgstr ""
+msgstr "``--meta`` または ``-m``: コールバックリクエストに渡される追加のリクエスト meta。 これは有効なJSON文字列でなければなりません。 例: --meta='{\"foo\" : \"bar\"}'"
 
 #: ../../topics/commands.rst:464
 msgid ""
 "``--cbkwargs``: additional keyword arguments that will be passed to the "
 "callback. This must be a valid json string. Example: --cbkwargs='{\"foo\""
 " : \"bar\"}'"
-msgstr ""
+msgstr "``--cbkwargs``: コールバックに渡される追加のキーワード引数。 これは有効なJSON文字列でなければなりません。 例: --cbkwargs='{\"foo\" : \"bar\"}'"
 
 #: ../../topics/commands.rst:467
 msgid "``--pipelines``: process items through pipelines"
-msgstr ""
+msgstr "``--pipelines``: パイプラインを介してアイテムを処理する。"
 
 #: ../../topics/commands.rst:469
 msgid ""
 "``--rules`` or ``-r``: use :class:`~scrapy.spiders.CrawlSpider` rules to "
 "discover the callback (i.e. spider method) to use for parsing the "
 "response"
-msgstr ""
+msgstr "``--rules`` または ``-r``: :class:`~scrapy.spiders.CrawlSpider` ルールを使用して、レスポンスの解析に使用するコールバック(スパイダーメソッド)を検出します。"
 
 #: ../../topics/commands.rst:473
 msgid "``--noitems``: don't show scraped items"
-msgstr ""
+msgstr "``--noitems``: スクレイプしたアイテムを表示しない。"
 
 #: ../../topics/commands.rst:475
 msgid "``--nolinks``: don't show extracted links"
-msgstr ""
+msgstr "``--nolinks``: 抽出したリンクを表示しません。"
 
 #: ../../topics/commands.rst:477
 msgid "``--nocolour``: avoid using pygments to colorize the output"
-msgstr ""
+msgstr "``--nocolour``: pygmentsを使用して出力を色付けするのを回避します。"
 
 #: ../../topics/commands.rst:479
 msgid ""
 "``--depth`` or ``-d``: depth level for which the requests should be "
 "followed recursively (default: 1)"
-msgstr ""
+msgstr "``--depth `` または ``-d``: リクエストを再帰的に追跡する深さレベル(デフォルト: 1)。"
 
 #: ../../topics/commands.rst:482
 msgid "``--verbose`` or ``-v``: display information for each depth level"
-msgstr ""
+msgstr "``--verbose`` または ``-v``: 各深度レベルの情報を表示。"
 
 #: ../../topics/commands.rst:502
 msgid "settings"
-msgstr ""
+msgstr "settings"
 
 #: ../../topics/commands.rst:504
 msgid "Syntax: ``scrapy settings [options]``"
-msgstr ""
+msgstr "文法: ``scrapy settings [options]``"
 
 #: ../../topics/commands.rst:507
 msgid "Get the value of a Scrapy setting."
-msgstr ""
+msgstr "Scrapy設定の値を取得します。"
 
 #: ../../topics/commands.rst:509
 msgid ""
 "If used inside a project it'll show the project setting value, otherwise "
 "it'll show the default Scrapy value for that setting."
-msgstr ""
+msgstr "プロジェクト内で使用すると、プロジェクト設定値が表示されます。それ以外の場合は、Scrapyでのその設定のデフォルト値を表示します。"
 
 #: ../../topics/commands.rst:512 ../../topics/commands.rst:530
 msgid "Example usage::"
-msgstr ""
+msgstr "使用例::"
 
 #: ../../topics/commands.rst:522
 msgid "runspider"
-msgstr ""
+msgstr "runspider"
 
 #: ../../topics/commands.rst:524
 msgid "Syntax: ``scrapy runspider <spider_file.py>``"
-msgstr ""
+msgstr "文法: ``scrapy runspider <spider_file.py>``"
 
 #: ../../topics/commands.rst:527
 msgid ""
 "Run a spider self-contained in a Python file, without having to create a "
 "project."
-msgstr ""
+msgstr "プロジェクトを作成せずに、Pythonファイルに含まれるスパイダーを実行します。"
 
 #: ../../topics/commands.rst:538
 msgid "version"
-msgstr ""
+msgstr "version"
 
 #: ../../topics/commands.rst:540
 msgid "Syntax: ``scrapy version [-v]``"
-msgstr ""
+msgstr "文法: ``scrapy version [-v]``"
 
 #: ../../topics/commands.rst:543
 msgid ""
 "Prints the Scrapy version. If used with ``-v`` it also prints Python, "
 "Twisted and Platform info, which is useful for bug reports."
-msgstr ""
+msgstr "Scrapyバージョンを出力します。 ``-v`` とともに使用すると、Python、Twisted、Platformの情報も出力します。これはバグレポートに役立ちます。"
 
 #: ../../topics/commands.rst:549
 msgid "bench"
-msgstr ""
+msgstr "bench"
 
 #: ../../topics/commands.rst:553
 msgid "Syntax: ``scrapy bench``"
-msgstr ""
+msgstr "文法: ``scrapy bench``"
 
 #: ../../topics/commands.rst:556
 msgid "Run a quick benchmark test. :ref:`benchmarking`."
-msgstr ""
+msgstr "簡単なベンチマークテストを実行します。 :ref:`benchmarking`"
 
 #: ../../topics/commands.rst:559
 msgid "Custom project commands"
-msgstr ""
+msgstr "カスタム プロジェクト コマンド"
 
 #: ../../topics/commands.rst:561
 msgid ""
 "You can also add your custom project commands by using the "
 ":setting:`COMMANDS_MODULE` setting. See the Scrapy commands in "
 "`scrapy/commands`_ for examples on how to implement your commands."
-msgstr ""
+msgstr ":setting:`COMMANDS_MODULE` 設定を使用して、カスタムプロジェクトコマンドを追加することもできます。 コマンドの実装方法の例については、 `scrapy/commands`_ Scrapyコマンドを参照してください。"
 
 #: ../../topics/commands.rst:569
 msgid "COMMANDS_MODULE"
-msgstr ""
+msgstr "COMMANDS_MODULE"
 
 #: ../../topics/commands.rst:571
 msgid "Default: ``''`` (empty string)"
-msgstr ""
+msgstr "デフォルト: ``''`` (空文字列)"
 
 #: ../../topics/commands.rst:573
 msgid ""
 "A module to use for looking up custom Scrapy commands. This is used to "
 "add custom commands for your Scrapy project."
-msgstr ""
+msgstr "カスタムのScrapyコマンドを検索するために使用するモジュール。 これは、Scrapyプロジェクトにカスタムコマンドを追加するために使用されます。"
 
 #: ../../topics/commands.rst:576
 msgid "Example::"
-msgstr ""
+msgstr "例::"
 
 #: ../../topics/commands.rst:583
 msgid "Register commands via setup.py entry points"
-msgstr ""
+msgstr "setup.pyエントリポイントを介してコマンドを登録する。"
 
 #: ../../topics/commands.rst:585
 msgid "This is an experimental feature, use with caution."
-msgstr ""
+msgstr "これは実験的な機能です。注意して使用してください。"
 
 #: ../../topics/commands.rst:587
 msgid ""
 "You can also add Scrapy commands from an external library by adding a "
 "``scrapy.commands`` section in the entry points of the library "
 "``setup.py`` file."
-msgstr ""
+msgstr "ライブラリ ``setup.py`` ファイルのエントリポイントに ``scrapy.commands`` セクションを追加することにより、外部ライブラリからScrapyコマンドを追加することもできます。"
 
 #: ../../topics/commands.rst:591
 msgid "The following example adds ``my_command`` command::"
-msgstr ""
+msgstr "以下の例は ``my_command`` コマンドを追加します。::"
 
