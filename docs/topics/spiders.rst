@@ -326,7 +326,7 @@ Generic Spiders
 Scrapy comes with some useful generic spiders that you can use to subclass
 your spiders from. Their aim is to provide convenient functionality for a few
 common scraping cases, like following all links on a site based on certain
-rules, crawling from `Sitemaps`_, or parsing an XML/CSV feed.
+rules, crawling from sitemaps, or parsing an XML/CSV feed.
 
 For the examples used in the following spiders, we'll assume you have a project
 with a ``TestItem`` declared in a ``myproject.items`` module::
