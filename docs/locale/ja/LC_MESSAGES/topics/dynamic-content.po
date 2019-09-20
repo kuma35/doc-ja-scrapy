@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-20 19:51+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,35 +19,35 @@ msgstr ""
 
 #: ../../topics/dynamic-content.rst:5
 msgid "Selecting dynamically-loaded content"
-msgstr ""
+msgstr "動的に読み込まれたコンテンツの選択"
 
 #: ../../topics/dynamic-content.rst:7
 msgid ""
 "Some webpages show the desired data when you load them in a web browser. "
 "However, when you download them using Scrapy, you cannot reach the "
 "desired data using :ref:`selectors <topics-selectors>`."
-msgstr ""
+msgstr "一部のWebページは、あなたがそれらのページをWebブラウザーに読み込み後に目的のデータを表示します。 ただし、Scrapyを使用してそれらをダウンロードする場合、 :ref:`selectors <topics-selectors>` を使用して目的のデータに到達することはできません。"
 
 #: ../../topics/dynamic-content.rst:11
 msgid ""
 "When this happens, the recommended approach is to :ref:`find the data "
 "source <topics-finding-data-source>` and extract the data from it."
-msgstr ""
+msgstr "この場合、推奨されるアプローチは :ref:`データ・ソースを探し、<topics-finding-data-source>` そこからデータを抽出することです。"
 
 #: ../../topics/dynamic-content.rst:15
 msgid ""
 "If you fail to do that, and you can nonetheless access the desired data "
 "through the :ref:`DOM <topics-livedom>` from your web browser, see :ref"
 ":`topics-javascript-rendering`."
-msgstr ""
+msgstr "データ・ソースを探すのに失敗し、それでもWebブラウザから :ref:`DOM <topics-livedom>` を介して目的のデータにアクセスできる場合は、 :ref:`topics-javascript-rendering` を参照してください。"
 
 #: ../../topics/dynamic-content.rst:22
 msgid "Finding the data source"
-msgstr ""
+msgstr "データ・ソースを探す"
 
 #: ../../topics/dynamic-content.rst:24
 msgid "To extract the desired data, you must first find its source location."
-msgstr ""
+msgstr "目的のデータを抽出するには、最初にソースの場所を見つける必要があります。"
 
 #: ../../topics/dynamic-content.rst:26
 msgid ""
@@ -55,63 +55,63 @@ msgid ""
 "document, use the :ref:`network tool <topics-network-tool>` of your web "
 "browser to find the corresponding request, and :ref:`reproduce it "
 "<topics-reproducing-requests>`."
-msgstr ""
+msgstr "データが画像やPDFドキュメントなどの非テキストベースの形式である場合、あなたのWebブラウザの :ref:`ネットワークツール<topics-network-tool>` を使用して、対応するリクエストを見つけ、 :ref:`それを再現します。<topics-reproducing-requests>`"
 
 #: ../../topics/dynamic-content.rst:31
 msgid ""
 "If your web browser lets you select the desired data as text, the data "
 "may be defined in embedded JavaScript code, or loaded from an external "
 "resource in a text-based format."
-msgstr ""
+msgstr "Webブラウザーで目的のデータをテキストとして選択できる場合、データは埋め込みJavaScriptコードで定義されるか、テキストベースの形式で外部リソースからロードされます。"
 
 #: ../../topics/dynamic-content.rst:35
 msgid ""
 "In that case, you can use a tool like wgrep_ to find the URL of that "
 "resource."
-msgstr ""
+msgstr "その場合、wgrep_ などのツールを使用して、そのリソースのURLを見つけることができます。"
 
 #: ../../topics/dynamic-content.rst:37
 msgid ""
 "If the data turns out to come from the original URL itself, you must "
 ":ref:`inspect the source code of the webpage <topics-inspecting-source>` "
 "to determine where the data is located."
-msgstr ""
+msgstr "データが元のURL自体からのものであることが判明した場合、 :ref:`Webページのソースコードを調べて、<topics-inspecting-source>` データの場所を特定する必要があります。"
 
 #: ../../topics/dynamic-content.rst:41
 msgid ""
 "If the data comes from a different URL, you will need to :ref:`reproduce "
 "the corresponding request <topics-reproducing-requests>`."
-msgstr ""
+msgstr "データが別のURLからのものである場合は、 :ref:`対応するリクエストを再現する必要があります。<topics-reproducing-requests>`"
 
 #: ../../topics/dynamic-content.rst:47
 msgid "Inspecting the source code of a webpage"
-msgstr ""
+msgstr "Webページのソースコードの調査"
 
 #: ../../topics/dynamic-content.rst:49
 msgid ""
 "Sometimes you need to inspect the source code of a webpage (not the "
 ":ref:`DOM <topics-livedom>`) to determine where some desired data is "
 "located."
-msgstr ""
+msgstr "しばしば、(:ref:`DOM <topics-livedom>` ではなく)Webページのソースコードを調べて、必要なデータがどこにあるかを判断する必要がある場合があります。"
 
 #: ../../topics/dynamic-content.rst:52
 msgid ""
 "Use Scrapy’s :command:`fetch` command to download the webpage contents as"
 " seen by Scrapy::"
-msgstr ""
+msgstr "Scrapyが見れるWebページのコンテンツをダウンロードするためにScrapyの :command:`fetch` コマンドを使用しください。::"
 
 #: ../../topics/dynamic-content.rst:57
 msgid ""
 "If the desired data is in embedded JavaScript code within a ``<script/>``"
 " element, see :ref:`topics-parsing-javascript`."
-msgstr ""
+msgstr "目的のデータが ``<script/>`` 要素内の埋め込みJavaScriptコードにある場合は、 :ref:`topics-parsing-javascript` を参照してください。"
 
 #: ../../topics/dynamic-content.rst:60
 msgid ""
 "If you cannot find the desired data, first make sure it’s not just "
 "Scrapy: download the webpage with an HTTP client like curl_ or wget_ and "
 "see if the information can be found in the response they get."
-msgstr ""
+msgstr "目的のデータが見つからない場合は、まず、Scrapyだけで見つからないのではないことを確認します。curl_ や wget_ などのHTTPクライアントでもWebページをダウンロードしてみて、取得したレスポンスで情報が見つかるかどうかを確認します。"
 
 #: ../../topics/dynamic-content.rst:64
 msgid ""
@@ -119,31 +119,31 @@ msgid ""
 ":class:`~scrapy.http.Request` to match that of the other HTTP client. For"
 " example, try using the same user-agent string (:setting:`USER_AGENT`) or"
 " the same :attr:`~scrapy.http.Request.headers`."
-msgstr ""
+msgstr "他のHTTPクライアントで目的のデータがあるレスポンスを受け取った場合、そのHTTPクライアントと同じになるようにあなたのScrapyの :class:`~scrapy.http.Request` を変更します。 たとえば、同じユーザーエージェント文字列(:setting:`USER_AGENT`) または同じ :attr:`~scrapy.http.Request.headers` にします。"
 
 #: ../../topics/dynamic-content.rst:69
 msgid ""
 "If they also get a response without the desired data, you’ll need to take"
 " steps to make your request more similar to that of the web browser. See "
 ":ref:`topics-reproducing-requests`."
-msgstr ""
+msgstr "目的のデータなしのレスポンスが返される場合は、リクエストをウェブブラウザのリクエストにより近いものにするための手順を実行する必要があります。 :ref:`topics-reproducing-requests` を参照してください。"
 
 #: ../../topics/dynamic-content.rst:76
 msgid "Reproducing requests"
-msgstr ""
+msgstr "リクエストの再現"
 
 #: ../../topics/dynamic-content.rst:78
 msgid ""
 "Sometimes we need to reproduce a request the way our web browser performs"
 " it."
-msgstr ""
+msgstr "しばしば、Webブラウザが実行する方法でリクエストを再現する必要がある場合があります。"
 
 #: ../../topics/dynamic-content.rst:80
 msgid ""
 "Use the :ref:`network tool <topics-network-tool>` of your web browser to "
 "see how your web browser performs the desired request, and try to "
 "reproduce that request with Scrapy."
-msgstr ""
+msgstr "Webブラウザーの :ref:`ネットワーク・ツール<topics-network-tool>` を使用して、Webブラウザーが目的のリクエストをどのように実行するかを確認し、Scrapyでそのリクエストを再現してください。"
 
 #: ../../topics/dynamic-content.rst:84
 msgid ""
@@ -151,7 +151,7 @@ msgid ""
 " HTTP method and URL. However, you may also need to reproduce the body, "
 "headers and form parameters (see :class:`~scrapy.http.FormRequest`) of "
 "that request."
-msgstr ""
+msgstr "同じHTTPメソッドとURLで :class:`~scrapy.http.Request` を生成すれば十分かもしれません。ただし、そのリクエストの本文、ヘッダー、フォームパラメーター(:class:`~scrapy.http.FormRequest` 参照)を再現する必要がある場合もあります。"
 
 #: ../../topics/dynamic-content.rst:88
 msgid ""
@@ -161,13 +161,13 @@ msgid ""
 ":class:`~scrapy.http.Request` from a cURL command. To get more "
 "information visit :ref:`request from curl <requests-from-curl>` inside "
 "the network tool section."
-msgstr ""
+msgstr "すべての主要なブラウザはリクエストを `cURL <https://curl.haxx.se/>`_ 形式でエクスポートできるため、Scrapyは :meth:`~scrapy.http.Request.from_curl()` メソッドを組み込んで、cURLコマンドから同等の :class:`~scrapy.http.Request` を生成します。 詳細については、ネットワークツール節内の :ref:`request from curl <requests-from-curl>` を参照してください。"
 
 #: ../../topics/dynamic-content.rst:95
 msgid ""
 "Once you get the expected response, you can :ref:`extract the desired "
 "data from it <topics-handling-response-formats>`."
-msgstr ""
+msgstr "あなたが期待するレスポンスを取得したら、あなたは :ref:`目的のデータをそこから抽出する事<topics-handling-response-formats>` ができます。"
 
 #: ../../topics/dynamic-content.rst:98
 msgid ""
@@ -176,7 +176,7 @@ msgid ""
 "time. If that is your case, and crawling speed is not a major concern for"
 " you, you can alternatively consider :ref:`JavaScript pre-rendering "
 "<topics-javascript-rendering>`."
-msgstr ""
+msgstr "Scrapyでリクエストを再現できます。 けれども、必要なすべてのリクエストを再現することは、開発時には効率的でないように見える場合があります。 もしあなたがそのような場合に遭遇し、そして、クロール速度があなたにとって大きな関心事ではない場合は、代わりに :ref:`JavaScriptの事前レンダリング<topics-javascript-rendering>` を検討することもできます。"
 
 #: ../../topics/dynamic-content.rst:103
 msgid ""
@@ -184,29 +184,29 @@ msgid ""
 "is probably not your request, but the target server. The target server "
 "might be buggy, overloaded, or :ref:`banning <bans>` some of your "
 "requests."
-msgstr ""
+msgstr "予想されるレスポンスが時々は得られるが、常にではない場合、問題はおそらくリクエストではなく、ターゲットサーバーにあります。 ターゲットサーバーはバグがあるか、過負荷であるか、または :ref:`禁止<bans>` リクエストの一部です。"
 
 #: ../../topics/dynamic-content.rst:110
 msgid "Handling different response formats"
-msgstr ""
+msgstr "さまざまなレスポンス形式の処理"
 
 #: ../../topics/dynamic-content.rst:112
 msgid ""
 "Once you have a response with the desired data, how you extract the "
 "desired data from it depends on the type of response:"
-msgstr ""
+msgstr "あなたが目的のデータを含むレスポンスを取得した後、そこから目的のデータを抽出する方法は、レスポンスのタイプによって異なります。"
 
 #: ../../topics/dynamic-content.rst:115
 msgid ""
 "If the response is HTML or XML, use :ref:`selectors <topics-selectors>` "
 "as usual."
-msgstr ""
+msgstr "レスポンスがHTMLまたはXMLの場合、通常どおり :ref:`セレクター<topics-selectors>` を使用します。"
 
 #: ../../topics/dynamic-content.rst:118
 msgid ""
 "If the response is JSON, use `json.loads`_ to load the desired data from "
 ":attr:`response.text <scrapy.http.TextResponse.text>`::"
-msgstr ""
+msgstr "応答がJSONの場合、 `json.loads`_ を使用して :attr:`response.text <scrapy.http.TextResponse.text>` から目的のデータをロードします。::"
 
 #: ../../topics/dynamic-content.rst:123
 msgid ""
@@ -214,19 +214,19 @@ msgid ""
 " you can load that HTML or XML code into a "
 ":class:`~scrapy.selector.Selector` and then :ref:`use it <topics-"
 "selectors>` as usual::"
-msgstr ""
+msgstr "目的のデータがJSONデータに埋め込まれたHTMLまたはXMLコード内にある場合、そのHTMLまたはXMLコードを :class:`~scrapy.selector.Selector` にロードして、それから、いつものように  :ref:`セレクター<topics-selectors>` を使います。"
 
 #: ../../topics/dynamic-content.rst:130
 msgid ""
 "If the response is JavaScript, or HTML with a ``<script/>`` element "
 "containing the desired data, see :ref:`topics-parsing-javascript`."
-msgstr ""
+msgstr "応答がJavaScript、または目的のデータを含む ``<script/>`` 要素を持つHTMLの場合、 :ref:`topics-parsing-javascript` を参照してください。"
 
 #: ../../topics/dynamic-content.rst:133
 msgid ""
 "If the response is CSS, use a `regular expression`_ to extract the "
 "desired data from :attr:`response.text <scrapy.http.TextResponse.text>`."
-msgstr ""
+msgstr "レスポンスがCSSの場合、正規表現(`regular expression`_)を使用して :attr:`response.text <scrapy.http.TextResponse.text>` から目的のデータを抽出します。"
 
 #: ../../topics/dynamic-content.rst:138
 msgid ""
@@ -234,83 +234,83 @@ msgid ""
 " read the response as bytes from :attr:`response.body "
 "<scrapy.http.TextResponse.body>` and use an OCR solution to extract the "
 "desired data as text."
-msgstr ""
+msgstr "レスポンスが画像または画像に基づく別の形式(PDFなど)）の場合、レスポンスを :attr:`レスポンス・ボディ<scrapy.http.TextResponse.body>` からバイトとして読み取り、OCRソリューションを使用してテキストとして目的のデータを抽出します。"
 
 #: ../../topics/dynamic-content.rst:143
 msgid ""
 "For example, you can use pytesseract_. To read a table from a PDF, "
 "`tabula-py`_ may be a better choice."
-msgstr ""
+msgstr "たとえば、 pytesseract_ を使用できます。 PDFから表を読むには、 `tabula-py`_ がより良い選択かもしれません。"
 
 #: ../../topics/dynamic-content.rst:146
 msgid ""
 "If the response is SVG, or HTML with embedded SVG containing the desired "
 "data, you may be able to extract the desired data using :ref:`selectors "
 "<topics-selectors>`, since SVG is based on XML."
-msgstr ""
+msgstr "レスポンスがSVG、または目的のデータを含む埋め込みSVGを含むHTMLの場合、SVGはXMLに基づいているため、 :ref:`セレクター<topics-selectors>` を使用して目的のデータを抽出できます。"
 
 #: ../../topics/dynamic-content.rst:150
 msgid ""
 "Otherwise, you might need to convert the SVG code into a raster image, "
 "and :ref:`handle that raster image <topics-parsing-images>`."
-msgstr ""
+msgstr "そうでない場合は、SVGコードをラスターイメージに変換し、 :ref:`ラスターイメージ処理<topics-parsing-images>` を行う必要があります。"
 
 #: ../../topics/dynamic-content.rst:156
 msgid "Parsing JavaScript code"
-msgstr ""
+msgstr "JavaScriptコードのパース"
 
 #: ../../topics/dynamic-content.rst:158
 msgid ""
 "If the desired data is hardcoded in JavaScript, you first need to get the"
 " JavaScript code:"
-msgstr ""
+msgstr "目的のデータがJavaScriptでハードコーディングされている場合、最初にJavaScriptコードを取得する必要があります。:"
 
 #: ../../topics/dynamic-content.rst:161
 msgid ""
 "If the JavaScript code is in a JavaScript file, simply read "
 ":attr:`response.text <scrapy.http.TextResponse.text>`."
-msgstr ""
+msgstr "JavaScriptコードがJavaScriptファイルにある場合は、単に :attr:`response.text <scrapy.http.TextResponse.text>` から読み取ります。"
 
 #: ../../topics/dynamic-content.rst:164
 msgid ""
 "If the JavaScript code is within a ``<script/>`` element of an HTML page,"
 " use :ref:`selectors <topics-selectors>` to extract the text within that "
 "``<script/>`` element."
-msgstr ""
+msgstr "JavaScriptコードがHTMLページの ``<script/>`` 要素内にある場合、 :ref:`セレクター<topics-selectors>` を使用して、その ``<script/>`` 要素内のテキストを抽出します。"
 
 #: ../../topics/dynamic-content.rst:168
 msgid ""
 "Once you have a string with the JavaScript code, you can extract the "
 "desired data from it:"
-msgstr ""
+msgstr "あなたがJavaScriptコードを含む文字列を取得したら、そこから目的のデータを抽出できます。:"
 
 #: ../../topics/dynamic-content.rst:171
 msgid ""
 "You might be able to use a `regular expression`_ to extract the desired "
 "data in JSON format, which you can then parse with `json.loads`_."
-msgstr ""
+msgstr "正規表現(`regular expression`_)を使用してJSON形式で目的のデータを抽出し、 `json.loads`_ でパースできる場合があります。"
 
 #: ../../topics/dynamic-content.rst:174
 msgid ""
 "For example, if the JavaScript code contains a separate line like ``var "
 "data = {\"field\": \"value\"};`` you can extract that data as follows::"
-msgstr ""
+msgstr "たとえば、JavaScriptコードに ``var data = {\"field\": \"value\"};`` のような個別の行が含まれている場合、次のようにそのデータを抽出できます。::"
 
 #: ../../topics/dynamic-content.rst:182
 msgid ""
 "Otherwise, use js2xml_ to convert the JavaScript code into an XML "
 "document that you can parse using :ref:`selectors <topics-selectors>`."
-msgstr ""
+msgstr "それ以外の場合は、js2xml_ を使用してJavaScriptコードをXML文書に変換し、 :ref:`セレクター<topics-selectors>` を使用して解析できます。"
 
 #: ../../topics/dynamic-content.rst:185
 msgid ""
 "For example, if the JavaScript code contains ``var data = {field: "
 "\"value\"};`` you can extract that data as follows::"
-msgstr ""
+msgstr "たとえば、JavaScriptコードに ``var data = {field: \"value\"};`` が含まれている場合、次のようにしてそのデータを抽出できます。::"
 
 #: ../../topics/dynamic-content.rst:200
 msgid "Pre-rendering JavaScript"
-msgstr ""
+msgstr "JavaScriptの事前レンダリング"
 
 #: ../../topics/dynamic-content.rst:202
 msgid ""
@@ -318,27 +318,27 @@ msgid ""
 "requests that contain the desired data is the preferred approach. The "
 "effort is often worth the result: structured, complete data with minimum "
 "parsing time and network transfer."
-msgstr ""
+msgstr "追加のリクエストからデータを取得するウェブページでは、目的のデータを含むリクエストを再現することをお勧めします。 多くの場合、その努力は、最小のパース時間とネットワーク転送で構造化された完全なデータという結果で報われます。"
 
 #: ../../topics/dynamic-content.rst:207
 msgid ""
 "However, sometimes it can be really hard to reproduce certain requests. "
 "Or you may need something that no request can give you, such as a "
 "screenshot of a webpage as seen in a web browser."
-msgstr ""
+msgstr "けれども、特定のリクエストを再現するのが非常に難しい場合があります。 または、Webブラウザーで表示されるWebページのスクリーンショットなど、リクエストで提供できないものが必要な場合があります。"
 
 #: ../../topics/dynamic-content.rst:211
 msgid ""
 "In these cases use the Splash_ JavaScript-rendering service, along with "
 "`scrapy-splash`_ for seamless integration."
-msgstr ""
+msgstr "これらの場合、シームレスな統合のために、 Splash_ JavaScriptレンダリングサービス(https://github.com/scrapinghub/splash)と `scrapy-splash`_ (https://github.com/scrapinghub/splash)を使用します。"
 
 #: ../../topics/dynamic-content.rst:214
 msgid ""
 "Splash returns as HTML the :ref:`DOM <topics-livedom>` of a webpage, so "
 "that you can parse it with :ref:`selectors <topics-selectors>`. It "
 "provides great flexibility through configuration_ or scripting_."
-msgstr ""
+msgstr "スプラッシュはHTMLとしてWebページの :ref:`DOM <topics-livedom>` を返すため、 :ref:`セレクター<topics-selectors>` でパースできます。 configuration_ または scripting_ を介して大きな柔軟性を提供します。"
 
 #: ../../topics/dynamic-content.rst:218
 msgid ""
@@ -346,21 +346,21 @@ msgid ""
 " the DOM on-the-fly from Python code instead of using a previously-"
 "written script, or handling multiple web browser windows, you might need "
 "to :ref:`use a headless browser <topics-headless-browsing>` instead."
-msgstr ""
+msgstr "以前に記述されたスクリプトを使用する代わりに、PythonコードからオンザフライでDOMと対話する、または複数のWebブラウザーウィンドウを処理するなど、Splashが提供する以上のものが必要な場合は、 代わりに :ref:`ヘッドレス ブラウザ<topics-headless-browsing>` を使用する必要があります。"
 
 #: ../../topics/dynamic-content.rst:229
 msgid "Using a headless browser"
-msgstr ""
+msgstr "ヘッドレスブラウザ(headless browser)の使用"
 
 #: ../../topics/dynamic-content.rst:231
 msgid ""
 "A `headless browser`_ is a special web browser that provides an API for "
 "automation."
-msgstr ""
+msgstr "ヘッドレスブラウザー(`headless browser`_)は、自動化のためのAPIを提供する特別なWebブラウザーです。"
 
 #: ../../topics/dynamic-content.rst:234
 msgid ""
 "The easiest way to use a headless browser with Scrapy is to use "
 "Selenium_, along with `scrapy-selenium`_ for seamless integration."
-msgstr ""
+msgstr "Scrapyでヘッドレスブラウザを使用する最も簡単な方法は、シームレスな統合のために `scrapy-selenium`_ (https://github.com/clemfromspace/scrapy-selenium)とともに Selenium_ (https://www.seleniumhq.org/)を使用することです。"
 
