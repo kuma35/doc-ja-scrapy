@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-24 00:50+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../topics/items.rst:5
 msgid "Items"
-msgstr ""
+msgstr "アイテム"
 
 #: ../../topics/items.rst:10
 msgid ""
@@ -28,7 +28,7 @@ msgid ""
 "data as Python dicts. While convenient and familiar, Python dicts lack "
 "structure: it is easy to make a typo in a field name or return "
 "inconsistent data, especially in a larger project with many spiders."
-msgstr ""
+msgstr "スクレイピングの主な目標は、非構造化ソース(通常はWebページ)から構造化データを抽出することです。 Scrapyスパイダーは、抽出したデータをPythonの辞書として返すことができます。 Pythonの辞書には便利で使い慣れていますが、構造が欠けています。特に、多くのスパイダーがいる大規模なプロジェクトでは、容易にフィールド名をtypoしたり、矛盾したデータを返しちゃったりします。"
 
 #: ../../topics/items.rst:16
 msgid ""
@@ -36,7 +36,7 @@ msgid ""
 "class. :class:`Item` objects are simple containers used to collect the "
 "scraped data. They provide a `dictionary-like`_ API with a convenient "
 "syntax for declaring their available fields."
-msgstr ""
+msgstr "一般的な出力データ形式を定義するために、Scrapyは :class:`Item` クラスを提供します。 :class:`Item` オブジェクトは、スクレイピングされたデータを収集するために使用される単純なコンテナです。 これらは、利用可能なフィールドを宣言するための便利な構文を持つ「辞書のようなAPI」(`dictionary-like`_ API)を提供します。"
 
 #: ../../topics/items.rst:21
 msgid ""
@@ -45,35 +45,35 @@ msgid ""
 "serialization can be customized using Item fields metadata, "
 ":mod:`trackref` tracks Item instances to help find memory leaks (see :ref"
 ":`topics-leaks-trackrefs`), etc."
-msgstr ""
+msgstr "さまざまなScrapyコンポーネントは、Itemsによって提供される追加情報を使用します。エクスポーターは、宣言されたフィールドを見てエクスポートする列を見つけます。シリアル化は、アイテムのフィールドメタデータを使用してカスタマイズできます。 :mod:`trackref` はアイテムのインスタンスを追跡して、メモリリーク( :ref:`topics-leaks-trackrefs` 参照)などを見つけるのに役立ちます。"
 
 #: ../../topics/items.rst:32
 msgid "Declaring Items"
-msgstr ""
+msgstr "アイテムの宣言"
 
 #: ../../topics/items.rst:34
 msgid ""
 "Items are declared using a simple class definition syntax and "
 ":class:`Field` objects. Here is an example::"
-msgstr ""
+msgstr "アイテムは、単純なクラス定義構文と :class:`Field` オブジェクトを使用して宣言します。 以下に例があります::"
 
 #: ../../topics/items.rst:46
 msgid ""
 "Those familiar with `Django`_ will notice that Scrapy Items are declared "
 "similar to `Django Models`_, except that Scrapy Items are much simpler as"
 " there is no concept of different field types."
-msgstr ""
+msgstr "`Django`_ に精通している人は、Scrapyアイテムが `Django Models`_ と同様に宣言されていることに気付くでしょう。ただし、異なるフィールドタイプの概念がないため、Scrapyアイテムははるかに単純です。"
 
 #: ../../topics/items.rst:56
 msgid "Item Fields"
-msgstr ""
+msgstr "アイテムのフィールド"
 
 #: ../../topics/items.rst:58
 msgid ""
 ":class:`Field` objects are used to specify metadata for each field. For "
 "example, the serializer function for the ``last_updated`` field "
 "illustrated in the example above."
-msgstr ""
+msgstr ":class:`Field` オブジェクトは、各フィールドのメタデータを指定するために使用されます。 たとえば、上記の例で示した ``last_updated`` フィールドのシリアル化関数です。"
 
 #: ../../topics/items.rst:62
 msgid ""
@@ -88,62 +88,62 @@ msgid ""
 " behaviour depends on each field use certain field keys to configure that"
 " behaviour. You must refer to their documentation to see which metadata "
 "keys are used by each component."
-msgstr ""
+msgstr "あなたは各フィールドに任意の種類のメタデータを指定できます。 :class:`Field` オブジェクトが受け入れる値には制限はありません。これと同じ理由で、利用可能なすべてのメタデータキーの参照リストはありません。 :class:`Field` オブジェクトで定義された各キーは異なるコンポーネントで使用でき、それらのコンポーネントのみがそれについて知っています。プロジェクトで他の :class:`Field` キーを定義して使用することもできます。 :class:`Field` オブジェクトの主な目的は、すべてのフィールドメタデータを1か所で定義する方法を提供することです。 通常、各フィールドに動作が依存するコンポーネントは、特定のフィールドキーを使用してその動作を構成します。 各コンポーネントで使用されているメタデータキーを確認するには、ドキュメントを参照する必要があります。"
 
 #: ../../topics/items.rst:73
 msgid ""
 "It's important to note that the :class:`Field` objects used to declare "
 "the item do not stay assigned as class attributes. Instead, they can be "
 "accessed through the :attr:`Item.fields` attribute."
-msgstr ""
+msgstr "アイテムの宣言に使用される :class:`Field` オブジェクトは、クラス属性として割り当てられたままにならないことに注意することが重要です。 代わりに、 :attr:`Item.fields` 属性を介してアクセスできます。"
 
 #: ../../topics/items.rst:78
 msgid "Working with Items"
-msgstr ""
+msgstr "アイテムで作業する"
 
 #: ../../topics/items.rst:80
 msgid ""
 "Here are some examples of common tasks performed with items, using the "
 "``Product`` item :ref:`declared above  <topics-items-declaring>`. You "
 "will notice the API is very similar to the `dict API`_."
-msgstr ""
+msgstr "ここで、 :ref:`先程宣言した<topics-items-declaring>` ``Product`` アイテムを使って、アイテムで実行される一般的なタスクの例をいくつか示します。 APIは辞書API(`dict API`_)に非常に似ていることに気付くでしょう。"
 
 #: ../../topics/items.rst:85
 msgid "Creating items"
-msgstr ""
+msgstr "アイテムの作成"
 
 #: ../../topics/items.rst:94
 msgid "Getting field values"
-msgstr ""
+msgstr "フィールド値の取得"
 
 #: ../../topics/items.rst:135
 msgid "Setting field values"
-msgstr ""
+msgstr "フィールド値のセット"
 
 #: ../../topics/items.rst:149
 msgid "Accessing all populated values"
-msgstr ""
+msgstr "読み込まれたすべての値へのアクセス"
 
 #: ../../topics/items.rst:151
 msgid "To access all populated values, just use the typical `dict API`_::"
-msgstr ""
+msgstr "読み込まれたすべての値にアクセスするには、典型的な辞書API(`dict API`_)を使用するだけです::"
 
 #: ../../topics/items.rst:163
 msgid "Copying items"
-msgstr ""
+msgstr "アイテムのコピー"
 
 #: ../../topics/items.rst:165
 msgid ""
 "To copy an item, you must first decide whether you want a shallow copy or"
 " a deep copy."
-msgstr ""
+msgstr "アイテムをコピーするには、あなたは最初に浅いコピーとディープコピーのどちらを使用するかを決定する必要があります。"
 
 #: ../../topics/items.rst:168
 msgid ""
 "If your item contains mutable_ values like lists or dictionaries, a "
 "shallow copy will keep references to the same mutable values across all "
 "different copies."
-msgstr ""
+msgstr "アイテムにリストや辞書などのミュータブル(mutable_)値が含まれている場合、浅いコピーは、すべての異なるコピー間で同じミュータブル値への参照を保持します。"
 
 #: ../../topics/items.rst:174
 msgid ""
@@ -151,15 +151,15 @@ msgid ""
 "shallow copy of that item, both the original item and the copy have the "
 "same list of tags. Adding a tag to the list of one of the items will add "
 "the tag to the other item as well."
-msgstr ""
+msgstr "たとえば、タグのリストを持つアイテムがあり、そのアイテムの浅いコピーを作成する場合、元のアイテムとコピーの両方に同じタグのリストがあります。 アイテムの1つのリストにタグを追加すると、他のアイテムにもタグが追加されます。"
 
 #: ../../topics/items.rst:179
 msgid "If that is not the desired behavior, use a deep copy instead."
-msgstr ""
+msgstr "それが望ましい振る舞いでない場合は、代わりにディープコピーを使用します。"
 
 #: ../../topics/items.rst:181
 msgid "See the `documentation of the copy module`_ for more information."
-msgstr ""
+msgstr "詳細は `documentation of the copy module`_ 参照。"
 
 #: ../../topics/items.rst:185
 msgid ""
@@ -167,65 +167,65 @@ msgid ""
 ":meth:`~scrapy.item.Item.copy` on an existing item (``product2 = "
 "product.copy()``) or instantiate your item class from an existing item "
 "(``product2 = Product(product)``)."
-msgstr ""
+msgstr "アイテムの浅いコピーを作成するには、あなたは、既存のアイテムで :meth:`~scrapy.item.Item.copy` を呼び出す(``product2 = product.copy()``)か、あるいは、既存のアイテムからアイテムクラスをインスタンス化(``product2 = Product(product)``)のいずれかが可能です。"
 
 #: ../../topics/items.rst:190
 msgid ""
 "To create a deep copy, call :meth:`~scrapy.item.Item.deepcopy` instead "
 "(``product2 = product.deepcopy()``)."
-msgstr ""
+msgstr "ディープコピーを作成するには、代わりに :meth:`~scrapy.item.Item.deepcopy` を呼び出します(``product2 = product.deepcopy()``)。"
 
 #: ../../topics/items.rst:195
 msgid "Other common tasks"
-msgstr ""
+msgstr "その他の一般的な作業"
 
 #: ../../topics/items.rst:197
 msgid "Creating dicts from items::"
-msgstr ""
+msgstr "アイテムから辞書を作成する::"
 
 #: ../../topics/items.rst:202
 msgid "Creating items from dicts::"
-msgstr ""
+msgstr "辞書からアイテムを作成する::"
 
 #: ../../topics/items.rst:213
 msgid "Extending Items"
-msgstr ""
+msgstr "アイテムの拡張"
 
 #: ../../topics/items.rst:215
 msgid ""
 "You can extend Items (to add more fields or to change some metadata for "
 "some fields) by declaring a subclass of your original Item."
-msgstr ""
+msgstr "あなたは、元のアイテムのサブクラスを宣言することにより、アイテムを拡張できます(フィールドを追加したり、フィールドのメタデータを変更したりできます)。"
 
 #: ../../topics/items.rst:218
 msgid "For example::"
-msgstr ""
+msgstr "例えば::"
 
 #: ../../topics/items.rst:224
 msgid ""
 "You can also extend field metadata by using the previous field metadata "
 "and appending more values, or changing existing values, like this::"
-msgstr ""
+msgstr "次のように、あなたは、以前のフィールドメタデータを使用して値を追加したり、既存の値を変更したりして、フィールドメタデータを拡張することもできます::"
 
 #: ../../topics/items.rst:230
 msgid ""
 "That adds (or replaces) the ``serializer`` metadata key for the ``name`` "
 "field, keeping all the previously existing metadata values."
-msgstr ""
+msgstr "これは、 ``name`` フィールドの ``serializer`` メタデータキーを追加(または置換)し、以前に存在したすべてのメタデータ値を保持します。"
 
 #: ../../topics/items.rst:234
 msgid "Item objects"
-msgstr ""
+msgstr "アイテムオブジェクト"
 
 #: ../../topics/items.rst:238
 msgid "Return a new Item optionally initialized from the given argument."
-msgstr ""
+msgstr "オプションで指定した引数によって初期化された新しいItemを返します。"
 
 #: ../../topics/items.rst:240
 msgid ""
 "Items replicate the standard `dict API`_, including its constructor. The "
 "only additional attribute provided by Items is:"
-msgstr ""
+msgstr "アイテムは、コンストラクタを含む標準の辞書API(`dict API`_)を複製します。 アイテムによって提供される追加の属性は次のとおりです:"
 
 #: ../../topics/items.rst:245
 msgid ""
@@ -233,11 +233,11 @@ msgid ""
 "those populated. The keys are the field names and the values are the "
 ":class:`Field` objects used in the :ref:`Item declaration <topics-items-"
 "declaring>`."
-msgstr ""
+msgstr "読み込まれたフィールドだけでなく、このアイテムの *すべての宣言済みフィールド* を含む辞書。 キーはフィールド名で、値は :ref:`アイテム宣言<topics-items-declaring>` で使用される :class:`Field` オブジェクトです。"
 
 #: ../../topics/items.rst:253
 msgid "Field objects"
-msgstr ""
+msgstr "フィールドオブジェクト"
 
 #: ../../topics/items.rst:257
 msgid ""
@@ -246,5 +246,5 @@ msgid ""
 "words, :class:`Field` objects are plain-old Python dicts. A separate "
 "class is used to support the :ref:`item declaration syntax <topics-items-"
 "declaring>` based on class attributes."
-msgstr ""
+msgstr ":class:`Field` クラスは組み込みの `dict`_ クラスの単なるエイリアスであり、追加の機能や属性を提供しません。 言い換えれば、 :class:`Field` オブジェクトは昔ながらのPython辞書です。 別のクラスを使用して、クラス属性に基づいて :ref:`アイテム宣言構文<topics-items-declaring>` をサポートします。"
 
