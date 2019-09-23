@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-21 10:38+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,17 +19,17 @@ msgstr ""
 
 #: ../../news.rst:4
 msgid "Release notes"
-msgstr ""
+msgstr "リリース・ノート"
 
 #: ../../news.rst:6
 msgid ""
 "Scrapy 1.x will be the last series supporting Python 2. Scrapy 2.0, "
 "planned for Q4 2019 or Q1 2020, will support **Python 3 only**."
-msgstr ""
+msgstr "Scrapy 1.xはPython2をサポートする最後のシリーズになります。Scrapy2.0は2019年第4四半期または2020年第1四半期に予定されており、 **Python3のみ** をサポートします。"
 
 #: ../../news.rst:10
 msgid "Scrapy 1.7.3 (2019-08-01)"
-msgstr ""
+msgstr "Scrapy 1.7.3 (2019-08-01)"
 
 #: ../../news.rst:12
 msgid "Enforce lxml 4.3.5 or lower for Python 3.4 (:issue:`3912`, :issue:`3918`)."
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../news.rst:15
 msgid "Scrapy 1.7.2 (2019-07-23)"
-msgstr ""
+msgstr "Scrapy 1.7.2 (2019-07-23)"
 
 #: ../../news.rst:17
 msgid "Fix Python 2 support (:issue:`3889`, :issue:`3893`, :issue:`3896`)."
@@ -45,60 +45,60 @@ msgstr ""
 
 #: ../../news.rst:21
 msgid "Scrapy 1.7.1 (2019-07-18)"
-msgstr ""
+msgstr "Scrapy 1.7.1 (2019-07-18)"
 
 #: ../../news.rst:23
 msgid "Re-packaging of Scrapy 1.7.0, which was missing some changes in PyPI."
-msgstr ""
+msgstr "Scrapy 1.7.0の再パッケージ化。PyPIの一部の変更が欠落していました。"
 
 #: ../../news.rst:28
 msgid "Scrapy 1.7.0 (2019-07-18)"
-msgstr ""
+msgstr "Scrapy 1.7.0 (2019-07-18)"
 
 #: ../../news.rst:30
 msgid ""
 "Make sure you install Scrapy 1.7.1. The Scrapy 1.7.0 package in PyPI is "
 "the result of an erroneous commit tagging and does not include all the "
 "changes described below."
-msgstr ""
+msgstr "Scrapy 1.7.1を必ずインストールしてください。 PyPIのScrapy 1.7.0パッケージは誤ったコミットタグ付けの結果であり、以下で説明するすべての変更が含まれていません。"
 
 #: ../../news.rst:34 ../../news.rst:351
 msgid "Highlights:"
-msgstr ""
+msgstr "ハイライト:"
 
 #: ../../news.rst:36
 msgid "Improvements for crawls targeting multiple domains"
-msgstr ""
+msgstr "複数のドメインをターゲットとするクロールの改善"
 
 #: ../../news.rst:37
 msgid "A cleaner way to pass arguments to callbacks"
-msgstr ""
+msgstr "引数をコールバックに渡すよりクリーンな方法"
 
 #: ../../news.rst:38
 msgid "A new class for JSON requests"
-msgstr ""
+msgstr "JSONリクエストの新しいクラス"
 
 #: ../../news.rst:39
 msgid "Improvements for rule-based spiders"
-msgstr ""
+msgstr "ルールベースのスパイダーの改善"
 
 #: ../../news.rst:40
 msgid "New features for feed exports"
-msgstr ""
+msgstr "フィード・エクスポートの新機能"
 
 #: ../../news.rst:43 ../../news.rst:2775
 msgid "Backward-incompatible changes"
-msgstr ""
+msgstr "後方互換性のない変更"
 
 #: ../../news.rst:45
 msgid "``429`` is now part of the :setting:`RETRY_HTTP_CODES` setting by default"
-msgstr ""
+msgstr "``429`` はデフォルトで :setting:`RETRY_HTTP_CODES` 設定の一部になりました"
 
 #: ../../news.rst:47
 msgid ""
 "This change is **backward incompatible**. If you don’t want to retry "
 "``429``, you must override :setting:`RETRY_HTTP_CODES` accordingly."
-msgstr ""
+msgstr "この変更は **後方互換性がありません** 。 ``429`` を再試行したくない場合は、それに応じて :setting:`RETRY_HTTP_CODES` をオーバーライドする必要があります。"
 
 #: ../../news.rst:50
 msgid ""
@@ -108,7 +108,7 @@ msgid ""
 "<scrapy.crawler.CrawlerRunner.create_crawler>` no longer accept a "
 ":class:`~scrapy.spiders.Spider` subclass instance, they only accept a "
 ":class:`~scrapy.spiders.Spider` subclass now."
-msgstr ""
+msgstr ":class:`~scrapy.crawler.Crawler` と :class:`CrawlerRunner.crawl <scrapy.crawler.CrawlerRunner.crawl>` と :class:`CrawlerRunner.create_crawler <scrapy.crawler.CrawlerRunner.create_crawler>` は、もはや :class:`~scrapy.spiders.Spider` のサブクラスのインスタンスを受け入れなくなり、:class:`~scrapy.spiders.Spider` サブクラスのみを受け入れます。"
 
 #: ../../news.rst:56
 msgid ""
@@ -117,7 +117,7 @@ msgid ""
 " passed :class:`~scrapy.spiders.Spider` subclass instance, their "
 ":class:`~scrapy.spiders.Spider.from_crawler` method was called to "
 "generate a new instance."
-msgstr ""
+msgstr ":class:`〜scrapy.spiders.Spider` サブクラスのインスタンスは実行することを意図していなかったため、期待どおりに機能していませんでした。渡された :class:`〜scrapy.spiders.Spider` サブクラスのインスタンスを使用する代わりに、:class:`〜scrapy.spiders.Spider.from_crawler` メソッドは、新しいインスタンスを生成するために呼び出されました。"
 
 #: ../../news.rst:62
 msgid ""
@@ -125,16 +125,16 @@ msgid ""
 "may stop working. Scheduler priority queue classes now need to handle "
 ":class:`~scrapy.http.Request` objects instead of arbitrary Python data "
 "structures."
-msgstr ""
+msgstr ":setting:`SCHEDULER_PRIORITY_QUEUE` 設定のデフォルト以外の値が機能しなくなる場合があります。 スケジューラープライオリティキュークラスは、任意のPythonデータ構造ではなく :class:`〜scrapy.http.Request` オブジェクトを処理する必要があります。"
 
 #: ../../news.rst:67
 msgid "See also :ref:`1.7-deprecation-removals` below."
-msgstr ""
+msgstr "下記の :ref:`1.7-deprecation-removals` も参照してください。"
 
 #: ../../news.rst:71 ../../news.rst:615 ../../news.rst:911 ../../news.rst:1206
 #: ../../news.rst:2766
 msgid "New features"
-msgstr ""
+msgstr "新機能"
 
 #: ../../news.rst:73
 msgid ""
@@ -143,7 +143,7 @@ msgid ""
 ":ref:`enabled <broad-crawls-scheduler-priority-queue>` for a significant "
 "scheduling improvement on crawls targetting multiple web domains, at the "
 "cost of no :setting:`CONCURRENT_REQUESTS_PER_IP` support (:issue:`3520`)"
-msgstr ""
+msgstr "新しいスケジューラーの優先度キュー :class:`scrapy.pqueues.DownloaderAwarePriorityQueue` は、 :ref:`enabled<broad-crawls-scheduler-priority-queue>` で、:setting:`CONCURRENT_REQUESTS_PER_IP` をサポートしないという犠牲を払えば、複数のWebドメインをターゲットとするクロールのスケジューリングを大幅に改善できます。"
 
 #: ../../news.rst:79
 msgid ""
@@ -370,11 +370,11 @@ msgstr ""
 
 #: ../../news.rst:211 ../../news.rst:497
 msgid "Deprecation removals"
-msgstr ""
+msgstr "非推奨による削除"
 
 #: ../../news.rst:213
 msgid "The following deprecated APIs have been removed (:issue:`3578`):"
-msgstr ""
+msgstr "次の非推奨APIは削除されました(:issue:`3578`):"
 
 #: ../../news.rst:215
 msgid ""
@@ -538,7 +538,7 @@ msgstr ""
 
 #: ../../news.rst:300
 msgid "Deprecations"
-msgstr ""
+msgstr "非推奨"
 
 #: ../../news.rst:302
 msgid ""
@@ -2032,33 +2032,33 @@ msgid ""
 "backported code from Twisted (``scrapy.xlib.tx.*``), even if newer "
 "Twisted modules are available. Scrapy now uses ``twisted.web.client`` and"
 " ``twisted.internet.endpoints`` directly. (See also cleanups below.)"
-msgstr ""
+msgstr "このリリースは、1.2.2のある主要な理由により、1.2.2の直後の版となります。0.18から1.2.2（含まれる）以降のリリースでは、Twisted(``scrapy.xlib.tx.*``)からのバックポートされたコードを使用することがわかりました。 より新しいTwistedモジュールが利用できる場合でも。 Scrapyは ``twisted.web.client`` と ``twisted.internet.endpoints`` を直接使用するようになりました。（以下のクリーンアップも参照してください。）"
 
 #: ../../news.rst:967
 msgid ""
 "As it is a major change, we wanted to get the bug fix out quickly while "
 "not breaking any projects using the 1.2 series."
-msgstr ""
+msgstr "これは大きな変更であるため、1.2シリーズを使用しているプロジェクトを壊すことなく、バグをすばやく修正したかったのです。"
 
 #: ../../news.rst:973
 msgid ""
 "``MailSender`` now accepts single strings as values for ``to`` and ``cc``"
 " arguments (:issue:`2272`)"
-msgstr ""
+msgstr "``MailSender`` は ``to`` 引数と ``cc`` 引数の値として単一の文字列を受け入れるようになりました(:issue:`2272`)"
 
 #: ../../news.rst:975
 msgid ""
 "``scrapy fetch url``, ``scrapy shell url`` and ``fetch(url)`` inside "
 "scrapy shell now follow HTTP redirections by default (:issue:`2290`); See"
 " :command:`fetch` and :command:`shell` for details."
-msgstr ""
+msgstr "Scrapyシェル内の ``scrapy fetch url`` と ``scrapy shell url`` と ``fetch(url)`` はデフォルトでHTTPリダイレクトに従います。(:issue:`2290`) 詳細については、:command:`fetch` と :command:`shell` を参照してください。"
 
 #: ../../news.rst:978
 msgid ""
 "``HttpErrorMiddleware`` now logs errors with ``INFO`` level instead of "
 "``DEBUG``; this is technically **backward incompatible** so please check "
 "your log parsers."
-msgstr ""
+msgstr "``HttpErrorMiddleware`` は ``DEBUG`` ではなく ``INFO`` レベルでエラーを記録するようになりました。 これは技術的には **後方互換性がない** ので、ログパーサーを確認してください。"
 
 #: ../../news.rst:980
 msgid ""
@@ -2068,7 +2068,7 @@ msgid ""
 "incompatible** if you have log parsers expecting the short logger name "
 "part. You can switch back to short logger names using "
 ":setting:`LOG_SHORT_NAMES` set to ``True``."
-msgstr ""
+msgstr "デフォルトでは、ロガー名は以前のリリースの短い「トップレベル」バリアント(例 ``[scrapy]``)ではなく、長い形式のパス ``[scrapy.extensions.logstats]`` を使用するようになりました。短いロガー名の部分を期待するログパーサーがある場合、 **後方互換性がありません** 。 :setting:`LOG_SHORT_NAMES` を ``True`` に設定して、短いロガー名に戻すことができます。"
 
 #: ../../news.rst:987
 msgid "Dependencies & Cleanups"
@@ -2099,7 +2099,7 @@ msgstr ""
 
 #: ../../news.rst:1001 ../../news.rst:1142 ../../news.rst:1425
 msgid "Packaging fix: disallow unsupported Twisted versions in setup.py"
-msgstr ""
+msgstr "パッケージの修正：setup.pyでサポートされていないTwistedバージョンを禁止します。"
 
 #: ../../news.rst:1007
 msgid "Scrapy 1.2.2 (2016-12-06)"
@@ -2211,7 +2211,7 @@ msgstr ""
 
 #: ../../news.rst:1070
 msgid "Scrapy 1.2.0 (2016-10-03)"
-msgstr ""
+msgstr "Scrapy 1.2.0 (2016-10-03)"
 
 #: ../../news.rst:1075
 msgid ""
@@ -2219,31 +2219,31 @@ msgid ""
 "used when writing items to a file. This can be used to turn off "
 "``\\uXXXX`` escapes in JSON output. This is also useful for those wanting"
 " something else than UTF-8 for XML or CSV output (:issue:`2034`)."
-msgstr ""
+msgstr "新しい :setting:`FEED_EXPORT_ENCODING` 設定は、アイテムをファイルに書き込むときに使用されるエンコーディングをカスタマイズします。 これは、JSON出力で ``\\uXXXX`` エスケープをオフにするために使用できます。 これは、XMLまたはCSV出力にUTF-8以外のものが必要な場合にも便利です。(:issue:`2034`)"
 
 #: ../../news.rst:1080
 msgid ""
 "``startproject`` command now supports an optional destination directory "
 "to override the default one based on the project name (:issue:`2005`)."
-msgstr ""
+msgstr "``startproject`` コマンドは、プロジェクト名に基づいてデフォルトのディレクトリを上書きするオプションの宛先ディレクトリをサポートするようになりました。(:issue:`2005`)"
 
 #: ../../news.rst:1082
 msgid ""
 "New :setting:`SCHEDULER_DEBUG` setting to log requests serialization "
 "failures (:issue:`1610`)."
-msgstr ""
+msgstr "新しい :setting:`SCHEDULER_DEBUG` 設定は、リクエストのシリアル化エラーをログに記録します(:issue:`1610`)"
 
 #: ../../news.rst:1084
 msgid ""
 "JSON encoder now supports serialization of ``set`` instances "
 "(:issue:`2058`)."
-msgstr ""
+msgstr "JSONエンコーダーが ``set`` インスタンスのシリアル化をサポートするようになりました(:issue:`2058`)"
 
 #: ../../news.rst:1085
 msgid ""
 "Interpret ``application/json-amazonui-streaming`` as ``TextResponse`` "
 "(:issue:`1503`)."
-msgstr ""
+msgstr "``application/json-amazonui-streaming`` を ``TextResponse`` として解釈する(:issue:`1503`)."
 
 #: ../../news.rst:1086
 msgid ""
@@ -2302,7 +2302,7 @@ msgstr ""
 
 #: ../../news.rst:1108
 msgid "Refactoring"
-msgstr ""
+msgstr "リファクタリング"
 
 #: ../../news.rst:1110
 msgid "``canonicalize_url`` has been moved to `w3lib.url`_ (:issue:`2168`)."
@@ -3318,18 +3318,18 @@ msgid ""
 "Make sure to check our updated :ref:`overview <intro-overview>` to get a "
 "glance of some of the changes, along with our brushed :ref:`tutorial "
 "<intro-tutorial>`."
-msgstr ""
+msgstr "このメジャーリリースには、多くの新機能とバグ修正が含まれています。 更新された :ref:`overview <intro-overview>` を確認して、磨かれた :ref:`チュートリアル<intro-tutorial>` とともに変更の一部を確認してください。"
 
 #: ../../news.rst:1543
 msgid "Support for returning dictionaries in spiders"
-msgstr ""
+msgstr "スパイダーで辞書を返すためのサポート"
 
 #: ../../news.rst:1545
 msgid ""
 "Declaring and returning Scrapy Items is no longer necessary to collect "
 "the scraped data from your spider, you can now return explicit "
 "dictionaries instead."
-msgstr ""
+msgstr "スパイダーからスクレイピングされたデータを収集するために、スクレイピーアイテムを宣言して返す必要はなくなりました。代わりに、明示的な辞書を返すことができるようになりました。"
 
 #: ../../news.rst:1549
 msgid "*Classic version*"
@@ -6612,7 +6612,7 @@ msgstr ""
 msgid ""
 "New Scrapy service called ``scrapyd`` for deploying Scrapy crawlers in "
 "production (#218) (documentation available)"
-msgstr ""
+msgstr "Scrapyクローラーを実稼働環境に展開するための ``scrapyd`` と呼ばれる新しいScrapyサービス(#218)(ドキュメントあり)"
 
 #: ../../news.rst:2656
 msgid ""
@@ -6869,7 +6869,7 @@ msgstr ""
 
 #: ../../news.rst:2728
 msgid "Added SMTP-AUTH support to scrapy.mail"
-msgstr ""
+msgstr "scrapy.mailにSMTP-AUTHサポートを追加。"
 
 #: ../../news.rst:2729
 msgid "New settings added: ``MAIL_USER``, ``MAIL_PASS`` (:rev:`2065` | #149)"
@@ -7179,5 +7179,5 @@ msgstr ""
 
 #: ../../news.rst:2809
 msgid "First release of Scrapy."
-msgstr ""
+msgstr "Scrapyの最初のリリース。"
 
