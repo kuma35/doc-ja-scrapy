@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-09-21 10:38+0900\n"
+"PO-Revision-Date: 2019-09-23 18:44+0900\n"
 "Last-Translator: kuma35\n"
 "Language: ja_JP\n"
 "Language-Team: Japanese\n"
@@ -33,7 +33,7 @@ msgstr "Scrapy 1.7.3 (2019-08-01)"
 
 #: ../../news.rst:12
 msgid "Enforce lxml 4.3.5 or lower for Python 3.4 (:issue:`3912`, :issue:`3918`)."
-msgstr ""
+msgstr "Python 3.4では lxml 4.3.5以下を強制する(:issue:`3912`, :issue:`3918`)"
 
 #: ../../news.rst:15
 msgid "Scrapy 1.7.2 (2019-07-23)"
@@ -242,7 +242,7 @@ msgstr ""
 #: ../../news.rst:1047 ../../news.rst:1090 ../../news.rst:1150
 #: ../../news.rst:1168 ../../news.rst:1183
 msgid "Bug fixes"
-msgstr ""
+msgstr "バグ修正"
 
 #: ../../news.rst:136
 msgid ""
@@ -530,7 +530,7 @@ msgstr ""
 
 #: ../../news.rst:294
 msgid "The following deprecated settings have also been removed (:issue:`3578`):"
-msgstr ""
+msgstr "また、以下の非推奨の設定も削除されました(:issue:`3578`):"
 
 #: ../../news.rst:296
 msgid "``SPIDER_MANAGER_CLASS`` (use :setting:`SPIDER_LOADER_CLASS`)"
@@ -664,7 +664,7 @@ msgstr ""
 
 #: ../../news.rst:370
 msgid "Selector API changes"
-msgstr ""
+msgstr "セレクターAPI変更"
 
 #: ../../news.rst:372
 msgid ""
@@ -713,7 +713,7 @@ msgstr ""
 
 #: ../../news.rst:403
 msgid "Telnet console"
-msgstr ""
+msgstr "Telnetコンソール"
 
 #: ../../news.rst:405
 msgid ""
@@ -3421,7 +3421,7 @@ msgstr ""
 
 #: ../../news.rst:1652
 msgid "Module Relocations"
-msgstr ""
+msgstr "モジュールの再配置"
 
 #: ../../news.rst:1654
 msgid ""
@@ -3451,16 +3451,16 @@ msgstr ""
 #: ../../news.rst:1672 ../../news.rst:1690 ../../news.rst:1729
 #: ../../news.rst:1749 ../../news.rst:1757
 msgid "Old location"
-msgstr ""
+msgstr "古い場所"
 
 #: ../../news.rst:1672 ../../news.rst:1690 ../../news.rst:1729
 #: ../../news.rst:1749 ../../news.rst:1757
 msgid "New location"
-msgstr ""
+msgstr "新しい場所"
 
 #: ../../news.rst:1674
 msgid "scrapy.commands.deploy"
-msgstr ""
+msgstr "scrapy.commands.deploy"
 
 #: ../../news.rst:1674
 msgid ""
@@ -3470,7 +3470,7 @@ msgstr ""
 
 #: ../../news.rst:1679
 msgid "scrapy.contrib.djangoitem"
-msgstr ""
+msgstr "scrapy.contrib.djangoitem"
 
 #: ../../news.rst:1679
 msgid ""
@@ -3480,7 +3480,7 @@ msgstr ""
 
 #: ../../news.rst:1683
 msgid "scrapy.webservice"
-msgstr ""
+msgstr "scrapy.webservice"
 
 #: ../../news.rst:1683
 msgid "`scrapy-jsonrpc <https://github.com /scrapy-plugins/scrapy-jsonrpc>`_"
@@ -3504,115 +3504,115 @@ msgstr ""
 
 #: ../../news.rst:1695
 msgid "scrapy.utils.iterators"
-msgstr ""
+msgstr "scrapy.utils.iterators"
 
 #: ../../news.rst:1697
 msgid "scrapy.contrib.downloadermiddleware"
-msgstr ""
+msgstr "scrapy.contrib.downloadermiddleware"
 
 #: ../../news.rst:1697
 msgid "scrapy.downloadermiddlewares"
-msgstr ""
+msgstr "scrapy.downloadermiddlewares"
 
 #: ../../news.rst:1699
 msgid "scrapy.contrib.exporter"
-msgstr ""
+msgstr "scrapy.contrib.exporter"
 
 #: ../../news.rst:1699
 msgid "scrapy.exporters"
-msgstr ""
+msgstr "scrapy.exporters"
 
 #: ../../news.rst:1701
 msgid "scrapy.contrib.linkextractors"
-msgstr ""
+msgstr "scrapy.contrib.linkextractors"
 
 #: ../../news.rst:1701 ../../news.rst:1735
 msgid "scrapy.linkextractors"
-msgstr ""
+msgstr "scrapy.linkextractors"
 
 #: ../../news.rst:1703
 msgid "scrapy.contrib.loader"
-msgstr ""
+msgstr "scrapy.contrib.loader"
 
 #: ../../news.rst:1703
 msgid "scrapy.loader"
-msgstr ""
+msgstr "scrapy.loader"
 
 #: ../../news.rst:1705
 msgid "scrapy.contrib.loader.processor"
-msgstr ""
+msgstr "scrapy.contrib.loader.processor"
 
 #: ../../news.rst:1705
 msgid "scrapy.loader.processors"
-msgstr ""
+msgstr "scrapy.loader.processors"
 
 #: ../../news.rst:1707
 msgid "scrapy.contrib.pipeline"
-msgstr ""
+msgstr "scrapy.contrib.pipeline"
 
 #: ../../news.rst:1707
 msgid "scrapy.pipelines"
-msgstr ""
+msgstr "scrapy.pipelines"
 
 #: ../../news.rst:1709
 msgid "scrapy.contrib.spidermiddleware"
-msgstr ""
+msgstr "scrapy.contrib.spidermiddleware"
 
 #: ../../news.rst:1709
 msgid "scrapy.spidermiddlewares"
-msgstr ""
+msgstr "scrapy.spidermiddlewares"
 
 #: ../../news.rst:1711
 msgid "scrapy.contrib.spiders"
-msgstr ""
+msgstr "scrapy.contrib.spiders"
 
 #: ../../news.rst:1711 ../../news.rst:1737
 msgid "scrapy.spiders"
-msgstr ""
+msgstr "scrapy.spiders"
 
 #: ../../news.rst:1713
 msgid "scrapy.contrib.closespider"
-msgstr ""
+msgstr "scrapy.contrib.closespider"
 
 #: ../../news.rst:1714
 msgid "scrapy.contrib.corestats"
-msgstr ""
+msgstr "scrapy.contrib.corestats"
 
 #: ../../news.rst:1715
 msgid "scrapy.contrib.debug"
-msgstr ""
+msgstr "scrapy.contrib.debug"
 
 #: ../../news.rst:1716
 msgid "scrapy.contrib.feedexport"
-msgstr ""
+msgstr "scrapy.contrib.feedexport"
 
 #: ../../news.rst:1717
 msgid "scrapy.contrib.httpcache"
-msgstr ""
+msgstr "scrapy.contrib.httpcache"
 
 #: ../../news.rst:1718
 msgid "scrapy.contrib.logstats"
-msgstr ""
+msgstr "scrapy.contrib.logstats"
 
 #: ../../news.rst:1719
 msgid "scrapy.contrib.memdebug"
-msgstr ""
+msgstr "scrapy.contrib.memdebug"
 
 #: ../../news.rst:1720
 msgid "scrapy.contrib.memusage"
-msgstr ""
+msgstr "scrapy.contrib.memusage"
 
 #: ../../news.rst:1721
 msgid "scrapy.contrib.spiderstate"
-msgstr ""
+msgstr "scrapy.contrib.spiderstate"
 
 #: ../../news.rst:1722
 msgid "scrapy.contrib.statsmailer"
-msgstr ""
+msgstr "scrapy.contrib.statsmailer"
 
 #: ../../news.rst:1723
 msgid "scrapy.contrib.throttle"
-msgstr ""
+msgstr "scrapy.contrib.throttle"
 
 #: ../../news.rst:1713
 msgid "scrapy.extensions.\\*"
@@ -3624,51 +3624,51 @@ msgstr ""
 
 #: ../../news.rst:1731
 msgid "scrapy.command"
-msgstr ""
+msgstr "scrapy.command"
 
 #: ../../news.rst:1731
 msgid "scrapy.commands"
-msgstr ""
+msgstr "scrapy.commands"
 
 #: ../../news.rst:1733
 msgid "scrapy.dupefilter"
-msgstr ""
+msgstr "scrapy.dupefilter"
 
 #: ../../news.rst:1733
 msgid "scrapy.dupefilters"
-msgstr ""
+msgstr "scrapy.dupefilters"
 
 #: ../../news.rst:1735
 msgid "scrapy.linkextractor"
-msgstr ""
+msgstr "scrapy.linkextractor"
 
 #: ../../news.rst:1737
 msgid "scrapy.spider"
-msgstr ""
+msgstr "scrapy.spider"
 
 #: ../../news.rst:1739
 msgid "scrapy.squeue"
-msgstr ""
+msgstr "scrapy.squeue"
 
 #: ../../news.rst:1739
 msgid "scrapy.squeues"
-msgstr ""
+msgstr "scrapy.squeues"
 
 #: ../../news.rst:1741
 msgid "scrapy.statscol"
-msgstr ""
+msgstr "scrapy.statscol"
 
 #: ../../news.rst:1741
 msgid "scrapy.statscollectors"
-msgstr ""
+msgstr "scrapy.statscollectors"
 
 #: ../../news.rst:1743
 msgid "scrapy.utils.decorator"
-msgstr ""
+msgstr "scrapy.utils.decorator"
 
 #: ../../news.rst:1743
 msgid "scrapy.utils.decorators"
-msgstr ""
+msgstr "scrapy.utils.decorators"
 
 #: ../../news.rst:1746
 msgid "Class renames"
@@ -3676,15 +3676,15 @@ msgstr ""
 
 #: ../../news.rst:1751
 msgid "scrapy.spidermanager.SpiderManager"
-msgstr ""
+msgstr "scrapy.spidermanager.SpiderManager"
 
 #: ../../news.rst:1751
 msgid "scrapy.spiderloader.SpiderLoader"
-msgstr ""
+msgstr "scrapy.spiderloader.SpiderLoader"
 
 #: ../../news.rst:1754
 msgid "Settings renames"
-msgstr ""
+msgstr "Settings renames"
 
 #: ../../news.rst:1759
 msgid "SPIDER\\_MANAGER\\_CLASS"
