@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-23 22:00+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,18 +19,18 @@ msgstr ""
 
 #: ../../faq.rst:4
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "F.A.Q.(よくある質問と回答)"
 
 #: ../../faq.rst:9
 msgid "How does Scrapy compare to BeautifulSoup or lxml?"
-msgstr ""
+msgstr "ScrapyはBeautifulSoupやlxmlと比較してどうですか？"
 
 #: ../../faq.rst:11
 msgid ""
 "`BeautifulSoup`_ and `lxml`_ are libraries for parsing HTML and XML. "
 "Scrapy is an application framework for writing web spiders that crawl web"
 " sites and extract data from them."
-msgstr ""
+msgstr "`BeautifulSoup`_ と `lxml`_ は、HTMLとXMLを解析するためのライブラリです。 Scrapyは、Webサイトをクロールし、そこからデータを抽出するWebスパイダーを作成するためのアプリケーションフレームワークです。"
 
 #: ../../faq.rst:15
 msgid ""
@@ -39,17 +39,17 @@ msgid ""
 "`BeautifulSoup`_ (or `lxml`_) instead, if you feel more comfortable "
 "working with them. After all, they're just parsing libraries which can be"
 " imported and used from any Python code."
-msgstr ""
+msgstr "Scrapyはデータを抽出するための組み込みメカニズムを提供します( :ref:`セレクター<topics-selectors>` とよばれます)が、より快適に作業できる場合は、代わりに `BeautifulSoup`_ (または `lxml`_ )を簡単に使用できます。結局のところ、それらは任意のPythonコードからインポートして使用できるライブラリを利用しているだけです。"
 
 #: ../../faq.rst:21
 msgid ""
 "In other words, comparing `BeautifulSoup`_ (or `lxml`_) to Scrapy is like"
 " comparing `jinja2`_ to `Django`_."
-msgstr ""
+msgstr "いいかえると、 `BeautifulSoup`_ (または `lxml`_ )とScrapyを比較することは、  `jinja2`_ と `Django`_ を比較するようなものです。"
 
 #: ../../faq.rst:30
 msgid "Can I use Scrapy with BeautifulSoup?"
-msgstr ""
+msgstr "ScrapyでBeautifulSoupを使用できますか？"
 
 #: ../../faq.rst:32
 msgid ""
@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../../faq.rst:70
 msgid "What Python versions does Scrapy support?"
-msgstr ""
+msgstr "ScrapyはどのPythonバージョンをサポートしていますか？"
 
 #: ../../faq.rst:72
 msgid ""
@@ -93,7 +93,7 @@ msgstr ""
 
 #: ../../faq.rst:83
 msgid "Did Scrapy \"steal\" X from Django?"
-msgstr ""
+msgstr "ScrapyはDjangoからhogehogeを盗んだ？"
 
 #: ../../faq.rst:85
 msgid ""
@@ -121,7 +121,7 @@ msgstr ""
 
 #: ../../faq.rst:100
 msgid "Does Scrapy work with HTTP proxies?"
-msgstr ""
+msgstr "ScrapyはHTTPプロキシ経由で動作しますか？"
 
 #: ../../faq.rst:102
 msgid ""
@@ -132,7 +132,7 @@ msgstr ""
 
 #: ../../faq.rst:107
 msgid "How can I scrape an item with attributes in different pages?"
-msgstr ""
+msgstr "異なるページの属性を持つアイテムをスクレイピングするにはどうすればよいですか？"
 
 #: ../../faq.rst:109
 msgid "See :ref:`topics-request-response-ref-request-callback-arguments`."
@@ -140,7 +140,7 @@ msgstr ""
 
 #: ../../faq.rst:113
 msgid "Scrapy crashes with: ImportError: No module named win32api"
-msgstr ""
+msgstr "Scrapyがクラッシュします。「ImportError: No module named win32api」"
 
 #: ../../faq.rst:115
 msgid "You need to install `pywin32`_ because of `this Twisted bug`_."
@@ -148,7 +148,7 @@ msgstr ""
 
 #: ../../faq.rst:121
 msgid "How can I simulate a user login in my spider?"
-msgstr ""
+msgstr "スパイダーでユーザーログインをシミュレートするにはどうすればよいですか？"
 
 #: ../../faq.rst:123
 msgid "See :ref:`topics-request-response-ref-request-userlogin`."
@@ -156,7 +156,7 @@ msgstr ""
 
 #: ../../faq.rst:128
 msgid "Does Scrapy crawl in breadth-first or depth-first order?"
-msgstr ""
+msgstr "Scrapyは幅優先または深さ優先でクロールしますか？"
 
 #: ../../faq.rst:130
 msgid ""
@@ -183,7 +183,7 @@ msgstr ""
 
 #: ../../faq.rst:150
 msgid "My Scrapy crawler has memory leaks. What can I do?"
-msgstr ""
+msgstr "Scrapyクローラーにメモリリークがあります。 何か私にできる事がありますか？"
 
 #: ../../faq.rst:152
 msgid "See :ref:`topics-leaks`."
@@ -197,7 +197,7 @@ msgstr ""
 
 #: ../../faq.rst:158
 msgid "How can I make Scrapy consume less memory?"
-msgstr ""
+msgstr "Scrapyが消費するメモリを減らすにはどうすればよいですか？"
 
 #: ../../faq.rst:160
 msgid "See previous question."
@@ -205,7 +205,7 @@ msgstr ""
 
 #: ../../faq.rst:163
 msgid "Can I use Basic HTTP Authentication in my spiders?"
-msgstr ""
+msgstr "スパイダーは基本HTTP認証を使用できますか？"
 
 #: ../../faq.rst:165
 msgid ""
@@ -215,7 +215,7 @@ msgstr ""
 
 #: ../../faq.rst:168
 msgid "Why does Scrapy download pages in English instead of my native language?"
-msgstr ""
+msgstr "Scrapyが母国語ではなく英語でページをダウンロードするのはなぜですか？"
 
 #: ../../faq.rst:170
 msgid ""
@@ -225,15 +225,15 @@ msgstr ""
 
 #: ../../faq.rst:176
 msgid "Where can I find some example Scrapy projects?"
-msgstr ""
+msgstr "Scrapyプロジェクトの例はどこにありますか？"
 
 #: ../../faq.rst:178
 msgid "See :ref:`intro-examples`."
-msgstr ""
+msgstr ":ref:`intro-examples` 参照。"
 
 #: ../../faq.rst:181
 msgid "Can I run a spider without creating a project?"
-msgstr ""
+msgstr "プロジェクトを作成せずにスパイダーを実行できますか？"
 
 #: ../../faq.rst:183
 msgid ""
@@ -247,7 +247,7 @@ msgstr ""
 
 #: ../../faq.rst:191
 msgid "I get \"Filtered offsite request\" messages. How can I fix them?"
-msgstr ""
+msgstr "\"Filtered offsite request\"(フィルターされたオフサイト要求)メッセージが表示されます。 どうすれば修正できますか？"
 
 #: ../../faq.rst:193
 msgid ""
@@ -270,15 +270,15 @@ msgstr ""
 
 #: ../../faq.rst:204
 msgid "What is the recommended way to deploy a Scrapy crawler in production?"
-msgstr ""
+msgstr "Scrapyクローラーを運用環境に展開する推奨方法は何ですか？"
 
 #: ../../faq.rst:206
 msgid "See :ref:`topics-deploy`."
-msgstr ""
+msgstr ":ref:`topics-deploy` 参照。"
 
 #: ../../faq.rst:209
 msgid "Can I use JSON for large exports?"
-msgstr ""
+msgstr "大規模なエクスポートにJSONを使用できますか？"
 
 #: ../../faq.rst:211
 msgid ""
@@ -289,7 +289,7 @@ msgstr ""
 
 #: ../../faq.rst:216
 msgid "Can I return (Twisted) deferreds from signal handlers?"
-msgstr ""
+msgstr "シグナルハンドラーから(Twisted)遅延(deferred)を返すことができますか？"
 
 #: ../../faq.rst:218
 msgid ""
@@ -299,7 +299,7 @@ msgstr ""
 
 #: ../../faq.rst:222
 msgid "What does the response status code 999 means?"
-msgstr ""
+msgstr "レスポンスステータスコード999の意味は何ですか？"
 
 #: ../../faq.rst:224
 msgid ""
@@ -316,7 +316,7 @@ msgstr ""
 
 #: ../../faq.rst:240
 msgid "Can I call ``pdb.set_trace()`` from my spiders to debug them?"
-msgstr ""
+msgstr "スパイダーから ``pdb.set_trace()`` を呼び出してデバッグできますか？"
 
 #: ../../faq.rst:242
 msgid ""
@@ -331,19 +331,19 @@ msgstr ""
 
 #: ../../faq.rst:249
 msgid "Simplest way to dump all my scraped items into a JSON/CSV/XML file?"
-msgstr ""
+msgstr "スクレイピングしたすべてのアイテムをJSON/CSV/XMLファイルにダンプする最も簡単な方法は？"
 
 #: ../../faq.rst:251
 msgid "To dump into a JSON file::"
-msgstr ""
+msgstr "JSONファイルにダンプするには::"
 
 #: ../../faq.rst:255
 msgid "To dump into a CSV file::"
-msgstr ""
+msgstr "CSVファイルにダンプするには::"
 
 #: ../../faq.rst:259
 msgid "To dump into a XML file::"
-msgstr ""
+msgstr "XMLファイルにダンプするには::"
 
 #: ../../faq.rst:263
 msgid "For more information see :ref:`topics-feed-exports`"
@@ -351,7 +351,7 @@ msgstr ""
 
 #: ../../faq.rst:266
 msgid "What's this huge cryptic ``__VIEWSTATE`` parameter used in some forms?"
-msgstr ""
+msgstr "いくつかのフォームで使用されているこの巨大な ``__VIEWSTATE`` パラメーターは何ですか？"
 
 #: ../../faq.rst:268
 msgid ""
@@ -362,7 +362,7 @@ msgstr ""
 
 #: ../../faq.rst:276
 msgid "What's the best way to parse big XML/CSV data feeds?"
-msgstr ""
+msgstr "大きなXML/CSVデータフィードを解析する最良の方法は何ですか？"
 
 #: ../../faq.rst:278
 msgid ""
@@ -381,7 +381,7 @@ msgstr ""
 
 #: ../../faq.rst:288
 msgid "Does Scrapy manage cookies automatically?"
-msgstr ""
+msgstr "ScrapyはCookieを自動的に管理しますか？"
 
 #: ../../faq.rst:290
 msgid ""
@@ -396,7 +396,7 @@ msgstr ""
 
 #: ../../faq.rst:296
 msgid "How can I see the cookies being sent and received from Scrapy?"
-msgstr ""
+msgstr "Scrapyとの間で送受信されているCookieを確認するにはどうすればよいですか？"
 
 #: ../../faq.rst:298
 msgid "Enable the :setting:`COOKIES_DEBUG` setting."
@@ -404,7 +404,7 @@ msgstr ""
 
 #: ../../faq.rst:301
 msgid "How can I instruct a spider to stop itself?"
-msgstr ""
+msgstr "スパイダーに自分自身を止めるように指示するにはどうすればよいですか？"
 
 #: ../../faq.rst:303
 msgid ""
@@ -414,7 +414,7 @@ msgstr ""
 
 #: ../../faq.rst:307
 msgid "How can I prevent my Scrapy bot from getting banned?"
-msgstr ""
+msgstr "ScrapyボットがBANされるのを防ぐにはどうすればよいですか？"
 
 #: ../../faq.rst:309
 msgid "See :ref:`bans`."
@@ -422,7 +422,7 @@ msgstr ""
 
 #: ../../faq.rst:312
 msgid "Should I use spider arguments or settings to configure my spider?"
-msgstr ""
+msgstr "スパイダーを設定するには、スパイダーの引数または設定を使用する必要がありますか？"
 
 #: ../../faq.rst:314
 msgid ""
@@ -446,15 +446,15 @@ msgstr ""
 
 #: ../../faq.rst:328
 msgid "I'm scraping a XML document and my XPath selector doesn't return any items"
-msgstr ""
+msgstr "XMLドキュメントをスクレイピングしていますが、XPathセレクターはアイテムを返しません"
 
 #: ../../faq.rst:330
 msgid "You may need to remove namespaces. See :ref:`removing-namespaces`."
-msgstr ""
+msgstr "名前空間を削除する必要がある場合があります。 :ref:`removing-namespaces` 参照。"
 
 #: ../../faq.rst:335
 msgid "How to split an item into multiple items in an item pipeline?"
-msgstr ""
+msgstr "アイテムパイプラインでアイテムを複数のアイテムに分割する方法は？"
 
 #: ../../faq.rst:337
 msgid ""
