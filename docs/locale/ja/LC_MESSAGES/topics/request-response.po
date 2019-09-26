@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 22:00+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-27 03:48+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,13 +19,13 @@ msgstr ""
 
 #: ../../topics/request-response.rst:5
 msgid "Requests and Responses"
-msgstr ""
+msgstr "リクエストとレスポンス"
 
 #: ../../topics/request-response.rst:10
 msgid ""
 "Scrapy uses :class:`Request` and :class:`Response` objects for crawling "
 "web sites."
-msgstr ""
+msgstr "Scrapyは、Webサイトのクロールに :class:`Request` と :class:`Response` オブジェクトを使用します。"
 
 #: ../../topics/request-response.rst:13
 msgid ""
@@ -33,7 +33,7 @@ msgid ""
 " across the system until they reach the Downloader, which executes the "
 "request and returns a :class:`Response` object which travels back to the "
 "spider that issued the request."
-msgstr ""
+msgstr "通常、 :class:`Request` オブジェクトはスパイダーで生成され、ダウンローダーに到達するまでシステム内をあちこち旅行(pass across)します。ダウンローダーはリクエストを実行し、リクエストを発行したスパイダーに :class:`Response` オブジェクトを返します。"
 
 #: ../../topics/request-response.rst:18
 msgid ""
@@ -41,26 +41,26 @@ msgid ""
 " add functionality not required in the base classes. These are described "
 "below in :ref:`topics-request-response-ref-request-subclasses` and :ref"
 ":`topics-request-response-ref-response-subclasses`."
-msgstr ""
+msgstr ":class:`Request` クラスと :class:`Response` クラスの両方には、基本クラスでは必要のない機能を追加するサブクラスがあります。これらについては、 :ref:`topics-request-response-ref-request-subclasses` と :ref:`topics-request-response-ref-response-subclasses` で説明しています。"
 
 #: ../../topics/request-response.rst:25
 msgid "Request objects"
-msgstr ""
+msgstr "Requestオブジェクト"
 
 #: ../../topics/request-response.rst:29
 msgid ""
 "A :class:`Request` object represents an HTTP request, which is usually "
 "generated in the Spider and executed by the Downloader, and thus "
 "generating a :class:`Response`."
-msgstr ""
+msgstr ":class:`Request` オブジェクトはHTTPリクエストを表します。これは通常スパイダーで生成され、ダウンローダーによって実行され、そして、 :class:`Response` が生成されます。"
 
 #: ../../topics/request-response.rst
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../topics/request-response.rst:33
 msgid "the URL of this request"
-msgstr ""
+msgstr "このリクエストのURL"
 
 #: ../../topics/request-response.rst:36
 msgid ""
@@ -70,18 +70,19 @@ msgid ""
 "Request doesn't specify a callback, the spider's "
 ":meth:`~scrapy.spiders.Spider.parse` method will be used. Note that if "
 "exceptions are raised during processing, errback is called instead."
-msgstr ""
+msgstr "最初のパラメーターとしてこのリクエストのレスポンス(ダウンロード後)に呼び出される関数。詳細については、以下の :ref:`topics-request-response-ref-request-callback-arguments` を参照してください。リクエストでコールバックが指定されていない場合、スパイダーの :meth:`~scrapy.spiders.Spider.parse` メソッドが使用されます。 処理中に例外が発生した場合、代わりにエラーバック(errback)が呼び出されることに注意してください。"
 
 #: ../../topics/request-response.rst:45
 msgid "the HTTP method of this request. Defaults to ``'GET'``."
-msgstr ""
+msgstr "このリクエストのHTTPメソッド。デフォルトは ``'GET'`` です。"
 
 #: ../../topics/request-response.rst:48
 msgid ""
 "the initial values for the :attr:`Request.meta` attribute. If given, the "
 "dict passed in this parameter will be shallow copied."
-msgstr ""
+msgstr ":attr:`Request.meta` 属性の初期値。指定すると、このパラメーターに渡された辞書は浅いコピー(shallow copy)されます。"
 
+# 注意！「…この引数のタイプに関係なく、保存される最終的な値は ``str``」
 #: ../../topics/request-response.rst:52
 msgid ""
 "the request body. If a ``unicode`` is passed, then it's encoded to "
@@ -89,59 +90,60 @@ msgid ""
 "``body`` is not given, an empty string is stored. Regardless of the type "
 "of this argument, the final value stored will be a ``str`` (never "
 "``unicode`` or ``None``)."
-msgstr ""
+msgstr "リクエスト・ボディ。 ``unicode`` が渡されると、渡された ``encoding`` (デフォルトは ``utf-8`` )を使用して ``str`` にエンコードされます。 ``body`` が与えられない場合、空の文字列が保存されます。この引数のタイプに関係なく、保存される最終的な値は ``str`` (決して ``unicode`` や ``None`` ではありません)。"
 
 #: ../../topics/request-response.rst:59
 msgid ""
 "the headers of this request. The dict values can be strings (for single "
 "valued headers) or lists (for multi-valued headers). If ``None`` is "
 "passed as value, the HTTP header will not be sent at all."
-msgstr ""
+msgstr "このリクエストのヘッダー。 辞書値は、文字列(単一値のヘッダーの場合)またはリスト(複数値のヘッダーの場合)です。 値として ``None`` が渡された場合、HTTPヘッダーはまったく送信されません。"
 
+# gettext での誤分割ダブリっぽい。訳文に何も出てないので無視する。
 #: ../../topics/request-response.rst:64
-msgid ""
-"the request cookies. These can be sent in two forms.  1. Using a dict::"
-"      request_with_cookies = Request(url=\"http://www.example.com\","
-"                                    cookies={'currency': 'USD', "
-"'country': 'UY'})  2. Using a list of dicts::      request_with_cookies ="
-" Request(url=\"http://www.example.com\","
-"                                    cookies=[{'name': 'currency',"
-"                                             'value': 'USD',"
-"                                             'domain': 'example.com',"
-"                                             'path': '/currency'}])  The "
-"latter form allows for customizing the ``domain`` and ``path`` attributes"
-" of the cookie. This is only useful if the cookies are saved for later "
-"requests.  .. reqmeta:: dont_merge_cookies  When some site returns "
-"cookies (in a response) those are stored in the cookies for that domain "
-"and will be sent again in future requests. That's the typical behaviour "
-"of any regular web browser. However, if, for some reason, you want to "
-"avoid merging with existing cookies you can instruct Scrapy to do so by "
-"setting the ``dont_merge_cookies`` key to True in the "
-":attr:`Request.meta`.  Example of request without merging cookies::      "
-"request_with_cookies = Request(url=\"http://www.example.com\","
-"                                    cookies={'currency': 'USD', "
-"'country': 'UY'},                                    "
-"meta={'dont_merge_cookies': True})  For more info see :ref:`cookies-mw`."
-msgstr ""
+#~ msgid ""
+#~ "the request cookies. These can be sent in two forms.  1. Using a dict::"
+#~ "      request_with_cookies = Request(url=\"http://www.example.com\","
+#~ "                                    cookies={'currency': 'USD', "
+#~ "'country': 'UY'})  2. Using a list of dicts::      request_with_cookies ="
+#~ " Request(url=\"http://www.example.com\","
+#~ "                                    cookies=[{'name': 'currency',"
+#~ "                                             'value': 'USD',"
+#~ "                                             'domain': 'example.com',"
+#~ "                                             'path': '/currency'}])  The "
+#~ "latter form allows for customizing the ``domain`` and ``path`` attributes"
+#~ " of the cookie. This is only useful if the cookies are saved for later "
+#~ "requests.  .. reqmeta:: dont_merge_cookies  When some site returns "
+#~ "cookies (in a response) those are stored in the cookies for that domain "
+#~ "and will be sent again in future requests. That's the typical behaviour "
+#~ "of any regular web browser. However, if, for some reason, you want to "
+#~ "avoid merging with existing cookies you can instruct Scrapy to do so by "
+#~ "setting the ``dont_merge_cookies`` key to True in the "
+#~ ":attr:`Request.meta`.  Example of request without merging cookies::      "
+#~ "request_with_cookies = Request(url=\"http://www.example.com\","
+#~ "                                    cookies={'currency': 'USD', "
+#~ "'country': 'UY'},                                    "
+#~ "meta={'dont_merge_cookies': True})  For more info see :ref:`cookies-mw`."
+#~ msgstr ""
 
 #: ../../topics/request-response.rst:64
 msgid "the request cookies. These can be sent in two forms."
-msgstr ""
+msgstr "リクエスト・クッキー。これらは2つの形式で送信できます。"
 
 #: ../../topics/request-response.rst:66
 msgid "Using a dict::"
-msgstr ""
+msgstr "辞書の使用::"
 
 #: ../../topics/request-response.rst:71
 msgid "Using a list of dicts::"
-msgstr ""
+msgstr "辞書のリストの使用::"
 
 #: ../../topics/request-response.rst:79
 msgid ""
 "The latter form allows for customizing the ``domain`` and ``path`` "
 "attributes of the cookie. This is only useful if the cookies are saved "
 "for later requests."
-msgstr ""
+msgstr "後者の形式では、クッキーの ``domain`` および ``path`` 属性をカスタマイズできます。これは、クッキーが後のリクエストのために保存される場合にのみ役立ちます。"
 
 #: ../../topics/request-response.rst:85
 msgid ""
@@ -151,22 +153,22 @@ msgid ""
 "reason, you want to avoid merging with existing cookies you can instruct "
 "Scrapy to do so by setting the ``dont_merge_cookies`` key to True in the "
 ":attr:`Request.meta`."
-msgstr ""
+msgstr "一部のサイトが(レスポンスで)クッキーを返すと、それらはそのドメインのクッキーに保存され、今後のリクエストで再度送信されます。これは通常のWebブラウザの一般的な動作です。けれども、何らかの理由で既存のクッキーとのマージを避けたい場合は、 :attr:`Request.meta` で ``dont_merge_cookies`` キーをTrueに設定することで、Scrapyにそうするよう指示できます。"
 
 #: ../../topics/request-response.rst:92
 msgid "Example of request without merging cookies::"
-msgstr ""
+msgstr "クッキーをマージしないリクエストの例::"
 
 #: ../../topics/request-response.rst:98
 msgid "For more info see :ref:`cookies-mw`."
-msgstr ""
+msgstr "詳細については、 :ref:`cookies-mw` を参照してください。"
 
 #: ../../topics/request-response.rst:101
 msgid ""
 "the encoding of this request (defaults to ``'utf-8'``). This encoding "
 "will be used to percent-encode the URL and to convert the body to ``str``"
 " (if given as ``unicode``)."
-msgstr ""
+msgstr "このリクエストのエンコーディング(デフォルトは ``'utf-8'`` )。このエンコードは、URLをパーセントエンコードし、本文を ``str`` に変換するために使用されます( ``unicode`` として指定された場合)。"
 
 #: ../../topics/request-response.rst:106
 msgid ""
@@ -174,7 +176,7 @@ msgid ""
 " the scheduler to define the order used to process requests.  Requests "
 "with a higher priority value will execute earlier. Negative values are "
 "allowed in order to indicate relatively low-priority."
-msgstr ""
+msgstr "このリクエストの優先度(デフォルトは ``0``)。スケジューラーは優先度を使用して、リクエストの処理に使用される順序を定義します。より高い優先度値を持つリクエストは、より早く実行されます。比較的低い優先度を示すために、負の値が許可されています。"
 
 #: ../../topics/request-response.rst:112
 msgid ""
@@ -182,7 +184,7 @@ msgid ""
 " is used when you want to perform an identical request multiple times, to"
 " ignore the duplicates filter. Use it with care, or you will get into "
 "crawling loops. Default to ``False``."
-msgstr ""
+msgstr "このリクエストは、スケジューラによってフィルタリングされるべきではないことを示します。 これは、重複フィルターを無視するために、同じリクエストを複数回実行する場合に使用されます。注意して使用しないと、クロールループに陥ります。デフォルトは ``False`` です。"
 
 #: ../../topics/request-response.rst:118
 msgid ""
@@ -191,50 +193,50 @@ msgid ""
 "errors and such. It receives a `Twisted Failure`_ instance as first "
 "parameter. For more information, see :ref:`topics-request-response-ref-"
 "errbacks` below."
-msgstr ""
+msgstr "リクエストの処理中に例外が発生した場合に呼び出される関数。これには、404 HTTPエラーなどで失敗したページが含まれます。最初のパラメーターとして `Twisted Failure`_ インスタンスを受け取ります。 詳細については、以下の :ref:`topics-request-response-ref-errbacks` を参照してください。"
 
 #: ../../topics/request-response.rst:126
 msgid "Flags sent to the request, can be used for logging or similar purposes."
-msgstr ""
+msgstr "リクエストに送信されたフラグは、ロギングまたは同様の目的に使用できます。"
 
 #: ../../topics/request-response.rst:129
 msgid ""
 "A dict with arbitrary data that will be passed as keyword arguments to "
 "the Request's callback."
-msgstr ""
+msgstr "キーワード引数としてリクエストのコールバックに渡される任意のデータを含む辞書。"
 
 #: ../../topics/request-response.rst:134
 msgid ""
 "A string containing the URL of this request. Keep in mind that this "
 "attribute contains the escaped URL, so it can differ from the URL passed "
 "in the constructor."
-msgstr ""
+msgstr "このリクエストのURLを含む文字列。 この属性にはエスケープされたURLが含まれているため、コンストラクターで渡されるURLとは異なる場合があることに注意してください。"
 
 #: ../../topics/request-response.rst:138
 msgid ""
 "This attribute is read-only. To change the URL of a Request use "
 ":meth:`replace`."
-msgstr ""
+msgstr "この属性は読み取り専用です。リクエストのURLを変更するには、 :meth:`replace` を使用します。"
 
 #: ../../topics/request-response.rst:143
 msgid ""
 "A string representing the HTTP method in the request. This is guaranteed "
 "to be uppercase. Example: ``\"GET\"``, ``\"POST\"``, ``\"PUT\"``, etc"
-msgstr ""
+msgstr "リクエスト内のHTTPメソッドを表す文字列。 これは大文字であることが保証されています。 例： ``\"GET\"`` 、 ``\"POST\"`` 、 ``\"PUT\"`` など"
 
 #: ../../topics/request-response.rst:148
 msgid "A dictionary-like object which contains the request headers."
-msgstr ""
+msgstr "リクエスト・ヘッダーを含む辞書のようなオブジェクト。"
 
 #: ../../topics/request-response.rst:152
 msgid "A str that contains the request body."
-msgstr ""
+msgstr "リクエスト・ボディを含む文字列(str)。"
 
 #: ../../topics/request-response.rst:154
 msgid ""
 "This attribute is read-only. To change the body of a Request use "
 ":meth:`replace`."
-msgstr ""
+msgstr "この属性は読み取り専用です。リクエストの本文を変更するには、 :meth:`replace` を使用します。"
 
 #: ../../topics/request-response.rst:159
 msgid ""
@@ -242,20 +244,20 @@ msgid ""
 "empty for new Requests, and is usually  populated by different Scrapy "
 "components (extensions, middlewares, etc). So the data contained in this "
 "dict depends on the extensions you have enabled."
-msgstr ""
+msgstr "このリクエストの任意のメタデータを含む辞書。 この辞書は、新しいリクエストに対して空であり、通常、さまざまなScrapyコンポーネント(拡張機能、ミドルウェアなど)によって設定されます。したがって、この辞書に含まれるデータは、有効にした拡張機能によって異なります。"
 
 #: ../../topics/request-response.rst:164
 msgid ""
 "See :ref:`topics-request-meta` for a list of special meta keys recognized"
 " by Scrapy."
-msgstr ""
+msgstr "Scrapyによって認識される特殊なメタ・キーのリストについては、 :ref:`topics-request-meta` を参照してください。"
 
 #: ../../topics/request-response.rst:167
 msgid ""
 "This dict is `shallow copied`_ when the request is cloned using the "
 "``copy()`` or ``replace()`` methods, and can also be accessed, in your "
 "spider, from the ``response.meta`` attribute."
-msgstr ""
+msgstr "この辞書は ``copy()`` または ``replace()`` メソッドを使用してリクエストが複製されたときに浅いコピーされ(`shallow copied`_)、スパイダーで ``response.meta`` 属性からアクセスすることもできます。"
 
 #: ../../topics/request-response.rst:173
 msgid ""
@@ -263,20 +265,20 @@ msgid ""
 "contents will be passed to the Request's callback as keyword arguments. "
 "It is empty for new Requests, which means by default callbacks only get a"
 " :class:`Response` object as argument."
-msgstr ""
+msgstr "このリクエストの任意のメタデータを含む辞書。その内容は、キーワード引数としてリクエストのコールバックに渡されます。新しいリクエストの場合は空です。つまり、デフォルトではコールバックは引数として :class:`Response` オブジェクトのみを取得します。"
 
 #: ../../topics/request-response.rst:178
 msgid ""
 "This dict is `shallow copied`_ when the request is cloned using the "
 "``copy()`` or ``replace()`` methods, and can also be accessed, in your "
 "spider, from the ``response.cb_kwargs`` attribute."
-msgstr ""
+msgstr "この辞書は、 ``copy()`` または ``replace()`` メソッドを使用してリクエストが複製されたときに浅いコピーされ(`shallow copied`_)、スパイダーで ``response.cb_kwargs`` 属性からアクセスすることもできます。"
 
 #: ../../topics/request-response.rst:186
 msgid ""
 "Return a new Request which is a copy of this Request. See also: :ref"
 ":`topics-request-response-ref-request-callback-arguments`."
-msgstr ""
+msgstr "このリクエストのコピーである新しいリクエストを返します。 :ref:`topics-request-response-ref-request-callback-arguments` も参照してください。"
 
 #: ../../topics/request-response.rst:191
 msgid ""
@@ -285,7 +287,7 @@ msgid ""
 ":attr:`Request.cb_kwargs` and :attr:`Request.meta` attributes are shallow"
 " copied by default (unless new values are given as arguments). See also "
 ":ref:`topics-request-response-ref-request-callback-arguments`."
-msgstr ""
+msgstr "指定されたキーワード引数によって新しい値が指定されたメンバーを除き、同じメンバーを持つリクエスト・オブジェクトを返します。 :attr:`Request.cb_kwargs` および :attr:`Request.meta` 属性は(新しい値が引数として与えられない限り)デフォルトでは浅くコピー(shallow copy)されます。 :ref:`topics-request-response-ref-request-callback-arguments` も参照してください。"
 
 #: of scrapy.http.Request.from_curl:1
 msgid ""
@@ -294,14 +296,14 @@ msgid ""
 " the headers, the cookies and the body. It accepts the same arguments as "
 "the :class:`Request` class, taking preference and overriding the values "
 "of the same arguments contained in the cURL command."
-msgstr ""
+msgstr "`cURL <https://curl.haxx.se/>`_ コマンドを含む文字列からリクエストオブジェクトを作成します。 HTTPメソッドとURLとヘッダーとクッキーとボディを設定します。 :class:`Request` クラスと同じ引数を受け入れ、優先度を取得し、cURLコマンドに含まれる同じ引数の値をオーバーライドします。"
 
 #: of scrapy.http.Request.from_curl:8
 msgid ""
 "Unrecognized options are ignored by default. To raise an error when "
 "finding unknown options call this method by passing "
 "``ignore_unknown_options=False``."
-msgstr ""
+msgstr "認識されないオプションはデフォルトで無視されます。不明なオプションを見つけるときにエラーを発生させるには、 ``ignore_unknown_options=False`` を渡してこのメソッドを呼び出します。"
 
 #: of scrapy.http.Request.from_curl:12
 msgid ""
@@ -315,11 +317,11 @@ msgid ""
 " "
 ":class:`~scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware`,"
 " may modify the :class:`~scrapy.http.Request` object."
-msgstr ""
+msgstr ":class:`~scrapy.http.JSONRequest` または :class:`~scrapy.http.XmlRpcRequest` のような :class:`~scrapy.http.Request` サブクラスから :meth:`from_curl` を使用し、:class:`~scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware` または :class:`~scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` または :class:`~scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware` のような :ref:`ダウンローダー・ミドルウェア<topics-downloader-middleware>` と :ref:`スパイダー・ミドルウェア<topics-spider-middleware>` を有効にすることで、:class:`~scrapy.http.Request` オブジェクトを変更できます。"
 
 #: ../../topics/request-response.rst:202
 msgid "Passing additional data to callback functions"
-msgstr ""
+msgstr "追加のデータをコールバック関数に渡す"
 
 #: ../../topics/request-response.rst:204
 msgid ""
@@ -327,11 +329,11 @@ msgid ""
 "response of that request is downloaded. The callback function will be "
 "called with the downloaded :class:`Response` object as its first "
 "argument."
-msgstr ""
+msgstr "リクエストのコールバックは、そのリクエストのレスポンスがダウンロードされるときに呼び出される関数です。コールバック関数は、ダウンロードされた :class:`Response` オブジェクトを最初の引数として呼び出されます。"
 
 #: ../../topics/request-response.rst:208
 msgid "Example::"
-msgstr ""
+msgstr "例::"
 
 #: ../../topics/request-response.rst:218
 msgid ""
@@ -339,7 +341,7 @@ msgid ""
 "callback functions so you can receive the arguments later, in the second "
 "callback. The following example shows how to achieve this by using the "
 ":attr:`Request.cb_kwargs` attribute:"
-msgstr ""
+msgstr "場合によっては、後で2番目のコールバックで引数を受け取ることができるように、これらのコールバック関数に引数を渡すことに興味があるかもしれません。 次の例は、 :attr:`Request.cb_kwargs` 属性を使用してこれを実現する方法を示しています:"
 
 #: ../../topics/request-response.rst:239
 msgid ""
@@ -348,146 +350,147 @@ msgid ""
 "around callbacks. After ``1.7``, :attr:`Request.cb_kwargs` became the "
 "preferred way for handling user information, leaving :attr:`Request.meta`"
 " for communication with components like middlewares and extensions."
-msgstr ""
+msgstr ":attr:`Request.cb_kwargs` はバージョン ``1.7`` で導入されました。 それ以前は、コールバックに情報を渡すために :attr:`Request.meta` を使用することが推奨されていました。``1.7`` 以降では、 :attr:`Request.cb_kwargs` がユーザー情報を処理するための好ましい方法となり、 :attr:`Request.meta` は、ミドルウェアや拡張機能などのコンポーネントとの通信のために残されています。"
 
 #: ../../topics/request-response.rst:248
 msgid "Using errbacks to catch exceptions in request processing"
-msgstr ""
+msgstr "リクエスト処理で例外をキャッチするためにエラーバック(errback)を使用する"
 
 #: ../../topics/request-response.rst:250
 msgid ""
 "The errback of a request is a function that will be called when an "
 "exception is raise while processing it."
-msgstr ""
+msgstr "リクエストのエラーバック(errback)は、処理中に例外が発生したときに呼び出される関数です。"
 
 #: ../../topics/request-response.rst:253
 msgid ""
 "It receives a `Twisted Failure`_ instance as first parameter and can be "
 "used to track connection establishment timeouts, DNS errors etc."
-msgstr ""
+msgstr "最初のパラメーターとして `Twisted Failure`_ インスタンスを受け取り、接続確立タイムアウト、DNSエラーなどを追跡するために使用できます。"
 
 #: ../../topics/request-response.rst:256
 msgid ""
 "Here's an example spider logging all errors and catching some specific "
 "errors if needed::"
-msgstr ""
+msgstr "すべてのエラーをログに記録し、必要に応じて特定のエラーをキャッチするスパイダーの例を次に示します::"
 
 #: ../../topics/request-response.rst:310
 msgid "Request.meta special keys"
-msgstr ""
+msgstr "Request.meta 特殊キー"
 
 #: ../../topics/request-response.rst:312
 msgid ""
 "The :attr:`Request.meta` attribute can contain any arbitrary data, but "
 "there are some special keys recognized by Scrapy and its built-in "
 "extensions."
-msgstr ""
+msgstr ":attr:`Request.meta` 属性には任意のデータを含めることができますが、Scrapyとその組み込み拡張機能によって認識される特殊なキーがあります。"
 
 #: ../../topics/request-response.rst:315
 msgid "Those are:"
-msgstr ""
+msgstr "以下がその特殊キーです:"
 
 #: ../../topics/request-response.rst:317
 msgid ":reqmeta:`dont_redirect`"
-msgstr ""
+msgstr ":reqmeta:`dont_redirect`"
 
 #: ../../topics/request-response.rst:318
 msgid ":reqmeta:`dont_retry`"
-msgstr ""
+msgstr ":reqmeta:`dont_retry`"
 
 #: ../../topics/request-response.rst:319
 msgid ":reqmeta:`handle_httpstatus_list`"
-msgstr ""
+msgstr ":reqmeta:`handle_httpstatus_list`"
 
 #: ../../topics/request-response.rst:320
 msgid ":reqmeta:`handle_httpstatus_all`"
-msgstr ""
+msgstr ":reqmeta:`handle_httpstatus_all`"
 
 #: ../../topics/request-response.rst:321
 msgid ":reqmeta:`dont_merge_cookies`"
-msgstr ""
+msgstr ":reqmeta:`dont_merge_cookies`"
 
 #: ../../topics/request-response.rst:322
 msgid ":reqmeta:`cookiejar`"
-msgstr ""
+msgstr ":reqmeta:`cookiejar`"
 
 #: ../../topics/request-response.rst:323
 msgid ":reqmeta:`dont_cache`"
-msgstr ""
+msgstr ":reqmeta:`dont_cache`"
 
 #: ../../topics/request-response.rst:324
 msgid ":reqmeta:`redirect_reasons`"
-msgstr ""
+msgstr ":reqmeta:`redirect_reasons`"
 
 #: ../../topics/request-response.rst:325
 msgid ":reqmeta:`redirect_urls`"
-msgstr ""
+msgstr ":reqmeta:`redirect_urls`"
 
 #: ../../topics/request-response.rst:326
 msgid ":reqmeta:`bindaddress`"
-msgstr ""
+msgstr ":reqmeta:`bindaddress`"
 
 #: ../../topics/request-response.rst:327
 msgid ":reqmeta:`dont_obey_robotstxt`"
-msgstr ""
+msgstr ":reqmeta:`dont_obey_robotstxt`"
 
 #: ../../topics/request-response.rst:328
 msgid ":reqmeta:`download_timeout`"
-msgstr ""
+msgstr ":reqmeta:`download_timeout`"
 
 #: ../../topics/request-response.rst:329
 msgid ":reqmeta:`download_maxsize`"
-msgstr ""
+msgstr ":reqmeta:`download_maxsize`"
 
 #: ../../topics/request-response.rst:330
 msgid ":reqmeta:`download_latency`"
-msgstr ""
+msgstr ":reqmeta:`download_latency`"
 
 #: ../../topics/request-response.rst:331
 msgid ":reqmeta:`download_fail_on_dataloss`"
-msgstr ""
+msgstr ":reqmeta:`download_fail_on_dataloss`"
 
 #: ../../topics/request-response.rst:332
 msgid ":reqmeta:`proxy`"
-msgstr ""
+msgstr ":reqmeta:`proxy`"
 
 #: ../../topics/request-response.rst:333
 msgid "``ftp_user`` (See :setting:`FTP_USER` for more info)"
-msgstr ""
+msgstr "``ftp_user`` (詳細は :setting:`FTP_USER` 参照)"
 
 #: ../../topics/request-response.rst:334
 msgid "``ftp_password`` (See :setting:`FTP_PASSWORD` for more info)"
-msgstr ""
+msgstr "``ftp_password`` (詳細は :setting:`FTP_PASSWORD` 参照)"
 
 #: ../../topics/request-response.rst:335
 msgid ":reqmeta:`referrer_policy`"
-msgstr ""
+msgstr ":reqmeta:`referrer_policy`"
 
 #: ../../topics/request-response.rst:336
 msgid ":reqmeta:`max_retry_times`"
-msgstr ""
+msgstr ":reqmeta:`max_retry_times`"
 
 #: ../../topics/request-response.rst:341
 msgid "bindaddress"
-msgstr ""
+msgstr "bindaddress"
 
+# 原文が怪しい？
 #: ../../topics/request-response.rst:343
 msgid "The IP of the outgoing IP address to use for the performing the request."
-msgstr ""
+msgstr "リクエストの実行に使用する発信IPアドレスのIP"
 
 #: ../../topics/request-response.rst:348
 msgid "download_timeout"
-msgstr ""
+msgstr "download_timeout"
 
 #: ../../topics/request-response.rst:350
 msgid ""
 "The amount of time (in secs) that the downloader will wait before timing "
 "out. See also: :setting:`DOWNLOAD_TIMEOUT`."
-msgstr ""
+msgstr "ダウンローダーがタイムアウトするまで待機する時間(秒)。 :setting:`DOWNLOAD_TIMEOUT` も参照してください。"
 
 #: ../../topics/request-response.rst:356
 msgid "download_latency"
-msgstr ""
+msgstr "download_latency"
 
 #: ../../topics/request-response.rst:358
 msgid ""
@@ -496,68 +499,68 @@ msgid ""
 " becomes available when the response has been downloaded. While most "
 "other meta keys are used to control Scrapy behavior, this one is supposed"
 " to be read-only."
-msgstr ""
+msgstr "リクエストが開始されてから、つまりネットワークを介して送信されたHTTPメッセージから、レスポンスの取得に費やされた時間。 このメタ・キーは、レスポンスがダウンロードされた場合にのみ使用可能になります。他のほとんどのメタ・キーはScrapyの動作を制御するために使用されますが、これは読み取り専用であると想定されています。"
 
 #: ../../topics/request-response.rst:366
 msgid "download_fail_on_dataloss"
-msgstr ""
+msgstr "download_fail_on_dataloss"
 
 #: ../../topics/request-response.rst:368
 msgid ""
 "Whether or not to fail on broken responses. See: "
 ":setting:`DOWNLOAD_FAIL_ON_DATALOSS`."
-msgstr ""
+msgstr "壊れたレスポンスで失敗するかどうか。 :setting:`DOWNLOAD_FAIL_ON_DATALOSS` を参照してください。"
 
 #: ../../topics/request-response.rst:374
 msgid "max_retry_times"
-msgstr ""
+msgstr "max_retry_times"
 
 #: ../../topics/request-response.rst:376
 msgid ""
 "The meta key is used set retry times per request. When initialized, the "
 ":reqmeta:`max_retry_times` meta key takes higher precedence over the "
 ":setting:`RETRY_TIMES` setting."
-msgstr ""
+msgstr "メタ・キーを使用して、リクエストごとに再試行回数を設定します。初期化されると、 :reqmeta:`max_retry_times` メタ・キーは :setting:`RETRY_TIMES` 設定よりも優先されます。"
 
 #: ../../topics/request-response.rst:383
 msgid "Request subclasses"
-msgstr ""
+msgstr "Requestサブクラス"
 
 #: ../../topics/request-response.rst:385
 msgid ""
 "Here is the list of built-in :class:`Request` subclasses. You can also "
 "subclass it to implement your own custom functionality."
-msgstr ""
+msgstr "以下は組み込みの :class:`Request` サブクラスのリストです。また、サブクラス化して独自のカスタム機能を実装することもできます。"
 
 #: ../../topics/request-response.rst:389
 msgid "FormRequest objects"
-msgstr ""
+msgstr "FormRequestオブジェクト"
 
 #: ../../topics/request-response.rst:391
 msgid ""
 "The FormRequest class extends the base :class:`Request` with "
 "functionality for dealing with HTML forms. It uses `lxml.html forms`_  to"
 " pre-populate form fields with form data from :class:`Response` objects."
-msgstr ""
+msgstr "FormRequestクラスは、ベースの :class:`Request` をHTMLフォームを処理する機能に関して拡張します。 `lxml.html forms`_ を使用して、フォームフィールドに :class:`Response` オブジェクトからのフォームデータを事前入力します。"
 
 #: ../../topics/request-response.rst:399
 msgid ""
 "The :class:`FormRequest` class adds a new argument to the constructor. "
 "The remaining arguments are the same as for the :class:`Request` class "
 "and are not documented here."
-msgstr ""
+msgstr ":class:`FormRequest` クラスはコンストラクターに新しい引数を追加します。残りの引数は :class:`Request` クラスと同じであり、ここでは説明しません。"
 
 #: ../../topics/request-response.rst:403
 msgid ""
 "is a dictionary (or iterable of (key, value) tuples) containing HTML Form"
 " data which will be url-encoded and assigned to the body of the request."
-msgstr ""
+msgstr "これは、URLエンコードされてリクエストの本文に割り当てられるHTMLフォームデータを含む辞書(または (キー, 値)タプルの反復可能要素)です。"
 
 #: ../../topics/request-response.rst:408
 msgid ""
 "The :class:`FormRequest` objects support the following class method in "
 "addition to the standard :class:`Request` methods:"
-msgstr ""
+msgstr ":class:`FormRequest` オブジェクトは、標準の :class:`Request` メソッドに加えて、次のクラスメソッドをサポートします:"
 
 #: ../../topics/request-response.rst:413
 msgid ""
@@ -565,7 +568,7 @@ msgid ""
 "populated with those found in the HTML ``<form>`` element contained in "
 "the given response. For an example see :ref:`topics-request-response-ref-"
 "request-userlogin`."
-msgstr ""
+msgstr "指定のレスポンスに含まれるHTML ``<form>`` 要素で見つかった値が事前に入力されたフォームフィールド値を持つ新しい :class:`FormRequest` オブジェクトを返します。例については、 :ref:`topics-request-response-ref-request-userlogin` を参照してください。"
 
 #: ../../topics/request-response.rst:418
 msgid ""
@@ -579,42 +582,42 @@ msgid ""
 "``dont_click`` argument to ``True``. Also, if you want to change the "
 "control clicked (instead of disabling it) you can also use the "
 "``clickdata`` argument."
-msgstr ""
+msgstr "ポリシーは、デフォルトでは、 ``<input type=\"submit\">`` のようにクリック可能に見えるフォームコントロールのクリックを自動的にシミュレートすることです。 これは非常に便利で、多くの場合望ましい動作ですが、時にはデバッグが困難な問題を引き起こす可能性があります。 たとえば、javascriptを使用して、入力 and/or 送信されたフォームを操作する場合、デフォルトの :meth:`from_response` 動作は最適ではない場合があります。この動作を無効にするには、  ``dont_click`` 引数を  ``True``  に設定します。 また、(無効にするのではなく)クリックしたコントロールを変更したい場合は、 ``clickdata`` 引数を使用することもできます。"
 
 #: ../../topics/request-response.rst:429
 msgid ""
 "Using this method with select elements which have leading or trailing "
 "whitespace in the option values will not work due to a `bug in lxml`_, "
 "which should be fixed in lxml 3.8 and above."
-msgstr ""
+msgstr "オプション値に先頭または末尾の空白があるselect要素でこのメソッドを使用すると、lxml 3.8で修正されるべきlxmlのバグ(`bug in lxml`_)のために機能しません。"
 
 #: ../../topics/request-response.rst:433
 msgid ""
 "the response containing a HTML form which will be used to pre-populate "
 "the form fields"
-msgstr ""
+msgstr "フォームフィールドに事前入力するために使用されるHTMLフォームを含むレスポンス"
 
 #: ../../topics/request-response.rst:437
 msgid "if given, the form with name attribute set to this value will be used."
-msgstr ""
+msgstr "指定した場合、name属性をこの値に設定したフォームが使用されます。"
 
 #: ../../topics/request-response.rst:440
 msgid "if given, the form with id attribute set to this value will be used."
-msgstr ""
+msgstr "指定した場合、この値に設定されたid属性を持つフォームが使用されます。"
 
 #: ../../topics/request-response.rst:443
 msgid "if given, the first form that matches the xpath will be used."
-msgstr ""
+msgstr "指定すると、xpathに一致する最初のフォームが使用されます。"
 
 #: ../../topics/request-response.rst:446
 msgid "if given, the first form that matches the css selector will be used."
-msgstr ""
+msgstr "指定した場合、cssセレクターに一致する最初のフォームが使用されます。"
 
 #: ../../topics/request-response.rst:449
 msgid ""
 "the number of form to use, when the response contains multiple forms. The"
 " first one (and also the default) is ``0``."
-msgstr ""
+msgstr "レスポンスに複数のフォームが含まれる場合に使用するフォームの数。 最初のもの(およびデフォルト)は ``0`` です。"
 
 #: ../../topics/request-response.rst:453
 msgid ""
@@ -623,7 +626,7 @@ msgid ""
 "passed in this parameter. If a value passed in this parameter is "
 "``None``, the field will not be included in the request, even if it was "
 "present in the response ``<form>`` element."
-msgstr ""
+msgstr "フォームデータでオーバーライドするフィールド。レスポンス ``<form>`` 要素にフィールドが既に存在する場合、その値はこのパラメーターで渡された値によってオーバーライドされます。このパラメーターに渡された値が ``None`` の場合、フィールドはレスポンス ``<form>`` 要素に存在していても、リクエストに含まれません。"
 
 #: ../../topics/request-response.rst:460
 msgid ""
@@ -632,52 +635,52 @@ msgid ""
 " In addition to html attributes, the control can be identified by its "
 "zero-based index relative to other submittable inputs inside the form, "
 "via the ``nr`` attribute."
-msgstr ""
+msgstr "クリックされたコントロールを検索する属性。 指定されていない場合、最初のクリック可能な要素のクリックをシミュレートしてフォームデータが送信されます。 html属性に加えて、コントロールは ``nr`` 属性を介して、フォーム内の他の送信可能な入力に対するゼロベースのインデックスによって識別できます。"
 
 #: ../../topics/request-response.rst:467
 msgid "If True, the form data will be submitted without clicking in any element."
-msgstr ""
+msgstr "Trueの場合、要素をクリックせずにフォームデータが送信されます。"
 
 #: ../../topics/request-response.rst:471
 msgid ""
 "The other parameters of this class method are passed directly to the "
 ":class:`FormRequest` constructor."
-msgstr ""
+msgstr "このクラスメソッドの他のパラメーターは、 :class:`FormRequest` コンストラクターに直接渡されます。"
 
 #: ../../topics/request-response.rst:474
 msgid "The ``formname`` parameter."
-msgstr ""
+msgstr "``formname`` パラメータ。"
 
 #: ../../topics/request-response.rst:477
 msgid "The ``formxpath`` parameter."
-msgstr ""
+msgstr "``formxpath`` パラメータ。"
 
 #: ../../topics/request-response.rst:480
 msgid "The ``formcss`` parameter."
-msgstr ""
+msgstr "``formcss`` パラメータ。"
 
 #: ../../topics/request-response.rst:483
 msgid "The ``formid`` parameter."
-msgstr ""
+msgstr "``formid`` パラメータ。"
 
 #: ../../topics/request-response.rst:487
 msgid "Request usage examples"
-msgstr ""
+msgstr "Request使用例"
 
 #: ../../topics/request-response.rst:490
 msgid "Using FormRequest to send data via HTTP POST"
-msgstr ""
+msgstr "HTTP POST経由でデータを送信するためにFormRequestを使う"
 
 #: ../../topics/request-response.rst:492
 msgid ""
 "If you want to simulate a HTML Form POST in your spider and send a couple"
 " of key-value fields, you can return a :class:`FormRequest` object (from "
 "your spider) like this::"
-msgstr ""
+msgstr "スパイダーでHTMLフォームPOSTをシミュレートし、いくつかのキー値フィールドを送信する場合、以下のように(スパイダーから) :class:`FormRequest` オブジェクトを返すことができます::"
 
 #: ../../topics/request-response.rst:503
 msgid "Using FormRequest.from_response() to simulate a user login"
-msgstr ""
+msgstr "FormRequest.from_response() を使用してユーザーログインをシミュレートする"
 
 #: ../../topics/request-response.rst:505
 msgid ""
@@ -688,31 +691,31 @@ msgid ""
 "them, such as the user name and password. You can use the "
 ":meth:`FormRequest.from_response` method for this job. Here's an example "
 "spider which uses it::"
-msgstr ""
+msgstr "Webサイトでは通常、セッション関連データや認証トークン(ログインページ用)などの ``<input type=\"hidden\">`` 要素を介して事前入力されたフォームフィールドを提供します。 スクレイピングするとき、これらのフィールドは自動的に事前入力され、ユーザー名やパスワードなどのいくつかのフィールドのみがオーバーライド必須です。この作業には :meth:`FormRequest.from_response` メソッドを使用できます。以下はこれを使用するスパイダーの例です::"
 
 #: ../../topics/request-response.rst:539
 msgid "JsonRequest"
-msgstr ""
+msgstr "JsonRequest"
 
 #: ../../topics/request-response.rst:541
 msgid ""
 "The JsonRequest class extends the base :class:`Request` class with "
 "functionality for dealing with JSON requests."
-msgstr ""
+msgstr "JsonRequestクラスは、ベースの :class:`Request` クラスにJSONリクエストを処理する機能をくわえます。"
 
 #: ../../topics/request-response.rst:546
 msgid ""
 "The :class:`JsonRequest` class adds two new argument to the constructor. "
 "The remaining arguments are the same as for the :class:`Request` class "
 "and are not documented here."
-msgstr ""
+msgstr ":class:`JsonRequest` クラスは、コンストラクターに2つの新しい引数を追加します。残りの引数は :class:`Request` クラスと同じであり、ここでは説明しません。"
 
 #: ../../topics/request-response.rst:550
 msgid ""
 "Using the :class:`JsonRequest` will set the ``Content-Type`` header to "
 "``application/json`` and ``Accept`` header to ``application/json, "
 "text/javascript, */*; q=0.01``"
-msgstr ""
+msgstr ":class:`JsonRequest` を使用すると、``Content-Type`` ヘッダーを ``application/json`` にセットし、そして、 ``Accept`` ヘッダーを ``application/json, text/javascript, */*; q=0.01`` にセットします。"
 
 #: ../../topics/request-response.rst:553
 msgid ""
@@ -721,45 +724,45 @@ msgid ""
 "parameter will be ignored. if :attr:`Request.body` argument is not "
 "provided and data argument is provided :attr:`Request.method` will be set"
 " to ``'POST'`` automatically."
-msgstr ""
+msgstr "JSONエンコードして本文に割り当てる必要があるJSONシリアル化可能オブジェクトです。 :attr:`Request.body` 引数が指定されている場合、このパラメーターは無視されます。 :attr:`Request.body` 引数が提供されておらず、データ引数が提供されている場合、 :attr:`Request.method` は ``'POST'`` に自動的に設定されます。"
 
 #: ../../topics/request-response.rst:559
 msgid ""
 "Parameters that will be passed to underlying `json.dumps`_ method which "
 "is used to serialize data into JSON format."
-msgstr ""
+msgstr "データをJSON形式にシリアル化するために使用される、基礎となる `json.dumps`_ メソッドに渡されるパラメーター。"
 
 #: ../../topics/request-response.rst:566
 msgid "JsonRequest usage example"
-msgstr ""
+msgstr "JsonRequest使用例"
 
 #: ../../topics/request-response.rst:568
 msgid "Sending a JSON POST request with a JSON payload::"
-msgstr ""
+msgstr "JSONペイロードを含むJSON POSTリクエストを送信する::"
 
 #: ../../topics/request-response.rst:578
 msgid "Response objects"
-msgstr ""
+msgstr "Responseオブジェクト"
 
 #: ../../topics/request-response.rst:582
 msgid ""
 "A :class:`Response` object represents an HTTP response, which is usually "
 "downloaded (by the Downloader) and fed to the Spiders for processing."
-msgstr ""
+msgstr ":class:`Response` オブジェクトはHTTPレスポンスを表し、通常は(ダウンローダーによって)ダウンロードされ、処理のためにスパイダーに送られます。"
 
 #: ../../topics/request-response.rst:585
 msgid "the URL of this response"
-msgstr ""
+msgstr "このレスポンスのURL"
 
 #: ../../topics/request-response.rst:588
 msgid "the HTTP status of the response. Defaults to ``200``."
-msgstr ""
+msgstr "レスポンスのHTTPステータス。デフォルトは ``200`` です。"
 
 #: ../../topics/request-response.rst:591
 msgid ""
 "the headers of this response. The dict values can be strings (for single "
 "valued headers) or lists (for multi-valued headers)."
-msgstr ""
+msgstr "このレスポンスのヘッダー。 辞書値は、文字列(単一値のヘッダーの場合)またはリスト(複数値のヘッダーの場合)です。"
 
 #: ../../topics/request-response.rst:595
 msgid ""
@@ -767,35 +770,35 @@ msgid ""
 "2) you can use ``response.text`` from an encoding-aware :ref:`Response "
 "subclass <topics-request-response-ref-response-subclasses>`, such as "
 ":class:`TextResponse`."
-msgstr ""
+msgstr "レスポンス・ボディ。 デコードされたテキストにstr(Python2ではユニコード)としてアクセスするには、エンコード対応(encoding-aware)である、 :class:`TextResponse` のような :ref:`レスポンス・サブクラス<topics-request-response-ref-response-subclasses>` の ``response.text`` を使用できます。"
 
 #: ../../topics/request-response.rst:601
 msgid ""
 "is a list containing the initial values for the :attr:`Response.flags` "
 "attribute. If given, the list will be shallow copied."
-msgstr ""
+msgstr ":attr:`Response.flags` 属性の初期値を含むリストです。 指定すると、リストは浅くコピー(shallow copy)されます。"
 
 #: ../../topics/request-response.rst:606
 msgid ""
 "the initial value of the :attr:`Response.request` attribute. This "
 "represents the :class:`Request` that generated this response."
-msgstr ""
+msgstr ":attr:`Response.request` 属性の初期値。これは、このレスポンスを生成した :class:`Request` を表します。"
 
 #: ../../topics/request-response.rst:612
 msgid "A string containing the URL of the response."
-msgstr ""
+msgstr "レスポンスのURLを含む文字列。"
 
 #: ../../topics/request-response.rst:614
 msgid ""
 "This attribute is read-only. To change the URL of a Response use "
 ":meth:`replace`."
-msgstr ""
+msgstr "この属性は読み取り専用です。レスポンスのURLを変更するには、 :meth:`replace` を使用します。"
 
 #: ../../topics/request-response.rst:619
 msgid ""
 "An integer representing the HTTP status of the response. Example: "
 "``200``, ``404``."
-msgstr ""
+msgstr "レスポンスのHTTPステータスを表す整数。例： ``200`` 、 ``404``"
 
 #: ../../topics/request-response.rst:624
 msgid ""
@@ -804,7 +807,7 @@ msgid ""
 "specified name or :meth:`getlist` to return all header values with the "
 "specified name. For example, this call will give you all cookies in the "
 "headers::"
-msgstr ""
+msgstr "レスポンス・ヘッダーを含む辞書のようなオブジェクト。値にアクセスするには、 :meth:`get` を使用して指定した名前の最初のヘッダー値を返すか、 :meth:`getlist` を使用して指定した名前のすべてのヘッダー値を返します。たとえば、以下のの呼び出しはヘッダーのすべてのクッキーを提供します::"
 
 #: ../../topics/request-response.rst:634
 msgid ""
@@ -812,13 +815,13 @@ msgid ""
 "bytes object. If you want the unicode version use "
 ":attr:`TextResponse.text` (only available in :class:`TextResponse` and "
 "subclasses)."
-msgstr ""
+msgstr "このResponseのボディ。Response.bodyは常にバイトオ・ブジェクトであることに注意してください。Unicodeバージョンが必要な場合は、 :attr:`TextResponse.text` を使用します( :class:`TextResponse` と、そのサブクラスでのみ使用可能)。"
 
 #: ../../topics/request-response.rst:639
 msgid ""
 "This attribute is read-only. To change the body of a Response use "
 ":meth:`replace`."
-msgstr ""
+msgstr "この属性は読み取り専用です。 レスポンスのボディを変更するには、 :meth:`replace` を使用します。"
 
 #: ../../topics/request-response.rst:644
 msgid ""
@@ -826,18 +829,18 @@ msgid ""
 "is assigned in the Scrapy engine, after the response and the request have"
 " passed through all :ref:`Downloader Middlewares <topics-downloader-"
 "middleware>`. In particular, this means that:"
-msgstr ""
+msgstr "このレスポンスを生成した :class:`Request` オブジェクト。この属性は、レスポンスとリクエストが、すべての :ref:`ダウンローダー・ミドルウェア<topics-downloader-middleware>` を通過した後、Scrapyエンジンで割り当てられます。 特に、これは以下を意味します::"
 
 #: ../../topics/request-response.rst:649
 msgid ""
 "HTTP redirections will cause the original request (to the URL before "
 "redirection) to be assigned to the redirected response (with the final "
 "URL after redirection)."
-msgstr ""
+msgstr "HTTPリダイレクトにより、元のリクエスト(リダイレクト前のURLへ)がリダイレクトされたレスポンス(リダイレクト後の最終URL)に割り当てられます。"
 
 #: ../../topics/request-response.rst:653
 msgid "Response.request.url doesn't always equal Response.url"
-msgstr ""
+msgstr "Response.request.urlは必ずしもResponse.urlと同じではありません"
 
 #: ../../topics/request-response.rst:655
 msgid ""
@@ -845,24 +848,24 @@ msgid ""
 ":ref:`Spider Middlewares <topics-spider-middleware>`, but not in "
 "Downloader Middlewares (although you have the Request available there by "
 "other means) and handlers of the :signal:`response_downloaded` signal."
-msgstr ""
+msgstr "この属性は、スパイダー・コード、および :ref:`スパイダー・ミドルウェア<topics-spider-middleware>` でのみ使用できます。ただし、(他の方法でリクエストを使用できる場合の)ダウンローダー・ミドルウェアと :signal:`response_downloaded` シグナルのハンドラーには含まれません。"
 
 #: ../../topics/request-response.rst:662
 msgid ""
 "A shortcut to the :attr:`Request.meta` attribute of the "
 ":attr:`Response.request` object (ie. ``self.request.meta``)."
-msgstr ""
+msgstr ":attr:`Response.request` オブジェクトの :attr:`Request.meta` 属性(つまり ``self.request.meta`` )へのショートカット。"
 
 #: ../../topics/request-response.rst:665
 msgid ""
 "Unlike the :attr:`Response.request` attribute, the :attr:`Response.meta` "
 "attribute is propagated along redirects and retries, so you will get the "
 "original :attr:`Request.meta` sent from your spider."
-msgstr ""
+msgstr ":attr:`Response.request` 属性とは異なり、 :attr:`Response.meta` 属性はリダイレクトと再試行に沿って伝播されるため、元の :attr:`Request.meta` がスパイダーから送信されます。"
 
 #: ../../topics/request-response.rst:669
 msgid ":attr:`Request.meta` attribute"
-msgstr ""
+msgstr ":attr:`Request.meta` 属性"
 
 #: ../../topics/request-response.rst:673
 msgid ""
@@ -870,65 +873,65 @@ msgid ""
 "tagging Responses. For example: ``'cached'``, ``'redirected``', etc. And "
 "they're shown on the string representation of the Response (`__str__` "
 "method) which is used by the engine for logging."
-msgstr ""
+msgstr "このレスポンスのフラグを含むリスト。フラグは、レスポンスのタグ付けに使用されるラベルです。 例： ``'cached'`` 、 ``'redirected``' など。これらは、エンジンがログ記録に使用するResponse ( `__str__` メソッド)の文字列表現に表示されます。"
 
 #: ../../topics/request-response.rst:680
 msgid "Returns a new Response which is a copy of this Response."
-msgstr ""
+msgstr "このレスポンスのコピーである新しいレスポンスを返します。"
 
 #: ../../topics/request-response.rst:684
 msgid ""
 "Returns a Response object with the same members, except for those members"
 " given new values by whichever keyword arguments are specified. The "
 "attribute :attr:`Response.meta` is copied by default."
-msgstr ""
+msgstr "指定されたキーワード引数によって新しい値が指定されたメンバーを除き、同じメンバーを持つレスポンスオブジェクトを返します。属性 :attr:`Response.meta` はデフォルトでコピーされます。"
 
 #: ../../topics/request-response.rst:690
 msgid ""
 "Constructs an absolute url by combining the Response's :attr:`url` with a"
 " possible relative url."
-msgstr ""
+msgstr "レスポンスの :attr:`url` と可能な相対URLを組み合わせて、絶対URLを構築します。"
 
 #: ../../topics/request-response.rst:693
 msgid ""
 "This is a wrapper over `urlparse.urljoin`_, it's merely an alias for "
 "making this call::"
-msgstr ""
+msgstr "これは `urlparse.urljoin`_ のラッパーであり、この呼び出しを行うための単なるエイリアスです"
 
 #: of scrapy.http.Response.follow:1
 msgid ""
 "Return a :class:`~.Request` instance to follow a link ``url``. It accepts"
 " the same arguments as ``Request.__init__`` method, but ``url`` can be a "
 "relative URL or a ``scrapy.link.Link`` object, not only an absolute URL."
-msgstr ""
+msgstr "リンク ``url`` をたどるには :class:`~.Request` インスタンスを返します。 ``Request.__init__`` メソッドと同じ引数を受け入れますが、 ``url`` は絶対URLだけでなく、相対URLまたは ``scrapy.link.Link`` オブジェクトでもかまいません。"
 
 #: of scrapy.http.Response.follow:6
 msgid ""
 ":class:`~.TextResponse` provides a :meth:`~.TextResponse.follow`  method "
 "which supports selectors in addition to absolute/relative URLs and Link "
 "objects."
-msgstr ""
+msgstr ":class:`~.TextResponse` は、絶対URLと相対URLとLinkオブジェクトに加えてセレクターをサポートする :meth:`~.TextResponse.follow` メソッドを提供します。"
 
 #: ../../topics/request-response.rst:706
 msgid "Response subclasses"
-msgstr ""
+msgstr "Responseサブクラス"
 
 #: ../../topics/request-response.rst:708
 msgid ""
 "Here is the list of available built-in Response subclasses. You can also "
 "subclass the Response class to implement your own functionality."
-msgstr ""
+msgstr "使用可能な組み込みResponseサブクラスのリストは以下のとおりです。 Responseクラスをサブクラス化して、独自の機能を実装することもできます。"
 
 #: ../../topics/request-response.rst:712
 msgid "TextResponse objects"
-msgstr ""
+msgstr "TextResponseオブジェクト"
 
 #: ../../topics/request-response.rst:716
 msgid ""
 ":class:`TextResponse` objects adds encoding capabilities to the base "
 ":class:`Response` class, which is meant to be used only for binary data, "
 "such as images, sounds or any media file."
-msgstr ""
+msgstr ":class:`TextResponse` オブジェクトは、エンコード機能を、ベースの :class:`Response` クラスに追加します。これは、画像、音声、メディアファイルなどのバイナリデータにのみ使用することを目的としています。"
 
 #: ../../topics/request-response.rst:720
 msgid ""
@@ -936,7 +939,7 @@ msgid ""
 "addition to the base :class:`Response` objects. The remaining "
 "functionality is the same as for the :class:`Response` class and is not "
 "documented here."
-msgstr ""
+msgstr ":class:`TextResponse` オブジェクトは、ベースの :class:`Response` オブジェクトに加えて、新しいコンストラクター引数をサポートします。残りの機能は :class:`Response` クラスと同じであり、ここでは説明しません。"
 
 #: ../../topics/request-response.rst:724
 msgid ""
@@ -945,139 +948,139 @@ msgid ""
 "encoded using this encoding (remember the body attribute is always a "
 "string). If ``encoding`` is ``None`` (default value), the encoding will "
 "be looked up in the response headers and body instead."
-msgstr ""
+msgstr "このレスポンスに使用するエンコーディングを含む文字列です。 ユニコード・ボディで :class:`TextResponse` オブジェクトを作成する場合、このエンコードを使用してエンコードされます(body属性は常に文字列であることに注意してください)。 ``encoding`` が ``None`` (デフォルト値)の場合、代わりにレスポンス・ヘッダーとボディからエンコードを検索します。"
 
 #: ../../topics/request-response.rst:731
 msgid ""
 ":class:`TextResponse` objects support the following attributes in "
 "addition to the standard :class:`Response` ones:"
-msgstr ""
+msgstr ":class:`TextResponse` オブジェクトは、標準の :class:`Response` に加えて、次の属性をサポートします:"
 
 #: ../../topics/request-response.rst:736
 msgid "Response body, as unicode."
-msgstr ""
+msgstr "ユニコードとしてのレスポンス・ボディ"
 
 #: ../../topics/request-response.rst:738
 msgid ""
 "The same as ``response.body.decode(response.encoding)``, but the result "
 "is cached after the first call, so you can access ``response.text`` "
 "multiple times without extra overhead."
-msgstr ""
+msgstr "``response.body.decode(response.encoding)`` と同じですが、最初の呼び出し後に結果がキャッシュされるため、余分なオーバーヘッドなしで ``response.text`` に複数回アクセスできます。"
 
 #: ../../topics/request-response.rst:744
 msgid ""
 "``unicode(response.body)`` is not a correct way to convert response body "
 "to unicode: you would be using the system default encoding (typically "
 "``ascii``) instead of the response encoding."
-msgstr ""
+msgstr "``unicode(response.body)`` はレスポンス・ボディをユニコードに変換する正しい方法ではありません。レスポンス・エンコーディングの代わりにシステムのデフォルト・エンコーディング(通常は ``ascii`` )を使用することになります。"
 
 #: ../../topics/request-response.rst:751
 msgid ""
 "A string with the encoding of this response. The encoding is resolved by "
 "trying the following mechanisms, in order:"
-msgstr ""
+msgstr "このレスポンスのエンコードを含む文字列。 エンコードは、次のメカニズムを順番に試して解決されます:"
 
 #: ../../topics/request-response.rst:754
 msgid "the encoding passed in the constructor ``encoding`` argument"
-msgstr ""
+msgstr "コンストラクタ ``encoding`` 引数に渡されたエンコーディング"
 
 #: ../../topics/request-response.rst:756
 msgid ""
 "the encoding declared in the Content-Type HTTP header. If this encoding "
 "is not valid (ie. unknown), it is ignored and the next resolution "
 "mechanism is tried."
-msgstr ""
+msgstr "Content-Type HTTPヘッダーで宣言されたエンコーディング。 このエンコードが有効でない(つまり不明の)場合、無視され、次の解決メカニズムが試行されます。"
 
 #: ../../topics/request-response.rst:760
 msgid ""
 "the encoding declared in the response body. The TextResponse class "
 "doesn't provide any special functionality for this. However, the "
 ":class:`HtmlResponse` and :class:`XmlResponse` classes do."
-msgstr ""
+msgstr "レスポンス・ボディで宣言されたエンコーディング。 TextResponseクラスは、このための特別な機能を提供しません。 ただし、 :class:`HtmlResponse` と :class:`XmlResponse` クラスはサポートします。"
 
 #: ../../topics/request-response.rst:764
 msgid ""
 "the encoding inferred by looking at the response body. This is the more "
 "fragile method but also the last one tried."
-msgstr ""
+msgstr "レスポンス・ボディを見て推測するエンコーディング。 これはより壊れやすい方法ですが、最後に試す方法でもあります。"
 
 #: ../../topics/request-response.rst:769
 msgid ""
 "A :class:`~scrapy.selector.Selector` instance using the response as "
 "target. The selector is lazily instantiated on first access."
-msgstr ""
+msgstr "レスポンスをターゲットとして使用する :class:`~scrapy.selector.Selector` インスタンス。セレクターは最初のアクセスで遅延的(lazily)にインスタンス化されます。"
 
 #: ../../topics/request-response.rst:772
 msgid ""
 ":class:`TextResponse` objects support the following methods in addition "
 "to the standard :class:`Response` ones:"
-msgstr ""
+msgstr ":class:`TextResponse` オブジェクトは標準の :class:`Response` に加えて以下のメソッドをサポートします:"
 
 #: ../../topics/request-response.rst:777
 msgid "A shortcut to ``TextResponse.selector.xpath(query)``::"
-msgstr ""
+msgstr "``TextResponse.selector.xpath(query)`` へのショートカット::"
 
 #: ../../topics/request-response.rst:783
 msgid "A shortcut to ``TextResponse.selector.css(query)``::"
-msgstr ""
+msgstr "``TextResponse.selector.css(query)`` へのショートカット::"
 
 #: of scrapy.http.TextResponse.follow:1
 msgid ""
 "Return a :class:`~.Request` instance to follow a link ``url``. It accepts"
 " the same arguments as ``Request.__init__`` method, but ``url`` can be "
 "not only an absolute URL, but also"
-msgstr ""
+msgstr "リンク ``url`` をたどるには :class:`~.Request` インスタンスを返します。 ``Request.__init__`` メソッドと同じ引数を受け入れますが、 ``url`` は絶対URLだけでなく、以下も受け入れます。"
 
 #: of scrapy.http.TextResponse.follow:5
 msgid "a relative URL;"
-msgstr ""
+msgstr "相対URL"
 
 #: of scrapy.http.TextResponse.follow:6
 msgid "a scrapy.link.Link object (e.g. a link extractor result);"
-msgstr ""
+msgstr "scrapy.link.Link オブジェクト(例: リンク抽出結果)"
 
 #: of scrapy.http.TextResponse.follow:7
 msgid ""
 "an attribute Selector (not SelectorList) - e.g. "
 "``response.css('a::attr(href)')[0]`` or "
 "``response.xpath('//img/@src')[0]``."
-msgstr ""
+msgstr "Selector属性(SelectorListはダメ) 例えば、``response.css('a::attr(href)')[0]`` とか ``response.xpath('//img/@src')[0]``"
 
 #: of scrapy.http.TextResponse.follow:10
 msgid ""
 "a Selector for ``<a>`` or ``<link>`` element, e.g. "
 "``response.css('a.my_link')[0]``."
-msgstr ""
+msgstr "``<a>`` または ``<link>`` 要素のためのセレクター。例： ``response.css('a.my_link')[0]``"
 
 #: of scrapy.http.TextResponse.follow:13
 msgid "See :ref:`response-follow-example` for usage examples."
-msgstr ""
+msgstr "使用例については :ref:`response-follow-example` を参照して下さい。"
 
 #: ../../topics/request-response.rst:791
 msgid ""
 "The same as :attr:`text`, but available as a method. This method is kept "
 "for backward compatibility; please prefer ``response.text``."
-msgstr ""
+msgstr ":attr:`text` と同じですが、メソッドとして使用できます。 このメソッドは、後方互換性のために残されています。 ``response.text`` を優先してください。"
 
 #: ../../topics/request-response.rst:796
 msgid "HtmlResponse objects"
-msgstr ""
+msgstr "HtmlResponseオブジェクト"
 
 #: ../../topics/request-response.rst:800
 msgid ""
 "The :class:`HtmlResponse` class is a subclass of :class:`TextResponse` "
 "which adds encoding auto-discovering support by looking into the HTML "
 "`meta http-equiv`_ attribute.  See :attr:`TextResponse.encoding`."
-msgstr ""
+msgstr ":class:`HtmlResponse` クラスは :class:`TextResponse` のサブクラスで、HTMLの `meta http-equiv`_ 属性を調べることでエンコーディングの自動検出サポートを追加します。 :attr:`TextResponse.encoding` 参照。"
 
 #: ../../topics/request-response.rst:807
 msgid "XmlResponse objects"
-msgstr ""
+msgstr "XmlResponseオブジェクト"
 
 #: ../../topics/request-response.rst:811
 msgid ""
 "The :class:`XmlResponse` class is a subclass of :class:`TextResponse` "
 "which adds encoding auto-discovering support by looking into the XML "
 "declaration line.  See :attr:`TextResponse.encoding`."
-msgstr ""
+msgstr ":class:`XmlResponse` クラスは :class:`TextResponse` のサブクラスで、XML宣言行を調べることでエンコーディングの自動検出サポートを追加します。 :attr:`TextResponse.encoding` 参照。"
 
