@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-27 04:32+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,21 +19,21 @@ msgstr ""
 
 #: ../../topics/link-extractors.rst:5
 msgid "Link Extractors"
-msgstr ""
+msgstr "リンク抽出器(extractor)"
 
 #: ../../topics/link-extractors.rst:7
 msgid ""
 "Link extractors are objects whose only purpose is to extract links from "
 "web pages (:class:`scrapy.http.Response` objects) which will be "
 "eventually followed."
-msgstr ""
+msgstr "リンク抽出器(link extractor)は、最終的に追跡されるWebページ( :class:`scrapy.http.Response` オブジェクト)からリンクを抽出することを唯一の目的とするオブジェクトです。"
 
 #: ../../topics/link-extractors.rst:11
 msgid ""
 "There is ``scrapy.linkextractors.LinkExtractor`` available in Scrapy, but"
 " you can create your own custom Link Extractors to suit your needs by "
 "implementing a simple interface."
-msgstr ""
+msgstr "Scrapyには ``scrapy.linkextractors.LinkExtractor`` がありますが、シンプルなインターフェースを実装することで、ニーズに合わせて独自のカスタム・リンク抽出器を作成できます。"
 
 #: ../../topics/link-extractors.rst:15
 msgid ""
@@ -42,7 +42,7 @@ msgid ""
 " and returns a list of :class:`scrapy.link.Link` objects. Link extractors"
 " are meant to be instantiated once and their ``extract_links`` method "
 "called several times with different responses to extract links to follow."
-msgstr ""
+msgstr "すべてのリンク抽出器が持つ唯一のパブリック・メソッドは ``extract_links`` で、これは :class:`~scrapy.http.Response` オブジェクトを受け取り、 :class:`scrapy.link.Link` オブジェクトのリストを返します。リンク抽出器は一度インスタンス化され、それらの ``extract_links`` メソッドが異なるレスポンスで数回呼び出されて、追跡するリンクを抽出します。"
 
 #: ../../topics/link-extractors.rst:21
 msgid ""
@@ -51,50 +51,50 @@ msgid ""
 " it in your spiders, even if you don't subclass from "
 ":class:`~scrapy.spiders.CrawlSpider`, as its purpose is very simple: to "
 "extract links."
-msgstr ""
+msgstr "リンク抽出器は、(Scrapyに用意されている) :class:`~scrapy.spiders.CrawlSpider` クラスで一連のルールを介して使用されますが、 :class:`~scrapy.spiders.CrawlSpider` サブクラスを作成しなくても、スパイダーでも使用できます。"
 
 #: ../../topics/link-extractors.rst:31
 msgid "Built-in link extractors reference"
-msgstr ""
+msgstr "組み込みリンク抽出器リファレンス"
 
 #: ../../topics/link-extractors.rst:36
 msgid ""
 "Link extractors classes bundled with Scrapy are provided in the "
 ":mod:`scrapy.linkextractors` module."
-msgstr ""
+msgstr "Scrapyに同梱されているリンク抽出器クラスは、 :mod:`scrapy.linkextractors` モジュールで提供されます。"
 
 #: ../../topics/link-extractors.rst:39
 msgid ""
 "The default link extractor is ``LinkExtractor``, which is the same as "
 ":class:`~.LxmlLinkExtractor`::"
-msgstr ""
+msgstr "デフォルトのリンク抽出器は ``LinkExtractor`` で、これは :class:`~.LxmlLinkExtractor` と同じです::"
 
 #: ../../topics/link-extractors.rst:44
 msgid ""
 "There used to be other link extractor classes in previous Scrapy "
 "versions, but they are deprecated now."
-msgstr ""
+msgstr "以前のScrapyバージョンには他のリンク抽出器クラスがありましたが、現在は廃止されています。"
 
 #: ../../topics/link-extractors.rst:48
 msgid "LxmlLinkExtractor"
-msgstr ""
+msgstr "LxmlLinkExtractor"
 
 #: ../../topics/link-extractors.rst:56
 msgid ""
 "LxmlLinkExtractor is the recommended link extractor with handy filtering "
 "options. It is implemented using lxml's robust HTMLParser."
-msgstr ""
+msgstr "LxmlLinkExtractorは、便利なフィルタリングオプションを備えた、おすすめのリンク抽出器です。lxmlの堅牢なHTMLParserを使用して実装されています。"
 
 #: ../../topics/link-extractors.rst
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../topics/link-extractors.rst:59
 msgid ""
 "a single regular expression (or list of regular expressions) that the "
 "(absolute) urls must match in order to be extracted. If not given (or "
 "empty), it will match all links."
-msgstr ""
+msgstr "(絶対)URLが抽出されるために一致する必要がある単一の正規表現(または正規表現のリスト)。指定しない場合(または空の場合)は、すべてのリンクに一致します。"
 
 #: ../../topics/link-extractors.rst:64
 msgid ""
@@ -102,19 +102,19 @@ msgid ""
 "(absolute) urls must match in order to be excluded (ie. not extracted). "
 "It has precedence over the ``allow`` parameter. If not given (or empty) "
 "it won't exclude any links."
-msgstr ""
+msgstr "(絶対)URLが除外される(抽出されない)ために一致する必要がある単一の正規表現(または正規表現のリスト)。 ``allow`` パラメータよりも優先されます。指定されていない(または空の)場合、リンクは除外されません。"
 
 #: ../../topics/link-extractors.rst:70
 msgid ""
 "a single value or a list of string containing domains which will be "
 "considered for extracting the links"
-msgstr ""
+msgstr "リンクを抽出するために考慮されるドメインを含む単一の値または文字列のリスト"
 
 #: ../../topics/link-extractors.rst:74
 msgid ""
 "a single value or a list of strings containing domains which won't be "
 "considered for extracting the links"
-msgstr ""
+msgstr "リンクを抽出するために **考慮されない** ドメインを含む単一の値または文字列のリスト"
 
 #: ../../topics/link-extractors.rst:78
 msgid ""
@@ -122,21 +122,21 @@ msgid ""
 "ignored when extracting links. If not given, it will default to the "
 "``IGNORED_EXTENSIONS`` list defined in the `scrapy.linkextractors`_ "
 "package."
-msgstr ""
+msgstr "リンクを抽出するときに無視される拡張子を含む単一の値または文字列のリスト。 指定しない場合、 `scrapy.linkextractors`_ パッケージで定義された ``IGNORED_EXTENSIONS`` リストがデフォルトになります。"
 
 #: ../../topics/link-extractors.rst:85
 msgid ""
 "is an XPath (or list of XPath's) which defines regions inside the "
 "response where links should be extracted from. If given, only the text "
 "selected by those XPath will be scanned for links. See examples below."
-msgstr ""
+msgstr "これは、リンクを抽出するレスポンス内の領域を定義するXPath(またはXPathのリスト)です。指定すると、それらのXPathによって選択されたテキストのみがリンクをスキャンされます。以下の例を参照してください。"
 
 #: ../../topics/link-extractors.rst:91
 msgid ""
 "a CSS selector (or list of selectors) which defines regions inside the "
 "response where links should be extracted from. Has the same behaviour as "
 "``restrict_xpaths``."
-msgstr ""
+msgstr "リンクを抽出するレスポンス内の領域を定義するCSSセレクター(またはセレクターのリスト)。 ``restrict_xpaths`` と同じ動作をします。"
 
 #: ../../topics/link-extractors.rst:96
 msgid ""
@@ -144,20 +144,20 @@ msgid ""
 "link's text must match in order to be extracted. If not given (or empty),"
 " it will match all links. If a list of regular expressions is given, the "
 "link will be extracted if it matches at least one."
-msgstr ""
+msgstr "リンクのテキストが抽出されるために一致する必要がある単一の正規表現(または正規表現のリスト)。指定しない場合(または空の場合)は、すべてのリンクに一致します。正規表現のリストが指定されている場合、リンクが少なくとも1つと一致するとリンクが抽出されます。"
 
 #: ../../topics/link-extractors.rst:102
 msgid ""
 "a tag or a list of tags to consider when extracting links. Defaults to "
 "``('a', 'area')``."
-msgstr ""
+msgstr "リンクを抽出するときに考慮するタグまたはタグのリスト。 デフォルトは ``('a', 'area')`` です。"
 
 #: ../../topics/link-extractors.rst:106
 msgid ""
 "an attribute or list of attributes which should be considered when "
 "looking for links to extract (only for those tags specified in the "
 "``tags`` parameter). Defaults to ``('href',)``"
-msgstr ""
+msgstr "抽出するリンクを探すときに考慮する必要がある属性または属性のリスト( ``tags`` パラメータで指定されたタグのみ)。デフォルトは ``('href',)``"
 
 #: ../../topics/link-extractors.rst:111
 msgid ""
@@ -167,25 +167,26 @@ msgid ""
 "can be different for requests with canonicalized and raw URLs. If you're "
 "using LinkExtractor to follow links it is more robust to keep the default"
 " ``canonicalize=False``."
-msgstr ""
+msgstr "抽出された各URLを正規化します(w3lib.url.canonicalize_urlを使用)。 デフォルトは ``False`` です。canonicalize_urlは重複チェックを目的としていることに注意してください。サーバー側で表示されるURLを変更できるため、正規化されたURLと生のURLを使用したリクエストのレスポンスが異なる場合があります。LinkExtractorを使用してリンクをたどっている場合、デフォルトの ``canonicalize=False`` のままにしておいた方がより堅牢です。"
 
 #: ../../topics/link-extractors.rst:120
 msgid "whether duplicate filtering should be applied to extracted links."
-msgstr ""
+msgstr "抽出されたリンクに重複フィルタリングを適用するかどうか。"
 
-#: ../../topics/link-extractors.rst:124
-msgid ""
-"a function which receives each value extracted from the tag and "
-"attributes scanned and can modify the value and return a new one, or "
-"return ``None`` to ignore the link altogether. If not given, "
-"``process_value`` defaults to ``lambda x: x``.  .. highlight:: html  For "
-"example, to extract links from this code::      <a "
-"href=\"javascript:goToPage('../other/page.html'); return false\">Link "
-"text</a>  .. highlight:: python  You can use the following function in "
-"``process_value``::      def process_value(value):         m = "
-"re.search(\"javascript:goToPage\\('(.*?)'\", value)         if m:"
-"             return m.group(1)"
-msgstr ""
+#~ # gettextの誤検出と思われる。obsolute
+#~ #: ../../topics/link-extractors.rst:124
+#~ msgid ""
+#~ "a function which receives each value extracted from the tag and "
+#~ "attributes scanned and can modify the value and return a new one, or "
+#~ "return ``None`` to ignore the link altogether. If not given, "
+#~ "``process_value`` defaults to ``lambda x: x``.  .. highlight:: html  For "
+#~ "example, to extract links from this code::      <a "
+#~ "href=\"javascript:goToPage('../other/page.html'); return false\">Link "
+#~ "text</a>  .. highlight:: python  You can use the following function in "
+#~ "``process_value``::      def process_value(value):         m = "
+#~ "re.search(\"javascript:goToPage\\('(.*?)'\", value)         if m:"
+#~ "             return m.group(1)"
+#~ msgstr ""
 
 #: ../../topics/link-extractors.rst:124
 msgid ""
@@ -193,15 +194,15 @@ msgid ""
 "attributes scanned and can modify the value and return a new one, or "
 "return ``None`` to ignore the link altogether. If not given, "
 "``process_value`` defaults to ``lambda x: x``."
-msgstr ""
+msgstr "タグから抽出された各値とスキャンされた属性を受け取り、値を変更して新しい値を返すか、リンクを完全に無視するために ``None`` を返すことができる関数。 指定しない場合、 ``process_value`` のデフォルトは ``lambda x: x`` になります。"
 
 #: ../../topics/link-extractors.rst:131
 msgid "For example, to extract links from this code::"
-msgstr ""
+msgstr "たとえば、このコードからリンクを抽出するには::"
 
 #: ../../topics/link-extractors.rst:137
 msgid "You can use the following function in ``process_value``::"
-msgstr ""
+msgstr "あなたは ``process_value`` で次の関数を使用できます::"
 
 #: ../../topics/link-extractors.rst:146
 msgid ""
@@ -212,5 +213,5 @@ msgid ""
 "LinkExtractor strips space chars by default. Set ``strip=False`` to turn "
 "it off (e.g. if you're extracting urls from elements or attributes which "
 "allow leading/trailing whitespaces)."
-msgstr ""
+msgstr "抽出された属性から空白を削除するかどうか。HTML5標準によれば、先頭と末尾の空白は、``<a>`` や ``<area>`` の ``href`` 属性や他の多くの要素、 ``<img>`` や ``<iframe>`` の ``src`` 属性、などから削除する必要があります。そのためLinkExtractorはデフォルトでスペース文字を削除します。オフにするには ``strip=False`` を設定します(たとえば、先頭または末尾の空白を許可する要素または属性からURLを抽出する場合)。"
 
