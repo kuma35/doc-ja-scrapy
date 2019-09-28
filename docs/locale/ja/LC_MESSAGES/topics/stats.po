@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-28 21:34+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../topics/stats.rst:5
 msgid "Stats Collection"
-msgstr ""
+msgstr "統計をとる"
 
 #: ../../topics/stats.rst:7
 msgid ""
@@ -29,7 +29,7 @@ msgid ""
 ":attr:`~scrapy.crawler.Crawler.stats` attribute of the :ref:`topics-api-"
 "crawler`, as illustrated by the examples in the :ref:`topics-stats-"
 "usecases` section below."
-msgstr ""
+msgstr "Scrapyは、値が多くの場合カウンターである、キー/値の形式で統計を収集するための便利な機能を提供します。この機能は統計収集器(Stats Collector)と呼ばれ、以下の :ref:`topics-stats-usecases` 節の例にあるように、 :ref:`topics-api-crawler` の :attr:`~scrapy.crawler.Crawler.stats` 属性を通じてアクセスできます。"
 
 #: ../../topics/stats.rst:13
 msgid ""
@@ -40,59 +40,59 @@ msgid ""
 "This is aimed at simplifying the stats collector usage: you should spend "
 "no more than one line of code for collecting stats in your spider, Scrapy"
 " extension, or whatever code you're using the Stats Collector from."
-msgstr ""
+msgstr "ただし、統計収集器(Stats Collector)は常に使用可能なため、統計収集が有効かどうかに関係なく、モジュールにいつでもインポートして、APIを使用(新しい統計キーをインクリメントまたは設定)できます。無効にしても、APIは機能しますが、何も収集しません。これは、統計収集器の使用を簡素化することを目的としています。スパイダー、Scrapy拡張機能、または統計収集器を使用しているコードの統計を取るために、1行以上のコードを費やす必要はありません。"
 
 #: ../../topics/stats.rst:21
 msgid ""
 "Another feature of the Stats Collector is that it's very efficient (when "
 "enabled) and extremely efficient (almost unnoticeable) when disabled."
-msgstr ""
+msgstr "統計収集器(Stats Collector)のもう1つの特色は、(有効な場合)とても効率的で、無効な場合は極めて効率的(ほとんど気付かない)だということです。"
 
 #: ../../topics/stats.rst:24
 msgid ""
 "The Stats Collector keeps a stats table per open spider which is "
 "automatically opened when the spider is opened, and closed when the "
 "spider is closed."
-msgstr ""
+msgstr "統計収集器は、開いているスパイダーごとに統計テーブルを保持します。このテーブルは、スパイダーを開くと自動的に開き、スパイダーを閉じると閉じます。"
 
 #: ../../topics/stats.rst:30
 msgid "Common Stats Collector uses"
-msgstr ""
+msgstr "一般的な統計収集器を使う"
 
 #: ../../topics/stats.rst:32
 msgid ""
 "Access the stats collector through the "
 ":attr:`~scrapy.crawler.Crawler.stats` attribute. Here is an example of an"
 " extension that access stats::"
-msgstr ""
+msgstr ":attr:`~scrapy.crawler.Crawler.stats` 属性を介して統計収集器(stats collector)にアクセスします。統計にアクセスする拡張機能の例を次に示します::"
 
 #: ../../topics/stats.rst:44
 msgid "Set stat value::"
-msgstr ""
+msgstr "統計値設定::"
 
 #: ../../topics/stats.rst:48
 msgid "Increment stat value::"
-msgstr ""
+msgstr "統計値加算::"
 
 #: ../../topics/stats.rst:52
 msgid "Set stat value only if greater than previous::"
-msgstr ""
+msgstr "以前より大きい場合のみ統計値設定::"
 
 #: ../../topics/stats.rst:56
 msgid "Set stat value only if lower than previous::"
-msgstr ""
+msgstr "以前より小さい場合のみ統計値設定::"
 
 #: ../../topics/stats.rst:60
 msgid "Get stat value::"
-msgstr ""
+msgstr "統計値取得::"
 
 #: ../../topics/stats.rst:65
 msgid "Get all stats::"
-msgstr ""
+msgstr "全統計取得::"
 
 #: ../../topics/stats.rst:71
 msgid "Available Stats Collectors"
-msgstr ""
+msgstr "利用可能な統計収集器"
 
 #: ../../topics/stats.rst:73
 msgid ""
@@ -101,11 +101,11 @@ msgid ""
 "You can select which Stats Collector to use through the "
 ":setting:`STATS_CLASS` setting. The default Stats Collector used is the "
 ":class:`MemoryStatsCollector`."
-msgstr ""
+msgstr "基本的な :class:`StatsCollector` に加えて、基本的な統計収集器を拡張するScrapyで利用可能な他の統計収集器があります。 :setting:`STATS_CLASS` 設定を使用して、使用する統計収集器を選択できます。 使用されるデフォルトの統計収集器は :class:`MemoryStatsCollector` です。"
 
 #: ../../topics/stats.rst:81
 msgid "MemoryStatsCollector"
-msgstr ""
+msgstr "MemoryStatsCollector"
 
 #: ../../topics/stats.rst:85
 msgid ""
@@ -113,21 +113,22 @@ msgid ""
 "(for each spider) in memory, after they're closed. The stats can be "
 "accessed through the :attr:`spider_stats` attribute, which is a dict "
 "keyed by spider domain name."
-msgstr ""
+msgstr "スパイダーが閉じられた後、(各スパイダーの）最後のスクレイピング実行の統計をメモリに保持する単純な統計収集器。 統計は、 :attr:`spider_stats` 属性を介してアクセスできます。これは、スパイダー・ドメイン名をキーとする辞書です。"
 
 #: ../../topics/stats.rst:90
 msgid "This is the default Stats Collector used in Scrapy."
-msgstr ""
+msgstr "これは、Scrapyで使用されるデフォルトの統計収集器です。"
 
+# ?? A dict of dicts
 #: ../../topics/stats.rst:94
 msgid ""
 "A dict of dicts (keyed by spider name) containing the stats of the last "
 "scraping run for each spider."
-msgstr ""
+msgstr "各スパイダーの最後のスクレイピング実行の統計を含む(スパイダー名をキーとする)辞書の辞書"
 
 #: ../../topics/stats.rst:98
 msgid "DummyStatsCollector"
-msgstr ""
+msgstr "DummyStatsCollector"
 
 #: ../../topics/stats.rst:102
 msgid ""
@@ -137,5 +138,5 @@ msgid ""
 "improve performance. However, the performance penalty of stats collection"
 " is usually marginal compared to other Scrapy workload like parsing "
 "pages."
-msgstr ""
+msgstr "(何もしないので)非常に効率的ですが、何もしない統計収集器。この統計収集器は、 :setting:`STATS_CLASS` 設定を介して設定でき、パフォーマンスを改善するために統計収集を無効にします。 ただし、統計収集のパフォーマンス・ペナルティは、通常、ページの解析などの他のScrapyワーク・ロードと比較してわずかです。"
 
