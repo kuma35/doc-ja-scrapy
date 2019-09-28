@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-29 01:05+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../topics/email.rst:5
 msgid "Sending e-mail"
-msgstr ""
+msgstr "電子メールの送信"
 
 #: ../../topics/email.rst:10
 msgid ""
@@ -29,101 +29,101 @@ msgid ""
 "to avoid interfering with the non-blocking IO of the crawler. It also "
 "provides a simple API for sending attachments and it's very easy to "
 "configure, with a few :ref:`settings <topics-email-settings>`."
-msgstr ""
+msgstr "Pythonは `smtplib`_ ライブラリを介して電子メールを比較的簡単に送信できますが、Scrapyは電子メールを送信するための独自の機能を提供します。これは非常に使いやすく、クローラーの非ブロッキングIOの干渉を避けるため、 `Twisted non-blocking IO`_ を使用して実装されています。また、添付ファイルを送信するためのシンプルなAPIを提供し、いくつかの :ref:`電子メール設定<topics-email-settings>` で非常に簡単に構成(configure)できます。"
 
 #: ../../topics/email.rst:21
 msgid "Quick example"
-msgstr ""
+msgstr "簡単な例"
 
 #: ../../topics/email.rst:23
 msgid ""
 "There are two ways to instantiate the mail sender. You can instantiate it"
 " using the standard constructor::"
-msgstr ""
+msgstr "メール送信者をインスタンス化するには2つの方法があります。あなたは標準コンストラクタを使用してインスタンス化できます::"
 
 #: ../../topics/email.rst:29
 msgid ""
 "Or you can instantiate it passing a Scrapy settings object, which will "
 "respect the :ref:`settings <topics-email-settings>`::"
-msgstr ""
+msgstr "または、 :ref:`電子メール設定<topics-email-settings>` を尊重するScrapy設定オブジェクトを渡してインスタンス化できます。"
 
 #: ../../topics/email.rst:34
 msgid "And here is how to use it to send an e-mail (without attachments)::"
-msgstr ""
+msgstr "そして、以下を使用して(添付ファイルなしで)電子メールを送信する方法があります::"
 
 #: ../../topics/email.rst:39
 msgid "MailSender class reference"
-msgstr ""
+msgstr "MailSenderクラス・リファレンス"
 
 #: ../../topics/email.rst:41
 msgid ""
 "MailSender is the preferred class to use for sending emails from Scrapy, "
 "as it uses `Twisted non-blocking IO`_, like the rest of the framework."
-msgstr ""
+msgstr "MailSenderは、フレームワークの残りの部分と同様に、 `Twisted non-blocking IO`_ を使用するため、Scrapyから電子メールを送信するために使用する優先クラスです。"
 
 #: ../../topics/email.rst
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../topics/email.rst:46
 msgid ""
 "the SMTP host to use for sending the emails. If omitted, the "
 ":setting:`MAIL_HOST` setting will be used."
-msgstr ""
+msgstr "電子メールの送信に使用するSMTPホスト。省略すると、 :setting:`MAIL_HOST` 設定が使用されます。"
 
 #: ../../topics/email.rst:50
 msgid ""
 "the address used to send emails (in the ``From:`` header). If omitted, "
 "the :setting:`MAIL_FROM` setting will be used."
-msgstr ""
+msgstr "メールの送信に使用されるアドレス( ``From:`` ヘッダー内)。 省略すると、 :setting:`MAIL_FROM` 設定が使用されます。"
 
 #: ../../topics/email.rst:54
 msgid ""
 "the SMTP user. If omitted, the :setting:`MAIL_USER` setting will be used."
 " If not given, no SMTP authentication will be performed."
-msgstr ""
+msgstr "SMTPユーザー。省略すると、 :setting:`MAIL_USER` 設定が使用されます。指定しない場合、SMTP認証は実行されません。"
 
 #: ../../topics/email.rst:59
 msgid "the SMTP pass for authentication."
-msgstr ""
+msgstr "認証用のSMTPパスワード"
 
 #: ../../topics/email.rst:62
 msgid "the SMTP port to connect to"
-msgstr ""
+msgstr "接続のためのSMTPポート番号"
 
 #: ../../topics/email.rst:65
 msgid "enforce using SMTP STARTTLS"
-msgstr ""
+msgstr "SMTP STARTTLSの使用を強制する"
 
 #: ../../topics/email.rst:68
 msgid "enforce using a secure SSL connection"
-msgstr ""
+msgstr "安全なSSL接続の使用を強制する"
 
 #: ../../topics/email.rst:73
 msgid ""
 "Instantiate using a Scrapy settings object, which will respect "
 ":ref:`these Scrapy settings <topics-email-settings>`."
-msgstr ""
+msgstr ":ref:`これらのScrapy電子メール設定<topics-email-settings>` を尊重するScrapy設定オブジェクトを使用してインスタンス化します。"
 
 #: ../../topics/email.rst:76 ../../topics/email.rst:83
 msgid "the e-mail recipients"
-msgstr ""
+msgstr "電子メールの受信者"
 
 #: ../../topics/email.rst:81
 msgid "Send email to the given recipients."
-msgstr ""
+msgstr "指定された受信者にメールを送信します。"
 
 #: ../../topics/email.rst:86
 msgid "the subject of the e-mail"
-msgstr ""
+msgstr "電子メールの件名"
 
 #: ../../topics/email.rst:89
 msgid "the e-mails to CC"
-msgstr ""
+msgstr "カーボン・コピー(CC)への電子メール"
 
 #: ../../topics/email.rst:92
 msgid "the e-mail body"
-msgstr ""
+msgstr "電子メール本文"
 
 #: ../../topics/email.rst:95
 msgid ""
@@ -132,19 +132,19 @@ msgid ""
 "e-mail's attachment, ``mimetype`` is the mimetype of the attachment and "
 "``file_object`` is a readable file object with the contents of the "
 "attachment"
-msgstr ""
+msgstr "タプル ``(attach_name, mimetype, file_object)`` の反復可能オブジェクト(iterable)。 ここで、 ``attach_name`` は、電子メールの添付ファイルに表示される名前の文字列で、 ``mimetype`` は添付ファイルのMIMEタイプであり、 ``file_object`` は添付ファイルの内容を含む読み取り可能なファイルオブジェクトです"
 
 #: ../../topics/email.rst:102
 msgid "the MIME type of the e-mail"
-msgstr ""
+msgstr "電子メールのMIMEタイプ"
 
 #: ../../topics/email.rst:105
 msgid "the character encoding to use for the e-mail contents"
-msgstr ""
+msgstr "電子メールのコンテンツに使用する文字エンコード"
 
 #: ../../topics/email.rst:112
 msgid "Mail settings"
-msgstr ""
+msgstr "メール設定"
 
 #: ../../topics/email.rst:114
 msgid ""
@@ -152,85 +152,85 @@ msgid ""
 ":class:`MailSender` class, and can be used to configure e-mail "
 "notifications in your project without writing any code (for those "
 "extensions and code that uses :class:`MailSender`)."
-msgstr ""
+msgstr "これらの設定は、 :class:`MailSender` クラスのデフォルトのコンストラクター値を定義し、コードを記述せずにプロジェクトで電子メール通知を構成(configure)するために使用できます( :class:`MailSender` を使用する拡張機能およびコード用))。"
 
 #: ../../topics/email.rst:121
 msgid "MAIL_FROM"
-msgstr ""
+msgstr "MAIL_FROM"
 
 #: ../../topics/email.rst:123
 msgid "Default: ``'scrapy@localhost'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy@localhost'``"
 
 #: ../../topics/email.rst:125
 msgid "Sender email to use (``From:`` header) for sending emails."
-msgstr ""
+msgstr "電子メールの送信に使用する送信者の電子メール( ``From:`` ヘッダー)。"
 
 #: ../../topics/email.rst:130
 msgid "MAIL_HOST"
-msgstr ""
+msgstr "MAIL_HOST"
 
 #: ../../topics/email.rst:132
 msgid "Default: ``'localhost'``"
-msgstr ""
+msgstr "デフォルト: ``'localhost'``"
 
 #: ../../topics/email.rst:134
 msgid "SMTP host to use for sending emails."
-msgstr ""
+msgstr "電子メールの送信に使用するSMTPホスト。"
 
 #: ../../topics/email.rst:139
 msgid "MAIL_PORT"
-msgstr ""
+msgstr "MAIL_PORT"
 
 #: ../../topics/email.rst:141
 msgid "Default: ``25``"
-msgstr ""
+msgstr "デフォルト: ``25``"
 
 #: ../../topics/email.rst:143
 msgid "SMTP port to use for sending emails."
-msgstr ""
+msgstr "電子メールの送信に使用するSMTPポート。"
 
 #: ../../topics/email.rst:148
 msgid "MAIL_USER"
-msgstr ""
+msgstr "MAIL_USER"
 
 #: ../../topics/email.rst:150 ../../topics/email.rst:160
 msgid "Default: ``None``"
-msgstr ""
+msgstr "デフォルト: ``None``"
 
 #: ../../topics/email.rst:152
 msgid ""
 "User to use for SMTP authentication. If disabled no SMTP authentication "
 "will be performed."
-msgstr ""
+msgstr "SMTP認証に使用するユーザー。無効にすると、SMTP認証は実行されません。"
 
 #: ../../topics/email.rst:158
 msgid "MAIL_PASS"
-msgstr ""
+msgstr "MAIL_PASS"
 
 #: ../../topics/email.rst:162
 msgid "Password to use for SMTP authentication, along with :setting:`MAIL_USER`."
-msgstr ""
+msgstr ":setting:`MAIL_USER` とともに、SMTP認証に使用するパスワード。"
 
 #: ../../topics/email.rst:167
 msgid "MAIL_TLS"
-msgstr ""
+msgstr "MAIL_TLS"
 
 #: ../../topics/email.rst:169 ../../topics/email.rst:178
 msgid "Default: ``False``"
-msgstr ""
+msgstr "デフォルト: ``False``"
 
 #: ../../topics/email.rst:171
 msgid ""
 "Enforce using STARTTLS. STARTTLS is a way to take an existing insecure "
 "connection, and upgrade it to a secure connection using SSL/TLS."
-msgstr ""
+msgstr "STARTTLSを使用を強制します。STARTTLSは、既存の安全でない接続を取得し、SSL/TLSを使用して安全な接続にアップグレードする方法です。"
 
 #: ../../topics/email.rst:176
 msgid "MAIL_SSL"
-msgstr ""
+msgstr "MAIL_SSL"
 
 #: ../../topics/email.rst:180
 msgid "Enforce connecting using an SSL encrypted connection"
-msgstr ""
+msgstr "SSL暗号化接続を使用した接続を強制する"
 
