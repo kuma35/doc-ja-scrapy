@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-09-23 22:00+0900\n"
+"PO-Revision-Date: 2019-09-27 20:40+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -156,20 +156,20 @@ msgstr ""
 
 #: ../../faq.rst:128
 msgid "Does Scrapy crawl in breadth-first or depth-first order?"
-msgstr "Scrapyは幅優先または深さ優先でクロールしますか？"
+msgstr "Scrapyは幅(breadth)優先または深さ(depth)優先でクロールしますか？"
 
 #: ../../faq.rst:130
 msgid ""
 "By default, Scrapy uses a `LIFO`_ queue for storing pending requests, "
 "which basically means that it crawls in `DFO order`_. This order is more "
 "convenient in most cases."
-msgstr ""
+msgstr "デフォルトでは、Scrapyは保留中のリクエストを保存するために `LIFO`_ キューを使用します。これは基本的に、DFO順序(`DFO order`_)でクロールすることを意味します。 ほとんどの場合、この順序の方が便利です。"
 
 #: ../../faq.rst:134
 msgid ""
 "If you do want to crawl in true `BFO order`_, you can do it by setting "
 "the following settings::"
-msgstr ""
+msgstr "あなたが本当にBFO順(`BFO order`_)でクロールしたい場合は、次の設定を行うことで実行できます::"
 
 #: ../../faq.rst:141
 msgid ""
@@ -179,7 +179,7 @@ msgid ""
 "concurrently. As a result, the first few requests of a crawl rarely "
 "follow the desired order. Lowering those settings to ``1`` enforces the "
 "desired order, but it significantly slows down the crawl as a whole."
-msgstr ""
+msgstr "保留中のリクエストが :setting:`CONCURRENT_REQUESTS` または :setting:`CONCURRENT_REQUESTS_PER_DOMAIN` または :setting:`CONCURRENT_REQUESTS_PER_DOMAIN` の設定値を下回っている間、これらのリクエストは同時に送信されます。その結果、クロールの最初のいくつかのリクエストが目的の順序に従うことはほとんどありません。 これらの設定を ``1`` に下げると、目的の順序が強制されますが、クロール全体が大幅に遅くなります。"
 
 #: ../../faq.rst:150
 msgid "My Scrapy crawler has memory leaks. What can I do?"
@@ -201,7 +201,7 @@ msgstr "Scrapyが消費するメモリを減らすにはどうすればよいで
 
 #: ../../faq.rst:160
 msgid "See previous question."
-msgstr ""
+msgstr "1つ前の質問を見て下さい。"
 
 #: ../../faq.rst:163
 msgid "Can I use Basic HTTP Authentication in my spiders?"
@@ -211,7 +211,7 @@ msgstr "スパイダーは基本HTTP認証を使用できますか？"
 msgid ""
 "Yes, see "
 ":class:`~scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware`."
-msgstr ""
+msgstr "はい。 :class:`~scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware` 参照。"
 
 #: ../../faq.rst:168
 msgid "Why does Scrapy download pages in English instead of my native language?"
@@ -221,7 +221,7 @@ msgstr "Scrapyが母国語ではなく英語でページをダウンロードす
 msgid ""
 "Try changing the default `Accept-Language`_ request header by overriding "
 "the :setting:`DEFAULT_REQUEST_HEADERS` setting."
-msgstr ""
+msgstr ":setting:`DEFAULT_REQUEST_HEADERS` 設定をオーバーライドして、デフォルトの `Accept-Language`_ リクエスト・ヘッダーを変更してみてください。"
 
 #: ../../faq.rst:176
 msgid "Where can I find some example Scrapy projects?"
@@ -418,7 +418,7 @@ msgstr "ScrapyボットがBANされるのを防ぐにはどうすればよいで
 
 #: ../../faq.rst:309
 msgid "See :ref:`bans`."
-msgstr ""
+msgstr ":ref:`bans` 参照。"
 
 #: ../../faq.rst:312
 msgid "Should I use spider arguments or settings to configure my spider?"

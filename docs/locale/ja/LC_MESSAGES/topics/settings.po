@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-28 11:23+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,14 +19,14 @@ msgstr ""
 
 #: ../../topics/settings.rst:5
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: ../../topics/settings.rst:7
 msgid ""
 "The Scrapy settings allows you to customize the behaviour of all Scrapy "
 "components, including the core, extensions, pipelines and spiders "
 "themselves."
-msgstr ""
+msgstr "Scrapy設定を使用すると、コア、拡張機能、パイプライン、スパイダー自体を含むすべてのScrapyコンポーネントの動作をカスタマイズできます。"
 
 #: ../../topics/settings.rst:10
 msgid ""
@@ -34,98 +34,98 @@ msgid ""
 "value mappings that the code can use to pull configuration values from. "
 "The settings can be populated through different mechanisms, which are "
 "described below."
-msgstr ""
+msgstr "設定のインフラストラクチャは、コードが構成値を取得するために使用できるキーと値のマッピングのグローバル名前空間を提供します。設定は、以下で説明するさまざまなメカニズムを使用して設定できます。"
 
 #: ../../topics/settings.rst:14
 msgid ""
 "The settings are also the mechanism for selecting the currently active "
 "Scrapy project (in case you have many)."
-msgstr ""
+msgstr "設定は、(多くの場合)現在アクティブなScrapyプロジェクトを選択するためのメカニズムでもあります。"
 
 #: ../../topics/settings.rst:17
 msgid "For a list of available built-in settings see: :ref:`topics-settings-ref`."
-msgstr ""
+msgstr "利用可能な組み込み設定のリストについては、 :ref:`topics-settings-ref` を参照してください。"
 
 #: ../../topics/settings.rst:22
 msgid "Designating the settings"
-msgstr ""
+msgstr "設定の指定"
 
 #: ../../topics/settings.rst:24
 msgid ""
 "When you use Scrapy, you have to tell it which settings you're using. You"
 " can do this by using an environment variable, "
 "``SCRAPY_SETTINGS_MODULE``."
-msgstr ""
+msgstr "あなたがScrapyを使用するときは、あなたは使用している設定を伝える必要があります。これを行うには、環境変数 ``SCRAPY_SETTINGS_MODULE`` を使用します。"
 
 #: ../../topics/settings.rst:27
 msgid ""
 "The value of ``SCRAPY_SETTINGS_MODULE`` should be in Python path syntax, "
 "e.g. ``myproject.settings``. Note that the settings module should be on "
 "the Python `import search path`_."
-msgstr ""
+msgstr "``SCRAPY_SETTINGS_MODULE`` の値は、Pythonパス構文である必要があります。例えば ``myproject.settings`` です。設定モジュールはPythonのインポート検索パス(`import search path`_)にある必要があることに注意してください。"
 
 #: ../../topics/settings.rst:36
 msgid "Populating the settings"
-msgstr ""
+msgstr "設定の入力"
 
 #: ../../topics/settings.rst:38
 msgid ""
 "Settings can be populated using different mechanisms, each of which "
 "having a different precedence. Here is the list of them in decreasing "
 "order of precedence:"
-msgstr ""
+msgstr "設定は、それぞれ異なる優先順位を持つさまざまなメカニズムを使用して入力できます。 優先順位の降順でそれらのリストを示します:"
 
 #: ../../topics/settings.rst:42
 msgid "Command line options (most precedence)"
-msgstr ""
+msgstr "コマンド・ライン・オプション(最優先)"
 
 #: ../../topics/settings.rst:43
 msgid "Settings per-spider"
-msgstr ""
+msgstr "スパイダーごとの設定"
 
 #: ../../topics/settings.rst:44
 msgid "Project settings module"
-msgstr ""
+msgstr "プロジェクト設定モジュール"
 
 #: ../../topics/settings.rst:45
 msgid "Default settings per-command"
-msgstr ""
+msgstr "コマンドごとのデフォルト設定"
 
 #: ../../topics/settings.rst:46
 msgid "Default global settings (less precedence)"
-msgstr ""
+msgstr "デフォルトのグローバル設定(最も優先度が低い)"
 
 #: ../../topics/settings.rst:48
 msgid ""
 "The population of these settings sources is taken care of internally, but"
 " a manual handling is possible using API calls. See the :ref:`topics-api-"
 "settings` topic for reference."
-msgstr ""
+msgstr "これらの設定ソースの入力は内部的に処理されますが、API呼び出しを使用して手動で処理することができます。 参考として :ref:`topics-api-settings` トピックを参照してください。"
 
 #: ../../topics/settings.rst:52
 msgid "These mechanisms are described in more detail below."
-msgstr ""
+msgstr "これらのメカニズムについては、以下で詳しく説明します。"
 
 #: ../../topics/settings.rst:55
 msgid "1. Command line options"
-msgstr ""
+msgstr "1. コマンド・ライン・オプション"
 
 #: ../../topics/settings.rst:57
 msgid ""
 "Arguments provided by the command line are the ones that take most "
 "precedence, overriding any other options. You can explicitly override one"
 " (or more) settings using the ``-s`` (or ``--set``) command line option."
-msgstr ""
+msgstr "コマンドラインで提供される引数は、他のオプションより優先され、最も優先される引数です。 ` -s`` (または ``--set`` )コマンドラインオプションを使用して、1つ(または複数)の設定を明示的にオーバーライドできます。"
 
 #: ../../topics/settings.rst:63 ../../topics/settings.rst:838
 #: ../../topics/settings.rst:977 ../../topics/settings.rst:1043
 #: ../../topics/settings.rst:1070 ../../topics/settings.rst:1352
 msgid "Example::"
-msgstr ""
+msgstr "例::"
 
 #: ../../topics/settings.rst:68
 msgid "2. Settings per-spider"
-msgstr ""
+msgstr "2. スパイダーごとの設定"
 
 #: ../../topics/settings.rst:70
 msgid ""
@@ -133,11 +133,11 @@ msgid ""
 "their own settings that will take precedence and override the project "
 "ones. They can do so by setting their "
 ":attr:`~scrapy.spiders.Spider.custom_settings` attribute::"
-msgstr ""
+msgstr "スパイダー( :ref:`topics-spiders` 参照)は、プロジェクト設定を優先して上書きする独自の設定を定義できます。 そのためには :attr:`~scrapy.spiders.Spider.custom_settings` 属性を設定します::"
 
 #: ../../topics/settings.rst:82
 msgid "3. Project settings module"
-msgstr ""
+msgstr "3. プロジェクト設定モジュール"
 
 #: ../../topics/settings.rst:84
 msgid ""
@@ -146,11 +146,11 @@ msgid ""
 "populated. For a standard Scrapy project, this means you'll be adding or "
 "changing the settings in the ``settings.py`` file created for your "
 "project."
-msgstr ""
+msgstr "プロジェクト設定モジュールは、Scrapyプロジェクトの標準構成ファイルであり、ほとんどのカスタム設定がそこに入力されます。 標準のScrapyプロジェクトの場合、これは、プロジェクト用に作成された ``settings.py`` ファイルの設定を追加または変更することを意味します。"
 
 #: ../../topics/settings.rst:90
 msgid "4. Default settings per-command"
-msgstr ""
+msgstr "4. コマンドごとのデフォルト設定"
 
 #: ../../topics/settings.rst:92
 msgid ""
@@ -158,26 +158,26 @@ msgid ""
 "default settings, which override the global default settings. Those "
 "custom command settings are specified in the ``default_settings`` "
 "attribute of the command class."
-msgstr ""
+msgstr "各 :doc:`Scrapyツール</topics/commands>` コマンドには、グローバルなデフォルト設定を上書きする独自のデフォルト設定を含めることができます。これらのカスタム・コマンド設定は、コマンド・クラスの ``default_settings`` 属性で指定されます。"
 
 #: ../../topics/settings.rst:98
 msgid "5. Default global settings"
-msgstr ""
+msgstr "5. デフォルトのグローバル設定"
 
 #: ../../topics/settings.rst:100
 msgid ""
 "The global defaults are located in the "
 "``scrapy.settings.default_settings`` module and documented in the :ref"
 ":`topics-settings-ref` section."
-msgstr ""
+msgstr "グローバルなデフォルトは ``scrapy.settings.default_settings`` モジュールにあり、 :ref:`topics-settings-ref` で文書化されています。"
 
 #: ../../topics/settings.rst:104
 msgid "How to access settings"
-msgstr ""
+msgstr "設定にアクセスする方法"
 
 #: ../../topics/settings.rst:108
 msgid "In a spider, the settings are available through ``self.settings``::"
-msgstr ""
+msgstr "スパイダーでは、設定は ``self.settings`` から利用できます::"
 
 #: ../../topics/settings.rst:118
 msgid ""
@@ -185,7 +185,7 @@ msgid ""
 "spider is initialized.  If you want to use the settings before the "
 "initialization (e.g., in your spider's ``__init__()`` method), you'll "
 "need to override the :meth:`~scrapy.spiders.Spider.from_crawler` method."
-msgstr ""
+msgstr "``settings`` 属性は、スパイダーが初期化された後にベースSpiderクラスで設定されます。初期化の前に設定を使用する場合(たとえば、スパイダーの ``__init__()`` メソッドで)、 :meth:`~scrapy.spiders.Spider.from_crawler` メソッドをオーバーライドする必要があります。"
 
 #: ../../topics/settings.rst:123
 msgid ""
@@ -193,7 +193,7 @@ msgid ""
 ":attr:`scrapy.crawler.Crawler.settings` attribute of the Crawler that is "
 "passed to ``from_crawler`` method in extensions, middlewares and item "
 "pipelines::"
-msgstr ""
+msgstr "設定には、拡張機能、ミドルウェア、アイテム・パイプラインの ``from_crawler`` メソッドに渡されるクローラーの :attr:`scrapy.crawler.Crawler.settings` 属性からアクセスできます::"
 
 #: ../../topics/settings.rst:137
 msgid ""
@@ -201,11 +201,11 @@ msgid ""
 "``settings['LOG_ENABLED']``), but it's usually preferred to extract the "
 "setting in the format you need it to avoid type errors, using one of the "
 "methods provided by the :class:`~scrapy.settings.Settings` API."
-msgstr ""
+msgstr "設定オブジェクトは辞書のように使用できます(例: ``settings['LOG_ENABLED']`` )。ただし、通常、タイプ・エラーを回避するために必要な形式で設定を抽出し、 :class:`~scrapy.settings.Settings` APIで提供されるメソッドの1つを使用することをお勧めします。"
 
 #: ../../topics/settings.rst:143
 msgid "Rationale for setting names"
-msgstr ""
+msgstr "名前を設定する理由"
 
 #: ../../topics/settings.rst:145
 msgid ""
@@ -213,17 +213,17 @@ msgid ""
 "configure. For example, proper setting names for a fictional robots.txt "
 "extension would be ``ROBOTSTXT_ENABLED``, ``ROBOTSTXT_OBEY``, "
 "``ROBOTSTXT_CACHEDIR``, etc."
-msgstr ""
+msgstr "設定名には通常、構成するコンポーネントの接頭辞が付きます。 たとえば、架空のrobots.txt拡張子の適切な設定名は、 ``ROBOTSTXT_ENABLED`` 、 ``ROBOTSTXT_OBEY`` 、 ``ROBOTSTXT_CACHEDIR`` などになります。"
 
 #: ../../topics/settings.rst:153
 msgid "Built-in settings reference"
-msgstr ""
+msgstr "組み込みの設定リファレンス"
 
 #: ../../topics/settings.rst:155
 msgid ""
 "Here's a list of all available Scrapy settings, in alphabetical order, "
 "along with their default values and the scope where they apply."
-msgstr ""
+msgstr "以下に、利用可能なすべてのスクレイピー設定のリストをアルファベット順に、デフォルト値と適用範囲とともに示します。"
 
 #: ../../topics/settings.rst:158
 msgid ""
@@ -232,158 +232,158 @@ msgid ""
 "component will be shown, typically an extension, middleware or pipeline. "
 "It also means that the component must be enabled in order for the setting"
 " to have any effect."
-msgstr ""
+msgstr "使用可能な場所では、スコープは、特定のコンポーネントに関連付けられている場合、設定が使用されている場所を示します。 その場合、そのコンポーネントのモジュールは通常、拡張機能、ミドルウェア、またはパイプラインが表示されます。 また、設定を有効にするには、コンポーネントを有効にする必要があります。"
 
 #: ../../topics/settings.rst:166
 msgid "AWS_ACCESS_KEY_ID"
-msgstr ""
+msgstr "AWS_ACCESS_KEY_ID"
 
 #: ../../topics/settings.rst:168 ../../topics/settings.rst:178
 #: ../../topics/settings.rst:188 ../../topics/settings.rst:198
 #: ../../topics/settings.rst:209 ../../topics/settings.rst:219
 #: ../../topics/settings.rst:878 ../../topics/settings.rst:1178
 msgid "Default: ``None``"
-msgstr ""
+msgstr "デフォルト: ``None``"
 
 #: ../../topics/settings.rst:170
 msgid ""
 "The AWS access key used by code that requires access to `Amazon Web "
 "services`_, such as the :ref:`S3 feed storage backend <topics-feed-"
 "storage-s3>`."
-msgstr ""
+msgstr ":ref:`S3フィードストレージバックエンド<topics-feed-storage-s3>` など、 `Amazon Web services`_ へのアクセスを必要とするコードで使用されるAWSアクセスキー。"
 
 #: ../../topics/settings.rst:176
 msgid "AWS_SECRET_ACCESS_KEY"
-msgstr ""
+msgstr "AWS_SECRET_ACCESS_KEY"
 
 #: ../../topics/settings.rst:180
 msgid ""
 "The AWS secret key used by code that requires access to `Amazon Web "
 "services`_, such as the :ref:`S3 feed storage backend <topics-feed-"
 "storage-s3>`."
-msgstr ""
+msgstr ":ref:`S3フィード・ストレージ・バックエンド<topics-feed-storage-s3>` など、 `Amazon Web services`_ へのアクセスを必要とするコードで使用されるAWSシークレット・キー"
 
 #: ../../topics/settings.rst:186
 msgid "AWS_ENDPOINT_URL"
-msgstr ""
+msgstr "AWS_ENDPOINT_URL"
 
 #: ../../topics/settings.rst:190
 msgid ""
 "Endpoint URL used for S3-like storage, for example Minio or s3.scality. "
 "Only supported with ``botocore`` library."
-msgstr ""
+msgstr "Minioやs3.scalityなど、S3のようなストレージに使用されるエンドポイントURL。 ``botocore`` ライブラリでのみサポートされています。"
 
 #: ../../topics/settings.rst:196
 msgid "AWS_USE_SSL"
-msgstr ""
+msgstr "AWS_USE_SSL"
 
 #: ../../topics/settings.rst:200
 msgid ""
 "Use this option if you want to disable SSL connection for communication "
 "with S3 or S3-like storage. By default SSL will be used. Only supported "
 "with ``botocore`` library."
-msgstr ""
+msgstr "S3またはS3のようなストレージとの通信のためにSSL接続を無効にする場合は、このオプションを使用します。 デフォルトでは、SSLが使用されます。 ``botocore`` ライブラリでのみサポートされています。"
 
 #: ../../topics/settings.rst:207
 msgid "AWS_VERIFY"
-msgstr ""
+msgstr "AWS_VERIFY"
 
 #: ../../topics/settings.rst:211
 msgid ""
 "Verify SSL connection between Scrapy and S3 or S3-like storage. By "
 "default SSL verification will occur. Only supported with ``botocore`` "
 "library."
-msgstr ""
+msgstr "ScrapyとS3またはS3のようなストレージ間のSSL接続を検証(verify)します。デフォルトでは、SSL検証が行われます。 ``botocore`` ライブラリでのみサポートされています。"
 
 #: ../../topics/settings.rst:217
 msgid "AWS_REGION_NAME"
-msgstr ""
+msgstr "AWS_REGION_NAME"
 
 #: ../../topics/settings.rst:221
 msgid ""
 "The name of the region associated with the AWS client. Only supported "
 "with ``botocore`` library."
-msgstr ""
+msgstr "AWSクライアントに関連付けられているリージョンの名前。 ``botocore`` ライブラリでのみサポートされています。"
 
 #: ../../topics/settings.rst:227
 msgid "BOT_NAME"
-msgstr ""
+msgstr "BOT_NAME"
 
 #: ../../topics/settings.rst:229
 msgid "Default: ``'scrapybot'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapybot'``"
 
 #: ../../topics/settings.rst:231
 msgid ""
 "The name of the bot implemented by this Scrapy project (also known as the"
 " project name). This will be used to construct the User-Agent by default,"
 " and also for logging."
-msgstr ""
+msgstr "このScrapyプロジェクトによって実装されるボットの名前(プロジェクト名とも呼ばれます)。 これは、デフォルトでUser-Agentを構築するために使用され、ログでも使用されます。"
 
 #: ../../topics/settings.rst:235
 msgid ""
 "It's automatically populated with your project name when you create your "
 "project with the :command:`startproject` command."
-msgstr ""
+msgstr ":command:`startproject` コマンドでプロジェクトを作成すると、プロジェクト名が自動的に入力されます。"
 
 #: ../../topics/settings.rst:241
 msgid "CONCURRENT_ITEMS"
-msgstr ""
+msgstr "CONCURRENT_ITEMS"
 
 #: ../../topics/settings.rst:243
 msgid "Default: ``100``"
-msgstr ""
+msgstr "デフォルト: ``100``"
 
 #: ../../topics/settings.rst:245
 msgid ""
 "Maximum number of concurrent items (per response) to process in parallel "
 "in the Item Processor (also known as the :ref:`Item Pipeline <topics-"
 "item-pipeline>`)."
-msgstr ""
+msgstr "アイテム・プロセッサ( :ref:`アイテム・パイプライン<topics-item-pipeline>` とも呼ばれます)で並列処理する(レスポンスごとの)同時アイテムの最大数。"
 
 #: ../../topics/settings.rst:251
 msgid "CONCURRENT_REQUESTS"
-msgstr ""
+msgstr "CONCURRENT_REQUESTS"
 
 #: ../../topics/settings.rst:253
 msgid "Default: ``16``"
-msgstr ""
+msgstr "デフォルト: ``16``"
 
 #: ../../topics/settings.rst:255
 msgid ""
 "The maximum number of concurrent (ie. simultaneous) requests that will be"
 " performed by the Scrapy downloader."
-msgstr ""
+msgstr "Scrapyダウンローダーが実行する並列(すなわち同時)リクエストの最大数。"
 
 #: ../../topics/settings.rst:261
 msgid "CONCURRENT_REQUESTS_PER_DOMAIN"
-msgstr ""
+msgstr "CONCURRENT_REQUESTS_PER_DOMAIN"
 
 #: ../../topics/settings.rst:263
 msgid "Default: ``8``"
-msgstr ""
+msgstr "デフォルト: ``8``"
 
 #: ../../topics/settings.rst:265
 msgid ""
 "The maximum number of concurrent (ie. simultaneous) requests that will be"
 " performed to any single domain."
-msgstr ""
+msgstr "任意の単一ドメインに対して実行される並列(すなわち同時)リクエストの最大数。"
 
 #: ../../topics/settings.rst:268
 msgid ""
 "See also: :ref:`topics-autothrottle` and its "
 ":setting:`AUTOTHROTTLE_TARGET_CONCURRENCY` option."
-msgstr ""
+msgstr ":ref:`topics-autothrottle` と、その :setting:`AUTOTHROTTLE_TARGET_CONCURRENCY` オプションを参照して下さい。"
 
 #: ../../topics/settings.rst:275
 msgid "CONCURRENT_REQUESTS_PER_IP"
-msgstr ""
+msgstr "CONCURRENT_REQUESTS_PER_IP"
 
 #: ../../topics/settings.rst:277 ../../topics/settings.rst:320
 #: ../../topics/settings.rst:332 ../../topics/settings.rst:561
 #: ../../topics/settings.rst:1003 ../../topics/settings.rst:1054
 msgid "Default: ``0``"
-msgstr ""
+msgstr "デフォルト: ``0``"
 
 #: ../../topics/settings.rst:279
 msgid ""
@@ -392,93 +392,93 @@ msgid ""
 ":setting:`CONCURRENT_REQUESTS_PER_DOMAIN` setting is ignored, and this "
 "one is used instead. In other words, concurrency limits will be applied "
 "per IP, not per domain."
-msgstr ""
+msgstr "単一のIPに対して実行される並行(すなわち同時)リクエストの最大数。 ゼロ以外の場合、 :setting:`CONCURRENT_REQUESTS_PER_DOMAIN` 設定は無視され、代わりにこの設定が使用されます。 つまり、並列実行制限はドメインごとではなくIPごとに適用されます。"
 
 #: ../../topics/settings.rst:285
 msgid ""
 "This setting also affects :setting:`DOWNLOAD_DELAY` and :ref:`topics-"
 "autothrottle`: if :setting:`CONCURRENT_REQUESTS_PER_IP` is non-zero, "
 "download delay is enforced per IP, not per domain."
-msgstr ""
+msgstr "この設定は、 :setting:`DOWNLOAD_DELAY` と :ref:`topics-autothrottle` にも影響します。 :setting:`CONCURRENT_REQUESTS_PER_IP` がゼロ以外の場合、ダウンロード遅延はドメインごとではなくIPごとに適用されます。"
 
 #: ../../topics/settings.rst:293
 msgid "DEFAULT_ITEM_CLASS"
-msgstr ""
+msgstr "DEFAULT_ITEM_CLASS"
 
 #: ../../topics/settings.rst:295
 msgid "Default: ``'scrapy.item.Item'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.item.Item'``"
 
 #: ../../topics/settings.rst:297
 msgid ""
 "The default class that will be used for instantiating items in the "
 ":ref:`the Scrapy shell <topics-shell>`."
-msgstr ""
+msgstr ":ref:`Scrapyシェル<topics-shell>` 内のアイテムのインスタンス化に使用されるデフォルト・クラス。"
 
 #: ../../topics/settings.rst:303
 msgid "DEFAULT_REQUEST_HEADERS"
-msgstr ""
+msgstr "DEFAULT_REQUEST_HEADERS"
 
 #: ../../topics/settings.rst:305 ../../topics/settings.rst:522
 #: ../../topics/settings.rst:597 ../../topics/settings.rst:759
 #: ../../topics/settings.rst:1261 ../../topics/settings.rst:1329
 msgid "Default::"
-msgstr ""
+msgstr "デフォルト::"
 
 #: ../../topics/settings.rst:312
 msgid ""
 "The default headers used for Scrapy HTTP Requests. They're populated in "
 "the "
 ":class:`~scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware`."
-msgstr ""
+msgstr "Scrapy HTTPリクエストに使用されるデフォルトのヘッダー。それらは :class:`~scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware` に取り込まれます。"
 
 #: ../../topics/settings.rst:318
 msgid "DEPTH_LIMIT"
-msgstr ""
+msgstr "DEPTH_LIMIT"
 
 #: ../../topics/settings.rst:322 ../../topics/settings.rst:334
 #: ../../topics/settings.rst:360
 msgid "Scope: ``scrapy.spidermiddlewares.depth.DepthMiddleware``"
-msgstr ""
+msgstr "スコープ: ``scrapy.spidermiddlewares.depth.DepthMiddleware``"
 
 #: ../../topics/settings.rst:324
 msgid ""
 "The maximum depth that will be allowed to crawl for any site. If zero, no"
 " limit will be imposed."
-msgstr ""
+msgstr "任意のサイトでクロールできる最大深度。 ゼロの場合、制限は課されません。"
 
 #: ../../topics/settings.rst:330
 msgid "DEPTH_PRIORITY"
-msgstr ""
+msgstr "DEPTH_PRIORITY"
 
 #: ../../topics/settings.rst:336
 msgid ""
 "An integer that is used to adjust the "
 ":attr:`~scrapy.http.Request.priority` of a :class:`~scrapy.http.Request` "
 "based on its depth."
-msgstr ""
+msgstr "深さに基づいて :class:`~scrapy.http.Request` の :attr:`~scrapy.http.Request.priority` を調整するために使用される整数。"
 
 #: ../../topics/settings.rst:339
 msgid "The priority of a request is adjusted as follows::"
-msgstr ""
+msgstr "リクエストの優先度は次のように調整されます::"
 
 #: ../../topics/settings.rst:343
 msgid ""
 "As depth increases, positive values of ``DEPTH_PRIORITY`` decrease "
 "request priority (BFO), while negative values increase request priority "
 "(DFO). See also :ref:`faq-bfo-dfo`."
-msgstr ""
+msgstr "深さが増加すると、 ``DEPTH_PRIORITY`` の正の値はリクエストの優先度(BFO)を下げ、負の値はリクエストの優先度(DFO)を上げます。 :ref:`faq-bfo-dfo` も参照してください。"
 
 #: ../../topics/settings.rst:349
 msgid ""
 "This setting adjusts priority **in the opposite way** compared to other "
 "priority settings :setting:`REDIRECT_PRIORITY_ADJUST` and "
 ":setting:`RETRY_PRIORITY_ADJUST`."
-msgstr ""
+msgstr "この設定は、他の優先度設定 :setting:`REDIRECT_PRIORITY_ADJUST` と :setting:`RETRY_PRIORITY_ADJUST` と比較して、 **逆の方法で** 優先度を調整します。"
 
 #: ../../topics/settings.rst:356
 msgid "DEPTH_STATS_VERBOSE"
-msgstr ""
+msgstr "DEPTH_STATS_VERBOSE"
 
 #: ../../topics/settings.rst:358 ../../topics/settings.rst:498
 #: ../../topics/settings.rst:729 ../../topics/settings.rst:931
@@ -486,17 +486,17 @@ msgstr ""
 #: ../../topics/settings.rst:1037 ../../topics/settings.rst:1150
 #: ../../topics/settings.rst:1199 ../../topics/settings.rst:1298
 msgid "Default: ``False``"
-msgstr ""
+msgstr "デフォルト: ``False``"
 
 #: ../../topics/settings.rst:362
 msgid ""
 "Whether to collect verbose depth stats. If this is enabled, the number of"
 " requests for each depth is collected in the stats."
-msgstr ""
+msgstr "詳細な統計情報を収集するかどうか。これが有効になっている場合、各深さのリクエスト数が統計に収集されます。"
 
 #: ../../topics/settings.rst:368
 msgid "DNSCACHE_ENABLED"
-msgstr ""
+msgstr "DNSCACHE_ENABLED"
 
 #: ../../topics/settings.rst:370 ../../topics/settings.rst:552
 #: ../../topics/settings.rst:680 ../../topics/settings.rst:795
@@ -504,61 +504,61 @@ msgstr ""
 #: ../../topics/settings.rst:1079 ../../topics/settings.rst:1371
 #: ../../topics/settings.rst:1393
 msgid "Default: ``True``"
-msgstr ""
+msgstr "デフォルト: ``True``"
 
 #: ../../topics/settings.rst:372
 msgid "Whether to enable DNS in-memory cache."
-msgstr ""
+msgstr "DNSイン・メモリ・キャッシュを有効にするかどうか。"
 
 #: ../../topics/settings.rst:377
 msgid "DNSCACHE_SIZE"
-msgstr ""
+msgstr "DNSCACHE_SIZE"
 
 #: ../../topics/settings.rst:379
 msgid "Default: ``10000``"
-msgstr ""
+msgstr "デフォルト: ``10000``"
 
 #: ../../topics/settings.rst:381
 msgid "DNS in-memory cache size."
-msgstr ""
+msgstr "DNSイン・メモリ・キャッシュ・サイズ。"
 
 #: ../../topics/settings.rst:386
 msgid "DNS_TIMEOUT"
-msgstr ""
+msgstr "DNS_TIMEOUT"
 
 #: ../../topics/settings.rst:388
 msgid "Default: ``60``"
-msgstr ""
+msgstr "デフォルト: ``60``"
 
 #: ../../topics/settings.rst:390
 msgid "Timeout for processing of DNS queries in seconds. Float is supported."
-msgstr ""
+msgstr "DNSクエリの処理のタイムアウト(秒)。float値がサポートされています。"
 
 #: ../../topics/settings.rst:395
 msgid "DOWNLOADER"
-msgstr ""
+msgstr "DOWNLOADER"
 
 #: ../../topics/settings.rst:397
 msgid "Default: ``'scrapy.core.downloader.Downloader'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.core.downloader.Downloader'``"
 
 #: ../../topics/settings.rst:399
 msgid "The downloader to use for crawling."
-msgstr ""
+msgstr "クロールに使用するダウンローダー。"
 
 #: ../../topics/settings.rst:404
 msgid "DOWNLOADER_HTTPCLIENTFACTORY"
-msgstr ""
+msgstr "DOWNLOADER_HTTPCLIENTFACTORY"
 
 #: ../../topics/settings.rst:406
 msgid "Default: ``'scrapy.core.downloader.webclient.ScrapyHTTPClientFactory'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.core.downloader.webclient.ScrapyHTTPClientFactory'``"
 
 #: ../../topics/settings.rst:408
 msgid ""
 "Defines a Twisted ``protocol.ClientFactory``  class to use for HTTP/1.0 "
 "connections (for ``HTTP10DownloadHandler``)."
-msgstr ""
+msgstr "( ``HTTP10DownloadHandler`` の場合、) HTTP/1.0接続に使用する Twisted ``protocol.ClientFactory`` クラスを定義します。"
 
 #: ../../topics/settings.rst:413
 msgid ""
@@ -567,21 +567,21 @@ msgid ""
 "override :setting:`DOWNLOAD_HANDLERS_BASE` for ``http(s)`` scheme "
 "accordingly, i.e. to "
 "``'scrapy.core.downloader.handlers.http.HTTP10DownloadHandler'``."
-msgstr ""
+msgstr "最近では HTTP/1.0 はめったに使用されないため、Twisted <11.1 を使用する場合、または HTTP/1.0 を使用して ``http(s)`` スキームの :setting:`DOWNLOAD_HANDLERS_BASE` をオーバーライドする場合、つまり ``'scrapy.core.downloader.handlers.http.HTTP10DownloadHandler'`` を使用する場合を除き、この設定を無視しても安全です。"
 
 #: ../../topics/settings.rst:422
 msgid "DOWNLOADER_CLIENTCONTEXTFACTORY"
-msgstr ""
+msgstr "DOWNLOADER_CLIENTCONTEXTFACTORY"
 
 #: ../../topics/settings.rst:424
 msgid ""
 "Default: "
 "``'scrapy.core.downloader.contextfactory.ScrapyClientContextFactory'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.core.downloader.contextfactory.ScrapyClientContextFactory'``"
 
 #: ../../topics/settings.rst:426
 msgid "Represents the classpath to the ContextFactory to use."
-msgstr ""
+msgstr "使用するContextFactoryへのクラスパスを表します。"
 
 #: ../../topics/settings.rst:428
 msgid ""
@@ -589,13 +589,13 @@ msgid ""
 " the TLS/SSL protocol version to use, whether to do certificate "
 "verification, or even enable client-side authentication (and various "
 "other things)."
-msgstr ""
+msgstr "ここで、ContextFactoryはSSL/TLSコンテキストのTwisted用語であり、使用するTLS/SSLプロトコルのバージョン、証明書の検証(verification)を行うか、クライアント側の認証を有効にするかなどを定義します。"
 
 #: ../../topics/settings.rst:434
 msgid ""
 "Scrapy default context factory **does NOT perform remote server "
 "certificate verification**. This is usually fine for web scraping."
-msgstr ""
+msgstr "Scrapyデフォルト・コンテキスト・ファクトリは **リモート・サーバー証明書の検証を実行しません** 。これは通常、Webスクレイピングに適しています。"
 
 #: ../../topics/settings.rst:437
 msgid ""
@@ -604,7 +604,7 @@ msgid ""
 "``'scrapy.core.downloader.contextfactory.BrowserLikeContextFactory'``, "
 "which uses the platform's certificates to validate remote endpoints. "
 "**This is only available if you use Twisted>=14.0.**"
-msgstr ""
+msgstr "リモート・サーバー証明書の検証を有効にする必要がある場合、Scrapyには設定可能な別のコンテキスト・ファクトリ・クラス ``'scrapy.core.downloader.contextfactory.BrowserLikeContextFactory'`` があり、プラットフォームの証明書を使用してリモート・エンドポイントを検証します。 **これは、Twisted>=14.0 を使用する場合にのみ利用可能です** 。"
 
 #: ../../topics/settings.rst:443
 msgid ""
@@ -613,21 +613,21 @@ msgid ""
 "mapping :setting:`DOWNLOADER_CLIENT_TLS_METHOD`), a "
 "``tls_verbose_logging`` parameter (``bool``) and a ``tls_ciphers`` "
 "parameter (see :setting:`DOWNLOADER_CLIENT_TLS_CIPHERS`)."
-msgstr ""
+msgstr "カスタムContextFactoryを使用する場合、その ``__init__`` メソッドが ``method`` パラメーター(これは ``OpenSSL.SSL`` メソッド・マッピング :setting:`DOWNLOADER_CLIENT_TLS_METHOD` です）と ``tls_verbose_logging'' パラメーター( ``bool`` ） と ``tls_ciphers`` パラメーター( :setting:`DOWNLOADER_CLIENT_TLS_CIPHERS` 参照)を受け入れる事を確認して下さい。"
 
 #: ../../topics/settings.rst:452
 msgid "DOWNLOADER_CLIENT_TLS_CIPHERS"
-msgstr ""
+msgstr "DOWNLOADER_CLIENT_TLS_CIPHERS"
 
 #: ../../topics/settings.rst:454
 msgid "Default: ``'DEFAULT'``"
-msgstr ""
+msgstr "デフォルト: ``'DEFAULT'``"
 
 #: ../../topics/settings.rst:456
 msgid ""
 "Use  this setting to customize the TLS/SSL ciphers used by the default "
 "HTTP/1.1 downloader."
-msgstr ""
+msgstr "この設定を使用して、デフォルトの HTTP/1.1 ダウンローダーが使用するTLS/SSL暗号cipher)をカスタマイズします。"
 
 #: ../../topics/settings.rst:459
 msgid ""
@@ -637,93 +637,93 @@ msgid ""
 "to use ``'DEFAULT:!DH'`` for a website with weak DH parameters or enable "
 "a specific cipher that is not included in ``DEFAULT`` if a website "
 "requires it."
-msgstr ""
+msgstr "設定にはOpenSSL暗号リスト形式(`OpenSSL cipher list format`_)の文字列が含まれている必要があります。これらの暗号はクライアント暗号として使用されます。 特定のHTTPS Webサイトにアクセスするには、この設定の変更が必要になる場合があります。たとえば、弱いDHパラメーターを持つWebサイトに ``'DEFAULT:!DH'`` を使用しするか、または、Webサイトが要求しない場合は ``DEFAULT`` 含まれない特定の暗号を有効にする必要があります。"
 
 #: ../../topics/settings.rst:470
 msgid "DOWNLOADER_CLIENT_TLS_METHOD"
-msgstr ""
+msgstr "DOWNLOADER_CLIENT_TLS_METHOD"
 
 #: ../../topics/settings.rst:472
 msgid "Default: ``'TLS'``"
-msgstr ""
+msgstr "デフォルト: ``'TLS'``"
 
 #: ../../topics/settings.rst:474
 msgid ""
 "Use this setting to customize the TLS/SSL method used by the default "
 "HTTP/1.1 downloader."
-msgstr ""
+msgstr "この設定を使用して、デフォルトの HTTP/1.1 ダウンローダーが使用するTLS/SSLメソッドをカスタマイズします。"
 
 #: ../../topics/settings.rst:477
 msgid "This setting must be one of these string values:"
-msgstr ""
+msgstr "この設定は、次の文字列値のいずれかでなければなりません:"
 
 #: ../../topics/settings.rst:479
 msgid ""
 "``'TLS'``: maps to OpenSSL's ``TLS_method()`` (a.k.a "
 "``SSLv23_method()``), which allows protocol negotiation, starting from "
 "the highest supported by the platform; **default, recommended**"
-msgstr ""
+msgstr "``'TLS'``: これはOpenSSLの ``TLS_method()`` (別名 ``SSLv23_method()`` ）にマップします。これにより、プラットフォームでサポートされる最高のものからプロトコル・ネゴシエーションが可能になります。 **これがデフォルトかつ推奨です**"
 
 #: ../../topics/settings.rst:482
 msgid ""
 "``'TLSv1.0'``: this value forces HTTPS connections to use TLS version 1.0"
 " ; set this if you want the behavior of Scrapy<1.1"
-msgstr ""
+msgstr "``'TLSv1.0'``: この値は、HTTPS接続がTLSバージョン1.0を使用するように強制します。Scrapy<1.1 の動作が必要な場合はこれを設定します"
 
 #: ../../topics/settings.rst:484
 msgid "``'TLSv1.1'``: forces TLS version 1.1"
-msgstr ""
+msgstr "``'TLSv1.1'``: TLS バージョン 1.1 の使用を強制します"
 
 #: ../../topics/settings.rst:485
 msgid "``'TLSv1.2'``: forces TLS version 1.2"
-msgstr ""
+msgstr "``'TLSv1.2'``: TLS バージョン 1.2 の使用を強制します"
 
 #: ../../topics/settings.rst:486
 msgid "``'SSLv3'``: forces SSL version 3 (**not recommended**)"
-msgstr ""
+msgstr "``'SSLv3'``: SSL バージョン3の使用を強制します ( **非推奨** )"
 
 #: ../../topics/settings.rst:490
 msgid ""
 "We recommend that you use PyOpenSSL>=0.13 and Twisted>=0.13 or above "
 "(Twisted>=14.0 if you can)."
-msgstr ""
+msgstr "私達は PyOpenSSL>=0.13 かつ Twisted>=0.1 3 以上(可能な場合はTwisted>=14.0)を使用することをお勧めします。"
 
 #: ../../topics/settings.rst:496
 msgid "DOWNLOADER_CLIENT_TLS_VERBOSE_LOGGING"
-msgstr ""
+msgstr "DOWNLOADER_CLIENT_TLS_VERBOSE_LOGGING"
 
 #: ../../topics/settings.rst:500
 msgid ""
 "Setting this to ``True`` will enable DEBUG level messages about TLS "
 "connection parameters after establishing HTTPS connections. The kind of "
 "information logged depends on the versions of OpenSSL and pyOpenSSL."
-msgstr ""
+msgstr "これを ``True`` に設定すると、HTTPS接続を確立した後、TLS接続パラメーターに関するDEBUGレベルのメッセージが有効になります。記録される情報の種類は、OpenSSLおよびpyOpenSSLのバージョンによって異なります。"
 
 #: ../../topics/settings.rst:504
 msgid ""
 "This setting is only used for the default "
 ":setting:`DOWNLOADER_CLIENTCONTEXTFACTORY`."
-msgstr ""
+msgstr "この設定は、デフォルトの :setting:`DOWNLOADER_CLIENTCONTEXTFACTORY` にのみ使用されます。"
 
 #: ../../topics/settings.rst:510
 msgid "DOWNLOADER_MIDDLEWARES"
-msgstr ""
+msgstr "DOWNLOADER_MIDDLEWARES"
 
 #: ../../topics/settings.rst:512 ../../topics/settings.rst:750
 #: ../../topics/settings.rst:1251 ../../topics/settings.rst:1319
 msgid "Default:: ``{}``"
-msgstr ""
+msgstr "デフォルト:: ``{}``"
 
 #: ../../topics/settings.rst:514
 msgid ""
 "A dict containing the downloader middlewares enabled in your project, and"
 " their orders. For more info see :ref:`topics-downloader-middleware-"
 "setting`."
-msgstr ""
+msgstr "プロジェクトで有効になっているダウンローダー・ミドルウェアとその順序を含む辞書。詳細については、 :ref:`topics-downloader-middleware-setting` を参照してください。"
 
 #: ../../topics/settings.rst:520
 msgid "DOWNLOADER_MIDDLEWARES_BASE"
-msgstr ""
+msgstr "DOWNLOADER_MIDDLEWARES_BASE"
 
 #: ../../topics/settings.rst:541
 msgid ""
@@ -732,19 +732,19 @@ msgid ""
 "the downloader. You should never modify this setting in your project, "
 "modify :setting:`DOWNLOADER_MIDDLEWARES` instead.  For more info see :ref"
 ":`topics-downloader-middleware-setting`."
-msgstr ""
+msgstr "Scrapyでデフォルトで有効になっているダウンローダー・ミドルウェアを含む辞書。 低次はエンジンに近く、高次はダウンローダーに近いです。プロジェクト内でこの設定を変更しないでください。代わりに :setting:`DOWNLOADER_MIDDLEWARES` を変更してください。詳細については、 :ref:`topics-downloader-middleware-setting` を参照してください。"
 
 #: ../../topics/settings.rst:550
 msgid "DOWNLOADER_STATS"
-msgstr ""
+msgstr "DOWNLOADER_STATS"
 
 #: ../../topics/settings.rst:554
 msgid "Whether to enable downloader stats collection."
-msgstr ""
+msgstr "ダウンローダー統計収集を有効にするかどうか。"
 
 #: ../../topics/settings.rst:559
 msgid "DOWNLOAD_DELAY"
-msgstr ""
+msgstr "DOWNLOAD_DELAY"
 
 #: ../../topics/settings.rst:563
 msgid ""
@@ -752,7 +752,7 @@ msgid ""
 "downloading consecutive pages from the same website. This can be used to "
 "throttle the crawling speed to avoid hitting servers too hard. Decimal "
 "numbers are supported.  Example::"
-msgstr ""
+msgstr "ダウンローダーが同じWebサイトから連続したページをダウンロードするまで待機する時間(秒)。 これを使用してクロール速度を調整し、サーバーへの過度のヒットを回避できます。10進数がサポートされています。 例::"
 
 #: ../../topics/settings.rst:570
 msgid ""
@@ -760,45 +760,45 @@ msgid ""
 "setting (which is enabled by default). By default, Scrapy doesn't wait a "
 "fixed amount of time between requests, but uses a random interval between"
 " 0.5 * :setting:`DOWNLOAD_DELAY` and 1.5 * :setting:`DOWNLOAD_DELAY`."
-msgstr ""
+msgstr "この設定は、 :setting:`RANDOMIZE_DOWNLOAD_DELAY` 設定(デフォルトで有効)の影響も受けます。デフォルトでは、Scrapyはリクエスト間で一定の時間を待機する訳ではなく、(0.5 * :setting:`DOWNLOAD_DELAY` ) から ( 1.5 * :setting:`DOWNLOAD_DELAY` )の間のランダムな間隔を使用します。"
 
 #: ../../topics/settings.rst:574
 msgid ""
 "When :setting:`CONCURRENT_REQUESTS_PER_IP` is non-zero, delays are "
 "enforced per ip address instead of per domain."
-msgstr ""
+msgstr ":setting:`CONCURRENT_REQUESTS_PER_IP` がゼロ以外の場合、遅延はドメインごとではなくIPアドレスごとに適用されます。"
 
 #: ../../topics/settings.rst:579
 msgid ""
 "You can also change this setting per spider by setting ``download_delay``"
 " spider attribute."
-msgstr ""
+msgstr "あなたは ``download_delay`` スパイダー属性を設定することで、スパイダーごとにこの設定を変更することもできます。"
 
 #: ../../topics/settings.rst:585
 msgid "DOWNLOAD_HANDLERS"
-msgstr ""
+msgstr "DOWNLOAD_HANDLERS"
 
 #: ../../topics/settings.rst:587 ../../topics/settings.rst:832
 #: ../../topics/settings.rst:850
 msgid "Default: ``{}``"
-msgstr ""
+msgstr "デフォルト: ``{}``"
 
 #: ../../topics/settings.rst:589
 msgid ""
 "A dict containing the request downloader handlers enabled in your "
 "project. See :setting:`DOWNLOAD_HANDLERS_BASE` for example format."
-msgstr ""
+msgstr "プロジェクトで有効にされたリクエスト・ダウンローダー・ハンドラーを含む辞書。 形式の例については、 :setting:`DOWNLOAD_HANDLERS_BASE` を参照してください。"
 
 #: ../../topics/settings.rst:595
 msgid "DOWNLOAD_HANDLERS_BASE"
-msgstr ""
+msgstr "DOWNLOAD_HANDLERS_BASE"
 
 #: ../../topics/settings.rst:608
 msgid ""
 "A dict containing the request download handlers enabled by default in "
 "Scrapy. You should never modify this setting in your project, modify "
 ":setting:`DOWNLOAD_HANDLERS` instead."
-msgstr ""
+msgstr "Scrapyでデフォルトで有効になっているリクエスト・ダウンロード・ハンドラーを含む辞書。 プロジェクトのこの設定を変更するのではなく、代わりに :setting:`DOWNLOAD_HANDLERS` を変更してください。"
 
 #: ../../topics/settings.rst:612
 msgid ""
@@ -806,78 +806,78 @@ msgid ""
 "their URI scheme in :setting:`DOWNLOAD_HANDLERS`. E.g., to disable the "
 "built-in FTP handler (without replacement), place this in your "
 "``settings.py``::"
-msgstr ""
+msgstr ":setting:`DOWNLOAD_HANDLERS` でURIスキームに ``None`` を割り当てることで、これらのダウンロード・ハンドラーを無効にできます。たとえば、組み込みFTPハンドラーを(置換なしで)無効にするには、これを ``settings.py`` に配置します::"
 
 #: ../../topics/settings.rst:623
 msgid "DOWNLOAD_TIMEOUT"
-msgstr ""
+msgstr "DOWNLOAD_TIMEOUT"
 
 #: ../../topics/settings.rst:625
 msgid "Default: ``180``"
-msgstr ""
+msgstr "デフォルト: ``180``"
 
 #: ../../topics/settings.rst:627
 msgid ""
 "The amount of time (in secs) that the downloader will wait before timing "
 "out."
-msgstr ""
+msgstr "ダウンローダーがタイムアウトするまで待機する時間(秒)。"
 
 #: ../../topics/settings.rst:631
 msgid ""
 "This timeout can be set per spider using :attr:`download_timeout` spider "
 "attribute and per-request using :reqmeta:`download_timeout` Request.meta "
 "key."
-msgstr ""
+msgstr "このタイムアウトは、 :attr:`download_timeout` スパイダー属性を使用してスパイダーごとに設定でき、 :reqmeta:`download_timeout` Request.metaキーを使用してリクエストごとに設定できます。"
 
 #: ../../topics/settings.rst:638
 msgid "DOWNLOAD_MAXSIZE"
-msgstr ""
+msgstr "DOWNLOAD_MAXSIZE"
 
 #: ../../topics/settings.rst:640
 msgid "Default: ``1073741824`` (1024MB)"
-msgstr ""
+msgstr "デフォルト: ``1073741824`` (1024MB)"
 
 #: ../../topics/settings.rst:642
 msgid "The maximum response size (in bytes) that downloader will download."
-msgstr ""
+msgstr "ダウンローダーがダウンロードする最大レスポンス・サイズ(バイト単位)。"
 
 #: ../../topics/settings.rst:644 ../../topics/settings.rst:665
 msgid "If you want to disable it set to 0."
-msgstr ""
+msgstr "無効にしたい場合は0をセットします。"
 
 #: ../../topics/settings.rst:650
 msgid ""
 "This size can be set per spider using :attr:`download_maxsize` spider "
 "attribute and per-request using :reqmeta:`download_maxsize` Request.meta "
 "key."
-msgstr ""
+msgstr "このサイズは、スパイダー属性 :attr:`download_maxsize` を使用してスパイダーごとに設定し、リクエストごとに :reqmeta:`download_maxsize` Request.metaキーを使用して設定できます。"
 
 #: ../../topics/settings.rst:654 ../../topics/settings.rst:673
 msgid "This feature needs Twisted >= 11.1."
-msgstr ""
+msgstr "この機能には Twisted >= 11.1. が必要です。"
 
 #: ../../topics/settings.rst:659
 msgid "DOWNLOAD_WARNSIZE"
-msgstr ""
+msgstr "DOWNLOAD_WARNSIZE"
 
 #: ../../topics/settings.rst:661
 msgid "Default: ``33554432`` (32MB)"
-msgstr ""
+msgstr "デフォルト: ``33554432`` (32MB)"
 
 #: ../../topics/settings.rst:663
 msgid "The response size (in bytes) that downloader will start to warn."
-msgstr ""
+msgstr "ダウンローダーが警告し始めるレスポンス・サイズ(バイト単位)。"
 
 #: ../../topics/settings.rst:669
 msgid ""
 "This size can be set per spider using :attr:`download_warnsize` spider "
 "attribute and per-request using :reqmeta:`download_warnsize` Request.meta"
 " key."
-msgstr ""
+msgstr ":attr:`download_warnsize` スパイダー属性を使用してスパイダーごとにこのサイズを設定し、 :reqmeta:`download_warnsize` Request.metaキーを使用してリクエストごとに設定できます。"
 
 #: ../../topics/settings.rst:678
 msgid "DOWNLOAD_FAIL_ON_DATALOSS"
-msgstr ""
+msgstr "DOWNLOAD_FAIL_ON_DATALOSS"
 
 #: ../../topics/settings.rst:682
 msgid ""
@@ -887,13 +887,13 @@ msgid ""
 "``ResponseFailed([_DataLoss])`` error. If ``False``, these responses are "
 "passed through and the flag ``dataloss`` is added to the response, i.e.: "
 "``'dataloss' in response.flags`` is ``True``."
-msgstr ""
+msgstr "壊れた応答で失敗するかどうか、つまり、宣言された ``Content-Length`` がサーバーによって送信されたコンテンツと一致しないか、チャンクされた応答が適切に終了しませんでした。 ``True`` の場合、これらのレスポンスは ``ResponseFailed([_DataLoss])`` エラーを発生させます。 ``False`` の場合、これらのレスポンスはパス・スルーされ、フラグ ``dataloss`` がレスポンスに追加されます。すなわち、response.flagsの ``'dataloss'`` は ``True`` です。"
 
 #: ../../topics/settings.rst:689
 msgid ""
 "Optionally, this can be set per-request basis by using the "
 ":reqmeta:`download_fail_on_dataloss` Request.meta key to ``False``."
-msgstr ""
+msgstr "オプションで、これは :reqmeta:`download_fail_on_dataloss` Request.metaキーを ``False`` に使用することで、リクエストごとに設定できます。"
 
 #: ../../topics/settings.rst:694
 msgid ""
@@ -904,19 +904,19 @@ msgid ""
 "content. If :setting:`RETRY_ENABLED` is ``True`` and this setting is set "
 "to ``True``, the ``ResponseFailed([_DataLoss])`` failure will be retried "
 "as usual."
-msgstr ""
+msgstr "サーバーの設定ミスからネットワークエラー、データ破損まで、いくつかの状況下で、レスポンスの破損、またはデータ損失エラーが発生する場合があります。 部分的なコンテンツや不完全なコンテンツが含まれている可能性があることを考慮して、壊れたレスポンスを処理することが理にかなっているかどうかを判断するのはユーザーの責任です。本設定が ``True`` に設定されていて、かつ :setting:`RETRY_ENABLED` が ``True`` に設定されている場合、 ``ResponseFailed([_DataLoss])`` の失敗は通常どおり再試行されます。"
 
 #: ../../topics/settings.rst:704
 msgid "DUPEFILTER_CLASS"
-msgstr ""
+msgstr "DUPEFILTER_CLASS"
 
 #: ../../topics/settings.rst:706
 msgid "Default: ``'scrapy.dupefilters.RFPDupeFilter'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.dupefilters.RFPDupeFilter'``"
 
 #: ../../topics/settings.rst:708
 msgid "The class used to detect and filter duplicate requests."
-msgstr ""
+msgstr "重複したリクエストを検出およびフィルタリングするために使用されるクラス。"
 
 #: ../../topics/settings.rst:710
 msgid ""
@@ -926,7 +926,7 @@ msgid ""
 "``RFPDupeFilter`` and override its ``request_fingerprint`` method. This "
 "method should accept scrapy :class:`~scrapy.http.Request` object and "
 "return its fingerprint (a string)."
-msgstr ""
+msgstr "デフォルト( ``RFPDupeFilter`` )は ``scrapy.utils.request.request_fingerprint`` 関数を使用してリクエストのフィンガー・プリントに基づいてフィルターします。重複のチェック方法を変更するには、 ``RFPDupeFilter`` をサブクラス化し、その ``request_fingerprint`` メソッドをオーバーライドします。このメソッドは、scrapy :class:`~scrapy.http.Request` オブジェクトを受け入れ、そのフィンガー・プリント(文字列)を返す必要があります。"
 
 #: ../../topics/settings.rst:717
 msgid ""
@@ -936,94 +936,94 @@ msgid ""
 "loops. It's usually a better idea to set the ``dont_filter`` parameter to"
 " ``True`` on the specific :class:`~scrapy.http.Request` that should not "
 "be filtered."
-msgstr ""
+msgstr ":setting:`DUPEFILTER_CLASS` を ``'scrapy.dupefilters.BaseDupeFilter'`` に設定することで、重複したリクエストのフィルタリングを無効にできます。ただし、クロール・ループに入る可能性があるため、これには十分注意してください。通常、フィルタリングしない特定の :class:`~scrapy.http.Request` で ``dont_filter`` パラメーターを ``True`` に設定することをお勧めします。"
 
 #: ../../topics/settings.rst:727
 msgid "DUPEFILTER_DEBUG"
-msgstr ""
+msgstr "DUPEFILTER_DEBUG"
 
 #: ../../topics/settings.rst:731
 msgid ""
 "By default, ``RFPDupeFilter`` only logs the first duplicate request. "
 "Setting :setting:`DUPEFILTER_DEBUG` to ``True`` will make it log all "
 "duplicate requests."
-msgstr ""
+msgstr "デフォルトでは、 ``RFPDupeFilter`` は最初の重複リクエストのみを記録します。  :setting:`DUPEFILTER_DEBUG` を ``True`` に設定すると、重複するすべてのリクエストがログに記録されます。"
 
 #: ../../topics/settings.rst:737
 msgid "EDITOR"
-msgstr ""
+msgstr "EDITOR"
 
 #: ../../topics/settings.rst:739
 msgid "Default: ``vi`` (on Unix systems) or the IDLE editor (on Windows)"
-msgstr ""
+msgstr "デフォルト: ``vi`` (Unixシステムの場合)、またはIDLEエディター(Windowsの場合)"
 
 #: ../../topics/settings.rst:741
 msgid ""
 "The editor to use for editing spiders with the :command:`edit` command. "
 "Additionally, if the ``EDITOR`` environment variable is set, the "
 ":command:`edit` command will prefer it over the default setting."
-msgstr ""
+msgstr ":command:`edit` コマンドでスパイダーを編集するために使用するエディター。さらに、 ``EDITOR`` 環境変数が設定されている場合、 :command:`edit` コマンドはデフォルト設定よりもそれを優先します。"
 
 #: ../../topics/settings.rst:748
 msgid "EXTENSIONS"
-msgstr ""
+msgstr "EXTENSIONS"
 
 #: ../../topics/settings.rst:752
 msgid ""
 "A dict containing the extensions enabled in your project, and their "
 "orders."
-msgstr ""
+msgstr "プロジェクトで有効になっている拡張機能とその順序を含む辞書。"
 
 #: ../../topics/settings.rst:757
 msgid "EXTENSIONS_BASE"
-msgstr ""
+msgstr "EXTENSIONS_BASE"
 
 #: ../../topics/settings.rst:773
 msgid ""
 "A dict containing the extensions available by default in Scrapy, and "
 "their orders. This setting contains all stable built-in extensions. Keep "
 "in mind that some of them need to be enabled through a setting."
-msgstr ""
+msgstr "Scrapyでデフォルトで使用可能な拡張機能とその順序を含む辞書。この設定には、すべての安定した組み込み拡張機能が含まれています。それらのいくつかは設定によって有効にする必要があることに留意してください。"
 
 #: ../../topics/settings.rst:777
 msgid ""
 "For more information See the :ref:`extensions user guide  <topics-"
 "extensions>` and the :ref:`list of available extensions <topics-"
 "extensions-ref>`."
-msgstr ""
+msgstr "詳細については、 :ref:`拡張機能ユーザーガイド<topics-extensions>` および :ref:`利用可能な拡張機能のリスト<topics-extensions-ref>` を参照してください。"
 
 #: ../../topics/settings.rst:784
 msgid "FEED_TEMPDIR"
-msgstr ""
+msgstr "FEED_TEMPDIR"
 
 #: ../../topics/settings.rst:786
 msgid ""
 "The Feed Temp dir allows you to set a custom folder to save crawler "
 "temporary files before uploading with :ref:`FTP feed storage <topics-"
 "feed-storage-ftp>` and :ref:`Amazon S3 <topics-feed-storage-s3>`."
-msgstr ""
+msgstr "Feed Temp dirでは、 :ref:`FTPフィード・ストレージ<topics-feed-storage-ftp>` と :ref:`Amazon S3<topics-feed-storage-s3>` でアップロードする前に、クローラーの一時ファイルを保存するカスタム・フォルダーを設定できます。"
 
 #: ../../topics/settings.rst:793
 msgid "FTP_PASSIVE_MODE"
-msgstr ""
+msgstr "FTP_PASSIVE_MODE"
 
 #: ../../topics/settings.rst:797
 msgid "Whether or not to use passive mode when initiating FTP transfers."
-msgstr ""
+msgstr "FTP転送を開始するときにパッシブモードを使用するかどうか。"
 
 #: ../../topics/settings.rst:802
 msgid "FTP_PASSWORD"
-msgstr ""
+msgstr "FTP_PASSWORD"
 
 #: ../../topics/settings.rst:804
 msgid "Default: ``\"guest\"``"
-msgstr ""
+msgstr "デフォルト: ``\"guest\"``"
 
 #: ../../topics/settings.rst:806
 msgid ""
 "The password to use for FTP connections when there is no "
 "``\"ftp_password\"`` in ``Request`` meta."
-msgstr ""
+msgstr "``Request`` メタに ``\"ftp_password\"`` がない場合にFTP接続に使用するパスワード。"
 
 #: ../../topics/settings.rst:810
 msgid ""
@@ -1031,97 +1031,97 @@ msgid ""
 "password \"guest\" or one's e-mail address for anonymous FTP, some FTP "
 "servers explicitly ask for the user's e-mail address and will not allow "
 "login with the \"guest\" password."
-msgstr ""
+msgstr "`RFC 1635`_ を意訳すると、匿名FTPにはパスワード \"guest\" または自分の電子メールアドレスを使用するのが一般的ですが、一部のFTPサーバーは、ユーザーの電子メールアドレスを明示的に要求し、 \"guest\" パスワードでのログインを許可しません。"
 
 #: ../../topics/settings.rst:820
 msgid "FTP_USER"
-msgstr ""
+msgstr "FTP_USER"
 
 #: ../../topics/settings.rst:822
 msgid "Default: ``\"anonymous\"``"
-msgstr ""
+msgstr "デフォルト: ``\"anonymous\"``"
 
 #: ../../topics/settings.rst:824
 msgid ""
 "The username to use for FTP connections when there is no ``\"ftp_user\"``"
 " in ``Request`` meta."
-msgstr ""
+msgstr "``Request`` メタに ``\"ftp_user\"`` がない場合にFTP接続に使用するユーザー名。"
 
 #: ../../topics/settings.rst:830
 msgid "ITEM_PIPELINES"
-msgstr ""
+msgstr "ITEM_PIPELINES"
 
 #: ../../topics/settings.rst:834
 msgid ""
 "A dict containing the item pipelines to use, and their orders. Order "
 "values are arbitrary, but it is customary to define them in the 0-1000 "
 "range. Lower orders process before higher orders."
-msgstr ""
+msgstr "使用するアイテム・パイプラインとその順序を含む辞書。 順序の値は任意ですが、0〜1000の範囲で定義するのが一般的です。 低いオーダーは高いオーダーの前に処理されます。"
 
 #: ../../topics/settings.rst:848
 msgid "ITEM_PIPELINES_BASE"
-msgstr ""
+msgstr "ITEM_PIPELINES_BASE"
 
 #: ../../topics/settings.rst:852
 msgid ""
 "A dict containing the pipelines enabled by default in Scrapy. You should "
 "never modify this setting in your project, modify "
 ":setting:`ITEM_PIPELINES` instead."
-msgstr ""
+msgstr "Scrapyでデフォルトで有効になっているパイプラインを含む辞書。プロジェクトでこの設定を変更することは決してせず、代わりに :setting:`ITEM_PIPELINES` を変更してください。"
 
 #: ../../topics/settings.rst:858
 msgid "LOG_ENABLED"
-msgstr ""
+msgstr "LOG_ENABLED"
 
 #: ../../topics/settings.rst:862
 msgid "Whether to enable logging."
-msgstr ""
+msgstr "ロギングを有効にするかどうか。"
 
 #: ../../topics/settings.rst:867
 msgid "LOG_ENCODING"
-msgstr ""
+msgstr "LOG_ENCODING"
 
 #: ../../topics/settings.rst:869
 msgid "Default: ``'utf-8'``"
-msgstr ""
+msgstr "デフォルト: ``'utf-8'``"
 
 #: ../../topics/settings.rst:871
 msgid "The encoding to use for logging."
-msgstr ""
+msgstr "ロギングに使用するエンコード。"
 
 #: ../../topics/settings.rst:876
 msgid "LOG_FILE"
-msgstr ""
+msgstr "LOG_FILE"
 
 #: ../../topics/settings.rst:880
 msgid ""
 "File name to use for logging output. If ``None``, standard error will be "
 "used."
-msgstr ""
+msgstr "ログ出力に使用するファイル名。 ``None`` の場合、標準エラーが使用されます。"
 
 #: ../../topics/settings.rst:885
 msgid "LOG_FORMAT"
-msgstr ""
+msgstr "LOG_FORMAT"
 
 #: ../../topics/settings.rst:887
 #, python-format
 msgid "Default: ``'%(asctime)s [%(name)s] %(levelname)s: %(message)s'``"
-msgstr ""
+msgstr "デフォルト: ``'%(asctime)s [%(name)s] %(levelname)s: %(message)s'``"
 
 #: ../../topics/settings.rst:889
 msgid ""
 "String for formatting log messsages. Refer to the `Python logging "
 "documentation`_ for the whole list of available placeholders."
-msgstr ""
+msgstr "ログ・メッセージをフォーマットするための文字列。 利用可能なプレース・ホルダーの全リストについては、 `Python logging documentation`_ を参照してください。"
 
 #: ../../topics/settings.rst:897
 msgid "LOG_DATEFORMAT"
-msgstr ""
+msgstr "LOG_DATEFORMAT"
 
 #: ../../topics/settings.rst:899
 #, python-format
 msgid "Default: ``'%Y-%m-%d %H:%M:%S'``"
-msgstr ""
+msgstr "デフォルト: ``'%Y-%m-%d %H:%M:%S'``"
 
 #: ../../topics/settings.rst:901
 #, python-format
@@ -1129,103 +1129,103 @@ msgid ""
 "String for formatting date/time, expansion of the ``%(asctime)s`` "
 "placeholder in :setting:`LOG_FORMAT`. Refer to the `Python datetime "
 "documentation`_ for the whole list of available directives."
-msgstr ""
+msgstr "日付/時刻をフォーマットするための文字列、 :setting:`LOG_FORMAT` の ``%(asctime)s`` プレース・ホルダーの展開。 利用可能なディレクティブのリストについては、 `Python datetime documentation`_ を参照してください。"
 
 #: ../../topics/settings.rst:910
 msgid "LOG_FORMATTER"
-msgstr ""
+msgstr "LOG_FORMATTER"
 
 #: ../../topics/settings.rst:912
 msgid "Default: :class:`scrapy.logformatter.LogFormatter`"
-msgstr ""
+msgstr "デフォルト: :class:`scrapy.logformatter.LogFormatter`"
 
 #: ../../topics/settings.rst:914
 msgid ""
 "The class to use for :ref:`formatting log messages <custom-log-formats>` "
 "for different actions."
-msgstr ""
+msgstr ":ref:`さまざまなアクションのログ・メッセージのフォーマット<custom-log-formats>` に使用するクラス。"
 
 #: ../../topics/settings.rst:919
 msgid "LOG_LEVEL"
-msgstr ""
+msgstr "LOG_LEVEL"
 
 #: ../../topics/settings.rst:921
 msgid "Default: ``'DEBUG'``"
-msgstr ""
+msgstr "デフォルト: ``'DEBUG'``"
 
 #: ../../topics/settings.rst:923
 msgid ""
 "Minimum level to log. Available levels are: CRITICAL, ERROR, WARNING, "
 "INFO, DEBUG. For more info see :ref:`topics-logging`."
-msgstr ""
+msgstr "記録する最小レベル。 利用可能なレベルは、CRITICAL、ERROR、WARNING、INFO、DEBUG です。詳細については、:ref:`topics-logging` を参照してください。"
 
 #: ../../topics/settings.rst:929
 msgid "LOG_STDOUT"
-msgstr ""
+msgstr "LOG_STDOUT"
 
 #: ../../topics/settings.rst:933
 msgid ""
 "If ``True``, all standard output (and error) of your process will be "
 "redirected to the log. For example if you ``print('hello')`` it will "
 "appear in the Scrapy log."
-msgstr ""
+msgstr "``True`` の場合、処理のすべての標準出力(およびエラー)がログにリダイレクトされます。 たとえば、 ``print('hello')`` の場合、Scrapyログに表示されます。"
 
 #: ../../topics/settings.rst:940
 msgid "LOG_SHORT_NAMES"
-msgstr ""
+msgstr "LOG_SHORT_NAMES"
 
 #: ../../topics/settings.rst:944
 msgid ""
 "If ``True``, the logs will just contain the root path. If it is set to "
 "``False`` then it displays the component responsible for the log output"
-msgstr ""
+msgstr "``True`` の場合、ログにはルート・パスのみが含まれます。 ``False`` に設定されている場合、ログ出力を担当するコンポーネントが表示されます"
 
 #: ../../topics/settings.rst:950
 msgid "LOGSTATS_INTERVAL"
-msgstr ""
+msgstr "LOGSTATS_INTERVAL"
 
 #: ../../topics/settings.rst:952 ../../topics/settings.rst:1019
 msgid "Default: ``60.0``"
-msgstr ""
+msgstr "デフォルト: ``60.0``"
 
 #: ../../topics/settings.rst:954
 msgid ""
 "The interval (in seconds) between each logging printout of the stats by "
 ":class:`~scrapy.extensions.logstats.LogStats`."
-msgstr ""
+msgstr ":class:`~scrapy.extensions.logstats.LogStats` による統計の各ログ出力間の間隔(秒単位)。"
 
 #: ../../topics/settings.rst:960
 msgid "MEMDEBUG_ENABLED"
-msgstr ""
+msgstr "MEMDEBUG_ENABLED"
 
 #: ../../topics/settings.rst:964
 msgid "Whether to enable memory debugging."
-msgstr ""
+msgstr "メモリデバッグを有効にするかどうか。"
 
 #: ../../topics/settings.rst:969
 msgid "MEMDEBUG_NOTIFY"
-msgstr ""
+msgstr "MEMDEBUG_NOTIFY"
 
 #: ../../topics/settings.rst:971 ../../topics/settings.rst:1348
 msgid "Default: ``[]``"
-msgstr ""
+msgstr "デフォルト: ``[]``"
 
 #: ../../topics/settings.rst:973
 msgid ""
 "When memory debugging is enabled a memory report will be sent to the "
 "specified addresses if this setting is not empty, otherwise the report "
 "will be written to the log."
-msgstr ""
+msgstr "メモリ・デバッグが有効になっている場合、この設定が空でない場合、指定されたアドレスにメモリレポートが送信されます。そうでない場合、レポートはログに書き込まれます。"
 
 #: ../../topics/settings.rst:984
 msgid "MEMUSAGE_ENABLED"
-msgstr ""
+msgstr "MEMUSAGE_ENABLED"
 
 #: ../../topics/settings.rst:988 ../../topics/settings.rst:1005
 #: ../../topics/settings.rst:1021 ../../topics/settings.rst:1039
 #: ../../topics/settings.rst:1056
 msgid "Scope: ``scrapy.extensions.memusage``"
-msgstr ""
+msgstr "スコープ: ``scrapy.extensions.memusage``"
 
 #: ../../topics/settings.rst:990
 msgid ""
@@ -1234,27 +1234,27 @@ msgid ""
 " optionally shutdown the Scrapy process when it exceeds a memory limit "
 "(see :setting:`MEMUSAGE_LIMIT_MB`), and notify by email when that "
 "happened (see :setting:`MEMUSAGE_NOTIFY_MAIL`)."
-msgstr ""
+msgstr "メモリ使用量拡張機能を有効にするかどうか。 この拡張機能は、プロセスが使用するピークメモリを追跡します(統計に書き込みます)。また、オプションで、メモリ制限を超えたときにScrapyプロセスをシャットダウンし( :setting:`MEMUSAGE_LIMIT_MB` を参照)、それが発生したときに電子メールで通知することができます( :setting:`MEMUSAGE_NOTIFY_MAIL` を参照)。"
 
 #: ../../topics/settings.rst:996 ../../topics/settings.rst:1010
 #: ../../topics/settings.rst:1030 ../../topics/settings.rst:1047
 msgid "See :ref:`topics-extensions-ref-memusage`."
-msgstr ""
+msgstr ":ref:`topics-extensions-ref-memusage` 参照。"
 
 #: ../../topics/settings.rst:1001
 msgid "MEMUSAGE_LIMIT_MB"
-msgstr ""
+msgstr "MEMUSAGE_LIMIT_MB"
 
 #: ../../topics/settings.rst:1007
 msgid ""
 "The maximum amount of memory to allow (in megabytes) before shutting down"
 " Scrapy  (if MEMUSAGE_ENABLED is True). If zero, no check will be "
 "performed."
-msgstr ""
+msgstr "(MEMUSAGE_ENABLEDがTrueの場合、)Scrapyをシャットダウンする前に許可するメモリの最大量(メガバイト単位)。ゼロの場合、チェックは実行されません。"
 
 #: ../../topics/settings.rst:1015
 msgid "MEMUSAGE_CHECK_INTERVAL_SECONDS"
-msgstr ""
+msgstr "MEMUSAGE_CHECK_INTERVAL_SECONDS"
 
 #: ../../topics/settings.rst:1023
 msgid ""
@@ -1262,52 +1262,52 @@ msgid ""
 " the current memory usage, versus the limits set by "
 ":setting:`MEMUSAGE_LIMIT_MB` and :setting:`MEMUSAGE_WARNING_MB`, at fixed"
 " time intervals."
-msgstr ""
+msgstr ":ref:`メモリ使用量拡張<topics-extensions-ref-memusage>` は、現在のメモリ使用量と、 :setting:`MEMUSAGE_LIMIT_MB` および :setting:`MEMUSAGE_WARNING_MB` で設定された制限を一定の時間間隔でチェックします。"
 
 #: ../../topics/settings.rst:1028
 msgid "This sets the length of these intervals, in seconds."
-msgstr ""
+msgstr "これにより、これらの間隔の長さが秒単位で設定されます。"
 
 #: ../../topics/settings.rst:1035
 msgid "MEMUSAGE_NOTIFY_MAIL"
-msgstr ""
+msgstr "MEMUSAGE_NOTIFY_MAIL"
 
 #: ../../topics/settings.rst:1041
 msgid "A list of emails to notify if the memory limit has been reached."
-msgstr ""
+msgstr "メモリ制限に達した場合に通知する電子メールのリスト。"
 
 #: ../../topics/settings.rst:1052
 msgid "MEMUSAGE_WARNING_MB"
-msgstr ""
+msgstr "MEMUSAGE_WARNING_MB"
 
 #: ../../topics/settings.rst:1058
 msgid ""
 "The maximum amount of memory to allow (in megabytes) before sending a "
 "warning email notifying about it. If zero, no warning will be produced."
-msgstr ""
+msgstr "通知する警告メールを送信する前に許可するメモリの最大量(メガバイト単位)。ゼロの場合、警告は生成されません。"
 
 #: ../../topics/settings.rst:1064
 msgid "NEWSPIDER_MODULE"
-msgstr ""
+msgstr "NEWSPIDER_MODULE"
 
 #: ../../topics/settings.rst:1066
 msgid "Default: ``''``"
-msgstr ""
+msgstr "デフォルト: ``''``"
 
 #: ../../topics/settings.rst:1068
 msgid "Module where to create new spiders using the :command:`genspider` command."
-msgstr ""
+msgstr ":command:`genspider` コマンドを使用して新しいスパイダーを作成するモジュール。"
 
 #: ../../topics/settings.rst:1077
 msgid "RANDOMIZE_DOWNLOAD_DELAY"
-msgstr ""
+msgstr "RANDOMIZE_DOWNLOAD_DELAY"
 
 #: ../../topics/settings.rst:1081
 msgid ""
 "If enabled, Scrapy will wait a random amount of time (between 0.5 * "
 ":setting:`DOWNLOAD_DELAY` and 1.5 * :setting:`DOWNLOAD_DELAY`) while "
 "fetching requests from the same website."
-msgstr ""
+msgstr "有効にすると、Scrapyはランダムな時間(0.5 * :setting:`DOWNLOAD_DELAY`)から(1.5 * :setting:`DOWNLOAD_DELAY`)の間待機し、同じWebサイトからリクエストを取得します。"
 
 #: ../../topics/settings.rst:1084
 msgid ""
@@ -1315,25 +1315,39 @@ msgid ""
 "(and subsequently blocked) by sites which analyze requests looking for "
 "statistically significant similarities in the time between their "
 "requests."
-msgstr ""
+msgstr "このランダム化により、リクエストを分析し、リクエスト間の時間の統計的に有意な類似性を探しているサイトによってクローラーが検出される(そしてその後ブロックされる)機会が減少します。"
 
+# wget --random-wait option:
+# Some web sites may perform log analysis to identify retrieval programs such as Wget by looking for statistically significant similarities in the time between requests.
+# This option causes the time between requests to vary between 0.5 and 1.5 * wait seconds, where wait was specified using the --wait option, in order to mask Wget's presence from such analysis.
+# A 2001 article in a publication devoted to development on a popular consumer platform provided code to perform this analysis on the fly.
+# Its author suggested blocking at the class C address level to ensure automated retrieval programs were blocked despite changing DHCP-supplied addresses.
+#
+# The --random-wait option was inspired by this ill-advised recommendation to block many unrelated users from a web site due to the actions of one.
+#
+# 一部のWebサイトでは、ログ分析を実行して、リクエスト間の時間の統計的に有意な類似性を探すことにより、Wgetなどの検索プログラムを識別します。
+# このオプションにより、リクエスト間の時間は0.5〜1.5 *待機秒の間で変化します。この場合、待機は--waitオプションを使用して指定され、このような分析からWgetの存在を隠します。
+# 人気のあるコンシューマープラットフォームでの開発に特化した出版物の2001年の記事は、この分析をその場で実行するためのコードを提供しました。
+# その作成者は、DHCPが提供するアドレスを変更しても自動取得プログラムがブロックされるように、クラスCアドレスレベルでブロックすることを提案しました。
+#
+# --random-waitオプションは、1つのアクションのためにWebサイトから多くの無関係なユーザーをブロックするという、この賢明ではない推奨事項に触発されました。
 #: ../../topics/settings.rst:1088
 msgid ""
 "The randomization policy is the same used by `wget`_ ``--random-wait`` "
 "option."
-msgstr ""
+msgstr "ランダム化ポリシーは、 `wget`_ の ``--random-wait`` オプションで使用されるものと同じです。"
 
 #: ../../topics/settings.rst:1090
 msgid "If :setting:`DOWNLOAD_DELAY` is zero (default) this option has no effect."
-msgstr ""
+msgstr ":setting:`DOWNLOAD_DELAY` がゼロ(デフォルト)の場合、このオプションは効果がありません。"
 
 #: ../../topics/settings.rst:1097
 msgid "REACTOR_THREADPOOL_MAXSIZE"
-msgstr ""
+msgstr "REACTOR_THREADPOOL_MAXSIZE"
 
 #: ../../topics/settings.rst:1099
 msgid "Default: ``10``"
-msgstr ""
+msgstr "デフォルト: ``10``"
 
 #: ../../topics/settings.rst:1101
 msgid ""
@@ -1342,109 +1356,109 @@ msgid ""
 " Resolver, BlockingFeedStorage, S3FilesStore just to name a few. Increase"
 " this value if you're experiencing problems with insufficient blocking "
 "IO."
-msgstr ""
+msgstr "Twistedリアクター・スレッド・プール・サイズの最大制限。 これは、さまざまなScrapyコンポーネントで使用される一般的な多目的スレッド・プールです。スレッドDNSリゾルバー、BlockingFeedStorage、S3FilesStoreなどがあります。ブロッキングIOが不十分な問題が発生している場合は、この値を増やします。"
 
 #: ../../topics/settings.rst:1109
 msgid "REDIRECT_MAX_TIMES"
-msgstr ""
+msgstr "REDIRECT_MAX_TIMES"
 
 #: ../../topics/settings.rst:1111
 msgid "Default: ``20``"
-msgstr ""
+msgstr "デフォルト: ``20``"
 
 #: ../../topics/settings.rst:1113
 msgid ""
 "Defines the maximum times a request can be redirected. After this maximum"
 " the request's response is returned as is. We used Firefox default value "
 "for the same task."
-msgstr ""
+msgstr "リクエストをリダイレクトできる最大回数を定義します。この最大値を超えると、リクエストのレスポンスがそのまま返されます。 私たちはFirefoxの同じタスクのデフォルト値を使用しました。"
 
 #: ../../topics/settings.rst:1120
 msgid "REDIRECT_PRIORITY_ADJUST"
-msgstr ""
+msgstr "REDIRECT_PRIORITY_ADJUST"
 
 #: ../../topics/settings.rst:1122
 msgid "Default: ``+2``"
-msgstr ""
+msgstr "デフォルト: ``+2``"
 
 #: ../../topics/settings.rst:1124
 msgid "Scope: ``scrapy.downloadermiddlewares.redirect.RedirectMiddleware``"
-msgstr ""
+msgstr "スコープ: ``scrapy.downloadermiddlewares.redirect.RedirectMiddleware``"
 
 #: ../../topics/settings.rst:1126
 msgid "Adjust redirect request priority relative to original request:"
-msgstr ""
+msgstr "元のリクエストに対するリダイレクト・リクエストの優先度を調整する:"
 
 #: ../../topics/settings.rst:1128
 msgid "**a positive priority adjust (default) means higher priority.**"
-msgstr ""
+msgstr "**正の優先度調整(デフォルト)は、より高い優先度を意味します** 。"
 
 #: ../../topics/settings.rst:1129
 msgid "a negative priority adjust means lower priority."
-msgstr ""
+msgstr "負の優先度調整は、より低い優先度を意味します。"
 
 #: ../../topics/settings.rst:1134
 msgid "RETRY_PRIORITY_ADJUST"
-msgstr ""
+msgstr "RETRY_PRIORITY_ADJUST"
 
 #: ../../topics/settings.rst:1136
 msgid "Default: ``-1``"
-msgstr ""
+msgstr "デフォルト: ``-1``"
 
 #: ../../topics/settings.rst:1138
 msgid "Scope: ``scrapy.downloadermiddlewares.retry.RetryMiddleware``"
-msgstr ""
+msgstr "スコープ: ``scrapy.downloadermiddlewares.retry.RetryMiddleware``"
 
 #: ../../topics/settings.rst:1140
 msgid "Adjust retry request priority relative to original request:"
-msgstr ""
+msgstr "元のリクエストに対する再試行要求の優先度を調整する:"
 
 #: ../../topics/settings.rst:1142
 msgid "a positive priority adjust means higher priority."
-msgstr ""
+msgstr "正の優先度調整はより高い優先度を意味します。"
 
 #: ../../topics/settings.rst:1143
 msgid "**a negative priority adjust (default) means lower priority.**"
-msgstr ""
+msgstr "**負の優先度調整(デフォルト)は、より低いを意味します** 。"
 
 #: ../../topics/settings.rst:1148
 msgid "ROBOTSTXT_OBEY"
-msgstr ""
+msgstr "ROBOTSTXT_OBEY"
 
 #: ../../topics/settings.rst:1152
 msgid "Scope: ``scrapy.downloadermiddlewares.robotstxt``"
-msgstr ""
+msgstr "スコープ: ``scrapy.downloadermiddlewares.robotstxt``"
 
 #: ../../topics/settings.rst:1154
 msgid ""
 "If enabled, Scrapy will respect robots.txt policies. For more information"
 " see :ref:`topics-dlmw-robots`."
-msgstr ""
+msgstr "有効にすると、Scrapyはrobots.txtポリシーを尊重します。 詳細については、 :ref:`topics-dlmw-robots` を参照してください。"
 
 #: ../../topics/settings.rst:1159
 msgid ""
 "While the default value is ``False`` for historical reasons, this option "
 "is enabled by default in settings.py file generated by ``scrapy "
 "startproject`` command."
-msgstr ""
+msgstr "歴史的な理由からデフォルト値は ``False`` ですが、このオプションは ``scrapy startproject`` コマンドによって生成されたsettings.pyファイルでデフォルトで有効になっています。"
 
 #: ../../topics/settings.rst:1166
 msgid "ROBOTSTXT_PARSER"
-msgstr ""
+msgstr "ROBOTSTXT_PARSER"
 
 #: ../../topics/settings.rst:1168
 msgid "Default: ``'scrapy.robotstxt.PythonRobotParser'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.robotstxt.PythonRobotParser'``"
 
 #: ../../topics/settings.rst:1170
 msgid ""
 "The parser backend to use for parsing ``robots.txt`` files. For more "
 "information see :ref:`topics-dlmw-robots`."
-msgstr ""
+msgstr "``robots.txt`` ファイルの解析に使用するパーサー・バックエンド。詳細については、 :ref:`topics-dlmw-robots` を参照してください。"
 
 #: ../../topics/settings.rst:1176
 msgid "ROBOTSTXT_USER_AGENT"
-msgstr ""
+msgstr "ROBOTSTXT_USER_AGENT"
 
 #: ../../topics/settings.rst:1180
 msgid ""
@@ -1452,23 +1466,23 @@ msgid ""
 "``None``, the User-Agent header you are sending with the request or the "
 ":setting:`USER_AGENT` setting (in that order) will be used for "
 "determining the user agent to use in the robots.txt file."
-msgstr ""
+msgstr "robots.txtファイルでの照合に使用するユーザー・エージェント文字列。 ``None`` の場合、リクエストで送信するUser-Agentヘッダーまたは :setting:`USER_AGENT` 設定は、(この順序で、)robots.txtファイルで使用するユーザー・エージェントを決定するために使用されます。"
 
 #: ../../topics/settings.rst:1188
 msgid "SCHEDULER"
-msgstr ""
+msgstr "SCHEDULER"
 
 #: ../../topics/settings.rst:1190
 msgid "Default: ``'scrapy.core.scheduler.Scheduler'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.core.scheduler.Scheduler'``"
 
 #: ../../topics/settings.rst:1192
 msgid "The scheduler to use for crawling."
-msgstr ""
+msgstr "クロールに使用するスケジューラー。"
 
 #: ../../topics/settings.rst:1197
 msgid "SCHEDULER_DEBUG"
-msgstr ""
+msgstr "SCHEDULER_DEBUG"
 
 #: ../../topics/settings.rst:1201
 msgid ""
@@ -1476,19 +1490,19 @@ msgid ""
 "scheduler. This currently logs (only once) if the requests cannot be "
 "serialized to disk. Stats counter (``scheduler/unserializable``) tracks "
 "the number of times this happens."
-msgstr ""
+msgstr "``True`` に設定すると、リクエスト・スケジューラに関するデバッグ情報が記録されます。 現在、リクエストをディスクにシリアル化できない場合にログに記録されます(1回のみ)。 統計カウンター(``scheduler/unserializable``)は、これが発生した回数を追跡します。"
 
 #: ../../topics/settings.rst:1205
 msgid "Example entry in logs::"
-msgstr ""
+msgstr "ログのエントリの例::"
 
 #: ../../topics/settings.rst:1216
 msgid "SCHEDULER_DISK_QUEUE"
-msgstr ""
+msgstr "SCHEDULER_DISK_QUEUE"
 
 #: ../../topics/settings.rst:1218
 msgid "Default: ``'scrapy.squeues.PickleLifoDiskQueue'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.squeues.PickleLifoDiskQueue'``"
 
 #: ../../topics/settings.rst:1220
 msgid ""
@@ -1496,29 +1510,29 @@ msgid ""
 "are ``scrapy.squeues.PickleFifoDiskQueue``, "
 "``scrapy.squeues.MarshalFifoDiskQueue``, "
 "``scrapy.squeues.MarshalLifoDiskQueue``."
-msgstr ""
+msgstr "スケジューラが使用するディスク・キューのタイプ。 他の利用可能なタイプは、 ``scrapy.squeues.PickleFifoDiskQueue`` 、 ``scrapy.squeues.MarshalFifoDiskQueue`` 、 ``scrapy.squeues.MarshalLifoDiskQueue`` です。"
 
 #: ../../topics/settings.rst:1227
 msgid "SCHEDULER_MEMORY_QUEUE"
-msgstr ""
+msgstr "SCHEDULER_MEMORY_QUEUE"
 
 #: ../../topics/settings.rst:1228
 msgid "Default: ``'scrapy.squeues.LifoMemoryQueue'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.squeues.LifoMemoryQueue'``"
 
 #: ../../topics/settings.rst:1230
 msgid ""
 "Type of in-memory queue used by scheduler. Other available type is: "
 "``scrapy.squeues.FifoMemoryQueue``."
-msgstr ""
+msgstr "スケジューラが使用するメモリ内キューのタイプ。その他の利用可能なタイプは、 ``scrapy.squeues.FifoMemoryQueue`` です。"
 
 #: ../../topics/settings.rst:1236
 msgid "SCHEDULER_PRIORITY_QUEUE"
-msgstr ""
+msgstr "SCHEDULER_PRIORITY_QUEUE"
 
 #: ../../topics/settings.rst:1237
 msgid "Default: ``'scrapy.pqueues.ScrapyPriorityQueue'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.pqueues.ScrapyPriorityQueue'``"
 
 #: ../../topics/settings.rst:1239
 msgid ""
@@ -1529,21 +1543,21 @@ msgid ""
 "domains in parallel. But currently "
 "``scrapy.pqueues.DownloaderAwarePriorityQueue`` does not work together "
 "with :setting:`CONCURRENT_REQUESTS_PER_IP`."
-msgstr ""
+msgstr "スケジューラが使用する優先度キューのタイプ。 別の利用可能なタイプは ``scrapy.pqueues.DownloaderAwarePriorityQueue`` です。 多数の異なるドメインを並行してクロールする場合、``scrapy.pqueues.DownloaderAwarePriorityQueue`` は ``scrapy.pqueues.ScrapyPriorityQueue`` よりも適切に機能します。しかし、現在 ``scrapy.pqueues.DownloaderAwarePriorityQueue`` は :setting:`CONCURRENT_REQUESTS_PER_IP` と一緒には機能しません。"
 
 #: ../../topics/settings.rst:1249
 msgid "SPIDER_CONTRACTS"
-msgstr ""
+msgstr "SPIDER_CONTRACTS"
 
 #: ../../topics/settings.rst:1253
 msgid ""
 "A dict containing the spider contracts enabled in your project, used for "
 "testing spiders. For more info see :ref:`topics-contracts`."
-msgstr ""
+msgstr "プロジェクトで有効にされたスパイダー・コントラクトを含む辞書。スパイダーのテストに使用されます。 詳細については、 :ref:`topics-contracts` を参照してください。"
 
 #: ../../topics/settings.rst:1259
 msgid "SPIDER_CONTRACTS_BASE"
-msgstr ""
+msgstr "SPIDER_CONTRACTS_BASE"
 
 #: ../../topics/settings.rst:1269
 msgid ""
@@ -1551,32 +1565,32 @@ msgid ""
 "should never modify this setting in your project, modify "
 ":setting:`SPIDER_CONTRACTS` instead. For more info see :ref:`topics-"
 "contracts`."
-msgstr ""
+msgstr "Scrapyでデフォルトで有効になっているScrapyコントラクトを含む辞書。プロジェクトでこの設定を変更することは決してせず、代わりに :setting:`SPIDER_CONTRACTS` を変更してください。詳細については、 :ref:`topics-contracts` を参照してください。"
 
 #: ../../topics/settings.rst:1273
 msgid ""
 "You can disable any of these contracts by assigning ``None`` to their "
 "class path in :setting:`SPIDER_CONTRACTS`. E.g., to disable the built-in "
 "``ScrapesContract``, place this in your ``settings.py``::"
-msgstr ""
+msgstr ":setting:`SPIDER_CONTRACTS` でクラス・パスに ``None`` を割り当てることで、これらのコントラクトを無効にできます。たとえば、組み込みの ``ScrapesContract`` を無効にするには、これを ``settings.py`` に配置します::"
 
 #: ../../topics/settings.rst:1284
 msgid "SPIDER_LOADER_CLASS"
-msgstr ""
+msgstr "SPIDER_LOADER_CLASS"
 
 #: ../../topics/settings.rst:1286
 msgid "Default: ``'scrapy.spiderloader.SpiderLoader'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.spiderloader.SpiderLoader'``"
 
 #: ../../topics/settings.rst:1288
 msgid ""
 "The class that will be used for loading spiders, which must implement the"
 " :ref:`topics-api-spiderloader`."
-msgstr ""
+msgstr ":ref:`topics-api-spiderloader` を実装する必要があるスパイダーのロードに使用されるクラス。"
 
 #: ../../topics/settings.rst:1294
 msgid "SPIDER_LOADER_WARN_ONLY"
-msgstr ""
+msgstr "SPIDER_LOADER_WARN_ONLY"
 
 #: ../../topics/settings.rst:1300
 msgid ""
@@ -1585,7 +1599,7 @@ msgid ""
 "``ImportError`` exception. But you can choose to silence this exception "
 "and turn it into a simple warning by setting ``SPIDER_LOADER_WARN_ONLY = "
 "True``."
-msgstr ""
+msgstr "デフォルトでは、Scrapyが :setting:`SPIDER_MODULES` からスパイダー・クラスをインポートしようとすると、 ``ImportError`` 例外があると大声で怒られます。けれども、 ``SPIDER_LOADER_WARN_ONLY = True`` を設定することで、この例外を黙らせて単純な警告に変えることができます。"
 
 #: ../../topics/settings.rst:1306
 msgid ""
@@ -1595,21 +1609,21 @@ msgid ""
 ":command:`scrapy runspider <runspider>`, :command:`scrapy settings "
 "<settings>`, :command:`scrapy startproject <startproject>`, "
 ":command:`scrapy version <version>`."
-msgstr ""
+msgstr "いくつかの :ref:`scrapyコマンド<topics-commands>` は、実際にはスパイダー・クラスをロードする必要がないため、この設定を ``True`` に設定して実行します（つまり、警告のみを発行し、失敗しません)： :command:`scrapy runspider<runspider>` 、 :command:`scrapy settings<settings>` 、 :command:`scrapy startproject <startproject>` 、 :command:`scrapy version<version>`"
 
 #: ../../topics/settings.rst:1317
 msgid "SPIDER_MIDDLEWARES"
-msgstr ""
+msgstr "SPIDER_MIDDLEWARES"
 
 #: ../../topics/settings.rst:1321
 msgid ""
 "A dict containing the spider middlewares enabled in your project, and "
 "their orders. For more info see :ref:`topics-spider-middleware-setting`."
-msgstr ""
+msgstr "プロジェクトで有効になっているスパイダー・ミドルウェアとその順序を含む辞書。 詳細については、 :ref:`topics-spider-middleware-setting` を参照してください。"
 
 #: ../../topics/settings.rst:1327
 msgid "SPIDER_MIDDLEWARES_BASE"
-msgstr ""
+msgstr "SPIDER_MIDDLEWARES_BASE"
 
 #: ../../topics/settings.rst:1339
 msgid ""
@@ -1617,130 +1631,130 @@ msgid ""
 "and their orders. Low orders are closer to the engine, high orders are "
 "closer to the spider. For more info see :ref:`topics-spider-middleware-"
 "setting`."
-msgstr ""
+msgstr "Scrapyでデフォルトで有効になっているスパイダー・ミドルウェアとその順序を含む辞書。 低次はエンジンに近く、高次はスパイダーに近い。 詳細については、 :ref:`topics-spider-middleware-setting` を参照してください。"
 
 #: ../../topics/settings.rst:1346
 msgid "SPIDER_MODULES"
-msgstr ""
+msgstr "SPIDER_MODULES"
 
 #: ../../topics/settings.rst:1350
 msgid "A list of modules where Scrapy will look for spiders."
-msgstr ""
+msgstr "Scrapyがスパイダーを探すモジュールのリスト。"
 
 #: ../../topics/settings.rst:1359
 msgid "STATS_CLASS"
-msgstr ""
+msgstr "STATS_CLASS"
 
 #: ../../topics/settings.rst:1361
 msgid "Default: ``'scrapy.statscollectors.MemoryStatsCollector'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.statscollectors.MemoryStatsCollector'``"
 
 #: ../../topics/settings.rst:1363
 msgid ""
 "The class to use for collecting stats, who must implement the :ref"
 ":`topics-api-stats`."
-msgstr ""
+msgstr ":ref:`topics-api-stats` を実装する必要がある統計情報の収集に使用するクラス。"
 
 #: ../../topics/settings.rst:1369
 msgid "STATS_DUMP"
-msgstr ""
+msgstr "STATS_DUMP"
 
 #: ../../topics/settings.rst:1373
 msgid ""
 "Dump the :ref:`Scrapy stats <topics-stats>` (to the Scrapy log) once the "
 "spider finishes."
-msgstr ""
+msgstr "スパイダーが終了したら :ref:`Scrapy stats <topics-stats>` を(Scrapyログに)ダンプします。"
 
 #: ../../topics/settings.rst:1376
 msgid "For more info see: :ref:`topics-stats`."
-msgstr ""
+msgstr "詳細は :ref:`topics-stats` 参照。"
 
 #: ../../topics/settings.rst:1381
 msgid "STATSMAILER_RCPTS"
-msgstr ""
+msgstr "STATSMAILER_RCPTS"
 
 #: ../../topics/settings.rst:1383
 msgid "Default: ``[]`` (empty list)"
-msgstr ""
+msgstr "デフォルト: ``[]`` (空リスト)"
 
 #: ../../topics/settings.rst:1385
 msgid ""
 "Send Scrapy stats after spiders finish scraping. See "
 ":class:`~scrapy.extensions.statsmailer.StatsMailer` for more info."
-msgstr ""
+msgstr "スパイダーがスクレイピングを完了した後、スクレイピーの統計を送信します。 詳細については、 :class:`~scrapy.extensions.statsmailer.StatsMailer` を参照してください。"
 
 #: ../../topics/settings.rst:1391
 msgid "TELNETCONSOLE_ENABLED"
-msgstr ""
+msgstr "TELNETCONSOLE_ENABLED"
 
 #: ../../topics/settings.rst:1395
 msgid ""
 "A boolean which specifies if the :ref:`telnet console <topics-"
 "telnetconsole>` will be enabled (provided its extension is also enabled)."
-msgstr ""
+msgstr ":ref:`telnetコンソール<topics-telnetconsole>` を有効にするかどうかを指定するブール値(当該拡張機能も有効になっている場合)。"
 
 #: ../../topics/settings.rst:1401
 msgid "TELNETCONSOLE_PORT"
-msgstr ""
+msgstr "TELNETCONSOLE_PORT"
 
 #: ../../topics/settings.rst:1403
 msgid "Default: ``[6023, 6073]``"
-msgstr ""
+msgstr "デフォルト: ``[6023, 6073]``"
 
 #: ../../topics/settings.rst:1405
 msgid ""
 "The port range to use for the telnet console. If set to ``None`` or "
 "``0``, a dynamically assigned port is used. For more info see :ref"
 ":`topics-telnetconsole`."
-msgstr ""
+msgstr "telnetコンソールに使用するポート範囲。 ``None`` または ``0`` に設定すると、動的に割り当てられたポートが使用されます。 詳細については、 :ref:`topics-telnetconsole` を参照してください。"
 
 #: ../../topics/settings.rst:1412
 msgid "TEMPLATES_DIR"
-msgstr ""
+msgstr "TEMPLATES_DIR"
 
 #: ../../topics/settings.rst:1414
 msgid "Default: ``templates`` dir inside scrapy module"
-msgstr ""
+msgstr "デフォルト: Scrapyモジュール内の ``templates`` ディレクトリ"
 
 #: ../../topics/settings.rst:1416
 msgid ""
 "The directory where to look for templates when creating new projects with"
 " :command:`startproject` command and new spiders with "
 ":command:`genspider` command."
-msgstr ""
+msgstr ":command:`startproject` コマンドで新しいプロジェクトを作成し、 :command:`genspider` コマンドで新しいスパイダーを作成するときにテンプレートを探すディレクトリ。"
 
 #: ../../topics/settings.rst:1420
 msgid ""
 "The project name must not conflict with the name of custom files or "
 "directories in the ``project`` subdirectory."
-msgstr ""
+msgstr "プロジェクト名は、 ``project`` サブディレクトリ内のカスタム・ファイルまたはディレクトリの名前と競合してはいけません。"
 
 #: ../../topics/settings.rst:1427
 msgid "URLLENGTH_LIMIT"
-msgstr ""
+msgstr "URLLENGTH_LIMIT"
 
 #: ../../topics/settings.rst:1429
 msgid "Default: ``2083``"
-msgstr ""
+msgstr "デフォルト: ``2083``"
 
 #: ../../topics/settings.rst:1431
 msgid "Scope: ``spidermiddlewares.urllength``"
-msgstr ""
+msgstr "スコープ: ``spidermiddlewares.urllength``"
 
 #: ../../topics/settings.rst:1433
 msgid ""
 "The maximum URL length to allow for crawled URLs. For more information "
 "about the default value for this setting see: "
 "https://boutell.com/newfaq/misc/urllength.html"
-msgstr ""
+msgstr "クロールされたURLを許可する最大URL長。 この設定のデフォルト値の詳細については、 https：//boutell.com/newfaq/misc/urllength.html を参照してください。"
 
 #: ../../topics/settings.rst:1439
 msgid "USER_AGENT"
-msgstr ""
+msgstr "USER_AGENT"
 
 #: ../../topics/settings.rst:1441
 msgid "Default: ``\"Scrapy/VERSION (+https://scrapy.org)\"``"
-msgstr ""
+msgstr "デフォルト: ``\"Scrapy/VERSION (+https://scrapy.org)\"``"
 
 #: ../../topics/settings.rst:1443
 msgid ""
@@ -1749,15 +1763,15 @@ msgid ""
 ":class:`~scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware` if "
 ":setting:`ROBOTSTXT_USER_AGENT` setting is ``None`` and there is no "
 "overridding User-Agent header specified for the request."
-msgstr ""
+msgstr "オーバーライドされない限り、クロール時に使用するデフォルトのUser-Agent。このユーザー・エージェントは、 :setting:`ROBOTSTXT_USER_AGENT` 設定が ``None`` であり、リクエストに指定されたUser-Agentヘッダーが指定されていない場合、 :class:`~scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware` によっても使用されます。"
 
 #: ../../topics/settings.rst:1450
 msgid "Settings documented elsewhere:"
-msgstr ""
+msgstr "他の場所で文書化された設定:"
 
 #: ../../topics/settings.rst:1452
 msgid ""
 "The following settings are documented elsewhere, please check each "
 "specific case to see how to enable and use them."
-msgstr ""
+msgstr "以下の設定は他の場所で文書化されています。それぞれの特定の場合をチェックして、それらを有効にして使用する方法を確認してください。"
 
