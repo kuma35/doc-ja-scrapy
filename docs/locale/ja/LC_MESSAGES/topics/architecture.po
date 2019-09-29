@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-29 12:52+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,17 +19,17 @@ msgstr ""
 
 #: ../../topics/architecture.rst:5
 msgid "Architecture overview"
-msgstr ""
+msgstr "アーキテクチャ概観"
 
 #: ../../topics/architecture.rst:7
 msgid ""
 "This document describes the architecture of Scrapy and how its components"
 " interact."
-msgstr ""
+msgstr "この文書では、Scrapyのアーキテクチャとそのコンポーネントの相互作用について説明します。"
 
 #: ../../topics/architecture.rst:11
 msgid "Overview"
-msgstr ""
+msgstr "概観"
 
 #: ../../topics/architecture.rst:13
 msgid ""
@@ -38,36 +38,36 @@ msgid ""
 "the system (shown by the red arrows). A brief description of the "
 "components is included below with links for more detailed information "
 "about them. The data flow is also described below."
-msgstr ""
+msgstr "以下の図は、Scrapyアーキテクチャの概要とそのコンポーネント、およびシステム内で発生するデータフローの概要(赤い矢印で表示)を示しています。コンポーネントの簡単な説明と、それらの詳細情報へのリンクを以下に示します。データフローについても以下で説明します。"
 
 #: ../../topics/architecture.rst:22
 msgid "Data flow"
-msgstr ""
+msgstr "データ・フロー"
 
 #: ../../topics/architecture.rst:29
 msgid ""
 "The data flow in Scrapy is controlled by the execution engine, and goes "
 "like this:"
-msgstr ""
+msgstr "Scrapyのデータ・フローは実行エンジンによって制御され、次のようになります:"
 
 #: ../../topics/architecture.rst:32
 msgid ""
 "The :ref:`Engine <component-engine>` gets the initial Requests to crawl "
 "from the :ref:`Spider <component-spiders>`."
-msgstr ""
+msgstr ":ref:`Scrapyエンジン<component-engine>` は、 :ref:`スパイダー<component-spiders>` からクロールする最初のリクエストを取得します。"
 
 #: ../../topics/architecture.rst:35
 msgid ""
 "The :ref:`Engine <component-engine>` schedules the Requests in the "
 ":ref:`Scheduler <component-scheduler>` and asks for the next Requests to "
 "crawl."
-msgstr ""
+msgstr ":ref:`Scrapyエンジン<component-engine>` は、 :ref:`スケジューラ<component-scheduler>` でリクエストをスケジュールし、クロールする次のリクエストを求めます。"
 
 #: ../../topics/architecture.rst:39
 msgid ""
 "The :ref:`Scheduler <component-scheduler>` returns the next Requests to "
 "the :ref:`Engine <component-engine>`."
-msgstr ""
+msgstr ":ref:`スケジューラ<component-scheduler>` は、次のリクエストを :ref:`Scrapyエンジン<component-engine>` に返します。"
 
 #: ../../topics/architecture.rst:42
 msgid ""
@@ -75,7 +75,7 @@ msgid ""
 ":ref:`Downloader <component-downloader>`, passing through the "
 ":ref:`Downloader Middlewares <component-downloader-middleware>` (see "
 ":meth:`~scrapy.downloadermiddlewares.DownloaderMiddleware.process_request`)."
-msgstr ""
+msgstr ":ref:`Scrapyエンジン<component-engine>` は、 :ref:`ダウンローダー<component-downloader>` にリクエストを送信し、 :ref:`ダウンローダー・ミドルウェア<component-downloader-middleware>` を通過します(  :meth:`~scrapy.downloadermiddlewares.DownloaderMiddleware.process_request` 参照)。"
 
 #: ../../topics/architecture.rst:47
 msgid ""
@@ -84,7 +84,7 @@ msgid ""
 "Engine, passing through the :ref:`Downloader Middlewares <component-"
 "downloader-middleware>` (see "
 ":meth:`~scrapy.downloadermiddlewares.DownloaderMiddleware.process_response`)."
-msgstr ""
+msgstr "ページのダウンロードが完了すると、 :ref:`ダウンローダー<component-downloader>` は(そのページの)レスポンスを生成し、Scrapyエンジンに送信し、 :ref:`ダウンローダー・ミドルウェア<component-downloader-middleware>` を通過します( :meth:`~scrapy.downloadermiddlewares.DownloaderMiddleware.process_response`  参照)。"
 
 #: ../../topics/architecture.rst:53
 msgid ""
@@ -93,7 +93,7 @@ msgid ""
 " <component-spiders>` for processing, passing through the :ref:`Spider "
 "Middleware <component-spider-middleware>` (see "
 ":meth:`~scrapy.spidermiddlewares.SpiderMiddleware.process_spider_input`)."
-msgstr ""
+msgstr ":ref:`Scrapyエンジン<component-engine>` は :ref:`ダウンローダー<component-downloader>` からResponseを受け取り、それを :ref:`スパイダー<component-spiders>` に送信して処理し、 :ref:`スパイダー・ミドルウェア<component-spider-middleware>` を通過します( see :meth:`~scrapy.spidermiddlewares.SpiderMiddleware.process_spider_input` )。"
 
 #: ../../topics/architecture.rst:59
 msgid ""
@@ -102,7 +102,7 @@ msgid ""
 "<component-engine>`, passing through the :ref:`Spider Middleware "
 "<component-spider-middleware>` (see "
 ":meth:`~scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output`)."
-msgstr ""
+msgstr ":ref:`スパイダー<component-spiders>` はレスポンスを処理し、スクレイピングされたアイテムと(後に続く)新しいリクエストを :ref:`Scrapyエンジン<component-engine>` に返し、 :ref:`スパイダー・ミドルウェア<component-spider-middleware>` を通過します( :meth:`~scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output` 参照 )。"
 
 #: ../../topics/architecture.rst:65
 msgid ""
@@ -110,21 +110,21 @@ msgid ""
 "Pipelines <component-pipelines>`, then send processed Requests to the "
 ":ref:`Scheduler <component-scheduler>` and asks for possible next "
 "Requests to crawl."
-msgstr ""
+msgstr ":ref:`Scrapyエンジン<component-engine>` は処理済みのアイテムを :ref:`アイテム・パイプライン<component-pipelines>` に送信し、処理済みのリクエストを :ref:`スケジューラ<component-scheduler>` に送信し、可能なら次のクロール要求を求めます。"
 
 #: ../../topics/architecture.rst:70
 msgid ""
 "The process repeats (from step 1) until there are no more requests from "
 "the :ref:`Scheduler <component-scheduler>`."
-msgstr ""
+msgstr ":ref:`スケジューラ<component-scheduler>` からの要求がなくなるまで、プロセスは(ステップ1から)繰り返されます。"
 
 #: ../../topics/architecture.rst:74
 msgid "Components"
-msgstr ""
+msgstr "コンポーネント"
 
 #: ../../topics/architecture.rst:79
 msgid "Scrapy Engine"
-msgstr ""
+msgstr "Scrapyエンジン"
 
 #: ../../topics/architecture.rst:81
 msgid ""
@@ -132,42 +132,42 @@ msgid ""
 "components of the system, and triggering events when certain actions "
 "occur. See the :ref:`Data Flow <data-flow>` section above for more "
 "details."
-msgstr ""
+msgstr "エンジンは、システムのすべてのコンポーネント間のデータ・フローを制御し、特定のアクションが発生したときにイベントをトリガーします。詳細については、上記の :ref:`データ・フロー<data-flow>` 節を参照してください。"
 
 #: ../../topics/architecture.rst:88
 msgid "Scheduler"
-msgstr ""
+msgstr "スケジューラ"
 
 #: ../../topics/architecture.rst:90
 msgid ""
 "The Scheduler receives requests from the engine and enqueues them for "
 "feeding them later (also to the engine) when the engine requests them."
-msgstr ""
+msgstr "スケジューラはScrapyエンジンからリクエストを受信し、後でScrapyエンジンが求めたときにリクエストをキューに入れて(Scrapyエンジンにも)送信します。"
 
 #: ../../topics/architecture.rst:96
 msgid "Downloader"
-msgstr ""
+msgstr "ダウンローダー"
 
 #: ../../topics/architecture.rst:98
 msgid ""
 "The Downloader is responsible for fetching web pages and feeding them to "
 "the engine which, in turn, feeds them to the spiders."
-msgstr ""
+msgstr "ダウンローダーはWebページを取得し、それらをScrapyエンジンに送り、Scrapyエンジンがそれらをスパイダーに送ります。"
 
 #: ../../topics/architecture.rst:104
 msgid "Spiders"
-msgstr ""
+msgstr "スパイダー"
 
 #: ../../topics/architecture.rst:106
 msgid ""
 "Spiders are custom classes written by Scrapy users to parse responses and"
 " extract items (aka scraped items) from them or additional requests to "
 "follow. For more information see :ref:`topics-spiders`."
-msgstr ""
+msgstr "スパイダーは、Scrapyユーザーによって記述されたカスタム・クラスであり、レスポンスをパースし、それらからアイテム(またはスクレイピング・アイテム)を抽出するか、追跡するための追加のリクエストを行います。詳細については、 :ref:`topics-spiders` を参照してください。"
 
 #: ../../topics/architecture.rst:113
 msgid "Item Pipeline"
-msgstr ""
+msgstr "アイテム・パイプライン"
 
 #: ../../topics/architecture.rst:115
 msgid ""
@@ -175,114 +175,114 @@ msgid ""
 "been extracted (or scraped) by the spiders. Typical tasks include "
 "cleansing, validation and persistence (like storing the item in a "
 "database). For more information see :ref:`topics-item-pipeline`."
-msgstr ""
+msgstr "アイテム・パイプラインは、スパイダーによってアイテムが抽出(またはスクレイピング)された後にアイテムを処理する役割を果たします。典型的なタスクには、クレンジング、検証、永続化(データベースへのアイテムの保存など)が含まれます。詳細については、 :ref:`topics-item-pipeline` を参照してください。"
 
 #: ../../topics/architecture.rst:123
 msgid "Downloader middlewares"
-msgstr ""
+msgstr "ダウンローダー・ミドルウェア"
 
 #: ../../topics/architecture.rst:125
 msgid ""
 "Downloader middlewares are specific hooks that sit between the Engine and"
 " the Downloader and process requests when they pass from the Engine to "
 "the Downloader, and responses that pass from Downloader to the Engine."
-msgstr ""
+msgstr "ダウンローダー・ミドルウェアは、エンジンとダウンローダーの間にある特定のフックであり、エンジンからダウンローダーに渡されるときにリクエストを処理し、ダウンローダーからエンジンに渡されるリクエストを処理します。"
 
 #: ../../topics/architecture.rst:129
 msgid "Use a Downloader middleware if you need to do one of the following:"
-msgstr ""
+msgstr "あなたが以下のいずれかを行う必要がある場合は、ダウンローダー・ミドルウェアを使用します:"
 
 #: ../../topics/architecture.rst:131
 msgid ""
 "process a request just before it is sent to the Downloader (i.e. right "
 "before Scrapy sends the request to the website);"
-msgstr ""
+msgstr "ダウンローダーに送信される直前にリクエストを処理します(Scrapyがウェブサイトにリクエストを送信する直前);"
 
 #: ../../topics/architecture.rst:133
 msgid "change received response before passing it to a spider;"
-msgstr ""
+msgstr "スパイダーに渡す前に受信したリクエストを変更する;"
 
 #: ../../topics/architecture.rst:134
 msgid "send a new Request instead of passing received response to a spider;"
-msgstr ""
+msgstr "受信したレスポンスをスパイダーに渡すのではなく、新しいリクエストを送信します;"
 
 #: ../../topics/architecture.rst:135
 msgid "pass response to a spider without fetching a web page;"
-msgstr ""
+msgstr "Webページを取得せずにスパイダーにレスポンスを渡す;"
 
 #: ../../topics/architecture.rst:136
 msgid "silently drop some requests."
-msgstr ""
+msgstr "いくつかのリクエストを黙って廃棄する。"
 
 #: ../../topics/architecture.rst:138
 msgid "For more information see :ref:`topics-downloader-middleware`."
-msgstr ""
+msgstr "詳細は :ref:`topics-downloader-middleware` 参照。"
 
 #: ../../topics/architecture.rst:143
 msgid "Spider middlewares"
-msgstr ""
+msgstr "スパイダー・ミドルウェア"
 
 #: ../../topics/architecture.rst:145
 msgid ""
 "Spider middlewares are specific hooks that sit between the Engine and the"
 " Spiders and are able to process spider input (responses) and output "
 "(items and requests)."
-msgstr ""
+msgstr "スパイダー・ミドルウェアは、エンジンとスパイダーの間にある特定のフックであり、スパイダーの入力(レスポンス)と出力(アイテムとリクエスト)を処理できます。"
 
 #: ../../topics/architecture.rst:149
 msgid "Use a Spider middleware if you need to"
-msgstr ""
+msgstr "あなたが必要な場合はスパイダー・ミドルウェアを使用します"
 
 #: ../../topics/architecture.rst:151
 msgid ""
 "post-process output of spider callbacks - change/add/remove requests or "
 "items;"
-msgstr ""
+msgstr "スパイダー・コールバックのポスト・プロセス出力 - リクエストまたはアイテムの変更/追加/削除;"
 
 #: ../../topics/architecture.rst:152
 msgid "post-process start_requests;"
-msgstr ""
+msgstr "start_requests の後処理;"
 
 #: ../../topics/architecture.rst:153
 msgid "handle spider exceptions;"
-msgstr ""
+msgstr "スパイダー例外を処理します;"
 
 #: ../../topics/architecture.rst:154
 msgid ""
 "call errback instead of callback for some of the requests based on "
 "response content."
-msgstr ""
+msgstr "レスポンス内容に基づいて、一部のリクエストに対してコールバックの代わりに偉ー・バック(errback)を呼び出します。"
 
 #: ../../topics/architecture.rst:157
 msgid "For more information see :ref:`topics-spider-middleware`."
-msgstr ""
+msgstr "詳細については :ref:`topics-spider-middleware` 参照。"
 
 #: ../../topics/architecture.rst:160
 msgid "Event-driven networking"
-msgstr ""
+msgstr "イベント駆動型ネットワーキング"
 
 #: ../../topics/architecture.rst:162
 msgid ""
 "Scrapy is written with `Twisted`_, a popular event-driven networking "
 "framework for Python. Thus, it's implemented using a non-blocking (aka "
 "asynchronous) code for concurrency."
-msgstr ""
+msgstr "Scrapyは、Python用の人気のあるイベント駆動型ネットワーク・フレームワークである `Twisted`_ を使って記述されています。したがって、並行性のために非ブロッキング(別名「非同期」)コードを使用して実装されています。"
 
 #: ../../topics/architecture.rst:166
 msgid ""
 "For more information about asynchronous programming and Twisted see these"
 " links:"
-msgstr ""
+msgstr "非同期プログラミングとTwistedの詳細については、これらのリンクを参照してください:"
 
 #: ../../topics/architecture.rst:169
 msgid "`Introduction to Deferreds in Twisted`_"
-msgstr ""
+msgstr "Twistedの遅延オブジェクトの紹介(`Introduction to Deferreds in Twisted`_)"
 
 #: ../../topics/architecture.rst:170
 msgid "`Twisted - hello, asynchronous programming`_"
-msgstr ""
+msgstr "Twisted - こんにちは、非同期プログラミング(`Twisted - hello, asynchronous programming`_)"
 
 #: ../../topics/architecture.rst:171
 msgid "`Twisted Introduction - Krondo`_"
-msgstr ""
+msgstr "Twisted紹介 - Krondo(`Twisted Introduction - Krondo`_)"
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-09-23 18:44+0900\n"
+"PO-Revision-Date: 2019-09-29 10:09+0900\n"
 "Last-Translator: kuma35\n"
 "Language: ja_JP\n"
 "Language-Team: Japanese\n"
@@ -41,7 +41,7 @@ msgstr "Scrapy 1.7.2 (2019-07-23)"
 
 #: ../../news.rst:17
 msgid "Fix Python 2 support (:issue:`3889`, :issue:`3893`, :issue:`3896`)."
-msgstr ""
+msgstr "Python 2 サポートを修正(:issue:`3889`, :issue:`3893`, :issue:`3896`)."
 
 #: ../../news.rst:21
 msgid "Scrapy 1.7.1 (2019-07-18)"
@@ -150,13 +150,13 @@ msgid ""
 "A new :attr:`Request.cb_kwargs <scrapy.http.Request.cb_kwargs>` attribute"
 " provides a cleaner way to pass keyword arguments to callback methods "
 "(:issue:`1138`, :issue:`3563`)"
-msgstr ""
+msgstr "新しい :attr:`Request.cb_kwargs<scrapy.http.Request.cb_kwargs>` 属性は、キーワード引数をコールバック・メソッドに渡すよりクリーンな方法を提供します (:issue:`1138`, :issue:`3563`)"
 
 #: ../../news.rst:83
 msgid ""
 "A new :class:`JSONRequest <scrapy.http.JsonRequest>` class offers a more "
 "convenient way to build JSON requests (:issue:`3504`, :issue:`3505`)"
-msgstr ""
+msgstr "新しい :class:`JSONRequest<scrapy.http.JsonRequest>` クラスは、JSONリクエストを作成するより便利な方法を提供します (:issue:`3504`, :issue:`3505`)"
 
 #: ../../news.rst:86
 msgid ""
@@ -709,7 +709,7 @@ msgid ""
 "**backward incompatible** change in parsel may affect your code. See "
 "`parsel changelog`_ for a detailed description, as well as for the full "
 "list of improvements."
-msgstr ""
+msgstr "カスタム ``Selector`` または ``SelectorList`` サブクラスを使用している場合、parselの **後方互換性のない** 変更がコードに影響する可能性があります。 詳細な説明と改善点の完全なリストについては、 `parsel changelog`_ を参照してください。"
 
 #: ../../news.rst:403
 msgid "Telnet console"
@@ -721,11 +721,11 @@ msgid ""
 "and password. See :ref:`topics-telnetconsole` for more details. This "
 "change fixes a **security issue**; see :ref:`release-1.5.2` release notes"
 " for details."
-msgstr ""
+msgstr "**下位互換性なし** : Scrapyのtelnetコンソールには、ユーザー名とパスワードが必要になりました。詳細については、 :ref:`topics-telnetconsole` を参照してください。この変更により、 **セキュリティの問題** が修正されます。詳細については、 :ref:`release-1.5.2` リリースノートを参照してください。"
 
 #: ../../news.rst:410
 msgid "New extensibility features"
-msgstr ""
+msgstr "新しい拡張機能"
 
 #: ../../news.rst:412
 msgid ""
@@ -997,27 +997,27 @@ msgstr ""
 
 #: ../../news.rst:518
 msgid "Other deprecation removals:"
-msgstr ""
+msgstr "他の非推奨削除:"
 
 #: ../../news.rst:520
 msgid ""
 "Deprecated scrapy.interfaces.ISpiderManager is removed; please use "
 "scrapy.interfaces.ISpiderLoader."
-msgstr ""
+msgstr "非推奨の scrapy.interfaces.ISpiderManager は削除されました。scrapy.interfaces.ISpiderLoader を使って下さい。"
 
 #: ../../news.rst:522
 msgid "Deprecated ``CrawlerSettings`` class is removed (:issue:`3327`)."
-msgstr ""
+msgstr "非推奨の ``CrawlerSettings`` クラスは削除されました (:issue:`3327`)."
 
 #: ../../news.rst:523
 msgid ""
 "Deprecated ``Settings.overrides`` and ``Settings.defaults`` attributes "
 "are removed (:issue:`3327`, :issue:`3359`)."
-msgstr ""
+msgstr "非推奨の ``Settings.overrides`` と ``Settings.defaults`` 属性は削除されました(:issue:`3327`, :issue:`3359`)."
 
 #: ../../news.rst:527
 msgid "Other improvements, cleanups"
-msgstr ""
+msgstr "その他の改善、クリーンアップ"
 
 #: ../../news.rst:529
 msgid ""
@@ -1027,7 +1027,7 @@ msgstr ""
 
 #: ../../news.rst:531
 msgid "Python 3.7 support (:issue:`3326`, :issue:`3150`, :issue:`3547`)."
-msgstr ""
+msgstr "Python 3.7 サポート (:issue:`3326`, :issue:`3150`, :issue:`3547`)."
 
 #: ../../news.rst:532
 msgid ""
@@ -1070,7 +1070,7 @@ msgid ""
 "rogue websites POSTing content to http://localhost:6023, we haven't found"
 " a way to exploit it from Scrapy, but it is very easy to trick a browser "
 "to do so and elevates the risk for local development environment."
-msgstr ""
+msgstr "*セキュリティバグ修正*: Telnet console extension can be easily exploited by rogue websites POSTing content to http://localhost:6023, we haven't found a way to exploit it from Scrapy, but it is very easy to trick a browser to do so and elevates the risk for local development environment."
 
 #: ../../news.rst:552
 msgid ""
@@ -1078,13 +1078,13 @@ msgid ""
 "authentication by default with a random generated password. If you can't "
 "upgrade right away, please consider setting "
 ":setting:`TELNET_CONSOLE_PORT` out of its default value."
-msgstr ""
+msgstr "*この修正は下位互換性がありません*, it enables telnet user-password authentication by default with a random generated password. If you can't upgrade right away, please consider setting :setting:`TELNET_CONSOLE_PORT` out of its default value."
 
 #: ../../news.rst:557
 msgid ""
 "See :ref:`telnet console <topics-telnetconsole>` documentation for more "
 "info"
-msgstr ""
+msgstr "詳細は :ref:`telnetコンソール<topics-telnetconsole>` 文書参照"
 
 #: ../../news.rst:559
 msgid "Backport CI build failure under GCE environemnt due to boto import error."
@@ -1098,7 +1098,7 @@ msgstr ""
 msgid ""
 "This is a maintenance release with important bug fixes, but no new "
 "features:"
-msgstr ""
+msgstr "重要なバグ修正のためのメンテナンス・リリースです。新機能の追加はありません。"
 
 #: ../../news.rst:568
 msgid ""
@@ -1524,7 +1524,7 @@ msgstr ""
 
 #: ../../news.rst:759
 msgid "Deprecations and Backward Incompatible Changes"
-msgstr ""
+msgstr "非推奨と下位互換性のない変更"
 
 #: ../../news.rst:761
 msgid ""
@@ -2817,7 +2817,7 @@ msgstr ""
 
 #: ../../news.rst:1365 ../../news.rst:1796
 msgid "Deprecations and Removals"
-msgstr ""
+msgstr "非推奨と削除"
 
 #: ../../news.rst:1367
 msgid ""
