@@ -266,7 +266,7 @@ What's this huge cryptic ``__VIEWSTATE`` parameter used in some forms?
 ----------------------------------------------------------------------
 
 The ``__VIEWSTATE`` parameter is used in sites built with ASP.NET/VB.NET. For
-more info on how it works see `this page`_. Also, here's an `example spider`_
+more info on how it works see http://search.cpan.org/~ecarroll/HTML-TreeBuilderX-ASP_NET-0.09/lib/HTML/TreeBuilderX/ASP_NET.pm . Also, here's an `example spider`_
 which scrapes one of these sites.
 
 .. _this page: http://search.cpan.org/~ecarroll/HTML-TreeBuilderX-ASP_NET-0.09/lib/HTML/TreeBuilderX/ASP_NET.pm
