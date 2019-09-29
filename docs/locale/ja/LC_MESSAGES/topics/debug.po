@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-29 18:34+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,13 +19,13 @@ msgstr ""
 
 #: ../../topics/debug.rst:5
 msgid "Debugging Spiders"
-msgstr ""
+msgstr "スパイダーのデバッグ"
 
 #: ../../topics/debug.rst:7
 msgid ""
 "This document explains the most common techniques for debugging spiders. "
 "Consider the following scrapy spider below::"
-msgstr ""
+msgstr "この文書では、スパイダーをデバッグするための最も一般的な手法について説明します。 以下のScrapyスパイダーについて考えます::"
 
 #: ../../topics/debug.rst:37
 msgid ""
@@ -33,11 +33,11 @@ msgid ""
 "start_urls). Items also have a details page with additional information, "
 "so we use the ``cb_kwargs`` functionality of "
 ":class:`~scrapy.http.Request` to pass a partially populated item."
-msgstr ""
+msgstr "基本的に、これは2ページのアイテム(start_urls)をパースする単純なスパイダーです。アイテムには追加情報のある詳細ページもあるため、 :class:`~scrapy.http.Request` の `cb_kwargs`` 機能を使用して、部分的に入力されたアイテムを渡します。"
 
 #: ../../topics/debug.rst:44
 msgid "Parse Command"
-msgstr ""
+msgstr "parseコマンド"
 
 #: ../../topics/debug.rst:46
 msgid ""
@@ -46,27 +46,27 @@ msgid ""
 "parts of the spider at the method level. It has the advantage of being "
 "flexible and simple to use, but does not allow debugging code inside a "
 "method."
-msgstr ""
+msgstr "スパイダーの出力を確認する最も基本的な方法は、 :command:`parse` コマンドを使用することです。メソッド・レベルでスパイダーのさまざまな部分の動作を確認できます。柔軟で使いやすいという利点がありますが、メソッド内のコードをデバッグすることはできません。"
 
 #: ../../topics/debug.rst:51
 msgid "In order to see the item scraped from a specific url::"
-msgstr ""
+msgstr "特定のURLからスクレイピングされたアイテムを表示するには::"
 
 #: ../../topics/debug.rst:63
 msgid ""
 "Using the ``--verbose`` or ``-v`` option we can see the status at each "
 "depth level::"
-msgstr ""
+msgstr "``--verbose`` または ``-v`` オプションを使用すると、各深度レベルでステータスを確認できます::"
 
 #: ../../topics/debug.rst:83
 msgid ""
 "Checking items scraped from a single start_url, can also be easily "
 "achieved using::"
-msgstr ""
+msgstr "単一のstart_urlからスクレイプされたアイテムのチェックも、以下を使用して簡単に実現できます::"
 
 #: ../../topics/debug.rst:90
 msgid "Scrapy Shell"
-msgstr ""
+msgstr "Scrapyシェル"
 
 #: ../../topics/debug.rst:92
 msgid ""
@@ -74,39 +74,39 @@ msgid ""
 "of a spider, it is of little help to check what happens inside a "
 "callback, besides showing the response received and the output. How to "
 "debug the situation when ``parse_details`` sometimes receives no item?"
-msgstr ""
+msgstr ":command:`parse` コマンドはスパイダーの動作を確認するのに非常に役立ちますが、受信したレスポンスと出力を表示する以外の、コールバック内で何が起こるかを確認することにはほとんど役に立ちません。 では、 ``parse_details`` が時々アイテムを受け取らない状況をデバッグするには？"
 
 #: ../../topics/debug.rst:97
 msgid ""
 "Fortunately, the :command:`shell` is your bread and butter in this case "
 "(see :ref:`topics-shell-inspect-response`)::"
-msgstr ""
+msgstr ":command:`shell` は、そういうあなたにピッタリのツールです( :ref:`topics-shell-inspect-response` 参照)::"
 
 #: ../../topics/debug.rst:109
 msgid "See also: :ref:`topics-shell-inspect-response`."
-msgstr ""
+msgstr ":ref:`topics-shell-inspect-response` も参照。"
 
 #: ../../topics/debug.rst:112
 msgid "Open in browser"
-msgstr ""
+msgstr "ブラウザを開く"
 
 #: ../../topics/debug.rst:114
 msgid ""
 "Sometimes you just want to see how a certain response looks in a browser,"
 " you can use the ``open_in_browser`` function for that. Here is an "
 "example of how you would use it::"
-msgstr ""
+msgstr "あなたが特定のレスポンスがブラウザでどのように見えるかを確認したいだけの場合は、 ``open_in_browser`` 関数を使用できます。使用方法の例を次に示します::"
 
 #: ../../topics/debug.rst:124
 msgid ""
 "``open_in_browser`` will open a browser with the response received by "
 "Scrapy at that point, adjusting the `base tag`_ so that images and styles"
 " are displayed properly."
-msgstr ""
+msgstr "``open_in_browser`` は、その時点でScrapyが受け取ったレスポンスでブラウザーを開き、画像とスタイルが適切に表示されるように `base tag`_ を調整します。"
 
 #: ../../topics/debug.rst:129
 msgid "Logging"
-msgstr ""
+msgstr "ロギング"
 
 #: ../../topics/debug.rst:131
 msgid ""
@@ -114,9 +114,9 @@ msgid ""
 "spider run. Although not as convenient, it comes with the advantage that "
 "the logs will be available in all future runs should they be necessary "
 "again::"
-msgstr ""
+msgstr "ロギングは、スパイダーの実行に関する情報を取得するためのもう1つの便利なオプションです。それほど便利ではありませんが、ログが再び必要になった場合に、将来のすべての実行でログを使用できるという利点があります::"
 
 #: ../../topics/debug.rst:142
 msgid "For more information, check the :ref:`topics-logging` section."
-msgstr ""
+msgstr "詳細については :ref:`topics-logging` 節をチェックして下さい。"
 
