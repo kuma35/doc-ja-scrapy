@@ -3,46 +3,47 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-09-29 19:23+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
+# 演習・練習？慣習？
 #: ../../topics/practices.rst:5
 msgid "Common Practices"
-msgstr ""
+msgstr "よくある例"
 
 #: ../../topics/practices.rst:7
 msgid ""
 "This section documents common practices when using Scrapy. These are "
 "things that cover many topics and don't often fall into any other "
 "specific section."
-msgstr ""
+msgstr "このセクションでは、Scrapyを使用する際によくある例について説明します。 これらは多くの話題をカバーするものであり、他の特定の節にはあまり該当しません。"
 
 #: ../../topics/practices.rst:13
 msgid "Run Scrapy from a script"
-msgstr ""
+msgstr "スクリプトからScrapyを実行する"
 
 #: ../../topics/practices.rst:15
 msgid ""
 "You can use the :ref:`API <topics-api>` to run Scrapy from a script, "
 "instead of the typical way of running Scrapy via ``scrapy crawl``."
-msgstr ""
+msgstr "あなたは ``scrapy crawl`` を介してScrapyを実行する一般的な方法の代わりに、 :ref:`API<topics-api>` を使用してスクリプトからScrapyを実行できます。"
 
 #: ../../topics/practices.rst:18
 msgid ""
 "Remember that Scrapy is built on top of the Twisted asynchronous "
 "networking library, so you need to run it inside the Twisted reactor."
-msgstr ""
+msgstr "ScrapyはTwisted非同期ネットワークライブラリの上に構築されているため、Twistedリアクター内で実行する必要があることに注意してください。"
 
 #: ../../topics/practices.rst:21
 msgid ""
@@ -50,18 +51,18 @@ msgid ""
 ":class:`scrapy.crawler.CrawlerProcess`. This class will start a Twisted "
 "reactor for you, configuring the logging and setting shutdown handlers. "
 "This class is the one used by all Scrapy commands."
-msgstr ""
+msgstr "あなたがスパイダーを実行するために使用できる最初のユーティリティは :class:`scrapy.crawler.CrawlerProcess` です。 このクラスは、Twistedリアクターを開始し、ロギングを構成し、シャットダウン・ハンドラーを設定します。 このクラスは、すべてのScrapyコマンドで使用されるクラスです。"
 
 #: ../../topics/practices.rst:26
 msgid "Here's an example showing how to run a single spider with it."
-msgstr ""
+msgstr "単一のスパイダーを実行する方法を示す例を以下に示します。"
 
 #: ../../topics/practices.rst:45
 msgid ""
 "Define settings within dictionary in CrawlerProcess. Make sure to check "
 ":class:`~scrapy.crawler.CrawlerProcess` documentation to get acquainted "
 "with its usage details."
-msgstr ""
+msgstr "CrawlerProcessの辞書内の設定を定義します。 :class:`~scrapy.crawler.CrawlerProcess` の文書を確認して、使用方法の詳細を把握してください。"
 
 #: ../../topics/practices.rst:48
 msgid ""
@@ -71,13 +72,13 @@ msgid ""
 ":class:`~scrapy.crawler.CrawlerProcess`, and use ``get_project_settings``"
 " to get a :class:`~scrapy.settings.Settings` instance with your project "
 "settings."
-msgstr ""
+msgstr "あなたがScrapyプロジェクト内にいる場合は、プロジェクト内にこれらのコンポーネントをインポートするために使用できる追加のヘルパーがいくつかあります。名前を :class:`~scrapy.crawler.CrawlerProcess` に渡してスパイダーを自動的にインポートし、 ``get_project_settings`` を使用してプロジェクト設定で :class:`~scrapy.settings.Settings` インスタンスを取得できます。"
 
 #: ../../topics/practices.rst:54
 msgid ""
 "What follows is a working example of how to do that, using the "
 "`testspiders`_ project as example."
-msgstr ""
+msgstr "以下は、例として `testspiders`_ プロジェクトを使用して、それを行う方法の実際の例です。"
 
 #: ../../topics/practices.rst:68
 msgid ""
@@ -86,7 +87,7 @@ msgid ""
 "thin wrapper that encapsulates some simple helpers to run multiple "
 "crawlers, but it won't start or interfere with existing reactors in any "
 "way."
-msgstr ""
+msgstr "クロール・プロセスをより詳細に制御する別のScrapyユーティリティがあります。それは :class:`scrapy.crawler.CrawlerRunner` です。このクラスは、複数のクローラーを実行するための単純なヘルパーをカプセル化する薄いラッパーですが、既存のリアクターを開始したり、それに干渉したりすることはありません。"
 
 #: ../../topics/practices.rst:73
 msgid ""
@@ -95,7 +96,7 @@ msgid ""
 ":class:`~scrapy.crawler.CrawlerRunner` instead of "
 ":class:`~scrapy.crawler.CrawlerProcess` if your application is already "
 "using Twisted and you want to run Scrapy in the same reactor."
-msgstr ""
+msgstr "このクラスを使用すると、スパイダーをスケジュールした後にリアクターを明示的に実行する必要があります。アプリケーションがすでにTwistedを使用しており、同じリアクターでScrapyを実行する場合は、 :class:`~scrapy.crawler.CrawlerProcess` の代わりに :class:`~scrapy.crawler.CrawlerRunner` を使用することをお勧めします。"
 
 #: ../../topics/practices.rst:78
 msgid ""
@@ -103,50 +104,50 @@ msgid ""
 "after the spider is finished. This can be achieved by adding callbacks to"
 " the deferred returned by the :meth:`CrawlerRunner.crawl "
 "<scrapy.crawler.CrawlerRunner.crawl>` method."
-msgstr ""
+msgstr "スパイダーが終了した後、自分でTwistedリアクターをシャットダウンする必要があることに注意してください。これは、 :meth:`CrawlerRunner.crawl <scrapy.crawler.CrawlerRunner.crawl>` メソッドによって返される遅延オブジェクトにコールバックを追加することで実現できます。"
 
 #: ../../topics/practices.rst:83
 msgid ""
 "Here's an example of its usage, along with a callback to manually stop "
 "the reactor after ``MySpider`` has finished running."
-msgstr ""
+msgstr "以下に使用例と、 ``MySpider`` の実行が終了した後に手動でリアクターを停止するコールバックを示します。"
 
 #: ../../topics/practices.rst:104
 msgid "`Twisted Reactor Overview`_."
-msgstr ""
+msgstr "`Twisted Reactor Overview`_."
 
 #: ../../topics/practices.rst:109
 msgid "Running multiple spiders in the same process"
-msgstr ""
+msgstr "同じプロセスで複数のスパイダーを実行する"
 
 #: ../../topics/practices.rst:111
 msgid ""
 "By default, Scrapy runs a single spider per process when you run ``scrapy"
 " crawl``. However, Scrapy supports running multiple spiders per process "
 "using the :ref:`internal API <topics-api>`."
-msgstr ""
+msgstr "デフォルトでは、あなたが ``scrapy crawl`` を実行すると、Scrapyはプロセスごとに1つのスパイダーを実行します。ただし、Scrapyは、:ref:`内部API<topics-api>` を使用して、プロセスごとに複数のスパイダーを実行することをサポートしています。"
 
 #: ../../topics/practices.rst:115
 msgid "Here is an example that runs multiple spiders simultaneously:"
-msgstr ""
+msgstr "複数のスパイダーを同時に実行する例を次に示します:"
 
 #: ../../topics/practices.rst:135
 msgid "Same example using :class:`~scrapy.crawler.CrawlerRunner`:"
-msgstr ""
+msgstr ":class:`~scrapy.crawler.CrawlerRunner` を使用した同じ例:"
 
 #: ../../topics/practices.rst:161
 msgid ""
 "Same example but running the spiders sequentially by chaining the "
 "deferreds:"
-msgstr ""
+msgstr "同じ例ですが、遅延オブジェクトを連鎖させてスパイダーを順番に実行します:"
 
 #: ../../topics/practices.rst:189
 msgid ":ref:`run-from-script`."
-msgstr ""
+msgstr ":ref:`run-from-script`"
 
 #: ../../topics/practices.rst:194
 msgid "Distributed crawls"
-msgstr ""
+msgstr "分散クロール"
 
 #: ../../topics/practices.rst:196
 msgid ""
@@ -154,37 +155,37 @@ msgid ""
 "distribute (multi-server) manner. However, there are some ways to "
 "distribute crawls, which vary depending on how you plan to distribute "
 "them."
-msgstr ""
+msgstr "Scrapyは、分散(マルチサーバー)方式でクロールを実行するための組み込み機能を提供しません。ただし、クロールを配布する方法はいくつかあり、それらは配布方法によって異なります。"
 
 #: ../../topics/practices.rst:200
 msgid ""
 "If you have many spiders, the obvious way to distribute the load is to "
 "setup many Scrapyd instances and distribute spider runs among those."
-msgstr ""
+msgstr "多数のスパイダーがある場合、負荷を分散する明白な方法は、多くのScrapydインスタンスをセットアップし、それらの間でスパイダー実行を分散することです。"
 
 #: ../../topics/practices.rst:203
 msgid ""
 "If you instead want to run a single (big) spider through many machines, "
 "what you usually do is partition the urls to crawl and send them to each "
 "separate spider. Here is a concrete example:"
-msgstr ""
+msgstr "代わりに、多くのマシンで単一の(大きな)スパイダーを実行したい場合、通常行うことは、クロールするURLをパーティション分割して、各スパイダーに送信します。 具体例を次に示します:"
 
 #: ../../topics/practices.rst:207
 msgid ""
 "First, you prepare the list of urls to crawl and put them into separate "
 "files/urls::"
-msgstr ""
+msgstr "最初に、クロールするURLのリストを準備し、それらを個別のファイル/URLに入れます::"
 
 #: ../../topics/practices.rst:214
 msgid ""
 "Then you fire a spider run on 3 different Scrapyd servers. The spider "
 "would receive a (spider) argument ``part`` with the number of the "
 "partition to crawl::"
-msgstr ""
+msgstr "次に、3つの異なるScrapydサーバーで実行されるスパイダーを起動します。スパイダーはクロールするパーティションの番号を含む(スパイダー)引数 ``part`` を受け取ります::"
 
 #: ../../topics/practices.rst:225
 msgid "Avoiding getting banned"
-msgstr ""
+msgstr "バン(拒否)されるのを避ける"
 
 #: ../../topics/practices.rst:227
 msgid ""
@@ -193,51 +194,51 @@ msgid ""
 "measures can be difficult and tricky, and may sometimes require special "
 "infrastructure. Please consider contacting `commercial support`_ if in "
 "doubt."
-msgstr ""
+msgstr "一部のWebサイトでは、高度なレベルのさまざまなボットによるクロールを防止するための特定の手段を実装しています。これらの対策を回避することは難しい場合があり、特別なインフラストラクチャが必要になる場合があります。疑問がある場合は、(有償の)商用サポート(`commercial support`_)に連絡することを検討してください。"
 
 #: ../../topics/practices.rst:232
 msgid "Here are some tips to keep in mind when dealing with these kinds of sites:"
-msgstr ""
+msgstr "これらの種類のサイトを扱う際に留意するべきいくつかのヒントは以下にあります::"
 
 #: ../../topics/practices.rst:234
 msgid ""
 "rotate your user agent from a pool of well-known ones from browsers "
 "(google around to get a list of them)"
-msgstr ""
+msgstr "ブラウザから取得したよく使われているユーザーエージェントのプールを使ってユーザーエージェントをローテーションします(googleでそれらのリストを取得します)"
 
 #: ../../topics/practices.rst:236
 msgid ""
 "disable cookies (see :setting:`COOKIES_ENABLED`) as some sites may use "
 "cookies to spot bot behaviour"
-msgstr ""
+msgstr "クッキーを無効にします( :setting:`COOKIES_ENABLED` 参照)"
 
 #: ../../topics/practices.rst:238
 msgid "use download delays (2 or higher). See :setting:`DOWNLOAD_DELAY` setting."
-msgstr ""
+msgstr "ダウンロード遅延(2以上)を使用します。 :setting:`DOWNLOAD_DELAY` 設定を参照してください。"
 
 #: ../../topics/practices.rst:239
 msgid ""
 "if possible, use `Google cache`_ to fetch pages, instead of hitting the "
 "sites directly"
-msgstr ""
+msgstr "可能であれば、サイトに直接アクセスするのではなく、Googleキャッシュ(`Google cache`_)を使用してページを取得します"
 
 #: ../../topics/practices.rst:241
 msgid ""
 "use a pool of rotating IPs. For example, the free `Tor project`_ or paid "
 "services like `ProxyMesh`_. An open source alternative is `scrapoxy`_, a "
 "super proxy that you can attach your own proxies to."
-msgstr ""
+msgstr "ローテートIPのプールを使用します。 たとえば、無料のTorプロジェクト(`Tor project`_) または `ProxyMesh`_ のような有料サービスです。オープンソースの代替手段は、 `scrapoxy`_ です。これは、独自のプロキシをアタッチできるスーパープロキシです。"
 
 #: ../../topics/practices.rst:244
 msgid ""
 "use a highly distributed downloader that circumvents bans internally, so "
 "you can just focus on parsing clean pages. One example of such "
 "downloaders is `Crawlera`_"
-msgstr ""
+msgstr "内部的に禁止を回避する高度に分散されたダウンローダーを使用することで、クリーンなページのパースに集中できます。そのようなダウンローダーの一例は `Crawlera`_ です"
 
 #: ../../topics/practices.rst:248
 msgid ""
 "If you are still unable to prevent your bot getting banned, consider "
 "contacting `commercial support`_."
-msgstr ""
+msgstr "それでもボットが禁止されるのを防ぐことができない場合は、(有償の)商用サポート(`commercial support`_)に連絡することを検討してください。"
 
