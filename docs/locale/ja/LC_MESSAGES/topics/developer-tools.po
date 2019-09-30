@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-01 02:50+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../topics/developer-tools.rst:5
 msgid "Using your browser's Developer Tools for scraping"
-msgstr ""
+msgstr "スクレイピングにWebブラウザの開発ツールを使う"
 
 #: ../../topics/developer-tools.rst:7
 msgid ""
@@ -27,17 +27,17 @@ msgid ""
 "ease the scraping process. Today almost all browsers come with built in "
 "`Developer Tools`_ and although we will use Firefox in this guide, the "
 "concepts are applicable to any other browser."
-msgstr ""
+msgstr "ここでは、ブラウザの開発ツールを使用してスクレイピング・プロセスを簡単にする方法に関する一般的なガイドを示します。 今日、ほとんどすべてのブラウザには `Developer Tools`_ が組み込まれています。このガイドではFirefoxを使用しますが、概念は他のブラウザにも適用できます。"
 
 #: ../../topics/developer-tools.rst:12
 msgid ""
 "In this guide we'll introduce the basic tools to use from a browser's "
 "Developer Tools by scraping `quotes.toscrape.com`_."
-msgstr ""
+msgstr "このガイドでは、 `quotes.toscrape.com`_ をスクレイピングすることにより、ブラウザーの開発ツールから使用する基本的なツールを紹介します。"
 
 #: ../../topics/developer-tools.rst:18
 msgid "Caveats with inspecting the live browser DOM"
-msgstr ""
+msgstr "ライブ・ブラウザDOMの検査に関する注意事項"
 
 #: ../../topics/developer-tools.rst:20
 msgid ""
@@ -48,34 +48,34 @@ msgid ""
 " elements to tables.  Scrapy, on the other hand, does not modify the "
 "original page HTML, so you won't be able to extract any data if you use "
 "``<tbody>`` in your XPath expressions."
-msgstr ""
+msgstr "開発ツールはライブ・ブラウザDOMで動作するため、ページ・ソースの検査時に実際に表示されるのは元のHTMLではなく、ブラウザのクリーンアップを適用してJavascriptコードを実行した後の変更されたHTMLです。特に、Firefoxは ``<tbody>`` 要素をテーブルに追加することで知られています。一方、Scrapyは元のページのHTMLを変更しないため、XPath式で ``<tbody>`` を使用すると、データを抽出できません。"
 
 #: ../../topics/developer-tools.rst:27
 msgid "Therefore, you should keep in mind the following things:"
-msgstr ""
+msgstr "したがって、あなたは次のことに注意してください:"
 
 #: ../../topics/developer-tools.rst:29
 msgid ""
 "Disable Javascript while inspecting the DOM looking for XPaths to be used"
 " in Scrapy (in the Developer Tools settings click `Disable JavaScript`)"
-msgstr ""
+msgstr "Scrapyで使用されるXPathを探すDOMの検査中にJavaScriptを無効にします(開発ツールの設定で「JavaScriptを無効化」をクリックします)"
 
 #: ../../topics/developer-tools.rst:32
 msgid ""
 "Never use full XPath paths, use relative and clever ones based on "
 "attributes (such as ``id``, ``class``, ``width``, etc) or any identifying"
 " features like ``contains(@href, 'image')``."
-msgstr ""
+msgstr "フルパスのXPath式を使用せず、(``id`` 、 ``class`` 、 ``width`` などのような)属性または ``contains(@href, 'image')`` のような識別機能に基づいた相対的で賢いパスを使用してください。"
 
 #: ../../topics/developer-tools.rst:36
 msgid ""
 "Never include ``<tbody>`` elements in your XPath expressions unless you "
 "really know what you're doing"
-msgstr ""
+msgstr "あなたが何をしているのか本当に理解していない限り、あなたのXPath式に ``<tbody>`` 要素を含めないでください。"
 
 #: ../../topics/developer-tools.rst:42
 msgid "Inspecting a website"
-msgstr ""
+msgstr "ウェブサイトの検査"
 
 #: ../../topics/developer-tools.rst:44
 msgid ""
@@ -83,7 +83,7 @@ msgid ""
 "feature, which allows you to inspect the underlying HTML code of any "
 "webpage. To demonstrate the Inspector, let's look at the "
 "`quotes.toscrape.com`_-site."
-msgstr ""
+msgstr "開発ツールの最も便利な機能はインスペクター(`Inspector`)機能です。これにより、Webページの基になるHTMLコードを検査できます。インスペクターをデモンストレーションするために、 `quotes.toscrape.com`_ -siteを見てみましょう。"
 
 #: ../../topics/developer-tools.rst:49
 msgid ""
@@ -91,18 +91,18 @@ msgid ""
 "specific tags, as well as the Top Ten Tags. Let's say we want to extract "
 "all the quotes on this page, without any meta-information about authors, "
 "tags, etc."
-msgstr ""
+msgstr "このサイトには、特定のタグを含むさまざまな著者からの合計10個の引用と、トップ10のタグがあります。 著者、タグなどに関するメタ情報なしで、このページのすべての引用を抽出したいとしましょう。"
 
 #: ../../topics/developer-tools.rst:53
 msgid ""
 "Instead of viewing the whole source code for the page, we can simply "
 "right click on a quote and select ``Inspect Element (Q)``, which opens up"
 " the `Inspector`. In it you should see something like this:"
-msgstr ""
+msgstr "ページのソースコード全体を表示する代わりに、引用を右クリックして「要素の検査(Q)」を選択するだけで、インスペクターが開きます。その中に次のようなものが見えるはずです:"
 
 #: ../../topics/developer-tools.rst:62
 msgid "The interesting part for us is this:"
-msgstr ""
+msgstr "私たちにとって興味深い部分はこれです:"
 
 #: ../../topics/developer-tools.rst:72
 msgid ""
@@ -110,7 +110,7 @@ msgid ""
 "highlighted in the screenshot, you'll see that the corresponding section "
 "of the webpage gets highlighted as well. So now we have a section, but we"
 " can't find our quote text anywhere."
-msgstr ""
+msgstr "スクリーンショットで強調表示された ``span`` タグのすぐ上の最初の ``div`` にカーソルを合わせると、Webページの対応するセクションも強調表示されます。 これで私たちはセクションを得ましたが、引用テキストはどこにも見つかりません。"
 
 #: ../../topics/developer-tools.rst:77
 msgid ""
@@ -122,7 +122,7 @@ msgid ""
 "we clicked on. The `Inspector` lets you copy XPaths to selected elements."
 " Let's try it out: Right-click on the ``span`` tag, select ``Copy > "
 "XPath`` and paste it in the scrapy shell like so::"
-msgstr ""
+msgstr "インスペクタの利点は、Webページのセクションとタグを自動的に展開および折りたたむことであり、読みやすさが大幅に向上します。タグの前にある矢印をクリックするか、タグを直接ダブルクリックして、タグを展開したり折りたたんだりできます。``span`` タグを ``class= \"text\"`` で展開すると、クリックした引用テキストが表示されます。インスペクタを使用すると、選択した要素にXPathをコピーできます。試してみましょう。 ``span`` タグを右クリックして ``コピー→XPath`` を選択し、Scrapyシェルに貼り付けます::"
 
 #: ../../topics/developer-tools.rst:90
 msgid ""
@@ -130,7 +130,7 @@ msgid ""
 "this basic selector. But this XPath is not really that clever. All it "
 "does is go down a desired path in the source code starting from ``html``."
 " So let's see if we can refine our XPath a bit:"
-msgstr ""
+msgstr "最後に ``text()`` を追加すると、この基本セレクターで最初の引用を抽出できます。しかし、このXPathはあまり賢くありません。それは、ソースコードの ``html`` から始まる望ましいパスをたどるだけです。それでは、このXPathを少し改良できるかどうか見てみましょう:"
 
 #: ../../topics/developer-tools.rst:95
 msgid ""
@@ -140,14 +140,14 @@ msgid ""
 "same structure as with our first quote: Two ``span`` tags and one ``div``"
 " tag. We can expand each ``span`` tag with the ``class=\"text\"`` inside "
 "our ``div`` tags and see each quote:"
-msgstr ""
+msgstr "私たちがインスペクターを再びチェックすると、展開された ``div`` タグの下に、それぞれが最初の属性と同じ属性を持つ9つの同一の ``div`` タグがあることがわかります。それらのいずれかを展開すると、最初の引用と同じ構造が表示されます。2つの ``span`` タグと1つの ``div`` タグです。 ``div`` タグ内の ``class=\"text\"`` で各 ``span`` タグを展開し、各引用を見ることができます:"
 
 #: ../../topics/developer-tools.rst:113
 msgid ""
 "With this knowledge we can refine our XPath: Instead of a path to follow,"
 " we'll simply select all ``span`` tags with the ``class=\"text\"`` by "
 "using the `has-class-extension`_::"
-msgstr ""
+msgstr "この知識があれば、私たちのXPathを改良できます。たどるパスの代わりに、 `has-class-extension`_ を使用して ``class=\"text\"`` を持つすべての ``span`` タグを選択するだけです::"
 
 #: ../../topics/developer-tools.rst:123
 msgid ""
@@ -156,14 +156,14 @@ msgid ""
 "increase the number of the last ``div``, but this would have been "
 "unnecessarily complex and by simply constructing an XPath with ``has-"
 "class(\"text\")`` we were able to extract all quotes in one line."
-msgstr ""
+msgstr "そして、1つの単純で賢いXPathを使用して、ページからすべての引用を抽出できます。 最初のXPathにループを構築して最後の ``div`` の数を増やすこともできましたが、これは不必要に複雑であり、単に ``has-class(\"text\")`` でXPathを構築することで、すべての引用を1行で抽出できました。"
 
 #: ../../topics/developer-tools.rst:129
 msgid ""
 "The `Inspector` has a lot of other helpful features, such as searching in"
 " the source code or directly scrolling to an element you selected. Let's "
 "demonstrate a use case:"
-msgstr ""
+msgstr "インスペクターには、ソースコードの検索や選択した要素への直接スクロールなど、他の便利な機能がたくさんあります。以下にユースケースを示しましょう:"
 
 #: ../../topics/developer-tools.rst:133
 msgid ""
@@ -176,7 +176,7 @@ msgid ""
 "<topics-link-extractors>` to follow the pagination. On a simple site such"
 " as this, there may not be the need to find an element visually but the "
 "``Scroll into View`` function can be quite useful on complex sites."
-msgstr ""
+msgstr "あなたはページの ``Next`` ボタンを見つけたいとします。インスペクターの右上にある検索バーに ``Next`` と入力します。2つの結果が得られます。 最初は ``class=\"text\"`` を持つ ``li`` タグで、2つ目は ``a`` タグのテキストです。 ``a`` タグを右クリックして、 ``この要素の位置にスクロール(S)`` を選択します。ここから :ref:`リンク抽出器 <topics-link-extractors>` を簡単に作成して、ページネーションを追跡できます。 このようなシンプルなサイトでは、要素を視覚的に見つける必要はないかもしれませんが、複雑なサイトでは ``この要素の位置にスクロール(S)`` 機能は非常に便利です。"
 
 #: ../../topics/developer-tools.rst:143
 msgid ""
@@ -184,11 +184,11 @@ msgid ""
 "selectors. For example, you could search for ``span.text`` to find all "
 "quote texts. Instead of a full text search, this searches for exactly the"
 " ``span`` tag with the ``class=\"text\"`` in the page."
-msgstr ""
+msgstr "検索バーは、CSSセレクターの検索とテストにも使用できることに注意してください。 たとえば、 ``span.text`` を検索して、すべての引用テキストを見つけることができます。全文検索の代わりに、これはページ内で ``class=\"text\"`` を持つ ``span`` タグを正確に検索します。"
 
 #: ../../topics/developer-tools.rst:151
 msgid "The Network-tool"
-msgstr ""
+msgstr "ネットワーク・ツール"
 
 #: ../../topics/developer-tools.rst:152
 msgid ""
@@ -197,7 +197,7 @@ msgid ""
 " be quite tricky, the `Network`-tool in the Developer Tools greatly "
 "facilitates this task. To demonstrate the Network-tool, let's take a look"
 " at the page `quotes.toscrape.com/scroll`_."
-msgstr ""
+msgstr "スクレイピング中に、ページの一部が複数のリクエストを介して動的にロードされる動的Webページに遭遇する場合があります。これは非常に難しい場合がありますが、開発ツールの「ネットワーク」ツールはこのタスクを非常に容易にします。ネットワーク・ツールをデモンストレーションするために、ページ `quotes.toscrape.com/scroll`_ を見てみましょう。"
 
 #: ../../topics/developer-tools.rst:158
 msgid ""
@@ -206,14 +206,14 @@ msgid ""
 "loads new quotes when you scroll to the bottom. We could go ahead and try"
 " out different XPaths directly, but instead we'll check another quite "
 "useful command from the scrapy shell::"
-msgstr ""
+msgstr "このページは基本的な `quotes.toscrape.com`_ -page に非常に似ていますが、上記の ``Next`` ボタンの代わりに、ページを下にスクロールすると自動的に新しい引用を読み込みます。先に進んでさまざまなXPathを直接試すこともできますが、代わりにScrapyシェルから別の非常に便利なコマンドをチェックします::"
 
 #: ../../topics/developer-tools.rst:168
 msgid ""
 "A browser window should open with the webpage but with one crucial "
 "difference: Instead of the quotes we just see a greenish bar with the "
 "word ``Loading...``."
-msgstr ""
+msgstr "ブラウザーウィンドウはWebページで開きますが、1つの重要な違いがあります。引用の代わりに、``Loading...`` という語が付いた緑がかったバーが表示されるだけです。"
 
 #: ../../topics/developer-tools.rst:177
 msgid ""
@@ -222,7 +222,7 @@ msgid ""
 "template is loaded which includes the title, the login-button and the "
 "footer, but the quotes are missing. This tells us that the quotes are "
 "being loaded from a different request than ``quotes.toscrape/scroll``."
-msgstr ""
+msgstr "``view(response)`` コマンドにより、シェルまたは後でスパイダーがサーバーから受信するレスポンスを表示できます。ここでは、タイトル、ログイン・ボタン、フッターを含むいくつかの基本的なテンプレートが読み込まれていますが、引用が欠落しています。これは、引用が ``quotes.toscrape/scroll`` とは異なるリクエストからロードされていることを示しています。"
 
 #: ../../topics/developer-tools.rst:184
 msgid ""
@@ -231,20 +231,20 @@ msgid ""
 "``Persist Logs``. If this option is disabled, the log is automatically "
 "cleared each time you navigate to a different page. Enabling this option "
 "is a good default, since it gives us control on when to clear the logs."
-msgstr ""
+msgstr "「ネットワーク」タブをクリックすると、おそらく2つのエントリしか表示されません。最初に行うことは、「永続ログ」をクリックして永続ログを有効にすることです。このオプションを無効にすると、別のページに移動するたびにログが自動的にクリアされます。ログをクリアするタイミングを制御できるため、このオプションを有効にするのは良い怠慢です。"
 
 #: ../../topics/developer-tools.rst:191
 msgid ""
 "If we reload the page now, you'll see the log get populated with six new "
 "requests."
-msgstr ""
+msgstr "ここでページをリロードすると、ログに6つの新しいリクエストが表示されます。"
 
 #: ../../topics/developer-tools.rst:199
 msgid ""
 "Here we see every request that has been made when reloading the page and "
 "can inspect each request and its response. So let's find out where our "
 "quotes are coming from:"
-msgstr ""
+msgstr "ここでは、ページのリロード時に行われたすべてのリクエストが表示され、各リクエストとそのレスポンスを検査できます。それでは、私たちの引用がどこから来ているのかを見てみましょう:"
 
 #: ../../topics/developer-tools.rst:203
 msgid ""
@@ -252,7 +252,7 @@ msgid ""
 " now inspect the request. In ``Headers`` you'll find details about the "
 "request headers, such as the URL, the method, the IP-address, and so on. "
 "We'll ignore the other tabs and click directly on ``Reponse``."
-msgstr ""
+msgstr "最初に ``scroll`` という名前のリクエストをクリックします。 開発ツール画面の右側で、リクエストを検査できます。ヘッダー・タブには、URL、メソッド、IPアドレスなどのリクエスト・ヘッダーに関する詳細があります。 他のタブは無視し、応答タブをクリックします。"
 
 #: ../../topics/developer-tools.rst:208
 msgid ""
@@ -261,7 +261,7 @@ msgid ""
 "shell. Accordingly the ``type`` of the request in the log is ``html``. "
 "The other requests have types like ``css`` or ``js``, but what interests "
 "us is the one request called ``quotes?page=1`` with the type ``json``."
-msgstr ""
+msgstr "プレビュー・ペインに表示されるのはレンダリングされたHTMLコードです。これは、シェルで ``view(response)`` を呼び出したときに見たものです。 したがって、ログ内のリクエストの ``type`` は ``html`` です。 他のリクエストには ``css`` や ``js`` などのタイプがありますが、興味深いのは、タイプが ``json`` の ``quotes?page=1`` と呼ばれるリクエストです。"
 
 #: ../../topics/developer-tools.rst:215
 msgid ""
@@ -269,13 +269,13 @@ msgid ""
 "``http://quotes.toscrape.com/api/quotes?page=1`` and the response is a "
 "JSON-object that contains our quotes. We can also right-click on the "
 "request and open ``Open in new tab`` to get a better overview."
-msgstr ""
+msgstr "このリクエストをクリックすると、リクエストURLが ``http://quotes.toscrape.com/api/quotes?page=1`` であり、レスポンスが引用を含むJSONオブジェクトであることがわかります。 また、リクエストを右クリックして「新しいタブで開く」(``Open in new tab``)を開いて、概要を確認することもできます。"
 
 #: ../../topics/developer-tools.rst:225
 msgid ""
 "With this response we can now easily parse the JSON-object and also "
 "request each page to get every quote on the site::"
-msgstr ""
+msgstr "このレスポンスにより、JSONオブジェクトを簡単にパースし、各ページにサイト上のすべての引用を取得するようリクエストすることができます。"
 
 #: ../../topics/developer-tools.rst:247
 msgid ""
@@ -288,7 +288,7 @@ msgid ""
 "number greater than 10), we increment the ``page`` attribute and "
 "``yield`` a new request, inserting the incremented page-number into our "
 "``url``."
-msgstr ""
+msgstr "このスパイダーはquotes-APIの最初のページから始まります。各レスポンスで、 ``response.text`` をパースし、 ``data`` に割り当てます。 これにより、Python辞書のようにJSONオブジェクトを操作できます。 ``quotes`` を繰り返し処理し、 ``quote[\"text\"]`` を出力します。 便利な ``has_next`` 要素が ``true`` の場合(ブラウザーに `quotes.toscrape.com/api/quotes?page=10`_ または10より大きいページ番号をロードしてみてください)、 ``page`` 属性と新しいリクエストを生成(  ``yield`` )し、インクリメントしたページ番号を ``url`` に挿入します。"
 
 #: ../../topics/developer-tools.rst:259
 msgid ""
@@ -298,14 +298,14 @@ msgid ""
 "<https://curl.haxx.se/>`_ format, by right-clicking on each of them in "
 "the network tool and using the :meth:`~scrapy.http.Request.from_curl()` "
 "method to generate an equivalent request::"
-msgstr ""
+msgstr "より複雑なWebサイトでは、リクエストを簡単に再現するのが難しい場合があります。リクエストを機能させるにはヘッダーまたはクッキーを追加する必要があるからです。これらの場合、ネットワーク・ツールで各リクエストを右クリックし、 :meth:`~scrapy.http.Request.from_curl()` メソッドを使用して同等のリクエストを生成することにより、リクエストを `cURL <https://curl.haxx.se/>`_ 形式でエクスポートできます。"
 
 #: ../../topics/developer-tools.rst:277
 msgid ""
 "Alternatively, if you want to know the arguments needed to recreate that "
 "request you can use the :func:`scrapy.utils.curl.curl_to_request_kwargs` "
 "function to get a dictionary with the equivalent arguments."
-msgstr ""
+msgstr "あるいは、そのリクエストを再作成するために必要な引数を知りたい場合、 :func:`scrapy.utils.curl.curl_to_request_kwargs` 関数を使用して同等の引数を持つ辞書を取得できます。"
 
 #: ../../topics/developer-tools.rst:281
 msgid ""
@@ -314,5 +314,5 @@ msgid ""
 "of the page. Crawling dynamic pages can be quite daunting and pages can "
 "be very complex, but it (mostly) boils down to identifying the correct "
 "request and replicating it in your spider."
-msgstr ""
+msgstr "ご覧のとおり、ネットワーク・ツールでいくつかの検査を行うことで、ページのスクロール機能の動的リクエストを簡単に複製できました。 動的ページのクロールは非常に困難な場合があり、ページは非常に複雑になる可能性がありますが、最終的には正しいリクエストを識別し、それをスパイダーで複製することになります。"
 
