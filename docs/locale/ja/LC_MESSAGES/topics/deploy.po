@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-02 16:41+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../topics/deploy.rst:5
 msgid "Deploying Spiders"
-msgstr ""
+msgstr "スパイダーのデプロイ"
 
 #: ../../topics/deploy.rst:7
 msgid ""
@@ -29,69 +29,69 @@ msgid ""
 "but not so much when you need to execute long-running spiders or move "
 "spiders to run in production continuously. This is where the solutions "
 "for deploying Scrapy spiders come in."
-msgstr ""
+msgstr "この節では、Scrapyスパイダーをデプロイして定期的に実行するためのさまざまなオプションについて説明します。ローカルマシンでScrapyスパイダーを実行することは(初期の)開発段階には非常に便利ですが、長時間実行されるスパイダーを実行したり、スパイダーを動かして実稼働で実行する必要がある場合はそれほど便利ではありません。そこで、Scrapyスパイダーをデプロイするためのソリューションの出番です。"
 
 #: ../../topics/deploy.rst:14
 msgid "Popular choices for deploying Scrapy spiders are:"
-msgstr ""
+msgstr "Scrapyスパイダーをデプロイするための一般的な選択肢は以下の通りです:"
 
 #: ../../topics/deploy.rst:16
 msgid ":ref:`Scrapyd <deploy-scrapyd>` (open source)"
-msgstr ""
+msgstr ":ref:`Scrapyd <deploy-scrapyd>` (オープン・ソース)"
 
 #: ../../topics/deploy.rst:17
 msgid ":ref:`Scrapy Cloud <deploy-scrapy-cloud>` (cloud-based)"
-msgstr ""
+msgstr ":ref:`Scrapy Cloud <deploy-scrapy-cloud>` (クラウド)"
 
 #: ../../topics/deploy.rst:22
 msgid "Deploying to a Scrapyd Server"
-msgstr ""
+msgstr "Scrapydサーバへのデプロイ"
 
 #: ../../topics/deploy.rst:24
 msgid ""
 "`Scrapyd`_ is an open source application to run Scrapy spiders. It "
 "provides a server with HTTP API, capable of running and monitoring Scrapy"
 " spiders."
-msgstr ""
+msgstr "`Scrapyd`_ は、Scrapyスパイダーを実行するためのオープン・ソース・アプリケーションです。Scrapyスパイダーを実行および監視できるHTTP APIをサーバーに提供します。"
 
 #: ../../topics/deploy.rst:27
 msgid ""
 "To deploy spiders to Scrapyd, you can use the scrapyd-deploy tool "
 "provided by the `scrapyd-client`_ package. Please refer to the `scrapyd-"
 "deploy documentation`_ for more information."
-msgstr ""
+msgstr "スパイダーをScrapydにデプロイするには、 `scrapyd-client`_ パッケージで提供されるscrapyd-deployツールを使用できます。 詳細については、 `scrapyd-deploy documentation`_ を参照してください。"
 
 #: ../../topics/deploy.rst:31
 msgid "Scrapyd is maintained by some of the Scrapy developers."
-msgstr ""
+msgstr "Scrapydは、一部のScrapy開発者によって管理されています。"
 
 #: ../../topics/deploy.rst:36
 msgid "Deploying to Scrapy Cloud"
-msgstr ""
+msgstr "Scrapyクラウドへのデプロイ"
 
 #: ../../topics/deploy.rst:38
 msgid ""
 "`Scrapy Cloud`_ is a hosted, cloud-based service by `Scrapinghub`_, the "
 "company behind Scrapy."
-msgstr ""
+msgstr "`Scrapy Cloud`_ は、Scrapyの背後にある会社である `Scrapinghub`_ によってクラウドベースのサービスとしてホストされています。"
 
 #: ../../topics/deploy.rst:41
 msgid ""
 "Scrapy Cloud removes the need to setup and monitor servers and provides a"
 " nice UI to manage spiders and review scraped items, logs and stats."
-msgstr ""
+msgstr "Scrapyクラウドは、サーバーをセットアップおよび監視する必要をなくし、スパイダーを管理し、スクレイプされたアイテム、ログ、および統計を確認するための素晴らしいUIを提供します。"
 
 #: ../../topics/deploy.rst:45
 msgid ""
 "To deploy spiders to Scrapy Cloud you can use the `shub`_ command line "
 "tool. Please refer to the `Scrapy Cloud documentation`_ for more "
 "information."
-msgstr ""
+msgstr "スパイダーをScrapy Cloudにデプロイするには、 `shub`_ コマンドラインツールを使用できます。詳細については、 `Scrapy Cloud documentation`_ を参照してください。"
 
 #: ../../topics/deploy.rst:48
 msgid ""
 "Scrapy Cloud is compatible with Scrapyd and one can switch between them "
 "as needed - the configuration is read from the ``scrapy.cfg`` file just "
 "like ``scrapyd-deploy``."
-msgstr ""
+msgstr "ScrapyクラウドはScrapydと互換性があり、必要に応じてそれらを切り替えることができます。設定は ``scrapyd-deploy`` と同様に ``scrapy.cfg`` ファイルから読み込まれます。"
 
