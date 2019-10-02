@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-09-24 00:50+0900\n"
+"PO-Revision-Date: 2019-10-02 18:43+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -45,7 +45,7 @@ msgid ""
 "serialization can be customized using Item fields metadata, "
 ":mod:`trackref` tracks Item instances to help find memory leaks (see :ref"
 ":`topics-leaks-trackrefs`), etc."
-msgstr "さまざまなScrapyコンポーネントは、Itemsによって提供される追加情報を使用します。エクスポーターは、宣言されたフィールドを見てエクスポートする列を見つけます。シリアル化は、アイテムのフィールドメタデータを使用してカスタマイズできます。 :mod:`trackref` はアイテムのインスタンスを追跡して、メモリリーク( :ref:`topics-leaks-trackrefs` 参照)などを見つけるのに役立ちます。"
+msgstr "さまざまなScrapyコンポーネントは、アイテムによって提供される追加情報を使用します。エクスポーターは、宣言されたフィールドを見てエクスポートする列を見つけます。シリアル化は、アイテムのフィールド・メタ・データを使用してカスタマイズできます。 :mod:`trackref` はアイテムのインスタンスを追跡して、メモリ・リーク( :ref:`topics-leaks-trackrefs` 参照)などを見つけるのに役立ちます。"
 
 #: ../../topics/items.rst:32
 msgid "Declaring Items"
@@ -62,7 +62,7 @@ msgid ""
 "Those familiar with `Django`_ will notice that Scrapy Items are declared "
 "similar to `Django Models`_, except that Scrapy Items are much simpler as"
 " there is no concept of different field types."
-msgstr "`Django`_ に精通している人は、Scrapyアイテムが `Django Models`_ と同様に宣言されていることに気付くでしょう。ただし、異なるフィールドタイプの概念がないため、Scrapyアイテムははるかに単純です。"
+msgstr "`Django`_ に精通している人は、Scrapyアイテムが `Django Models`_ と同様に宣言されていることに気付くでしょう。ただし、異なるフィールド型の概念がないため、Scrapyアイテムははるかに単純です。"
 
 #: ../../topics/items.rst:56
 msgid "Item Fields"
@@ -73,7 +73,7 @@ msgid ""
 ":class:`Field` objects are used to specify metadata for each field. For "
 "example, the serializer function for the ``last_updated`` field "
 "illustrated in the example above."
-msgstr ":class:`Field` オブジェクトは、各フィールドのメタデータを指定するために使用されます。 たとえば、上記の例で示した ``last_updated`` フィールドのシリアル化関数です。"
+msgstr ":class:`Field` オブジェクトは、各フィールドのメタ・データを指定するために使用されます。 たとえば、上記の例で示した ``last_updated`` フィールドのシリアル化関数です。"
 
 #: ../../topics/items.rst:62
 msgid ""
@@ -88,7 +88,7 @@ msgid ""
 " behaviour depends on each field use certain field keys to configure that"
 " behaviour. You must refer to their documentation to see which metadata "
 "keys are used by each component."
-msgstr "あなたは各フィールドに任意の種類のメタデータを指定できます。 :class:`Field` オブジェクトが受け入れる値には制限はありません。これと同じ理由で、利用可能なすべてのメタデータキーの参照リストはありません。 :class:`Field` オブジェクトで定義された各キーは異なるコンポーネントで使用でき、それらのコンポーネントのみがそれについて知っています。プロジェクトで他の :class:`Field` キーを定義して使用することもできます。 :class:`Field` オブジェクトの主な目的は、すべてのフィールドメタデータを1か所で定義する方法を提供することです。 通常、各フィールドに動作が依存するコンポーネントは、特定のフィールドキーを使用してその動作を構成します。 各コンポーネントで使用されているメタデータキーを確認するには、ドキュメントを参照する必要があります。"
+msgstr "あなたは各フィールドに任意の種類のメタ・データを指定できます。 :class:`Field` オブジェクトが受け入れる値には制限はありません。これと同じ理由で、利用可能なすべてのメタ・データ・キーの参照リストはありません。 :class:`Field` オブジェクトで定義された各キーは異なるコンポーネントで使用でき、それらのコンポーネントのみがそれについて知っています。プロジェクトで他の :class:`Field` キーを定義して使用することもできます。 :class:`Field` オブジェクトの主な目的は、すべてのフィールド・メタ・データを1か所で定義する方法を提供することです。 通常、各フィールドに動作が依存するコンポーネントは、特定のフィールド・キーを使用してその動作を構成します。 各コンポーネントで使用されているメタ・データ・キーを確認するには、ドキュメントを参照する必要があります。"
 
 #: ../../topics/items.rst:73
 msgid ""
@@ -136,7 +136,7 @@ msgstr "アイテムのコピー"
 msgid ""
 "To copy an item, you must first decide whether you want a shallow copy or"
 " a deep copy."
-msgstr "アイテムをコピーするには、あなたは最初に浅いコピーとディープコピーのどちらを使用するかを決定する必要があります。"
+msgstr "アイテムをコピーするには、あなたは最初に浅いコピーとディープ・コピーのどちらを使用するかを決定する必要があります。"
 
 #: ../../topics/items.rst:168
 msgid ""
@@ -155,7 +155,7 @@ msgstr "たとえば、タグのリストを持つアイテムがあり、その
 
 #: ../../topics/items.rst:179
 msgid "If that is not the desired behavior, use a deep copy instead."
-msgstr "それが望ましい振る舞いでない場合は、代わりにディープコピーを使用します。"
+msgstr "それが望ましい振る舞いでない場合は、代わりにディープ・コピーを使用します。"
 
 #: ../../topics/items.rst:181
 msgid "See the `documentation of the copy module`_ for more information."
@@ -167,13 +167,13 @@ msgid ""
 ":meth:`~scrapy.item.Item.copy` on an existing item (``product2 = "
 "product.copy()``) or instantiate your item class from an existing item "
 "(``product2 = Product(product)``)."
-msgstr "アイテムの浅いコピーを作成するには、あなたは、既存のアイテムで :meth:`~scrapy.item.Item.copy` を呼び出す(``product2 = product.copy()``)か、あるいは、既存のアイテムからアイテムクラスをインスタンス化(``product2 = Product(product)``)のいずれかが可能です。"
+msgstr "アイテムの浅いコピーを作成するには、あなたは、既存のアイテムで :meth:`~scrapy.item.Item.copy` を呼び出す(``product2 = product.copy()``)か、あるいは、既存のアイテムからアイテム・クラスをインスタンス化(``product2 = Product(product)``)のいずれかが可能です。"
 
 #: ../../topics/items.rst:190
 msgid ""
 "To create a deep copy, call :meth:`~scrapy.item.Item.deepcopy` instead "
 "(``product2 = product.deepcopy()``)."
-msgstr "ディープコピーを作成するには、代わりに :meth:`~scrapy.item.Item.deepcopy` を呼び出します(``product2 = product.deepcopy()``)。"
+msgstr "ディープ・コピーを作成するには、代わりに :meth:`~scrapy.item.Item.deepcopy` を呼び出します(``product2 = product.deepcopy()``)。"
 
 #: ../../topics/items.rst:195
 msgid "Other common tasks"
@@ -195,7 +195,7 @@ msgstr "アイテムの拡張"
 msgid ""
 "You can extend Items (to add more fields or to change some metadata for "
 "some fields) by declaring a subclass of your original Item."
-msgstr "あなたは、元のアイテムのサブクラスを宣言することにより、アイテムを拡張できます(フィールドを追加したり、フィールドのメタデータを変更したりできます)。"
+msgstr "あなたは、元のアイテムのサブクラスを宣言することにより、アイテムを拡張できます(フィールドを追加したり、フィールドのメタ・データを変更したりできます)。"
 
 #: ../../topics/items.rst:218
 msgid "For example::"
@@ -205,17 +205,17 @@ msgstr "例えば::"
 msgid ""
 "You can also extend field metadata by using the previous field metadata "
 "and appending more values, or changing existing values, like this::"
-msgstr "次のように、あなたは、以前のフィールドメタデータを使用して値を追加したり、既存の値を変更したりして、フィールドメタデータを拡張することもできます::"
+msgstr "次のように、あなたは、以前のフィールド・メタ・データを使用して値を追加したり、既存の値を変更したりして、フィールド・メタ・データを拡張することもできます::"
 
 #: ../../topics/items.rst:230
 msgid ""
 "That adds (or replaces) the ``serializer`` metadata key for the ``name`` "
 "field, keeping all the previously existing metadata values."
-msgstr "これは、 ``name`` フィールドの ``serializer`` メタデータキーを追加(または置換)し、以前に存在したすべてのメタデータ値を保持します。"
+msgstr "これは、 ``name`` フィールドの ``serializer`` メタ・データ・キーを追加(または置換)し、以前に存在したすべてのメタ・データ値を保持します。"
 
 #: ../../topics/items.rst:234
 msgid "Item objects"
-msgstr "アイテムオブジェクト"
+msgstr "アイテム・オブジェクト"
 
 #: ../../topics/items.rst:238
 msgid "Return a new Item optionally initialized from the given argument."
@@ -237,7 +237,7 @@ msgstr "読み込まれたフィールドだけでなく、このアイテムの
 
 #: ../../topics/items.rst:253
 msgid "Field objects"
-msgstr "フィールドオブジェクト"
+msgstr "フィールド・オブジェクト"
 
 #: ../../topics/items.rst:257
 msgid ""
