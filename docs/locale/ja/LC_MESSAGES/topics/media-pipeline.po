@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-02 16:22+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../topics/media-pipeline.rst:5
 msgid "Downloading and processing files and images"
-msgstr ""
+msgstr "ファイルと画像のダウンロードおよび処理"
 
 #: ../../topics/media-pipeline.rst:9
 msgid ""
@@ -29,37 +29,37 @@ msgid ""
 "These pipelines share a bit of functionality and structure (we refer to "
 "them as media pipelines), but typically you'll either use the Files "
 "Pipeline or the Images Pipeline."
-msgstr ""
+msgstr "Scrapyは、特定のアイテムに添付されたファイルをダウンロードするための再利用可能な :doc:`アイテム・パイプライン</topics/item-pipeline>` を提供します(たとえば、製品をスクレイピングし、画像をローカルにダウンロードする場合)。 これらのパイプラインは少しの機能と構造を共有します(媒体パイプラインと呼びます)が、通常はファイル・パイプラインまたは画像パイプラインを使用します。"
 
 #: ../../topics/media-pipeline.rst:15
 msgid "Both pipelines implement these features:"
-msgstr ""
+msgstr "両方のパイプラインは以下の機能を実装しています:"
 
 #: ../../topics/media-pipeline.rst:17
 msgid "Avoid re-downloading media that was downloaded recently"
-msgstr ""
+msgstr "最近ダウンロードした媒体の再ダウンロードを避ける"
 
 #: ../../topics/media-pipeline.rst:18
 msgid ""
 "Specifying where to store the media (filesystem directory, Amazon S3 "
 "bucket, Google Cloud Storage bucket)"
-msgstr ""
+msgstr "メディアの保存場所の指定(ファイル・システム・ディレクトリ、Amazon S3バケット、Google Cloud Storageバケット)"
 
 #: ../../topics/media-pipeline.rst:21
 msgid "The Images Pipeline has a few extra functions for processing images:"
-msgstr ""
+msgstr "画像パイプラインには、画像を処理するためのいくつかの追加機能があります:"
 
 #: ../../topics/media-pipeline.rst:23
 msgid "Convert all downloaded images to a common format (JPG) and mode (RGB)"
-msgstr ""
+msgstr "ダウンロードしたすべての画像を共通の形式(JPG)とモード(RGB)に変換する"
 
 #: ../../topics/media-pipeline.rst:24
 msgid "Thumbnail generation"
-msgstr ""
+msgstr "サムネイル生成"
 
 #: ../../topics/media-pipeline.rst:25
 msgid "Check images width/height to make sure they meet a minimum constraint"
-msgstr ""
+msgstr "画像の幅/高さをチェックして、最小の制約を満たしていることを確認します"
 
 #: ../../topics/media-pipeline.rst:27
 msgid ""
@@ -67,27 +67,27 @@ msgid ""
 "currently being scheduled for download, and connect those responses that "
 "arrive containing the same media to that queue. This avoids downloading "
 "the same media more than once when it's shared by several items."
-msgstr ""
+msgstr "パイプラインは、現在ダウンロードがスケジュールされている媒体URLの内部キューを保持し、到着したレスポンスのうち、同じ媒体を含むレスポンスをそのキューに接続します。これにより、複数のアイテムで共有されている場合に同じ媒体を複数回ダウンロードすることがなくなります。"
 
 #: ../../topics/media-pipeline.rst:33
 msgid "Using the Files Pipeline"
-msgstr ""
+msgstr "ファイル・パイプラインの使用"
 
 #: ../../topics/media-pipeline.rst:35
 msgid ""
 "The typical workflow, when using the :class:`FilesPipeline` goes like "
 "this:"
-msgstr ""
+msgstr ":class:`FilesPipeline` を使用する場合の典型的なワークフローは次のようになります:"
 
 #: ../../topics/media-pipeline.rst:38
 msgid ""
 "In a Spider, you scrape an item and put the URLs of the desired into a "
 "``file_urls`` field."
-msgstr ""
+msgstr "Spiderでは、アイテムをスクレイプし、目的のURLを ``file_urls`` フィールドに入れます。"
 
 #: ../../topics/media-pipeline.rst:41
 msgid "The item is returned from the spider and goes to the item pipeline."
-msgstr ""
+msgstr "アイテムはスパイダーから返され、アイテム・パイプラインに送られます。"
 
 #: ../../topics/media-pipeline.rst:43
 msgid ""
@@ -98,7 +98,7 @@ msgid ""
 "before other pages are scraped. The item remains \"locked\" at that "
 "particular pipeline stage until the files have finish downloading (or "
 "fail for some reason)."
-msgstr ""
+msgstr "アイテムが :class:`FilesPipeline` に到達すると、 ``file_urls`` フィールドのURLは標準のScrapyスケジューラーとダウンローダー(スケジューラーとダウンローダーのミドルウェアが再利用されることを意味します)を使用してダウンロード用にスケジュールされます。しかし、他のページの処理より高い優先度で、他のページがスクレイピングされる前にダウンロード用の処理を行います。ファイルのダウンロードが完了する(または何らかの理由で失敗する)）まで、アイテムはその特定のパイプライン・ステージでロックされたままになります。"
 
 #: ../../topics/media-pipeline.rst:50
 msgid ""
@@ -110,11 +110,11 @@ msgid ""
 "same order of the original ``file_urls`` field. If some file failed "
 "downloading, an error will be logged and the file won't be present in the"
 " ``files`` field."
-msgstr ""
+msgstr "ファイルがダウンロードされると、別のフィールド( ``files`` )に結果が入力されます。このフィールドには、ダウンロードしたパス、スクレイプされた元のURL( ``file_urls`` フィールドから取得)や、ファイルのチェックサムのような、ダウンロードしたファイルに関する情報を含む辞書のリストが含まれます。 ``files`` フィールドのリストにあるファイルは、 元の ``file_urls`` フィールドと同じ順序を保持します。ファイルのダウンロードに失敗した場合、エラーがログに記録され、ファイルは ``files`` フィールドに存在しません。"
 
 #: ../../topics/media-pipeline.rst:60
 msgid "Using the Images Pipeline"
-msgstr ""
+msgstr "画像パイプラインの使用"
 
 #: ../../topics/media-pipeline.rst:62
 msgid ""
@@ -123,14 +123,14 @@ msgid ""
 "different: you use ``image_urls`` for the image URLs of an item and it "
 "will populate an ``images`` field for the information about the "
 "downloaded images."
-msgstr ""
+msgstr ":class:`ImagesPipeline` を使用することは、使用されるデフォルトのフィールド名が異なることを除き :class:`FilesPipeline` を使用することとよく似ています。あなたがアイテムの画像URLに ``image_urls`` を使用すると、ダウンロードした画像に関する情報が ``images`` フィールドに入力されます。"
 
 #: ../../topics/media-pipeline.rst:67
 msgid ""
 "The advantage of using the :class:`ImagesPipeline` for image files is "
 "that you can configure some extra functions like generating thumbnails "
 "and filtering the images based on their size."
-msgstr ""
+msgstr "画像ファイルに :class:`ImagesPipeline` を使用する利点は、サムネイルの生成やサイズに基づいた画像のフィルタリングなどの追加機能を設定できることです。"
 
 #: ../../topics/media-pipeline.rst:71
 msgid ""
@@ -139,29 +139,29 @@ msgid ""
 "to use it. `Python Imaging Library`_ (PIL) should also work in most "
 "cases, but it is known to cause troubles in some setups, so we recommend "
 "to use `Pillow`_ instead of PIL."
-msgstr ""
+msgstr "画像パイプラインは、画像をJPEG/RGB形式にサムネイル化および正規化するために  `Pillow`_ を使用するため、使用するにはこのライブラリをインストールする必要があります。 `Python Imaging Library`_ (PIL)もほとんどの場合に動作するはずですが、セットアップによっては問題を引き起こすことが知られているため、PILの代わりに `Pillow`_ を使用することをお勧めします。"
 
 #: ../../topics/media-pipeline.rst:84
 msgid "Enabling your Media Pipeline"
-msgstr ""
+msgstr "あなたの媒体パイプラインを有効にする"
 
 #: ../../topics/media-pipeline.rst:89
 msgid ""
 "To enable your media pipeline you must first add it to your project "
 ":setting:`ITEM_PIPELINES` setting."
-msgstr ""
+msgstr "媒体パイプラインを有効にするには、まずプロジェクトに :setting:`ITEM_PIPELINES` 設定を追加する必要があります。"
 
 #: ../../topics/media-pipeline.rst:92
 msgid "For Images Pipeline, use::"
-msgstr ""
+msgstr "画像パイプラインを使うには::"
 
 #: ../../topics/media-pipeline.rst:96
 msgid "For Files Pipeline, use::"
-msgstr ""
+msgstr "ファイル・パイプラインを使うには::"
 
 #: ../../topics/media-pipeline.rst:102
 msgid "You can also use both the Files and Images Pipeline at the same time."
-msgstr ""
+msgstr "ファイルと画像のパイプラインの両方を同時に使用することもできます。"
 
 #: ../../topics/media-pipeline.rst:105
 msgid ""
@@ -169,79 +169,79 @@ msgid ""
 "used for storing the downloaded images. Otherwise the pipeline will "
 "remain disabled, even if you include it in the :setting:`ITEM_PIPELINES` "
 "setting."
-msgstr ""
+msgstr "次に、ダウンロードした画像の保存に使用される有効な値でターゲット・ストレージ設定を構成(configure)します。 そうしないと、パイプラインは :setting:`ITEM_PIPELINES` 設定に含めても無効のままになります。"
 
 #: ../../topics/media-pipeline.rst:109
 msgid "For the Files Pipeline, set the :setting:`FILES_STORE` setting::"
-msgstr ""
+msgstr "ファイル・パイプラインの場合、 :setting:`FILES_STORE` 設定を設定します::"
 
 #: ../../topics/media-pipeline.rst:113
 msgid "For the Images Pipeline, set the :setting:`IMAGES_STORE` setting::"
-msgstr ""
+msgstr "画像パイプラインの場合、 :setting:`IMAGES_STORE` 設定を設定します::"
 
 #: ../../topics/media-pipeline.rst:118
 msgid "Supported Storage"
-msgstr ""
+msgstr "サポートされるストレージ"
 
 #: ../../topics/media-pipeline.rst:120
 msgid ""
 "File system is currently the only officially supported storage, but there"
 " are also support for storing files in `Amazon S3`_ and `Google Cloud "
 "Storage`_."
-msgstr ""
+msgstr "現在、ファイル・システムは公式にサポートされている唯一のストレージですが、 `Amazon S3`_ と `Google Cloud Storage`_ にファイルを保存することもサポートされています。"
 
 #: ../../topics/media-pipeline.rst:127
 msgid "File system storage"
-msgstr ""
+msgstr "ファイル・システム・ストレージ"
 
 #: ../../topics/media-pipeline.rst:129
 msgid ""
 "The files are stored using a `SHA1 hash`_ of their URLs for the file "
 "names."
-msgstr ""
+msgstr "ファイルは、ファイル名のURLから生成する `SHA1 hash`_ を使用して保存されます。"
 
 #: ../../topics/media-pipeline.rst:131
 msgid "For example, the following image URL::"
-msgstr ""
+msgstr "たとえば、次の画像URL::"
 
 #: ../../topics/media-pipeline.rst:135
 msgid "Whose ``SHA1 hash`` is::"
-msgstr ""
+msgstr "``SHA1 hash`` は::"
 
 #: ../../topics/media-pipeline.rst:139
 msgid "Will be downloaded and stored in the following file::"
-msgstr ""
+msgstr "ダウンロードされ、以下のファイルに保存されます::"
 
 #: ../../topics/media-pipeline.rst:143 ../../topics/media-pipeline.rst:328
 msgid "Where:"
-msgstr ""
+msgstr "ここで:"
 
 #: ../../topics/media-pipeline.rst:145
 msgid ""
 "``<IMAGES_STORE>`` is the directory defined in :setting:`IMAGES_STORE` "
 "setting for the Images Pipeline."
-msgstr ""
+msgstr "``<IMAGES_STORE>`` は、画像パイプラインの :setting:`IMAGES_STORE` 設定で定義されているディレクトリです。"
 
 #: ../../topics/media-pipeline.rst:148
 msgid ""
 "``full`` is a sub-directory to separate full images from thumbnails (if "
 "used). For more info see :ref:`topics-images-thumbnails`."
-msgstr ""
+msgstr "`` full`` は、(使用する場合)サムネイルから完全な画像を分離するためのサブディレクトリです。詳細は :ref:`topics-images-thumbnails` を参照。"
 
 #: ../../topics/media-pipeline.rst:152
 msgid "Amazon S3 storage"
-msgstr ""
+msgstr "Amazon S3 ストレージ"
 
 #: ../../topics/media-pipeline.rst:157
 msgid ""
 ":setting:`FILES_STORE` and :setting:`IMAGES_STORE` can represent an "
 "Amazon S3 bucket. Scrapy will automatically upload the files to the "
 "bucket."
-msgstr ""
+msgstr ":setting:`FILES_STORE` と :setting:`IMAGES_STORE` はAmazon S3バケットを表すことができます。 Scrapyは自動的にファイルをバケットにアップロードします。"
 
 #: ../../topics/media-pipeline.rst:160
 msgid "For example, this is a valid :setting:`IMAGES_STORE` value::"
-msgstr ""
+msgstr "たとえば、以下は有効な :setting:`IMAGES_STORE` 値です::"
 
 #: ../../topics/media-pipeline.rst:164
 msgid ""
@@ -250,11 +250,11 @@ msgid ""
 ":setting:`IMAGES_STORE_S3_ACL` settings. By default, the ACL is set to "
 "``private``. To make the files publicly available use the ``public-read``"
 " policy::"
-msgstr ""
+msgstr "あなたは :setting:`FILES_STORE_S3_ACL` と :setting:`IMAGES_STORE_S3_ACL` 設定によって定義される、保存されたファイルに使用されるアクセス制御リスト(ACL)ポリシーを変更できます。デフォルトでは、ACLは ``private`` に設定されています。ファイルを公開するには、 ``public-read`` ポリシーを使用します::"
 
 #: ../../topics/media-pipeline.rst:172
 msgid "For more information, see `canned ACLs`_ in the Amazon S3 Developer Guide."
-msgstr ""
+msgstr "詳細については、Amazon S3開発者ガイドの `canned ACLs`_ を参照してください。"
 
 #: ../../topics/media-pipeline.rst:174
 msgid ""
@@ -262,34 +262,34 @@ msgid ""
 "other S3-like storages. Storages like self-hosted `Minio`_ or "
 "`s3.scality`_. All you need to do is set endpoint option in you Scrapy "
 "settings::"
-msgstr ""
+msgstr "Scrapyは ``boto`` /  ``botocore`` を内部で使用するため、他のS3のようなストレージも使用できます。自己ホスト型の `Minio`_ や `s3.scality`_ のようなストレージです。あなたがする必要があるのはあなたのScrapy設定でエンドポイント・オプションを設定することです::"
 
 #: ../../topics/media-pipeline.rst:179
 msgid ""
 "For self-hosting you also might feel the need not to use SSL and not to "
 "verify SSL connection::"
-msgstr ""
+msgstr "セルフホスティングの場合は、SSLを使用する必要はなく、SSL接続を確認する必要もないと感じるかもしれません::"
 
 #: ../../topics/media-pipeline.rst:189
 msgid "Google Cloud Storage"
-msgstr ""
+msgstr "Google Cloud ストレージ"
 
 #: ../../topics/media-pipeline.rst:195
 msgid ""
 ":setting:`FILES_STORE` and :setting:`IMAGES_STORE` can represent a Google"
 " Cloud Storage bucket. Scrapy will automatically upload the files to the "
 "bucket. (requires `google-cloud-storage`_ )"
-msgstr ""
+msgstr ":setting:`FILES_STORE` と :setting:`IMAGES_STORE` は、Google Cloud Storageバケットを表すことができます。Scrapyは自動的にファイルをバケットにアップロードします( `google-cloud-storage`_ が必要です)。"
 
 #: ../../topics/media-pipeline.rst:200
 msgid ""
 "For example, these are valid :setting:`IMAGES_STORE` and "
 ":setting:`GCS_PROJECT_ID` settings::"
-msgstr ""
+msgstr "たとえば、以下は有効な :setting:`IMAGES_STORE` および :setting:`GCS_PROJECT_ID` 設定です::"
 
 #: ../../topics/media-pipeline.rst:205
 msgid "For information about authentication, see this `documentation`_."
-msgstr ""
+msgstr "認証については、この `documentation`_ を参照してください。"
 
 #: ../../topics/media-pipeline.rst:209
 msgid ""
@@ -299,23 +299,23 @@ msgid ""
 "``''`` (empty string) which means that Cloud Storage applies the bucket's"
 " default object ACL to the object. To make the files publicly available "
 "use the ``publicRead`` policy::"
-msgstr ""
+msgstr ":setting:`FILES_STORE_GCS_ACL` および :setting:`IMAGES_STORE_GCS_ACL` 設定によって定義される、保存されたファイルに使用されるアクセス制御リスト(ACL)ポリシーを変更できます。デフォルトでは、ACLは ``''`` (空の文字列)に設定されます。これは、Cloud Storageがバケットのデフォルト・オブジェクトACLをオブジェクトに適用することを意味します。ファイルを公開するには、 ``publicRead`` ポリシーを使用します::"
 
 #: ../../topics/media-pipeline.rst:218
 msgid ""
 "For more information, see `Predefined ACLs`_ in the Google Cloud Platform"
 " Developer Guide."
-msgstr ""
+msgstr "詳細については、Google Cloud Platform Developer Guide の `Predefined ACLs`_ を参照してください。"
 
 #: ../../topics/media-pipeline.rst:223
 msgid "Usage example"
-msgstr ""
+msgstr "使用例"
 
 #: ../../topics/media-pipeline.rst:230
 msgid ""
 "In order to use a media pipeline first, :ref:`enable it <topics-media-"
 "pipeline-enabling>`."
-msgstr ""
+msgstr "媒体パイプラインを使用するには、まず、 :ref:`媒体パイプラインを有効にする<topics-media-pipeline-enabling>` を行います。"
 
 #: ../../topics/media-pipeline.rst:233
 msgid ""
@@ -323,37 +323,37 @@ msgid ""
 "``image_urls``, for the Files or Images Pipeline respectively), the "
 "pipeline will put the results under respective key (``files`` or "
 "``images``)."
-msgstr ""
+msgstr "次に、スパイダーがURLキー(ファイルまたは画像パイプラインの場合はそれぞれ ``file_urls`` または ``image_urls`` )を含む辞書を返すと、パイプラインは結果をそれぞれのキー( ``files`` または ``images`` )の値として返します。"
 
 #: ../../topics/media-pipeline.rst:237
 msgid ""
 "If you prefer to use :class:`~.Item`, then define a custom item with the "
 "necessary fields, like in this example for Images Pipeline::"
-msgstr ""
+msgstr ":class:`~.Item` を使用する場合は、以下のImages Pipelineの例のように、必要なフィールドを持つカスタム・アイテムを定義します::"
 
 #: ../../topics/media-pipeline.rst:248
 msgid ""
 "If you want to use another field name for the URLs key or for the results"
 " key, it is also possible to override it."
-msgstr ""
+msgstr "URLキーまたは結果キーに別のフィールド名を使用する場合は、それをオーバーライドすることもできます。"
 
 #: ../../topics/media-pipeline.rst:251
 msgid ""
 "For the Files Pipeline, set :setting:`FILES_URLS_FIELD` and/or "
 ":setting:`FILES_RESULT_FIELD` settings::"
-msgstr ""
+msgstr "ファイル・パイプラインでは、 :setting:`FILES_URLS_FIELD` and/or :setting:`FILES_RESULT_FIELD` 設定を設定します::"
 
 #: ../../topics/media-pipeline.rst:257
 msgid ""
 "For the Images Pipeline, set :setting:`IMAGES_URLS_FIELD` and/or "
 ":setting:`IMAGES_RESULT_FIELD` settings::"
-msgstr ""
+msgstr "画像パイプラインでは、 :setting:`IMAGES_URLS_FIELD` and/or :setting:`IMAGES_RESULT_FIELD` 設定を設定します::"
 
 #: ../../topics/media-pipeline.rst:263
 msgid ""
 "If you need something more complex and want to override the custom "
 "pipeline behaviour, see :ref:`topics-media-pipeline-override`."
-msgstr ""
+msgstr "より複雑なものが必要で、カスタム・パイプラインの動作をオーバーライドする場合は、 :ref:`topics-media-pipeline-override` を参照してください。"
 
 #: ../../topics/media-pipeline.rst:266
 msgid ""
@@ -363,27 +363,28 @@ msgid ""
 " your pipeline is called MyPipeline and you want to have custom "
 "IMAGES_URLS_FIELD you define setting MYPIPELINE_IMAGES_URLS_FIELD and "
 "your custom settings will be used."
-msgstr ""
+msgstr "ImagePipelineを継承する複数の画像パイプラインがあり、あなたが異なるパイプラインで異なる設定を行いたい場合は、パイプライン・クラス名を大文字化した名前を先頭に付けた設定キーを設定できます。例えば、パイプラインの名前がMyPipelineで、カスタムIMAGES_URLS_FIELDが必要な場合は、設定MYPIPELINE_IMAGES_URLS_FIELDを定義すると、カスタム設定が使用されます。"
 
 #: ../../topics/media-pipeline.rst:274
 msgid "Additional features"
-msgstr ""
+msgstr "追加機能"
 
 #: ../../topics/media-pipeline.rst:277
 msgid "File expiration"
-msgstr ""
+msgstr "ファイルの有効期限"
 
+# 同じファイルではなく、どのファイルでも効くのか？
 #: ../../topics/media-pipeline.rst:282
 msgid ""
 "The Image Pipeline avoids downloading files that were downloaded "
 "recently. To adjust this retention delay use the :setting:`FILES_EXPIRES`"
 " setting (or :setting:`IMAGES_EXPIRES`, in case of Images Pipeline), "
 "which specifies the delay in number of days::"
-msgstr ""
+msgstr "画像パイプラインは、最近ダウンロードされたファイルのダウンロードを回避します。この保持遅延を調整するには、 :setting:`FILES_EXPIRES` (または、画像パイプラインの場合は :setting:`IMAGES_EXPIRES` )設定を使用します。これは、日数で保持遅延を指定します::"
 
 #: ../../topics/media-pipeline.rst:293
 msgid "The default value for both settings is 90 days."
-msgstr ""
+msgstr "両方の設定のデフォルト値は90日です。"
 
 #: ../../topics/media-pipeline.rst:295
 msgid ""
@@ -391,77 +392,77 @@ msgid ""
 " different setting for it you can set setting keys preceded by uppercase "
 "class name. E.g. given pipeline class called MyPipeline you can set "
 "setting key:"
-msgstr ""
+msgstr "FilesPipelineをサブクラス化するパイプラインがあり、それに対して別の設定が必要な場合は、クラス名を大文字化した名前を先頭に付けた設定キーを設定できます。例えば、パイプラインの名前がMyPipelineで、カスタムFIlE_EXPIERSが必要な場合は、以下のように設定すると、カスタム設定が使用されます。"
 
 #: ../../topics/media-pipeline.rst:299
 msgid "MYPIPELINE_FILES_EXPIRES = 180"
-msgstr ""
+msgstr "MYPIPELINE_FILES_EXPIRES = 180"
 
 #: ../../topics/media-pipeline.rst:301
 msgid "and pipeline class MyPipeline will have expiration time set to 180."
-msgstr ""
+msgstr "こうすると、パイプライン・クラスMyPipelineの有効期限は180に設定されます。"
 
 #: ../../topics/media-pipeline.rst:306
 msgid "Thumbnail generation for images"
-msgstr ""
+msgstr "画像のサムネイル生成"
 
 #: ../../topics/media-pipeline.rst:308
 msgid ""
 "The Images Pipeline can automatically create thumbnails of the downloaded"
 " images."
-msgstr ""
+msgstr "画像Pipelineは、ダウンロードした画像のサムネイルを自動的に作成できます。"
 
 #: ../../topics/media-pipeline.rst:313
 msgid ""
 "In order to use this feature, you must set :setting:`IMAGES_THUMBS` to a "
 "dictionary where the keys are the thumbnail names and the values are "
 "their dimensions."
-msgstr ""
+msgstr "この機能を使用するには、 :setting:`IMAGES_THUMBS` を辞書に設定する必要があります。ここで、キーはサムネイル名であり、値はその寸法です。"
 
 #: ../../topics/media-pipeline.rst:316 ../../topics/media-pipeline.rst:356
 msgid "For example::"
-msgstr ""
+msgstr "例えば::"
 
 #: ../../topics/media-pipeline.rst:323
 msgid ""
 "When you use this feature, the Images Pipeline will create thumbnails of "
 "the each specified size with this format::"
-msgstr ""
+msgstr "この機能を使用すると、画像パイプラインは指定された各サイズのサムネイルをこの形式で作成します::"
 
 #: ../../topics/media-pipeline.rst:330
 msgid ""
 "``<size_name>`` is the one specified in the :setting:`IMAGES_THUMBS` "
 "dictionary keys (``small``, ``big``, etc)"
-msgstr ""
+msgstr "``<size_name>`` は :setting:`IMAGES_THUMBS` 辞書キーで指定されたもの( ``small`` 、 ``big`` など)です"
 
 #: ../../topics/media-pipeline.rst:333
 msgid "``<image_id>`` is the `SHA1 hash`_ of the image url"
-msgstr ""
+msgstr "``<image_id>`` は画像のURLの `SHA1 hash`_ です"
 
 #: ../../topics/media-pipeline.rst:337
 msgid ""
 "Example of image files stored using ``small`` and ``big`` thumbnail "
 "names::"
-msgstr ""
+msgstr "``small`` および ``big`` のサムネイル名を使用して保存された画像ファイルの例::"
 
 #: ../../topics/media-pipeline.rst:343
 msgid "The first one is the full image, as downloaded from the site."
-msgstr ""
+msgstr "最初のものは、サイトからダウンロードされたフル画像です。"
 
 #: ../../topics/media-pipeline.rst:346
 msgid "Filtering out small images"
-msgstr ""
+msgstr "小さな画像を除外する"
 
 #: ../../topics/media-pipeline.rst:352
 msgid ""
 "When using the Images Pipeline, you can drop images which are too small, "
 "by specifying the minimum allowed size in the "
 ":setting:`IMAGES_MIN_HEIGHT` and :setting:`IMAGES_MIN_WIDTH` settings."
-msgstr ""
+msgstr "画像パイプラインを使用する場合、 :setting:`IMAGES_MIN_HEIGHT` および :setting:`IMAGES_MIN_WIDTH` 設定で最小許容サイズを指定することにより、小さすぎる画像をドロップできます。"
 
 #: ../../topics/media-pipeline.rst:362
 msgid "The size constraints don't affect thumbnail generation at all."
-msgstr ""
+msgstr "サイズの制約は、サムネイルの生成にはまったく影響しません。"
 
 #: ../../topics/media-pipeline.rst:364
 msgid ""
@@ -470,52 +471,52 @@ msgid ""
 "the above example, images of sizes (105 x 105) or (105 x 200) or (200 x "
 "105) will all be dropped because at least one dimension is shorter than "
 "the constraint."
-msgstr ""
+msgstr "1つのサイズ制約または両方を設定することができます。両方を設定すると、両方の最小サイズを満たす画像のみが保存されます。上記の例では、サイズが(105×105)または(105×200)または(200×105)の画像はすべて削除されます。これは、少なくとも1つの寸法が制約よりも短いためです。"
 
 #: ../../topics/media-pipeline.rst:369
 msgid "By default, there are no size constraints, so all images are processed."
-msgstr ""
+msgstr "デフォルトでは、サイズの制限はないため、すべての画像が処理されます。"
 
 #: ../../topics/media-pipeline.rst:372
 msgid "Allowing redirections"
-msgstr ""
+msgstr "リダイレクトを許可する"
 
 #: ../../topics/media-pipeline.rst:376
 msgid ""
 "By default media pipelines ignore redirects, i.e. an HTTP redirection to "
 "a media file URL request will mean the media download is considered "
 "failed."
-msgstr ""
+msgstr "デフォルトでは、媒体パイプラインはリダイレクトを無視します。つまり、媒体アファイルURLリクエストへのHTTPリダイレクトは、媒体のダウンロードが失敗したと見なされることを意味します。"
 
 #: ../../topics/media-pipeline.rst:379
 msgid "To handle media redirections, set this setting to ``True``::"
-msgstr ""
+msgstr "媒体のリダイレクトを処理するには、この設定を ``True``  に設定します::"
 
 #: ../../topics/media-pipeline.rst:386
 msgid "Extending the Media Pipelines"
-msgstr ""
+msgstr "媒体パイプラインの拡張"
 
 #: ../../topics/media-pipeline.rst:391
 msgid "See here the methods that you can override in your custom Files Pipeline:"
-msgstr ""
+msgstr "ここで、カスタム・ファイル・パイプラインでオーバーライドできるメソッドを参照してください:"
 
 #: ../../topics/media-pipeline.rst:397 ../../topics/media-pipeline.rst:510
 msgid ""
 "This method is called once per downloaded item. It returns the download "
 "path of the file originating from the specified :class:`response "
 "<scrapy.http.Response>`."
-msgstr ""
+msgstr "このメソッドは、ダウンロードされたアイテムごとに1回呼び出されます。 指定された :class:`response<scrapy.http.Response>` から始まるファイルのダウンロード・パスを返します。"
 
 #: ../../topics/media-pipeline.rst:401 ../../topics/media-pipeline.rst:514
 msgid ""
 "In addition to ``response``, this method receives the original "
 ":class:`request <scrapy.Request>` and :class:`info "
 "<scrapy.pipelines.media.MediaPipeline.SpiderInfo>`."
-msgstr ""
+msgstr "``response`` に加えて、このメソッドは元の :class:`request <scrapy.Request>` と :class:`info <scrapy.pipelines.media.MediaPipeline.SpiderInfo>` を受け取ります。"
 
 #: ../../topics/media-pipeline.rst:405 ../../topics/media-pipeline.rst:518
 msgid "You can override this method to customize the download path of each file."
-msgstr ""
+msgstr "このメソッドをオーバーライドして、各ファイルのダウンロード・パスをカスタマイズできます。"
 
 #: ../../topics/media-pipeline.rst:407 ../../topics/media-pipeline.rst:520
 msgid ""
@@ -523,13 +524,13 @@ msgid ""
 "``https://example.com/a/b/c/foo.png``), you can use the following "
 "approach to download all files into the ``files`` folder with their "
 "original filenames (e.g. ``files/foo.png``)::"
-msgstr ""
+msgstr "たとえば、ファイルのURLが通常のパスのように終わる場合(例 ``https://example.com/a/b/c/foo.png`` )、次のアプローチを使用して、全てのファイルを元のファイル(例 ``files/foo.png``)で ``files`` フォルダーにダウンロードできます::"
 
 #: ../../topics/media-pipeline.rst:422 ../../topics/media-pipeline.rst:535
 msgid ""
 "By default the :meth:`file_path` method returns ``full/<request URL "
 "hash>.<extension>``."
-msgstr ""
+msgstr "デフォルトでは :meth:`file_path` メソッドは ``full/<request URL hash>.<extension>`` を返します。"
 
 #: ../../topics/media-pipeline.rst:427
 msgid ""
@@ -537,7 +538,7 @@ msgid ""
 "download from the item. In order to do this, you can override the "
 ":meth:`~get_media_requests` method and return a Request for each file "
 "URL::"
-msgstr ""
+msgstr "ワークフローにあるように、パイプラインはアイテムからダウンロードする画像のURLを取得します。これを行うには、 :meth:`~get_media_requests` メソッドをオーバーライドして、各ファイルURLのリクエストを返すことができます::"
 
 #: ../../topics/media-pipeline.rst:436
 msgid ""
@@ -545,119 +546,119 @@ msgid ""
 "finished downloading, the results will be sent to the "
 ":meth:`~item_completed` method, as a list of 2-element tuples. Each tuple"
 " will contain ``(success, file_info_or_error)`` where:"
-msgstr ""
+msgstr "これらのリクエストはパイプラインによって処理され、ダウンロードが完了すると、結果が :meth:`~item_completed` メソッドに2要素タプルのリストとして送信されます。各タプルには ``(success, file_info_or_error)`` が含まれます:"
 
 #: ../../topics/media-pipeline.rst:441
 msgid ""
 "``success`` is a boolean which is ``True`` if the image was downloaded "
 "successfully or ``False`` if it failed for some reason"
-msgstr ""
+msgstr "``success`` は、画像が正常にダウンロードされた場合は ``True`` であるブール値であり、何らかの理由で失敗した場合は ``False`` です"
 
 #: ../../topics/media-pipeline.rst:444
 msgid ""
 "``file_info_or_error`` is a dict containing the following keys (if "
 "success is ``True``) or a `Twisted Failure`_ if there was a problem."
-msgstr ""
+msgstr "``file_info_or_error`` は、(success ``True`` の場合)以下のキーを含む辞書です。(success ``False`` の場合)問題が発生した場合は `Twisted Failure`_ を含みます。"
 
 #: ../../topics/media-pipeline.rst:447
 msgid ""
 "``url`` - the url where the file was downloaded from. This is the url of "
 "the request returned from the :meth:`~get_media_requests` method."
-msgstr ""
+msgstr "``url`` - ファイルのダウンロード元のURL。これは :meth:`~get_media_requests` メソッドから返されるリクエストのURLです。"
 
 #: ../../topics/media-pipeline.rst:451
 msgid ""
 "``path`` - the path (relative to :setting:`FILES_STORE`) where the file "
 "was stored"
-msgstr ""
+msgstr "``path`` - ファイルが保存されたパス( :setting:`FILES_STORE` への相対パス)"
 
 #: ../../topics/media-pipeline.rst:454
 msgid "``checksum`` - a `MD5 hash`_ of the image contents"
-msgstr ""
+msgstr "``checksum`` - 画像コンテンツのMD5ハッシュ(`MD5 hash`_)"
 
 #: ../../topics/media-pipeline.rst:456
 msgid ""
 "The list of tuples received by :meth:`~item_completed` is guaranteed to "
 "retain the same order of the requests returned from the "
 ":meth:`~get_media_requests` method."
-msgstr ""
+msgstr ":meth:`~item_completed` が受け取るタプルのリストは、 :meth:`~get_media_requests` メソッドから返されたリクエストと同じ順序を保持することが保証されています。"
 
 #: ../../topics/media-pipeline.rst:460
 msgid "Here's a typical value of the ``results`` argument::"
-msgstr ""
+msgstr "以下は ``results`` 引数の典型的な値です::"
 
 #: ../../topics/media-pipeline.rst:469
 msgid ""
 "By default the :meth:`get_media_requests` method returns ``None`` which "
 "means there are no files to download for the item."
-msgstr ""
+msgstr "デフォルトでは、 :meth:`get_media_requests` メソッドは ``None`` を返します。これは、アイテムにダウンロードするファイルがないことを意味します。"
 
 #: ../../topics/media-pipeline.rst:474
 msgid ""
 "The :meth:`FilesPipeline.item_completed` method called when all file "
 "requests for a single item have completed (either finished downloading, "
 "or failed for some reason)."
-msgstr ""
+msgstr ":meth:`FilesPipeline.item_completed` メソッドは、1つのアイテムに対するすべてのファイルリクエストが完了した(ダウンロードが完了したか、何らかの理由で失敗した)ときに呼び出されます。"
 
 #: ../../topics/media-pipeline.rst:478
 msgid ""
 "The :meth:`~item_completed` method must return the output that will be "
 "sent to subsequent item pipeline stages, so you must return (or drop) the"
 " item, as you would in any pipeline."
-msgstr ""
+msgstr ":meth:`~item_completed` メソッドは、後続のアイテム・パイプライン・ステージに送信される出力を返す必要があるため、パイプラインの場合と同様に、アイテムを返す(またはドロップする)必要があります。"
 
 #: ../../topics/media-pipeline.rst:482
 msgid ""
 "Here is an example of the :meth:`~item_completed` method where we store "
 "the downloaded file paths (passed in results) in the ``file_paths`` item "
 "field, and we drop the item if it doesn't contain any files::"
-msgstr ""
+msgstr "以下は :meth:`~item_completed` メソッドの例で、(結果で渡された)ダウンロードしたファイル・パスを ``file_paths`` アイテム・フィールドに保存し、ファイルが含まれていない場合はアイテムをドロップします::"
 
 #: ../../topics/media-pipeline.rst:495 ../../topics/media-pipeline.rst:554
 msgid "By default, the :meth:`item_completed` method returns the item."
-msgstr ""
+msgstr "デフォルトでは、 :meth:`item_completed` メソッドはアイテムを返します:"
 
 #: ../../topics/media-pipeline.rst:501
 msgid "See here the methods that you can override in your custom Images Pipeline:"
-msgstr ""
+msgstr "カスタム画像パイプラインでオーバーライドできるメソッドをご覧ください:"
 
 #: ../../topics/media-pipeline.rst:505
 msgid ""
 "The :class:`ImagesPipeline` is an extension of the "
 ":class:`FilesPipeline`, customizing the field names and adding custom "
 "behavior for images."
-msgstr ""
+msgstr ":class:`ImagesPipeline` は :class:`FilesPipeline` の拡張であり、フィールド名をカスタマイズして画像のカスタム動作を追加します。"
 
 #: ../../topics/media-pipeline.rst:540
 msgid ""
 "Works the same way as :meth:`FilesPipeline.get_media_requests` method, "
 "but using a different field name for image urls."
-msgstr ""
+msgstr ":meth:`FilesPipeline.get_media_requests` メソッドと同じように機能しますが、画像のURLに異なるフィールド名を使用します。"
 
 #: ../../topics/media-pipeline.rst:543
 msgid "Must return a Request for each image URL."
-msgstr ""
+msgstr "各画像URLのリクエストを返す必要があります。"
 
 #: ../../topics/media-pipeline.rst:547
 msgid ""
 "The :meth:`ImagesPipeline.item_completed` method is called when all image"
 " requests for a single item have completed (either finished downloading, "
 "or failed for some reason)."
-msgstr ""
+msgstr ":meth:`ImagesPipeline.item_completed` メソッドは、1つのアイテムに対するすべての画像リクエストが完了した(ダウンロードが完了したか、何らかの理由で失敗した)ときに呼び出されます。"
 
 #: ../../topics/media-pipeline.rst:551
 msgid ""
 "Works the same way as :meth:`FilesPipeline.item_completed` method, but "
 "using a different field names for storing image downloading results."
-msgstr ""
+msgstr ":meth:`FilesPipeline.item_completed` メソッドと同じように機能しますが、画像のダウンロード結果を保存するために異なるフィールド名を使用します。"
 
 #: ../../topics/media-pipeline.rst:558
 msgid "Custom Images pipeline example"
-msgstr ""
+msgstr "カスタム画像パイプライン例"
 
 #: ../../topics/media-pipeline.rst:560
 msgid ""
 "Here is a full example of the Images Pipeline whose methods are "
 "examplified above::"
-msgstr ""
+msgstr "上記の例示されたメソッドでの画像パイプラインの完全な例を以下に示します::"
 
