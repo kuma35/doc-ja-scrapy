@@ -3,23 +3,25 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-02 21:52+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
+# from wikipedia
+# ベンチマーキング（英：benchmarking）とは国や企業等が製品、サービス、プロセス、慣行を継続的に測定し、優れた競合他社やその他の優良企業のパフォーマンスと比較・分析する活動を指す。測定する尺度は、顧客による企業のパフォーマンスに対する評価に直接、間接的に影響を与えるものでなければならない。 
 #: ../../topics/benchmarking.rst:5
 msgid "Benchmarking"
-msgstr ""
+msgstr "ベンチマーキング"
 
 #: ../../topics/benchmarking.rst:9
 msgid ""
@@ -28,15 +30,15 @@ msgid ""
 "benchmarking is to get an idea of how Scrapy performs in your hardware, "
 "in order to have a common baseline for comparisons. It uses a simple "
 "spider that does nothing and just follows links."
-msgstr ""
+msgstr "Scrapyには、ローカルHTTPサーバーを生成し、可能な最大速度でクロールする単純なベンチマーキング・スイートが付属しています。 このベンチマークの目標は、ハードウェアでScrapyがどのように機能するかを把握し、比較のための共通のベースラインを得ることにあります。 何もせず、リンクをたどるシンプルなスパイダーを使用します。"
 
 #: ../../topics/benchmarking.rst:15
 msgid "To run it use::"
-msgstr ""
+msgstr "その実行は::"
 
 #: ../../topics/benchmarking.rst:19
 msgid "You should see an output like this::"
-msgstr ""
+msgstr "次のような出力が表示されるはずです::"
 
 #: ../../topics/benchmarking.rst:80
 msgid ""
@@ -45,11 +47,11 @@ msgid ""
 "intended to follow links, any custom spider you write will probably do "
 "more stuff which results in slower crawl rates. How slower depends on how"
 " much your spider does and how well it's written."
-msgstr ""
+msgstr "これは、Scrapyを実行するあなたのハードウェアで1分あたり約3000ページをクロールできることを示しています。 これは、リンクをたどることを目的とした非常に単純なスパイダーであることに注意してください。作成するカスタム・スパイダーは、おそらくより多くの処理を行うため、クロール速度が遅くなります。 どれだけ遅くなるかは、スパイダーがどれだけ行うかと、それがどれだけうまく書かれているかに依存します。"
 
 #: ../../topics/benchmarking.rst:86
 msgid ""
 "In the future, more cases will be added to the benchmarking suite to "
 "cover other common scenarios."
-msgstr ""
+msgstr "将来的には、他の一般的なシナリオをカバーするために、ベンチマーキング・スイートにさらにケースが追加されるでしょう。"
 
