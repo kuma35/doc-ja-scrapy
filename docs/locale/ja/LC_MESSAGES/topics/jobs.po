@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-03 10:34+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,37 +19,37 @@ msgstr ""
 
 #: ../../topics/jobs.rst:5
 msgid "Jobs: pausing and resuming crawls"
-msgstr ""
+msgstr "ジョブ制御: クロールの一時停止と再開"
 
 #: ../../topics/jobs.rst:7
 msgid ""
 "Sometimes, for big sites, it's desirable to pause crawls and be able to "
 "resume them later."
-msgstr ""
+msgstr "大きなサイトでは、クロールを一時停止して後で再開できることが望ましい場合があります。"
 
 #: ../../topics/jobs.rst:10
 msgid ""
 "Scrapy supports this functionality out of the box by providing the "
 "following facilities:"
-msgstr ""
+msgstr "Scrapyは、以下の機構を提供することにより、この機能をいち早くサポートしています:"
 
 #: ../../topics/jobs.rst:13
 msgid "a scheduler that persists scheduled requests on disk"
-msgstr ""
+msgstr "スケジュールされたリクエストをディスクに保持するスケジューラー"
 
 #: ../../topics/jobs.rst:15
 msgid "a duplicates filter that persists visited requests on disk"
-msgstr ""
+msgstr "訪問したリクエストをディスク上に保持する重複フィルター"
 
 #: ../../topics/jobs.rst:17
 msgid ""
 "an extension that keeps some spider state (key/value pairs) persistent "
 "between batches"
-msgstr ""
+msgstr "バッチ間でいくつかのスパイダーの状態(キー/値のペア)を保持する拡張機能"
 
 #: ../../topics/jobs.rst:21
 msgid "Job directory"
-msgstr ""
+msgstr "Jobディレクトリ"
 
 #: ../../topics/jobs.rst:23
 msgid ""
@@ -59,25 +59,25 @@ msgid ""
 " important to note that this directory must not be shared by different "
 "spiders, or even different jobs/runs of the same spider, as it's meant to"
 " be used for storing the state of a *single* job."
-msgstr ""
+msgstr "永続性サポートを有効にするには、 ``JOBDIR`` 設定で **jobディレクトリ** を定義するだけです。このディレクトリは、単一のジョブ(スパイダー実行など)の状態を維持するために必要なすべてのデータを保存するためのものです。このディレクトリは、**単一ジョブ** の状態を保存するために使用されるため、異なるスパイダー、または同じスパイダーの異なる job/run でさえ共有してはならないことに注意することが重要です。"
 
 #: ../../topics/jobs.rst:31
 msgid "How to use it"
-msgstr ""
+msgstr "使い方"
 
 #: ../../topics/jobs.rst:33
 msgid "To start a spider with persistence support enabled, run it like this::"
-msgstr ""
+msgstr "永続性サポートを有効にしてスパイダーを起動するには、次のように実行します::"
 
 #: ../../topics/jobs.rst:37
 msgid ""
 "Then, you can stop the spider safely at any time (by pressing Ctrl-C or "
 "sending a signal), and resume it later by issuing the same command::"
-msgstr ""
+msgstr "その後、いつでも(Ctrl-Cを押すかシグナルを送信することにより)スパイダーを安全に停止し、同じコマンドを発行して後で再開できます::"
 
 #: ../../topics/jobs.rst:43
 msgid "Keeping persistent state between batches"
-msgstr ""
+msgstr "バッチ間で永続的な状態を維持する"
 
 #: ../../topics/jobs.rst:45
 msgid ""
@@ -86,64 +86,71 @@ msgid ""
 "that, which should be a dict. There's a built-in extension that takes "
 "care of serializing, storing and loading that attribute from the job "
 "directory, when the spider starts and stops."
-msgstr ""
+msgstr "時々、一時停止/再開バッチ間で永続的なスパイダー状態を維持したい場合があります。 それには ``spider.state`` 属性を使用できます。これは辞書である必要があります。スパイダーが開始および停止するときに、ジョブ・ディレクトリからの属性のシリアル化、保存、および読み込みを処理する組み込みの拡張機能があります。"
 
 #: ../../topics/jobs.rst:51
 msgid ""
 "Here's an example of a callback that uses the spider state (other spider "
 "code is omitted for brevity)::"
-msgstr ""
+msgstr "スパイダー状態を使用するコールバックの例を次に示します(簡潔にするため、他のスパイダー・コードは省略されています)::"
 
+# https://eigobu.jp/magazine/gotcha
+# スラング「gotcha」の5つの意味とネイティブの使い方 
+# 「gotcha」の意味①：「つかまえたぞ」
+# 「gotcha」の意味②：「みーちゃった」
+# 「gotcha」の意味③：「やったぜえ」
+# 「gotcha」の意味④：「逮捕、問題の原因」(名詞)
+# 「gotcha」の意味⑤：「わかった」 
 #: ../../topics/jobs.rst:59
 msgid "Persistence gotchas"
-msgstr ""
+msgstr "永続性サポートあるある"
 
 #: ../../topics/jobs.rst:61
 msgid ""
 "There are a few things to keep in mind if you want to be able to use the "
 "Scrapy persistence support:"
-msgstr ""
+msgstr "Scrapy永続性サポートを使用できるようにしたい場合、留意すべきことがいくつかあります:"
 
 #: ../../topics/jobs.rst:65
 msgid "Cookies expiration"
-msgstr ""
+msgstr "クッキーの有効期限"
 
 #: ../../topics/jobs.rst:67
 msgid ""
 "Cookies may expire. So, if you don't resume your spider quickly the "
 "requests scheduled may no longer work. This won't be an issue if you "
 "spider doesn't rely on cookies."
-msgstr ""
+msgstr "Cookieの有効期限が切れる場合があります。 そのため、スパイダーをすぐに再開しないと、スケジュールされたリクエストが機能しなくなる可能性があります。 クモがクッキーに依存していない場合、これは問題になりません。"
 
 #: ../../topics/jobs.rst:72
 msgid "Request serialization"
-msgstr ""
+msgstr "リクエストのシリアル化"
 
 #: ../../topics/jobs.rst:74
 msgid ""
 "Requests must be serializable by the ``pickle`` module, in order for "
 "persistence to work, so you should make sure that your requests are "
 "serializable."
-msgstr ""
+msgstr "永続性が機能するためには、リクエストは ``pickle`` モジュールによってシリアル化可能でなければならないため、リクエストがシリアル化可能であることを確認する必要があります。"
 
 #: ../../topics/jobs.rst:77
 msgid ""
 "The most common issue here is to use ``lambda`` functions on request "
 "callbacks that can't be persisted."
-msgstr ""
+msgstr "ここで最も一般的な問題は、永続化できないリクエスト・コールバックで ``lambda`` 関数を使用することです。"
 
 #: ../../topics/jobs.rst:80
 msgid "So, for example, this won't work::"
-msgstr ""
+msgstr "たとえば、これは機能しません::"
 
 #: ../../topics/jobs.rst:90
 msgid "But this will::"
-msgstr ""
+msgstr "しかし、これは動作します::"
 
 #: ../../topics/jobs.rst:100
 msgid ""
 "If you wish to log the requests that couldn't be serialized, you can set "
 "the :setting:`SCHEDULER_DEBUG` setting to ``True`` in the project's "
 "settings page. It is ``False`` by default."
-msgstr ""
+msgstr "シリアル化できなかったリクエストをログに記録したい場合、プロジェクトの設定ページで :setting:`SCHEDULER_DEBUG` 設定を ``True`` に設定できます。デフォルトでは ``False`` です。"
 
