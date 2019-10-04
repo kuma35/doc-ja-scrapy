@@ -3,23 +3,24 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 22:00+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-05 07:43+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
+# 校正時に、ダウンローダー・ミドルウェアの訳と整合させる
 #: ../../topics/spider-middleware.rst:5
 msgid "Spider Middleware"
-msgstr ""
+msgstr "スパイダー・ミドルウェア"
 
 #: ../../topics/spider-middleware.rst:7
 msgid ""
@@ -27,22 +28,22 @@ msgid ""
 "processing mechanism where you can plug custom functionality to process "
 "the responses that are sent to :ref:`topics-spiders` for processing and "
 "to process the requests and items that are generated from spiders."
-msgstr ""
+msgstr "スパイダー・ミドルウェアは、Scrapyのスパイダー処理メカニズムへのフックのフレームワークであり、カスタム機能をプラグインして、処理のために :ref:`topics-spiders` に送信されるレスポンスを処理し、スパイダーから生成されたリクエストとアイテムを処理できます。"
 
 #: ../../topics/spider-middleware.rst:15
 msgid "Activating a spider middleware"
-msgstr ""
+msgstr "スパイダー・ミドルウェアをアクティブにする"
 
 #: ../../topics/spider-middleware.rst:17
 msgid ""
 "To activate a spider middleware component, add it to the "
 ":setting:`SPIDER_MIDDLEWARES` setting, which is a dict whose keys are the"
 " middleware class path and their values are the middleware orders."
-msgstr ""
+msgstr "スパイダー・ミドルウェア・コンポーネントをアクティブにするには、それを :setting:`SPIDER_MIDDLEWARES` 設定に追加します。これは、キーがミドルウェア・クラス・パスであり、値がミドルウェアの順序値である辞書です。"
 
 #: ../../topics/spider-middleware.rst:21
 msgid "Here's an example::"
-msgstr ""
+msgstr "以下に例があります::"
 
 #: ../../topics/spider-middleware.rst:27
 msgid ""
@@ -57,7 +58,7 @@ msgid ""
 "(100, 200, 300, ...), and the "
 ":meth:`~scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output` "
 "method of each middleware will be invoked in decreasing order."
-msgstr ""
+msgstr ":setting:`SPIDER_MIDDLEWARES` 設定は、Scrapyで定義された :setting:`SPIDER_MIDDLEWARES_BASE` 設定とマージされ(オーバーライドされることはありません)、有効なミドルウェアの最終ソート・リストを取得するために順序値の昇順にソートされます。最初がエンジンに近い方でスパイダーに近い方が最後です。 つまり、各ミドルウェアの :meth:`~scrapy.spidermiddlewares.SpiderMiddleware.process_spider_input` メソッドは、ミドルウェアの昇順(100、200、300、…)で呼び出され、各ミドルウェアの :meth:`~scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output` メソッドは、降順に呼び出されます。"
 
 #: ../../topics/spider-middleware.rst:38
 msgid ""
@@ -66,7 +67,7 @@ msgid ""
 "where you want to insert the middleware. The order does matter because "
 "each middleware performs a different action and your middleware could "
 "depend on some previous (or subsequent) middleware being applied."
-msgstr ""
+msgstr "ミドルウェアに割り当てる順序を決定するには、 :setting:`SPIDER_MIDDLEWARES_BASE` 設定を参照し、ミドルウェアを挿入する場所に応じて値を選択します。 各ミドルウェアは異なるアクションを実行し、ミドルウェアは適用される以前の(または後続の)ミドルウェアに依存する可能性があるため、順序は重要です。"
 
 #: ../../topics/spider-middleware.rst:44
 msgid ""
@@ -75,24 +76,24 @@ msgid ""
 "define it in your project :setting:`SPIDER_MIDDLEWARES` setting and "
 "assign ``None`` as its value.  For example, if you want to disable the "
 "off-site middleware::"
-msgstr ""
+msgstr "組み込みミドルウェア( :setting:`SPIDER_MIDDLEWARES_BASE` で定義され、デフォルトで有効になっているミドルウェア)を無効にする場合は、プロジェクトの :setting:`SPIDER_MIDDLEWARES` 設定で定義し、その値として ``None`` を割り当てる必要があります。たとえば、オフサイト・ミドルウェアを無効にする場合は次の通りです::"
 
 #: ../../topics/spider-middleware.rst:54
 msgid ""
 "Finally, keep in mind that some middlewares may need to be enabled "
 "through a particular setting. See each middleware documentation for more "
 "info."
-msgstr ""
+msgstr "最後に、特定の設定で一部のミドルウェアを有効にする必要がある場合があることに注意してください。 詳細については、各ミドルウェアのドキュメントを参照してください。"
 
 #: ../../topics/spider-middleware.rst:60
 msgid "Writing your own spider middleware"
-msgstr ""
+msgstr "あなた自身のスパイダー・ミドルウェアを書く"
 
 #: ../../topics/spider-middleware.rst:62
 msgid ""
 "Each spider middleware is a Python class that defines one or more of the "
 "methods defined below."
-msgstr ""
+msgstr "各スパイダー・ミドルウェアは、以下で定義される1つ以上のメソッドを定義するPythonクラスです。"
 
 #: ../../topics/spider-middleware.rst:65
 msgid ""
@@ -100,25 +101,26 @@ msgid ""
 " a :class:`~scrapy.crawler.Crawler` instance. The "
 ":class:`~scrapy.crawler.Crawler` object gives you access, for example, to"
 " the :ref:`settings <topics-settings>`."
-msgstr ""
+msgstr "メインのエントリーポイントは ``from_crawler`` クラス・メソッドで、これは :class:`~scrapy.crawler.Crawler` インスタンスを受け取ります。 :class:`~scrapy.crawler.Crawler` オブジェクトは、たとえば :ref:`設定<topics-settings>` へのアクセスを提供します。"
 
 #: ../../topics/spider-middleware.rst:75
 msgid ""
 "This method is called for each response that goes through the spider "
 "middleware and into the spider, for processing."
-msgstr ""
+msgstr "このメソッドは、処理のためにスパイダー・ミドルウェアを通過してスパイダーに送信される各レスポンスに対して呼び出されます。"
 
 #: ../../topics/spider-middleware.rst:78
 msgid ":meth:`process_spider_input` should return ``None`` or raise an exception."
-msgstr ""
+msgstr ":meth:`process_spider_input` は ``None`` を返すか、例外を発生させます。"
 
 #: ../../topics/spider-middleware.rst:81
 msgid ""
 "If it returns ``None``, Scrapy will continue processing this response, "
 "executing all other middlewares until, finally, the response is handed to"
 " the spider for processing."
-msgstr ""
+msgstr "``None`` を返す場合、Scrapyはこのレスポンスの処理を続行し、最後にレスポンスがスパイダーに渡されて処理されるまで、他のすべてのミドルウェアを実行します。"
 
+# chain backって何やねん？
 #: ../../topics/spider-middleware.rst:85
 msgid ""
 "If it raises an exception, Scrapy won't bother calling any other spider "
@@ -128,57 +130,57 @@ msgid ""
 "chained back in the other direction for :meth:`process_spider_output` to "
 "process it, or :meth:`process_spider_exception` if it raised an "
 "exception."
-msgstr ""
+msgstr "例外が発生した場合、Scrapyは他のスパイダーミドルウェアの :meth:`process_spider_input` を呼び出さず、リクエストがある場合はリクエストのerrbackを呼び出し、そうでない場合は :meth:`process_spider_exception` チェーンを開始します。errbackの出力は、 :meth:`process_spider_output` が処理するために別の方向に戻される(chain back)か、または、例外がを発生した場合は :meth:`process_spider_exception` に戻り(chain back)ます。"
 
 #: ../../topics/spider-middleware.rst
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../topics/spider-middleware.rst:92
 msgid "the response being processed"
-msgstr ""
+msgstr "処理中のレスポンス"
 
 #: ../../topics/spider-middleware.rst:95
 msgid "the spider for which this response is intended"
-msgstr ""
+msgstr "このレスポンスを意図したスパイダー"
 
 #: ../../topics/spider-middleware.rst:101
 msgid ""
 "This method is called with the results returned from the Spider, after it"
 " has processed the response."
-msgstr ""
+msgstr "このメソッドは、レスポンスを処理した後、Spiderから返された結果で呼び出されます。"
 
 #: ../../topics/spider-middleware.rst:104
 msgid ""
 ":meth:`process_spider_output` must return an iterable of "
 ":class:`~scrapy.http.Request`, dict or :class:`~scrapy.item.Item` "
 "objects."
-msgstr ""
+msgstr ":meth:`process_spider_output` は、 :class:`~scrapy.http.Request` または辞書または :class:`~scrapy.item.Item` オブジェクトの反復可能オブジェクト(iterable)を返す必要があります。"
 
 #: ../../topics/spider-middleware.rst:108
 msgid "the response which generated this output from the spider"
-msgstr ""
+msgstr "スパイダーからこの出力を生成したレスポンス"
 
 #: ../../topics/spider-middleware.rst:112
 msgid "the result returned by the spider"
-msgstr ""
+msgstr "スパイダーによって返された結果"
 
 #: ../../topics/spider-middleware.rst:116
 msgid "the spider whose result is being processed"
-msgstr ""
+msgstr "結果が処理されているスパイダー"
 
 #: ../../topics/spider-middleware.rst:122
 msgid ""
 "This method is called when a spider or :meth:`process_spider_output` "
 "method (from a previous spider middleware) raises an exception."
-msgstr ""
+msgstr "このメソッドは、スパイダーまたは、(以前のスパイダー・ミドルウェアの) :meth:`process_spider_output` メソッドが例外を発生させたときに呼び出されます。"
 
 #: ../../topics/spider-middleware.rst:125
 msgid ""
 ":meth:`process_spider_exception` should return either ``None`` or an "
 "iterable of :class:`~scrapy.http.Request`, dict or "
 ":class:`~scrapy.item.Item` objects."
-msgstr ""
+msgstr ":meth:`process_spider_exception` は ``None`` または :class:`~scrapy.http.Request` または辞書または :class:`~scrapy.item.Item` オブジェクトの反復可能オブジェクト(iterable)のいずれかを返す必要があります。"
 
 #: ../../topics/spider-middleware.rst:129
 msgid ""
@@ -186,26 +188,26 @@ msgid ""
 "executing any other :meth:`process_spider_exception` in the following "
 "middleware components, until no middleware components are left and the "
 "exception reaches the engine (where it's logged and discarded)."
-msgstr ""
+msgstr "``None`` が返された場合、Scrapyはこの例外の処理を続行し、処理するミドルウェア・コンポーネントが無くなってエンジンに到達するまで、続くミドルウェア・コンポーネントで :meth:`process_spider_exception` を実行します。"
 
 #: ../../topics/spider-middleware.rst:134
 msgid ""
 "If it returns an iterable the :meth:`process_spider_output` pipeline "
 "kicks in, starting from the next spider middleware, and no other "
 ":meth:`process_spider_exception` will be called."
-msgstr ""
+msgstr "反復可能オブジェクト(iterable)を返す場合、 :meth:`process_spider_output` パイプラインは次のスパイダー・ミドルウェアから開始され、他の :meth:`process_spider_exception` は呼び出されません。"
 
 #: ../../topics/spider-middleware.rst:138
 msgid "the response being processed when the exception was raised"
-msgstr ""
+msgstr "例外が発生したときに処理されているレスポンス"
 
 #: ../../topics/spider-middleware.rst:142
 msgid "the exception raised"
-msgstr ""
+msgstr "発生した例外"
 
 #: ../../topics/spider-middleware.rst:145
 msgid "the spider which raised the exception"
-msgstr ""
+msgstr "例外を発生させたスパイダー"
 
 #: ../../topics/spider-middleware.rst:152
 msgid ""
@@ -213,13 +215,13 @@ msgid ""
 "similarly to the :meth:`process_spider_output` method, except that it "
 "doesn't have a response associated and must return only requests (not "
 "items)."
-msgstr ""
+msgstr "このメソッドは、スパイダーの開始リクエストで呼び出され、レスポンスが関連付けられておらず、リクエストのみ(アイテムではなく)を返す必要があることを除いて、 :meth:`process_spider_output` メソッドと同様に機能します。"
 
 #: ../../topics/spider-middleware.rst:157
 msgid ""
 "It receives an iterable (in the ``start_requests`` parameter) and must "
 "return another iterable of :class:`~scrapy.http.Request` objects."
-msgstr ""
+msgstr "( ``start_requests`` パラメーターで)反復可能オブジェクト(iterable)を受け取り、別の :class:`~scrapy.http.Request` オブジェクトの反復可能オブジェクト(iterable)を返さなければなりません。"
 
 #: ../../topics/spider-middleware.rst:160
 msgid ""
@@ -230,15 +232,15 @@ msgid ""
 "pull start requests while it has capacity to process them, so the start "
 "requests iterator can be effectively endless where there is some other "
 "condition for stopping the spider (like a time limit or item/page count)."
-msgstr ""
+msgstr "スパイダー・ミドルウェアでこのメソッドを実装する場合、(入力に従って)常に反復可能オブジェクトを返す必要があり、``start_requests`` イテレータを消費しないでください。 Scrapyエンジンは、リクエスト開始を処理する能力がある間はリクエスト開始求を呼ぶように設計されているため、リクエスト開始イテレータは、スパイダーを停止するための他の条件(時間制限やアイテム/ページ数など)がある場合、事実上無限になります。"
 
 #: ../../topics/spider-middleware.rst:169
 msgid "the start requests"
-msgstr ""
+msgstr "リクエストの開始"
 
 #: ../../topics/spider-middleware.rst:172
 msgid "the spider to whom the start requests belong"
-msgstr ""
+msgstr "開始したリクエストが属するスパイダー"
 
 #: ../../topics/spider-middleware.rst:177
 msgid ""
@@ -247,15 +249,15 @@ msgid ""
 " the middleware. Crawler object provides access to all Scrapy core "
 "components like settings and signals; it is a way for middleware to "
 "access them and hook its functionality into Scrapy."
-msgstr ""
+msgstr "存在する場合、このクラスメソッドは :class:`~scrapy.crawler.Crawler` からミドルウェア・インスタンスを作成するために呼び出されます。ミドルウェアの新しいインスタンスを返す必要があります。クローラー・オブジェクトは、設定や信号などのすべてのScrapyコアコンポーネントへのアクセスを提供します。それはミドルウェアがそれらにアクセスし、その機能をScrapyにフックする方法です。"
 
 #: ../../topics/spider-middleware.rst:183
 msgid "crawler that uses this middleware"
-msgstr ""
+msgstr "このミドルウェアを使用するクローラー"
 
 #: ../../topics/spider-middleware.rst:193
 msgid "Built-in spider middleware reference"
-msgstr ""
+msgstr "組み込みのスパイダー・ミドルウェア・リファレンス"
 
 #: ../../topics/spider-middleware.rst:195
 msgid ""
@@ -263,17 +265,17 @@ msgid ""
 "Scrapy. For information on how to use them and how to write your own "
 "spider middleware, see the :ref:`spider middleware usage guide <topics-"
 "spider-middleware>`."
-msgstr ""
+msgstr "この文書では、Scrapyに付属するすべてのスパイダー・ミドルウェア・コンポーネントについて説明します。それらの使用方法と独自のスパイダー・ミドルウェアの作成方法については、 :ref:`スパイダーミドルウェア使用ガイド<topics-spider-middleware>` を参照してください。"
 
 #: ../../topics/spider-middleware.rst:199
 msgid ""
 "For a list of the components enabled by default (and their orders) see "
 "the :setting:`SPIDER_MIDDLEWARES_BASE` setting."
-msgstr ""
+msgstr "デフォルトで有効になっているコンポーネント(およびその順序)のリストについては、 :setting:`SPIDER_MIDDLEWARES_BASE` 設定を参照してください。"
 
 #: ../../topics/spider-middleware.rst:203
 msgid "DepthMiddleware"
-msgstr ""
+msgstr "DepthMiddleware"
 
 #: ../../topics/spider-middleware.rst:210
 msgid ""
@@ -281,54 +283,54 @@ msgid ""
 " site being scraped. It works by setting ``request.meta['depth'] = 0`` "
 "whenever there is no value previously set (usually just the first "
 "Request) and incrementing it by 1 otherwise."
-msgstr ""
+msgstr "DepthMiddlewareは、スクレイピングされるサイト内の各リクエストの深さを追跡するために使用されます。以前に値が設定された事がない場合は、``request.meta['depth'] = 0`` を設定し(通常は最初のリクエストのみ)、それ以外の場合は1インクリメントします。"
 
 #: ../../topics/spider-middleware.rst:215
 msgid ""
 "It can be used to limit the maximum depth to scrape, control Request "
 "priority based on their depth, and things like that."
-msgstr ""
+msgstr "スクレイピングする最大深度を制限したり、深度に基づいてリクエストの優先度を制御したりすることができます。"
 
 #: ../../topics/spider-middleware.rst:218
 msgid ""
 "The :class:`DepthMiddleware` can be configured through the following "
 "settings (see the settings documentation for more info):"
-msgstr ""
+msgstr ":class:`DepthMiddleware` は次の設定で設定できます(詳細については設定ドキュメントを参照してください):"
 
 #: ../../topics/spider-middleware.rst:221
 msgid ""
 ":setting:`DEPTH_LIMIT` - The maximum depth that will be allowed to crawl "
 "for any site. If zero, no limit will be imposed."
-msgstr ""
+msgstr ":setting:`DEPTH_LIMIT` - 任意のサイトでクロールできる最大深度。ゼロの場合、制限は課されません。"
 
 #: ../../topics/spider-middleware.rst:223
 msgid ""
 ":setting:`DEPTH_STATS_VERBOSE` - Whether to collect the number of "
 "requests for each depth."
-msgstr ""
+msgstr ":setting:`DEPTH_STATS_VERBOSE` - 各深さのレベルでリクエスト数を収集するかどうか。"
 
 #: ../../topics/spider-middleware.rst:225
 msgid ""
 ":setting:`DEPTH_PRIORITY` - Whether to prioritize the requests based on "
 "their depth."
-msgstr ""
+msgstr ":setting:`DEPTH_PRIORITY` - 深さに基づいてリクエストに優先順位を付けるかどうか。"
 
 #: ../../topics/spider-middleware.rst:229
 msgid "HttpErrorMiddleware"
-msgstr ""
+msgstr "HttpErrorMiddleware"
 
 #: ../../topics/spider-middleware.rst:236
 msgid ""
 "Filter out unsuccessful (erroneous) HTTP responses so that spiders don't "
 "have to deal with them, which (most of the time) imposes an overhead, "
 "consumes more resources, and makes the spider logic more complex."
-msgstr ""
+msgstr "失敗した(誤った)HTTPレスポンスをフィルター処理して、スパイダーがそれらに対処する必要がないようにします。これにより、(ほとんどの場合)オーバーヘッドが発生し、より多くのリソースが消費され、スパイダー・ロジックがより複雑になります。"
 
 #: ../../topics/spider-middleware.rst:240
 msgid ""
 "According to the `HTTP standard`_, successful responses are those whose "
 "status codes are in the 200-300 range."
-msgstr ""
+msgstr "`HTTP standard`_ によると、成功したレスポンスとは、ステータスコードが200〜300の範囲です。"
 
 #: ../../topics/spider-middleware.rst:245
 msgid ""
@@ -336,13 +338,13 @@ msgid ""
 "specify which response codes the spider is able to handle using the "
 "``handle_httpstatus_list`` spider attribute or "
 ":setting:`HTTPERROR_ALLOWED_CODES` setting."
-msgstr ""
+msgstr "それでもその範囲外のレスポンス・コードを処理したい場合は、 ``handle_httpstatus_list`` スパイダー属性または :setting:`HTTPERROR_ALLOWED_CODES` 設定を使用して、スパイダーが処理できるレスポンス・コードを指定できます。"
 
 #: ../../topics/spider-middleware.rst:250
 msgid ""
 "For example, if you want your spider to handle 404 responses you can do "
 "this::"
-msgstr ""
+msgstr "たとえば、スパイダーに404 レスポンスを処理させたい場合、以下を行うことができます::"
 
 #: ../../topics/spider-middleware.rst:260
 msgid ""
@@ -351,53 +353,53 @@ msgid ""
 "codes to allow on a per-request basis. You can also set the meta key "
 "``handle_httpstatus_all`` to ``True`` if you want to allow any response "
 "code for a request."
-msgstr ""
+msgstr ":attr:`Request.meta <scrapy.http.Request.meta>` の ``handle_httpstatus_list`` キーは、リクエストごとに許可するレスポンス・コードを指定するためにも使用できます。リクエストに対するレスポンス・コードを許可したい場合、メタ・キー ``handle_httpstatus_all`` を ``True`` に設定することもできます。"
 
 #: ../../topics/spider-middleware.rst:265
 msgid ""
 "Keep in mind, however, that it's usually a bad idea to handle non-200 "
 "responses, unless you really know what you're doing."
-msgstr ""
+msgstr "ただし、自分が何をしているのか本当にわかっていない限り、200以外の応答を処理することは通常良くない考えです。"
 
 #: ../../topics/spider-middleware.rst:268
 msgid "For more information see: `HTTP Status Code Definitions`_."
-msgstr ""
+msgstr "詳細情報は `HTTP Status Code Definitions`_ を参照ください。"
 
 #: ../../topics/spider-middleware.rst:273
 msgid "HttpErrorMiddleware settings"
-msgstr ""
+msgstr "HttpErrorMiddleware 設定"
 
 #: ../../topics/spider-middleware.rst:278
 msgid "HTTPERROR_ALLOWED_CODES"
-msgstr ""
+msgstr "HTTPERROR_ALLOWED_CODES"
 
 #: ../../topics/spider-middleware.rst:280
 msgid "Default: ``[]``"
-msgstr ""
+msgstr "デフォルト: ``[]``"
 
 #: ../../topics/spider-middleware.rst:282
 msgid "Pass all responses with non-200 status codes contained in this list."
-msgstr ""
+msgstr "このリストに含まれる、200以外のステータ・スコードを持つすべてのレスポンスを渡します。"
 
 #: ../../topics/spider-middleware.rst:287
 msgid "HTTPERROR_ALLOW_ALL"
-msgstr ""
+msgstr "HTTPERROR_ALLOW_ALL"
 
 #: ../../topics/spider-middleware.rst:289
 msgid "Default: ``False``"
-msgstr ""
+msgstr "デフォルト: ``False``"
 
 #: ../../topics/spider-middleware.rst:291
 msgid "Pass all responses, regardless of its status code."
-msgstr ""
+msgstr "ステータスコードに関係なく、すべてのレスポンスを渡します。"
 
 #: ../../topics/spider-middleware.rst:294
 msgid "OffsiteMiddleware"
-msgstr ""
+msgstr "OffsiteMiddleware"
 
 #: ../../topics/spider-middleware.rst:301
 msgid "Filters out Requests for URLs outside the domains covered by the spider."
-msgstr ""
+msgstr "スパイダーが対象とするドメインから外れているURLのリクエストを除外します。"
 
 #: ../../topics/spider-middleware.rst:303
 msgid ""
@@ -406,14 +408,14 @@ msgid ""
 "subdomains of any domain in the list are also allowed. E.g. the rule "
 "``www.example.org`` will also allow ``bob.www.example.org`` but not "
 "``www2.example.com`` nor ``example.com``."
-msgstr ""
+msgstr "このミドルウェアは、スパイダーの :attr:`~crapy.spiders.Spider.allowed_domains` 属性にない全てのホスト名のリクエストを除外します。なお、リスト内のドメインのすべてのサブドメインも許可されます。 例えば、ルール ``www.example.org`` は ``bob.www.example.org`` も許可しますが、 ``www2.example.com`` も ``example.com`` も許可しません。"
 
 #: ../../topics/spider-middleware.rst:309
 msgid ""
 "When your spider returns a request for a domain not belonging to those "
 "covered by the spider, this middleware will log a debug message similar "
 "to this one::"
-msgstr ""
+msgstr "スパイダーがカバーするドメインに属していないドメインへのリクエストをスパイダーが返すと、このミドルウェアは、以下に似たデバッグ・メッセージを記録します::"
 
 #: ../../topics/spider-middleware.rst:315
 msgid ""
@@ -422,172 +424,172 @@ msgid ""
 "request for ``www.othersite.com`` is filtered, no log message will be "
 "printed. But if a request for ``someothersite.com`` is filtered, a "
 "message will be printed (but only for the first request filtered)."
-msgstr ""
+msgstr "ログが過剰なノイズでいっぱいになるのを避けるため、フィルターされた新しいドメインごとにこれらのメッセージの1つのみを出力します。そのため、たとえば、 ``www.othersite.com`` への別のリクエストがフィルタリングされた場合、ログメッセージは出力されません。 しかし、 ``someothersite.com`` へのリクエストがフィルターされると、メッセージが出力されます(ただし、フィルターされる最初のリクエストのみ)。"
 
 #: ../../topics/spider-middleware.rst:321
 msgid ""
 "If the spider doesn't define an "
 ":attr:`~scrapy.spiders.Spider.allowed_domains` attribute, or the "
 "attribute is empty, the offsite middleware will allow all requests."
-msgstr ""
+msgstr "スパイダーが :attr:`~scrapy.spiders.Spider.allowed_domains` 属性を定義していない場合、または属性が空の場合、オフサイト・ミドルウェアはすべてのリクエストを許可します。"
 
 #: ../../topics/spider-middleware.rst:325
 msgid ""
 "If the request has the :attr:`~scrapy.http.Request.dont_filter` attribute"
 " set, the offsite middleware will allow the request even if its domain is"
 " not listed in allowed domains."
-msgstr ""
+msgstr "リクエストに :attr:`~scrapy.http.Request.dont_filter` 属性が設定されている場合、そのドメインが許可されたドメインにリストされていなくても、オフサイト・ミドルウェアはリクエストを許可します。"
 
 #: ../../topics/spider-middleware.rst:331
 msgid "RefererMiddleware"
-msgstr ""
+msgstr "RefererMiddleware"
 
 #: ../../topics/spider-middleware.rst:338
 msgid ""
 "Populates Request ``Referer`` header, based on the URL of the Response "
 "which generated it."
-msgstr ""
+msgstr "リクエストを生成したレスポンスのURLに基づいて、リクエスト ``Referer`` ヘッダーを生成します。"
 
 #: ../../topics/spider-middleware.rst:342
 msgid "RefererMiddleware settings"
-msgstr ""
+msgstr "RefererMiddleware 設定"
 
 #: ../../topics/spider-middleware.rst:347
 msgid "REFERER_ENABLED"
-msgstr ""
+msgstr "REFERER_ENABLED"
 
 #: ../../topics/spider-middleware.rst:351
 msgid "Default: ``True``"
-msgstr ""
+msgstr "デフォルト: ``True``"
 
 #: ../../topics/spider-middleware.rst:353
 msgid "Whether to enable referer middleware."
-msgstr ""
+msgstr "リファラー・ミドルウェアを有効にするかどうか。"
 
 #: ../../topics/spider-middleware.rst:358
 msgid "REFERRER_POLICY"
-msgstr ""
+msgstr "REFERRER_POLICY"
 
 #: ../../topics/spider-middleware.rst:362
 msgid "Default: ``'scrapy.spidermiddlewares.referer.DefaultReferrerPolicy'``"
-msgstr ""
+msgstr "デフォルト: ``'scrapy.spidermiddlewares.referer.DefaultReferrerPolicy'``"
 
 #: ../../topics/spider-middleware.rst:366
 msgid "`Referrer Policy`_ to apply when populating Request \"Referer\" header."
-msgstr ""
+msgstr "リクエストの \"Referer\" ヘッダーを設定するときに適用する `Referrer Policy`_"
 
 #: ../../topics/spider-middleware.rst:369
 msgid ""
 "You can also set the Referrer Policy per request, using the special "
 "``\"referrer_policy\"`` :ref:`Request.meta <topics-request-meta>` key, "
 "with the same acceptable values as for the ``REFERRER_POLICY`` setting."
-msgstr ""
+msgstr ":ref:`Request.meta <topics-request-meta>` の特別な ``\"referrer_policy\"`` キーを使用して、 ``REFERRER_POLICY`` 設定と同じ許容値を使用して、リクエストごとにリファラー・ポリシーを設定することもできます。"
 
 #: ../../topics/spider-middleware.rst:374
 msgid "Acceptable values for REFERRER_POLICY"
-msgstr ""
+msgstr "REFERRER_POLICYが受け入れる値"
 
 #: ../../topics/spider-middleware.rst:376
 msgid ""
 "either a path to a ``scrapy.spidermiddlewares.referer.ReferrerPolicy`` "
 "subclass — a custom policy or one of the built-in ones (see classes "
 "below),"
-msgstr ""
+msgstr "``scrapy.spidermiddlewares.referer.ReferrerPolicy`` サブクラスへのパス - カスタム・ポリシーまたは組み込みポリシーのいずれか(以下のクラスを参照)"
 
 #: ../../topics/spider-middleware.rst:378
 msgid "or one of the standard W3C-defined string values,"
-msgstr ""
+msgstr "または、標準のW3C定義の文字列値のいずれか"
 
 #: ../../topics/spider-middleware.rst:379
 msgid "or the special ``\"scrapy-default\"``."
-msgstr ""
+msgstr "または特別な ``\"scrapy-default\"`` 。"
 
 #: ../../topics/spider-middleware.rst:382
 msgid "String value"
-msgstr ""
+msgstr "文字列値"
 
 #: ../../topics/spider-middleware.rst:382
 msgid "Class name (as a string)"
-msgstr ""
+msgstr "クラス名(文字列)"
 
 #: ../../topics/spider-middleware.rst:384
 msgid "``\"scrapy-default\"`` (default)"
-msgstr ""
+msgstr "``\"scrapy-default\"`` (デフォルト)"
 
 #: ../../topics/spider-middleware.rst:384
 msgid ":class:`scrapy.spidermiddlewares.referer.DefaultReferrerPolicy`"
-msgstr ""
+msgstr ":class:`scrapy.spidermiddlewares.referer.DefaultReferrerPolicy`"
 
 #: ../../topics/spider-middleware.rst:385
 msgid "`\"no-referrer\"`_"
-msgstr ""
+msgstr "`\"no-referrer\"`_"
 
 #: ../../topics/spider-middleware.rst:385
 msgid ":class:`scrapy.spidermiddlewares.referer.NoReferrerPolicy`"
-msgstr ""
+msgstr ":class:`scrapy.spidermiddlewares.referer.NoReferrerPolicy`"
 
 #: ../../topics/spider-middleware.rst:386
 msgid "`\"no-referrer-when-downgrade\"`_"
-msgstr ""
+msgstr "`\"no-referrer-when-downgrade\"`_"
 
 #: ../../topics/spider-middleware.rst:386
 msgid ":class:`scrapy.spidermiddlewares.referer.NoReferrerWhenDowngradePolicy`"
-msgstr ""
+msgstr ":class:`scrapy.spidermiddlewares.referer.NoReferrerWhenDowngradePolicy`"
 
 #: ../../topics/spider-middleware.rst:387
 msgid "`\"same-origin\"`_"
-msgstr ""
+msgstr "`\"same-origin\"`_"
 
 #: ../../topics/spider-middleware.rst:387
 msgid ":class:`scrapy.spidermiddlewares.referer.SameOriginPolicy`"
-msgstr ""
+msgstr ":class:`scrapy.spidermiddlewares.referer.SameOriginPolicy`"
 
 #: ../../topics/spider-middleware.rst:388
 msgid "`\"origin\"`_"
-msgstr ""
+msgstr "`\"origin\"`_"
 
 #: ../../topics/spider-middleware.rst:388
 msgid ":class:`scrapy.spidermiddlewares.referer.OriginPolicy`"
-msgstr ""
+msgstr ":class:`scrapy.spidermiddlewares.referer.OriginPolicy`"
 
 #: ../../topics/spider-middleware.rst:389
 msgid "`\"strict-origin\"`_"
-msgstr ""
+msgstr "`\"strict-origin\"`_"
 
 #: ../../topics/spider-middleware.rst:389
 msgid ":class:`scrapy.spidermiddlewares.referer.StrictOriginPolicy`"
-msgstr ""
+msgstr ":class:`scrapy.spidermiddlewares.referer.StrictOriginPolicy`"
 
 #: ../../topics/spider-middleware.rst:390
 msgid "`\"origin-when-cross-origin\"`_"
-msgstr ""
+msgstr "`\"origin-when-cross-origin\"`_"
 
 #: ../../topics/spider-middleware.rst:390
 msgid ":class:`scrapy.spidermiddlewares.referer.OriginWhenCrossOriginPolicy`"
-msgstr ""
+msgstr ":class:`scrapy.spidermiddlewares.referer.OriginWhenCrossOriginPolicy`"
 
 #: ../../topics/spider-middleware.rst:391
 msgid "`\"strict-origin-when-cross-origin\"`_"
-msgstr ""
+msgstr "`\"strict-origin-when-cross-origin\"`_"
 
 #: ../../topics/spider-middleware.rst:391
 msgid ":class:`scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy`"
-msgstr ""
+msgstr ":class:`scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy`"
 
 #: ../../topics/spider-middleware.rst:392
 msgid "`\"unsafe-url\"`_"
-msgstr ""
+msgstr "`\"unsafe-url\"`_"
 
 #: ../../topics/spider-middleware.rst:392
 msgid ":class:`scrapy.spidermiddlewares.referer.UnsafeUrlPolicy`"
-msgstr ""
+msgstr ":class:`scrapy.spidermiddlewares.referer.UnsafeUrlPolicy`"
 
 #: of scrapy.spidermiddlewares.referer.DefaultReferrerPolicy:1
 msgid ""
 "A variant of \"no-referrer-when-downgrade\", with the addition that "
 "\"Referer\" is not sent if the parent request was using ``file://`` or "
 "``s3://`` scheme."
-msgstr ""
+msgstr "\"no-referrer-when-downgrade\" の変形(variant)。さらに、親リクエストが ``file://`` または ``s3://`` スキームを使用している場合、 \"Referer\" は送信されません。"
 
 #: ../../topics/spider-middleware.rst:397
 msgid ""
@@ -595,30 +597,30 @@ msgid ""
 "downgrade\"`_, the W3C-recommended value for browsers — will send a non-"
 "empty \"Referer\" header from any ``http(s)://`` to any ``https://`` URL,"
 " even if the domain is different."
-msgstr ""
+msgstr "`\" no-referrer-when-downgrade \"`_ のように、ブラウザのW3C推奨値である、Scrapyのデフォルトのリファラー・ポリシーは、ドメインが異なっていても、 任意の ``http(s)://`` から空でない  \"Referer\" ヘッダーをすべての ``https://`` に送信します。"
 
 #: ../../topics/spider-middleware.rst:402
 msgid ""
 "`\"same-origin\"`_ may be a better choice if you want to remove referrer "
 "information for cross-domain requests."
-msgstr ""
+msgstr "クロス・ドメイン・リクエストのリファラー情報を削除する場合は、 `\"same-origin\"`_ の方が適している場合があります。"
 
 #: of scrapy.spidermiddlewares.referer.NoReferrerPolicy:1
 msgid "https://www.w3.org/TR/referrer-policy/#referrer-policy-no-referrer"
-msgstr ""
+msgstr "https://www.w3.org/TR/referrer-policy/#referrer-policy-no-referrer"
 
 #: of scrapy.spidermiddlewares.referer.NoReferrerPolicy:3
 msgid ""
 "The simplest policy is \"no-referrer\", which specifies that no referrer "
 "information is to be sent along with requests made from a particular "
 "request client to any origin. The header will be omitted entirely."
-msgstr ""
+msgstr "最も単純なポリシーは「no-referrer」です。これは、特定のリクエスト・クライアントからのリクエストとともにリファラー情報を任意のオリジン(origin)に送信しないことを指定します。ヘッダーは完全に省略されます。"
 
 #: of scrapy.spidermiddlewares.referer.NoReferrerWhenDowngradePolicy:1
 msgid ""
 "https://www.w3.org/TR/referrer-policy/#referrer-policy-no-referrer-when-"
 "downgrade"
-msgstr ""
+msgstr "https://www.w3.org/TR/referrer-policy/#referrer-policy-no-referrer-when-downgrade"
 
 #: of scrapy.spidermiddlewares.referer.NoReferrerWhenDowngradePolicy:3
 msgid ""
@@ -626,53 +628,53 @@ msgid ""
 "requests from a TLS-protected environment settings object to a "
 "potentially trustworthy URL, and requests from clients which are not TLS-"
 "protected to any origin."
-msgstr ""
+msgstr "\"no-referrer-when-downgrade\" ポリシーは、TLSで保護された環境設定オブジェクトから潜在的に信頼できるURLへのリクエスト、およびTLSで保護されていないクライアントからのリクエストとともに完全なURLを送信します。"
 
 #: of scrapy.spidermiddlewares.referer.NoReferrerWhenDowngradePolicy:7
 msgid ""
 "Requests from TLS-protected clients to non-potentially trustworthy URLs, "
 "on the other hand, will contain no referrer information. A Referer HTTP "
 "header will not be sent."
-msgstr ""
+msgstr "一方、TLSで保護されたクライアントから潜在的に信頼できないURLへの要求には、リファラー情報は含まれません。 Referer HTTPヘッダーは送信されません。"
 
 #: of scrapy.spidermiddlewares.referer.NoReferrerWhenDowngradePolicy:11
 msgid ""
 "This is a user agent's default behavior, if no policy is otherwise "
 "specified."
-msgstr ""
+msgstr "ポリシーが指定されていない場合、これはユーザー・エージェントのデフォルトの振る舞いです。"
 
 #: ../../topics/spider-middleware.rst:409
 msgid ""
 "\"no-referrer-when-downgrade\" policy is the W3C-recommended default, and"
 " is used by major web browsers."
-msgstr ""
+msgstr "\"no-referrer-when-downgrade\" ポリシーはW3C推奨のデフォルトであり、主要なWebブラウザーで使用されます。"
 
 #: ../../topics/spider-middleware.rst:412
 msgid ""
 "However, it is NOT Scrapy's default referrer policy (see "
 ":class:`DefaultReferrerPolicy`)."
-msgstr ""
+msgstr "ただし、それはScrapyのデフォルトのリファラー・ポリシーではありません( :class:`DefaultReferrerPolicy` を参照)。"
 
 #: of scrapy.spidermiddlewares.referer.SameOriginPolicy:1
 msgid "https://www.w3.org/TR/referrer-policy/#referrer-policy-same-origin"
-msgstr ""
+msgstr "https://www.w3.org/TR/referrer-policy/#referrer-policy-same-origin"
 
 #: of scrapy.spidermiddlewares.referer.SameOriginPolicy:3
 msgid ""
 "The \"same-origin\" policy specifies that a full URL, stripped for use as"
 " a referrer, is sent as referrer information when making same-origin "
 "requests from a particular request client."
-msgstr ""
+msgstr "\"same-origin\"ポリシー(同一オリジン・ポリシー)は、特定のリクエスト・クライアントから同一オリジン・リクエストを行うときに、リファラーとして使用するために取り除かれた完全なURLがリファラー情報として送信されることを指定します。"
 
 #: of scrapy.spidermiddlewares.referer.SameOriginPolicy:6
 msgid ""
 "Cross-origin requests, on the other hand, will contain no referrer "
 "information. A Referer HTTP header will not be sent."
-msgstr ""
+msgstr "一方、クロス・オリジンリ・クエストにはリファラー情報は含まれません。リファラーHTTPヘッダーは送信されません。"
 
 #: of scrapy.spidermiddlewares.referer.OriginPolicy:1
 msgid "https://www.w3.org/TR/referrer-policy/#referrer-policy-origin"
-msgstr ""
+msgstr "https://www.w3.org/TR/referrer-policy/#referrer-policy-origin"
 
 #: of scrapy.spidermiddlewares.referer.OriginPolicy:3
 msgid ""
@@ -680,11 +682,11 @@ msgid ""
 "origin of the request client is sent as referrer information when making "
 "both same-origin requests and cross-origin requests from a particular "
 "request client."
-msgstr ""
+msgstr "オリジン・ポリシーは、特定のリクエスト・クライアントから同一オリジン・リクエストとクロス・オリジン・リクエストの両方を行うときに、リクエスト・クライアントのオリジンのASCIIシリアル化のみがリファラー情報として送信されることを指定します。"
 
 #: of scrapy.spidermiddlewares.referer.StrictOriginPolicy:1
 msgid "https://www.w3.org/TR/referrer-policy/#referrer-policy-strict-origin"
-msgstr ""
+msgstr "https://www.w3.org/TR/referrer-policy/#referrer-policy-strict-origin"
 
 #: of scrapy.spidermiddlewares.referer.StrictOriginPolicy:3
 msgid ""
@@ -692,20 +694,20 @@ msgid ""
 "of the request client when making requests: - from a TLS-protected "
 "environment settings object to a potentially trustworthy URL, and - from "
 "non-TLS-protected environment settings objects to any origin."
-msgstr ""
+msgstr "strict-originポリシーは、リクエストを行うときにリクエスト・クライアントの発信元のASCIIシリアル化を送信します。-TLSで保護された環境設定オブジェクトから潜在的に信頼できるURLへ、そして、TLSで保護されていない環境設定オブジェクトから任意のオリジンへ。"
 
 #: of scrapy.spidermiddlewares.referer.StrictOriginPolicy:8
 msgid ""
 "Requests from TLS-protected request clients to non- potentially "
 "trustworthy URLs, on the other hand, will contain no referrer "
 "information. A Referer HTTP header will not be sent."
-msgstr ""
+msgstr "一方、TLSで保護されたリクエスト・クライアントから潜在的に信頼できないURLへのリクエストには、リファラー情報は含まれません。"
 
 #: of scrapy.spidermiddlewares.referer.OriginWhenCrossOriginPolicy:1
 msgid ""
 "https://www.w3.org/TR/referrer-policy/#referrer-policy-origin-when-cross-"
 "origin"
-msgstr ""
+msgstr "https://www.w3.org/TR/referrer-policy/#referrer-policy-origin-when-cross-origin"
 
 #: of scrapy.spidermiddlewares.referer.OriginWhenCrossOriginPolicy:3
 msgid ""
@@ -715,13 +717,13 @@ msgid ""
 "the ASCII serialization of the origin of the request client is sent as "
 "referrer information when making cross-origin requests from a particular "
 "request client."
-msgstr ""
+msgstr "origin-when-cross-originポリシーは、リファラーとして使用するために分割(strip)された完全なURLが、特定のリクエスト・クライアントから同一オリジン・リクエストを行うときにリファラー情報として送信され、リクエスト・クライアントは、特定の要求クライアントからクロス・オリジン・リクエストを行うときに、リファラー情報として送信されます。"
 
 #: of scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy:1
 msgid ""
 "https://www.w3.org/TR/referrer-policy/#referrer-policy-strict-origin-"
 "when-cross-origin"
-msgstr ""
+msgstr "https://www.w3.org/TR/referrer-policy/#referrer-policy-strict-origin-when-cross-origin"
 
 #: of scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy:3
 msgid ""
@@ -730,35 +732,35 @@ msgid ""
 "making same-origin requests from a particular request client, and only "
 "the ASCII serialization of the origin of the request client when making "
 "cross-origin requests:"
-msgstr ""
+msgstr "strict-origin-when-cross-originポリシーは、リファラーとして使用するために取り除かれた完全なURLが、特定のリクエスト・クライアントから同一オリジン・リクエストを行うときにリファラー情報として送信されることを指定します。クロス・オリジン・リクエストを行うときのリクエスト・クライアントのオリジン:"
 
 #: of scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy:9
 msgid ""
 "from a TLS-protected environment settings object to a potentially "
 "trustworthy URL, and"
-msgstr ""
+msgstr "TLSで保護された環境設定オブジェクトから潜在的に信頼できるURLへ、そして、"
 
 #: of scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy:10
 msgid "from non-TLS-protected environment settings objects to any origin."
-msgstr ""
+msgstr "TLSで保護されていない環境設定オブジェクトから任意のオリジン(origin)へ。"
 
 #: of scrapy.spidermiddlewares.referer.StrictOriginWhenCrossOriginPolicy:12
 msgid ""
 "Requests from TLS-protected clients to non- potentially trustworthy URLs,"
 " on the other hand, will contain no referrer information. A Referer HTTP "
 "header will not be sent."
-msgstr ""
+msgstr "一方、TLSで保護されたクライアントから信頼できない可能性のあるURLへの要求には、リファラー情報は含まれません。 Referer HTTPヘッダーは送信されません。"
 
 #: of scrapy.spidermiddlewares.referer.UnsafeUrlPolicy:1
 msgid "https://www.w3.org/TR/referrer-policy/#referrer-policy-unsafe-url"
-msgstr ""
+msgstr "https://www.w3.org/TR/referrer-policy/#referrer-policy-unsafe-url"
 
 #: of scrapy.spidermiddlewares.referer.UnsafeUrlPolicy:3
 msgid ""
 "The \"unsafe-url\" policy specifies that a full URL, stripped for use as "
 "a referrer, is sent along with both cross-origin requests and same-origin"
 " requests made from a particular request client."
-msgstr ""
+msgstr "unsafe-urlポリシーは、リファラーとして使用するために分割(strip)された完全なURLが、特定のリクエスト・クライアントからのクロス・オリジン・リクエストと同一オリジン・リクエストの両方とともに送信されることを指定します。"
 
 #: of scrapy.spidermiddlewares.referer.UnsafeUrlPolicy:7
 msgid ""
@@ -766,29 +768,29 @@ msgid ""
 "origins and paths from TLS-protected resources to insecure origins. "
 "Carefully consider the impact of setting such a policy for potentially "
 "sensitive documents."
-msgstr ""
+msgstr "注：ポリシーの名前に頼ってはいけません。安全ではありません。このポリシーは、TLSで保護されたリソースから安全でないオリジンにオリジンとパスをリークします。機密性の高いドキュメントに対してこのようなポリシーを設定した場合の影響を慎重に検討してください。"
 
 #: ../../topics/spider-middleware.rst:426
 msgid "\"unsafe-url\" policy is NOT recommended."
-msgstr ""
+msgstr "\"unsafe-url\" ポリシーは **推奨されません** 。"
 
 #: ../../topics/spider-middleware.rst:440
 msgid "UrlLengthMiddleware"
-msgstr ""
+msgstr "UrlLengthMiddleware"
 
 #: ../../topics/spider-middleware.rst:447
 msgid "Filters out requests with URLs longer than URLLENGTH_LIMIT"
-msgstr ""
+msgstr "URLLENGTH_LIMITより長いURLを持つリクエストを除外します"
 
 #: ../../topics/spider-middleware.rst:449
 msgid ""
 "The :class:`UrlLengthMiddleware` can be configured through the following "
 "settings (see the settings documentation for more info):"
-msgstr ""
+msgstr ":class:`UrlLengthMiddleware` は次の設定で構成(configure)できます(詳細については設定ドキュメントをご覧ください):"
 
 #: ../../topics/spider-middleware.rst:452
 msgid ""
 ":setting:`URLLENGTH_LIMIT` - The maximum URL length to allow for crawled "
 "URLs."
-msgstr ""
+msgstr ":setting:`URLLENGTH_LIMIT` - クロールするURLの最大長。"
 
