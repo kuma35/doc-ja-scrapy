@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 22:00+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-05 22:24+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,17 +19,17 @@ msgstr ""
 
 #: ../../topics/api.rst:5
 msgid "Core API"
-msgstr ""
+msgstr "コアAPI"
 
 #: ../../topics/api.rst:9
 msgid ""
 "This section documents the Scrapy core API, and it's intended for "
 "developers of extensions and middlewares."
-msgstr ""
+msgstr "この節は、ScrapyコアAPIについて説明します。これは、拡張機能とミドルウェアの開発者を対象としています。"
 
 #: ../../topics/api.rst:15
 msgid "Crawler API"
-msgstr ""
+msgstr "クローラーAPI"
 
 #: ../../topics/api.rst:17
 msgid ""
@@ -38,7 +38,7 @@ msgid ""
 " ``from_crawler`` class method. This object provides access to all Scrapy"
 " core components, and it's the only way for extensions to access them and"
 " hook their functionality into Scrapy."
-msgstr ""
+msgstr "Scrapy APIの主要なエントリポイントは、 ``from_crawler`` クラス・メソッドを通じて拡張機能に渡される :class:`~scrapy.crawler.Crawler` オブジェクトです。 このオブジェクトは、すべてのScrapyコア・コンポーネントへのアクセスを提供し、拡張機能がそれらにアクセスし、その機能をScrapyにフックする唯一の方法です。"
 
 #: ../../topics/api.rst:25
 msgid ""
@@ -47,150 +47,150 @@ msgid ""
 ":setting:`EXTENSIONS` setting which contains a dictionary of all "
 "available extensions and their order similar to how you :ref:`configure "
 "the downloader middlewares <topics-downloader-middleware-setting>`."
-msgstr ""
+msgstr "拡張機能マネージャーは、インストールされた拡張機能を読み込んで追跡する責任があり、利用可能な全ての拡張機能の辞書と、 :ref:`ダウンローダー・ミドルウェアの構成(configure)<topics-downloader-middleware-setting>` 方法と類似した順序を含む :setting:`EXTENSIONS` 設定で構成(configure)されます。"
 
 #: ../../topics/api.rst:33
 msgid ""
 "The Crawler object must be instantiated with a "
 ":class:`scrapy.spiders.Spider` subclass and a "
 ":class:`scrapy.settings.Settings` object."
-msgstr ""
+msgstr "Crawlerオブジェクトは、 :class:`scrapy.spiders.Spider` サブクラスと :class:`scrapy.settings.Settings` オブジェクトでインスタンス化する必要があります。"
 
 #: ../../topics/api.rst:39
 msgid "The settings manager of this crawler."
-msgstr ""
+msgstr "このクローラーの設定マネージャ"
 
 #: ../../topics/api.rst:41
 msgid ""
 "This is used by extensions & middlewares to access the Scrapy settings of"
 " this crawler."
-msgstr ""
+msgstr "これは、拡張機能とミドルウェアがこのクローラーのScrapy設定にアクセスするために使用します。"
 
 #: ../../topics/api.rst:44
 msgid "For an introduction on Scrapy settings see :ref:`topics-settings`."
-msgstr ""
+msgstr "Scrapy設定の概要については、:ref:`topics-settings` を参照してください。"
 
 #: ../../topics/api.rst:46
 msgid "For the API see :class:`~scrapy.settings.Settings` class."
-msgstr ""
+msgstr "APIについては、 :class:`~scrapy.settings.Settings` クラスを参照してください。"
 
 #: ../../topics/api.rst:50
 msgid "The signals manager of this crawler."
-msgstr ""
+msgstr "このクローラーのシグナル・マネージャ"
 
 #: ../../topics/api.rst:52
 msgid ""
 "This is used by extensions & middlewares to hook themselves into Scrapy "
 "functionality."
-msgstr ""
+msgstr "これは、拡張機能およびミドルウェアがScrapy機能にフックするために使用されます。"
 
 #: ../../topics/api.rst:55
 msgid "For an introduction on signals see :ref:`topics-signals`."
-msgstr ""
+msgstr "シグナルの概要については、 :ref:`topics-signals` を参照してください。"
 
 #: ../../topics/api.rst:57
 msgid "For the API see :class:`~scrapy.signalmanager.SignalManager` class."
-msgstr ""
+msgstr "APIについては、 :class:`~scrapy.signalmanager.SignalManager` クラスを参照してください。"
 
 #: ../../topics/api.rst:61
 msgid "The stats collector of this crawler."
-msgstr ""
+msgstr "このクローラーの統計収集器"
 
 #: ../../topics/api.rst:63
 msgid ""
 "This is used from extensions & middlewares to record stats of their "
 "behaviour, or access stats collected by other extensions."
-msgstr ""
+msgstr "これは拡張機能とミドルウェアから使用され、その動作の統計を記録したり、他の拡張機能によって収集された統計にアクセスしたりします。"
 
 #: ../../topics/api.rst:66
 msgid "For an introduction on stats collection see :ref:`topics-stats`."
-msgstr ""
+msgstr "統計収集器の概要は :ref:`topics-stats` を参照下さい。"
 
 #: ../../topics/api.rst:68
 msgid "For the API see :class:`~scrapy.statscollectors.StatsCollector` class."
-msgstr ""
+msgstr "APIについては :class:`~scrapy.statscollectors.StatsCollector` クラス参照。"
 
 #: ../../topics/api.rst:72
 msgid "The extension manager that keeps track of enabled extensions."
-msgstr ""
+msgstr "有効な拡張機能を追跡(track)する拡張機能マネージャ"
 
 #: ../../topics/api.rst:74
 msgid "Most extensions won't need to access this attribute."
-msgstr ""
+msgstr "ほとんどの拡張機能は、この属性にアクセスする必要はありません。"
 
 #: ../../topics/api.rst:76
 msgid ""
 "For an introduction on extensions and a list of available extensions on "
 "Scrapy see :ref:`topics-extensions`."
-msgstr ""
+msgstr "拡張機能の紹介と、Scrapyで利用可能な拡張機能のリストについては、 :ref:`topics-extensions` を参照してください。"
 
 #: ../../topics/api.rst:81
 msgid ""
 "The execution engine, which coordinates the core crawling logic between "
 "the scheduler, downloader and spiders."
-msgstr ""
+msgstr "スケジューラ、ダウンローダー、スパイダーの間のコア・クロール・ロジックを調整する実行エンジン。"
 
 #: ../../topics/api.rst:84
 msgid ""
 "Some extension may want to access the Scrapy engine, to inspect  or "
 "modify the downloader and scheduler behaviour, although this is an "
 "advanced use and this API is not yet stable."
-msgstr ""
+msgstr "一部の拡張機能では、Scrapyエンジンにアクセスして、ダウンローダーとスケジューラの動作を検査または変更することができますが、これは高度な使用方法であり、このAPIはまだ安定していません。"
 
 #: ../../topics/api.rst:90
 msgid ""
 "Spider currently being crawled. This is an instance of the spider class "
 "provided while constructing the crawler, and it is created after the "
 "arguments given in the :meth:`crawl` method."
-msgstr ""
+msgstr "現在スパイダーがクロールされています。これはクローラーの構築中に提供されるスパイダー・クラスのインスタンスであり、 :meth:`crawl` メソッドで指定された引数の後に作成されます。"
 
 #: ../../topics/api.rst:96
 msgid ""
 "Starts the crawler by instantiating its spider class with the given "
 "``args`` and ``kwargs`` arguments, while setting the execution engine in "
 "motion."
-msgstr ""
+msgstr "指定された ``args`` 引数と ``kwargs`` 引数を使用してスパイダー・クラスをインスタンス化することでクローラーを起動し、実行エンジンを起動します。"
 
 #: ../../topics/api.rst:100
 msgid "Returns a deferred that is fired when the crawl is finished."
-msgstr ""
+msgstr "クロールが終了したときに起動される遅延オブジェクトを返します。"
 
 #: of scrapy.crawler.Crawler.stop:1
 msgid ""
 "Starts a graceful stop of the crawler and returns a deferred that is "
 "fired when the crawler is stopped."
-msgstr ""
+msgstr "クローラーの優しい(graceful)停止を開始し、クローラーの停止時に起動される遅延オブジェクトを返します。"
 
 #: of scrapy.crawler.CrawlerRunner:1
 msgid ""
 "This is a convenient helper class that keeps track of, manages and runs "
 "crawlers inside an already setup Twisted `reactor`_."
-msgstr ""
+msgstr "これは、セットアップ済みの Twisted `reactor`_ 内でクローラーを追跡、管理、実行する便利なヘルパー・クラスです。"
 
 #: of scrapy.crawler.CrawlerRunner:4
 msgid ""
 "The CrawlerRunner object must be instantiated with a "
 ":class:`~scrapy.settings.Settings` object."
-msgstr ""
+msgstr "CrawlerRunnerオブジェクトは :class:`~scrapy.settings.Settings` オブジェクトでインスタンス化する必要があります。"
 
 #: of scrapy.crawler.CrawlerProcess:17 scrapy.crawler.CrawlerRunner:7
 msgid ""
 "This class shouldn't be needed (since Scrapy is responsible of using it "
 "accordingly) unless writing scripts that manually handle the crawling "
 "process. See :ref:`run-from-script` for an example."
-msgstr ""
+msgstr "クロール・プロセスを手動で処理するスクリプトを記述しない限り、このクラスは必要ありません(Scrapyはそれに応じて使用する必要があるため)。例については、 :ref:`run-from-script` を参照してください。"
 
 #: of scrapy.crawler.CrawlerProcess.crawl:1
 #: scrapy.crawler.CrawlerRunner.crawl:1
 msgid "Run a crawler with the provided arguments."
-msgstr ""
+msgstr "指定された引数を使用してクローラーを実行します。"
 
 #: of scrapy.crawler.CrawlerProcess.crawl:3
 #: scrapy.crawler.CrawlerRunner.crawl:3
 msgid ""
 "It will call the given Crawler's :meth:`~Crawler.crawl` method, while "
 "keeping track of it so it can be stopped later."
-msgstr ""
+msgstr "指定したCrawlerの :meth:`~Crawler.crawl` メソッドを呼び出しますが、後で停止できるように追跡します。"
 
 #: of scrapy.crawler.CrawlerProcess.crawl:6
 #: scrapy.crawler.CrawlerRunner.crawl:6
@@ -198,12 +198,12 @@ msgid ""
 "If ``crawler_or_spidercls`` isn't a :class:`~scrapy.crawler.Crawler` "
 "instance, this method will try to create one using this parameter as the "
 "spider class given to it."
-msgstr ""
+msgstr "``crawler_or_spidercls`` が :class:`~scrapy.crawler.Crawler` インスタンスではない場合、このメソッドは、このパラメーターを、指定されたスパイダー・クラスとして使用してインスタンスを作成しようとします。"
 
 #: of scrapy.crawler.CrawlerProcess.crawl:10
 #: scrapy.crawler.CrawlerRunner.crawl:10
 msgid "Returns a deferred that is fired when the crawling is finished."
-msgstr ""
+msgstr "クロールが終了したときに起動される遅延オブジェクトを返します。"
 
 #: ../../topics/api.rst of scrapy.crawler.CrawlerProcess
 #: scrapy.crawler.CrawlerProcess.crawl scrapy.crawler.CrawlerProcess.start
@@ -217,48 +217,48 @@ msgstr ""
 #: scrapy.signalmanager.SignalManager.connect
 #: scrapy.signalmanager.SignalManager.disconnect_all
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of scrapy.crawler.CrawlerProcess.crawl:12
 #: scrapy.crawler.CrawlerRunner.crawl:12
 msgid ""
 "already created crawler, or a spider class or spider's name inside the "
 "project to create it"
-msgstr ""
+msgstr "作成済みのクローラー、またはプロジェクト内に作成するスパイダーのクラスまたはスパイダーの名前"
 
 #: of scrapy.crawler.CrawlerProcess.crawl:17
 #: scrapy.crawler.CrawlerRunner.crawl:17
 msgid "arguments to initialize the spider"
-msgstr ""
+msgstr "スパイダーを初期化するための引数"
 
 #: of scrapy.crawler.CrawlerProcess.crawl:19
 #: scrapy.crawler.CrawlerRunner.crawl:19
 msgid "keyword arguments to initialize the spider"
-msgstr ""
+msgstr "スパイダーを初期化するためのキーワード引数"
 
 #: of scrapy.crawler.CrawlerProcess.crawlers:1
 #: scrapy.crawler.CrawlerRunner.crawlers:1
 msgid ""
 "Set of :class:`crawlers <scrapy.crawler.Crawler>` started by "
 ":meth:`crawl` and managed by this class."
-msgstr ""
+msgstr ":meth:`crawl` によって開始され、このクラスによって管理される :class:`crawlers<scrapy.crawler.Crawler>` の組。"
 
 #: of scrapy.crawler.CrawlerProcess.create_crawler:1
 #: scrapy.crawler.CrawlerRunner.create_crawler:1
 msgid "Return a :class:`~scrapy.crawler.Crawler` object."
-msgstr ""
+msgstr ":class:`~scrapy.crawler.Crawler` オブジェクトを返します。"
 
 #: of scrapy.crawler.CrawlerProcess.create_crawler:3
 #: scrapy.crawler.CrawlerRunner.create_crawler:3
 msgid "If ``crawler_or_spidercls`` is a Crawler, it is returned as-is."
-msgstr ""
+msgstr "``crawler_or_spidercls`` がクローラーの場合、それがそのまま返されます。"
 
 #: of scrapy.crawler.CrawlerProcess.create_crawler:4
 #: scrapy.crawler.CrawlerRunner.create_crawler:4
 msgid ""
 "If ``crawler_or_spidercls`` is a Spider subclass, a new Crawler is "
 "constructed for it."
-msgstr ""
+msgstr "``crawler_or_spidercls`` がSpiderサブクラスである場合、新しいクローラーが構築されます。"
 
 #: of scrapy.crawler.CrawlerProcess.create_crawler:6
 #: scrapy.crawler.CrawlerRunner.create_crawler:6
@@ -266,29 +266,29 @@ msgid ""
 "If ``crawler_or_spidercls`` is a string, this function finds a spider "
 "with this name in a Scrapy project (using spider loader), then creates a "
 "Crawler instance for it."
-msgstr ""
+msgstr "``crawler_or_spidercls`` が文字列の場合、この関数は(スパイダー・ローダーを使用して、)Scrapyプロジェクトでこの名前のスパイダーを見つけ、そのクローラー・インスタンスを作成します。"
 
 #: of scrapy.crawler.CrawlerProcess.join:1 scrapy.crawler.CrawlerRunner.join:1
 msgid ""
 "Returns a deferred that is fired when all managed :attr:`crawlers` have "
 "completed their executions."
-msgstr ""
+msgstr "すべての管理対象クローラー(:attr:`crawlers`)が実行を完了したときに起動される遅延オブジェクトを返します。"
 
 #: of scrapy.crawler.CrawlerProcess.stop:1 scrapy.crawler.CrawlerRunner.stop:1
 msgid "Stops simultaneously all the crawling jobs taking place."
-msgstr ""
+msgstr "実行中のすべてのクロール・ジョブを一斉にに停止します。"
 
 #: of scrapy.crawler.CrawlerProcess.stop:3 scrapy.crawler.CrawlerRunner.stop:3
 msgid "Returns a deferred that is fired when they all have ended."
-msgstr ""
+msgstr "すべてが終了したときに起動される遅延オブジェクトを返します。"
 
 #: of scrapy.crawler.CrawlerProcess:1
 msgid "ベースクラス: :class:`scrapy.crawler.CrawlerRunner`"
-msgstr ""
+msgstr "ベースクラス: :class:`scrapy.crawler.CrawlerRunner`"
 
 #: of scrapy.crawler.CrawlerProcess:1
 msgid "A class to run multiple scrapy crawlers in a process simultaneously."
-msgstr ""
+msgstr "プロセスで複数のScrapyクローラーを同時に実行するクラス。"
 
 #: of scrapy.crawler.CrawlerProcess:3
 msgid ""
@@ -296,51 +296,51 @@ msgid ""
 "support for starting a Twisted `reactor`_ and handling shutdown signals, "
 "like the keyboard interrupt command Ctrl-C. It also configures top-level "
 "logging."
-msgstr ""
+msgstr "このクラスは、キーボード割り込みコマンドCtrl-CのようなTwisted `reactor`_ の起動と、シャットダウン信号の処理のサポートを追加することで :class:`~scrapy.crawler.CrawlerRunner` を拡張します。また、トップレベルのロギングを構成(configure)します。"
 
 #: of scrapy.crawler.CrawlerProcess:7
 msgid ""
 "This utility should be a better fit than "
 ":class:`~scrapy.crawler.CrawlerRunner` if you aren't running another "
 "Twisted `reactor`_ within your application."
-msgstr ""
+msgstr "アプリケーション内で別のTwisted `reactor`_ を実行していない場合、このユーティリティは :class:`~scrapy.crawler.CrawlerRunner` よりも適しているはずです。"
 
 #: of scrapy.crawler.CrawlerProcess:11
 msgid ""
 "The CrawlerProcess object must be instantiated with a "
 ":class:`~scrapy.settings.Settings` object."
-msgstr ""
+msgstr "CrawlerProcessオブジェクトは、 :class:`~scrapy.settings.Settings` オブジェクトでインスタンス化する必要があります。"
 
 #: of scrapy.crawler.CrawlerProcess:14
 msgid "whether to install root logging handler (default: True)"
-msgstr ""
+msgstr "ルート・ロギング・ハンドラーをインストールするかどうか(デフォルト:True)"
 
 #: of scrapy.crawler.CrawlerProcess.start:1
 msgid ""
 "This method starts a Twisted `reactor`_, adjusts its pool size to "
 ":setting:`REACTOR_THREADPOOL_MAXSIZE`, and installs a DNS cache based on "
 ":setting:`DNSCACHE_ENABLED` and :setting:`DNSCACHE_SIZE`."
-msgstr ""
+msgstr "このメソッドはTwisted `reactor`_ を開始し、そのプール・サイズを :setting:`REACTOR_THREADPOOL_MAXSIZE` に調整し、 :setting:`DNSCACHE_ENABLED` および :setting:`DNSCACHE_SIZE` に基づいてDNSキャッシュをインストールします。"
 
 #: of scrapy.crawler.CrawlerProcess.start:5
 msgid ""
 "If ``stop_after_crawl`` is True, the reactor will be stopped after all "
 "crawlers have finished, using :meth:`join`."
-msgstr ""
+msgstr "``stop_after_crawl`` がTrueの場合、 :meth:`join` を使用して、すべてのクローラーが終了した後にリアクターが停止します。"
 
 #: of scrapy.crawler.CrawlerProcess.start:8
 msgid "stop or not the reactor when all crawlers have finished"
-msgstr ""
+msgstr "すべてのクローラーが終了したときにリアクターを停止するかどうか"
 
 #: ../../topics/api.rst:115
 msgid "Settings API"
-msgstr ""
+msgstr "APIの設定"
 
 #: ../../topics/api.rst:122
 msgid ""
 "Dictionary that sets the key name and priority level of the default "
 "settings priorities used in Scrapy."
-msgstr ""
+msgstr "Scrapyで使用されるデフォルト設定の優先度のキー名と優先度を設定する辞書。"
 
 #: ../../topics/api.rst:125
 msgid ""
@@ -348,30 +348,30 @@ msgid ""
 "identification and an integer priority. Greater priorities take more "
 "precedence over lesser ones when setting and retrieving values in the "
 ":class:`~scrapy.settings.Settings` class."
-msgstr ""
+msgstr "各項目は設定エントリ・ポイントを定義し、識別のためのコード名と整数の優先度を与えます。 :class:`~scrapy.settings.Settings` クラスで値を設定および取得する場合、優先順位が高いほど順番値が小さくなります。"
 
 #: ../../topics/api.rst:142
 msgid ""
 "For a detailed explanation on each settings sources, see: :ref:`topics-"
 "settings`."
-msgstr ""
+msgstr "各設定ソースの詳細な説明については、 :ref:`topics-settings` を参照してください。"
 
 #: of scrapy.settings.get_settings_priority:1
 msgid ""
 "Small helper function that looks up a given string priority in the "
 ":attr:`~scrapy.settings.SETTINGS_PRIORITIES` dictionary and returns its "
 "numerical value, or directly returns a given numerical priority."
-msgstr ""
+msgstr ":attr:`~scrapy.settings.SETTINGS_PRIORITIES` 辞書で特定の文字列優先度を検索し、その数値を返す、または特定の数値優先度を直接返す小さなヘルパー関数。"
 
 #: of scrapy.settings.Settings:1
 msgid "ベースクラス: :class:`scrapy.settings.BaseSettings`"
-msgstr ""
+msgstr "ベースクラス: :class:`scrapy.settings.BaseSettings`"
 
 #: of scrapy.settings.Settings:1
 msgid ""
 "This object stores Scrapy settings for the configuration of internal "
 "components, and can be used for any further customization."
-msgstr ""
+msgstr "このオブジェクトは、内部コンポーネントの構成のためのScrapy設定を保存し、さらにカスタマイズするために使用できます。"
 
 #: of scrapy.settings.Settings:4
 msgid ""
@@ -379,14 +379,14 @@ msgid ""
 ":class:`~scrapy.settings.BaseSettings`. Additionally, after instantiation"
 " of this class, the new object will have the global default settings "
 "described on :ref:`topics-settings-ref` already populated."
-msgstr ""
+msgstr "これは直接のサブクラスであり、 :class:`~scrapy.settings.BaseSettings` のすべてのメソッドをサポートします。さらに、このクラスのインスタンス化の後、新しいオブジェクトには、すでに入力されている、 :ref:`topics-settings-ref` で説明されているグローバルなデフォルト設定が含まれます。"
 
 #: of scrapy.settings.BaseSettings:1
 msgid ""
 "Instances of this class behave like dictionaries, but store priorities "
 "along with their ``(key, value)`` pairs, and can be frozen (i.e. marked "
 "immutable)."
-msgstr ""
+msgstr "このクラスのインスタンスは辞書のように動作しますが、 ``(key, value)`` ペアとともに優先度を保存し、凍結することができます(つまり、不変(immutable)とマークされます)。"
 
 #: of scrapy.settings.BaseSettings:5
 msgid ""
@@ -397,7 +397,7 @@ msgid ""
 "``priority`` argument is a string, the priority name will be looked up in"
 " :attr:`~scrapy.settings.SETTINGS_PRIORITIES`. Otherwise, a specific "
 "integer should be provided."
-msgstr ""
+msgstr "キー値エントリは初期化時に ``values`` 引数で渡すことができ、それらは ``priority`` レベルを取ります( ``values`` がすでに :class:`~scrapy.settings.BaseSettings` のインスタンスである場合を除き。その場合、既存の優先度レベルが保持されます)。 ``priority`` 引数が文字列の場合、優先度名は :attr:`~scrapy.settings.SETTINGS_PRIORITIES` で検索されます。それ以外の場合は、特定の整数を指定する必要があります。"
 
 #: of scrapy.settings.BaseSettings:13
 msgid ""
@@ -407,68 +407,68 @@ msgid ""
 ":meth:`~scrapy.settings.BaseSettings.get` method of the instance and its "
 "value conversion variants. When requesting a stored key, the value with "
 "the highest priority will be retrieved."
-msgstr ""
+msgstr "オブジェクトが作成されると、新しい設定は :meth:`~scrapy.settings.BaseSettings.set` メソッドを使用してロードまたは更新でき、辞書の角括弧表記または :meth:`~scrapy.settings.BaseSettings.get` メソッドとその値変換variantを使用してアクセスできます。保存されたキーを要求すると、最高の優先度を持つ値が取得されます。"
 
 #: of scrapy.settings.BaseSettings.copy:1
 msgid "Make a deep copy of current settings."
-msgstr ""
+msgstr "現在の設定のdeepコピーを作成します。"
 
 #: of scrapy.settings.BaseSettings.copy:3
 msgid ""
 "This method returns a new instance of the :class:`Settings` class, "
 "populated with the same values and their priorities."
-msgstr ""
+msgstr "このメソッドは、 :class:`Settings` クラスの新しいインスタンスを返し、同じ値とその優先度が入力されます。"
 
 #: of scrapy.settings.BaseSettings.copy:6
 msgid ""
 "Modifications to the new object won't be reflected on the original "
 "settings."
-msgstr ""
+msgstr "新しいオブジェクトへの変更は、元の設定には反映されません。"
 
 #: of scrapy.settings.BaseSettings.copy_to_dict:1
 msgid "Make a copy of current settings and convert to a dict."
-msgstr ""
+msgstr "現在の設定のコピーを作成し、辞書に変換します。"
 
 #: of scrapy.settings.BaseSettings.copy_to_dict:3
 msgid ""
 "This method returns a new dict populated with the same values and their "
 "priorities as the current settings."
-msgstr ""
+msgstr "このメソッドは、現在の設定と同じ値とそれらの優先度が設定された新しい辞書を返します。"
 
 #: of scrapy.settings.BaseSettings.copy_to_dict:6
 msgid ""
 "Modifications to the returned dict won't be reflected on the original "
 "settings."
-msgstr ""
+msgstr "返された辞書への変更は、元の設定には反映されません。"
 
 #: of scrapy.settings.BaseSettings.copy_to_dict:9
 msgid ""
 "This method can be useful for example for printing settings in Scrapy "
 "shell."
-msgstr ""
+msgstr "このメソッドは、Scrapyシェルの印刷(printing)設定などに役立ちます。"
 
 #: of scrapy.settings.BaseSettings.freeze:1
 msgid "Disable further changes to the current settings."
-msgstr ""
+msgstr "現在の設定への、さらなる変更を無効にします。"
 
 #: of scrapy.settings.BaseSettings.freeze:3
 msgid ""
 "After calling this method, the present state of the settings will become "
 "immutable. Trying to change values through the :meth:`~set` method and "
 "its variants won't be possible and will be alerted."
-msgstr ""
+msgstr "このメソッドを呼び出した後、設定の現在の状態は不変(immutable)になります。 ::meth:`~set` メソッドとその変形(variant)を使用して値を変更しようとすることは不可能であり、警告されます。"
 
 #: of scrapy.settings.BaseSettings.frozencopy:1
 msgid "Return an immutable copy of the current settings."
-msgstr ""
+msgstr "現在の設定の不変(immutable)のコピーを返します。"
 
 #: of scrapy.settings.BaseSettings.frozencopy:3
 msgid "Alias for a :meth:`~freeze` call in the object returned by :meth:`copy`."
-msgstr ""
+msgstr ":meth:`copy` によって返されるオブジェクトの :meth:`~freeze` 呼び出しのエイリアス。"
 
 #: of scrapy.settings.BaseSettings.get:1
 msgid "Get a setting value without affecting its original type."
-msgstr ""
+msgstr "元のタイプに影響を与えずに設定値を取得します。"
 
 #: of scrapy.settings.BaseSettings.get:3 scrapy.settings.BaseSettings.getbool:9
 #: scrapy.settings.BaseSettings.getdict:9
@@ -477,7 +477,7 @@ msgstr ""
 #: scrapy.settings.BaseSettings.getpriority:4
 #: scrapy.settings.BaseSettings.set:7
 msgid "the setting name"
-msgstr ""
+msgstr "設定名"
 
 #: of scrapy.settings.BaseSettings.get:6
 #: scrapy.settings.BaseSettings.getbool:12
@@ -486,23 +486,23 @@ msgstr ""
 #: scrapy.settings.BaseSettings.getint:6
 #: scrapy.settings.BaseSettings.getlist:10
 msgid "the value to return if no setting is found"
-msgstr ""
+msgstr "設定が見つからない場合に返す値"
 
 #: of scrapy.settings.BaseSettings.getbool:1
 msgid "Get a setting value as a boolean."
-msgstr ""
+msgstr "設定値をブール値として取得します。"
 
 #: of scrapy.settings.BaseSettings.getbool:3
 msgid ""
 "``1``, ``'1'``, `True`` and ``'True'`` return ``True``, while ``0``, "
 "``'0'``, ``False``, ``'False'`` and ``None`` return ``False``."
-msgstr ""
+msgstr "``1`` と ``'1'`` と `True`` と ``'True'`` は ``True`` を返しますが、 ``0`` と ``'0'`` と ``False`` と ``'False'`` と ``None`` は ``False`` を返します。"
 
 #: of scrapy.settings.BaseSettings.getbool:6
 msgid ""
 "For example, settings populated through environment variables set to "
 "``'0'`` will return ``False`` when using this method."
-msgstr ""
+msgstr "たとえば、 ``'0'``に設定された環境変数を通じて設定された設定は、このメソッドを使用するときに ``False`` を返します。"
 
 #: of scrapy.settings.BaseSettings.getdict:1
 msgid ""
@@ -513,43 +513,43 @@ msgid ""
 "converted to a dictionary, containing all its current settings values as "
 "they would be returned by :meth:`~scrapy.settings.BaseSettings.get`, and "
 "losing all information about priority and mutability."
-msgstr ""
+msgstr "辞書として設定値を取得します。 設定元のタイプが辞書の場合、そのコピーが返されます。文字列の場合、JSON辞書として評価されます。それ自体が :class:`~scrapy.settings.BaseSettings` インスタンスである場合、それは辞書に変換され、 :meth:`~scrapy.settings.BaseSettings.get` によって返される現在の設定値をすべて含み、優先度(priority)と可変性(mutability)に関するすべての情報を失います。"
 
 #: of scrapy.settings.BaseSettings.getfloat:1
 msgid "Get a setting value as a float."
-msgstr ""
+msgstr "設定値をfloatとして取得します。"
 
 #: of scrapy.settings.BaseSettings.getint:1
 msgid "Get a setting value as an int."
-msgstr ""
+msgstr "設定値をintとして取得します。"
 
 #: of scrapy.settings.BaseSettings.getlist:1
 msgid ""
 "Get a setting value as a list. If the setting original type is a list, a "
 "copy of it will be returned. If it's a string it will be split by \",\"."
-msgstr ""
+msgstr "設定値をリストとして取得します。 設定元のタイプはリストであり、そのコピーが返されます。 文字列の場合、\",\"で分割されます。"
 
 #: of scrapy.settings.BaseSettings.getlist:4
 msgid ""
 "For example, settings populated through environment variables set to "
 "``'one,two'`` will return a list ['one', 'two'] when using this method."
-msgstr ""
+msgstr "たとえば、 ``'one,two'`` に設定された環境変数を通じて設定された設定は、このメソッドを使用するときにリスト ['one', 'two'] を返します。"
 
 #: of scrapy.settings.BaseSettings.getpriority:1
 msgid ""
 "Return the current numerical priority value of a setting, or ``None`` if "
 "the given ``name`` does not exist."
-msgstr ""
+msgstr "設定の現在の数値優先順位値を返します。指定された ``name`` が存在しない場合は ``None`` を返します。"
 
 #: of scrapy.settings.BaseSettings.getwithbase:1
 msgid ""
 "Get a composition of a dictionary-like setting and its `_BASE` "
 "counterpart."
-msgstr ""
+msgstr "辞書のような設定と、それに対応する `_BASE` の合成を取得します。"
 
 #: of scrapy.settings.BaseSettings.getwithbase:4
 msgid "name of the dictionary-like setting"
-msgstr ""
+msgstr "辞書風設定の名前"
 
 #: of scrapy.settings.BaseSettings.maxpriority:1
 msgid ""
@@ -557,61 +557,61 @@ msgid ""
 " settings, or the numerical value for ``default`` from "
 ":attr:`~scrapy.settings.SETTINGS_PRIORITIES` if there are no settings "
 "stored."
-msgstr ""
+msgstr "すべての設定を通して存在する最も高い優先度の数値を返します。設定が保存されていない場合は、 :attr:`~scrapy.settings.SETTINGS_PRIORITIES` から ``default`` の数値を返します。"
 
 #: of scrapy.settings.BaseSettings.set:1
 msgid "Store a key/value attribute with a given priority."
-msgstr ""
+msgstr "指定の優先度でキー/値属性を保存します。"
 
 #: of scrapy.settings.BaseSettings.set:3
 msgid ""
 "Settings should be populated *before* configuring the Crawler object "
 "(through the :meth:`~scrapy.crawler.Crawler.configure` method), otherwise"
 " they won't have any effect."
-msgstr ""
+msgstr "( :meth:`~scrapy.crawler.Crawler.configure` メソッドを使用して、)Crawlerオブジェクトを設定する前に、設定を読み込む必要があります。設定しないと、効果がありません。"
 
 #: of scrapy.settings.BaseSettings.set:10
 msgid "the value to associate with the setting"
-msgstr ""
+msgstr "設定に関連付ける値"
 
 #: of scrapy.settings.BaseSettings.set:13
 msgid ""
 "the priority of the setting. Should be a key of "
 ":attr:`~scrapy.settings.SETTINGS_PRIORITIES` or an integer"
-msgstr ""
+msgstr "設定の優先順位。 :attr:`~scrapy.settings.SETTINGS_PRIORITIES` のキーまたは整数でなければなりません"
 
 #: of scrapy.settings.BaseSettings.setmodule:1
 msgid "Store settings from a module with a given priority."
-msgstr ""
+msgstr "与えられた優先度でモジュールの設定を保存します。"
 
 #: of scrapy.settings.BaseSettings.setmodule:3
 msgid ""
 "This is a helper function that calls "
 ":meth:`~scrapy.settings.BaseSettings.set` for every globally declared "
 "uppercase variable of ``module`` with the provided ``priority``."
-msgstr ""
+msgstr "これは、提供された ``priority`` で ``module`` のグローバルに宣言されたすべての大文字変数に対して :meth:`~scrapy.settings.BaseSettings.set` を呼び出すヘルパー関数です。"
 
 #: of scrapy.settings.BaseSettings.setmodule:7
 msgid "the module or the path of the module"
-msgstr ""
+msgstr "モジュールまたは、モジュールのパス(path)"
 
 #: of scrapy.settings.BaseSettings.setmodule:10
 #: scrapy.settings.BaseSettings.update:17
 msgid ""
 "the priority of the settings. Should be a key of "
 ":attr:`~scrapy.settings.SETTINGS_PRIORITIES` or an integer"
-msgstr ""
+msgstr "設定の優先順位。 :attr:`~scrapy.settings.SETTINGS_PRIORITIES` のキーまたは整数でなければなりません"
 
 #: of scrapy.settings.BaseSettings.update:1
 msgid "Store key/value pairs with a given priority."
-msgstr ""
+msgstr "与えられた優先度で キー/値 のペアを保存します。"
 
 #: of scrapy.settings.BaseSettings.update:3
 msgid ""
 "This is a helper function that calls "
 ":meth:`~scrapy.settings.BaseSettings.set` for every item of ``values`` "
 "with the provided ``priority``."
-msgstr ""
+msgstr "これは、提供された ``priority`` を持つ ``values`` のすべての項目に対して :meth:`~scrapy.settings.BaseSettings.set` を呼び出すヘルパー関数です。"
 
 #: of scrapy.settings.BaseSettings.update:7
 msgid ""
@@ -621,21 +621,21 @@ msgid ""
 "will be used and the ``priority`` parameter ignored. This allows "
 "inserting/updating settings with different priorities with a single "
 "command."
-msgstr ""
+msgstr "``values`` が文字列の場合、JSONエンコードされていると見なされ、最初に ``json.loads()`` でパースされ辞書になります。 :class:`~scrapy.settings.BaseSettings`インスタンスの場合、キーごとの優先度が使用され、 ``priority`` パラメーターは無視されます。 これにより、単一のコマンドで異なる優先度の設定を挿入/更新できます。"
 
 #: of scrapy.settings.BaseSettings.update:14
 msgid "the settings names and values"
-msgstr ""
+msgstr "設定名と値"
 
 #: ../../topics/api.rst:157
 msgid "SpiderLoader API"
-msgstr ""
+msgstr "SpiderLoader API"
 
 #: ../../topics/api.rst:164
 msgid ""
 "This class is in charge of retrieving and handling the spider classes "
 "defined across the project."
-msgstr ""
+msgstr "このクラスは、プロジェクト全体で定義されたスパイダー・クラスの取得と処理を担当します。"
 
 #: ../../topics/api.rst:167
 msgid ""
@@ -643,7 +643,7 @@ msgid ""
 ":setting:`SPIDER_LOADER_CLASS` project setting. They must fully implement"
 " the :class:`scrapy.interfaces.ISpiderLoader` interface to guarantee an "
 "errorless execution."
-msgstr ""
+msgstr ":setting:`SPIDER_LOADER_CLASS` プロジェクト設定でパスを指定することにより、カスタム・スパイダー・ローダーを使用できます。エラーのない実行を保証するには、 :class:`scrapy.interfaces.ISpiderLoader` インターフェースを完全に実装する必要があります。"
 
 #: ../../topics/api.rst:174
 msgid ""
@@ -651,99 +651,99 @@ msgid ""
 "It's called with the current project settings, and it loads the spiders "
 "found recursively in the modules of the :setting:`SPIDER_MODULES` "
 "setting."
-msgstr ""
+msgstr "このクラスメソッドは、クラスのインスタンスを作成するためにScrapyによって使用されます。現在のプロジェクト設定で呼び出され、 :setting:`SPIDER_MODULES` 設定のモジュールで見つかったスパイダーを再帰的にロードします。"
 
 #: ../../topics/api.rst:179
 msgid "project settings"
-msgstr ""
+msgstr "プロジェクト設定"
 
 #: ../../topics/api.rst:184
 msgid ""
 "Get the Spider class with the given name. It'll look into the previously "
 "loaded spiders for a spider class with name ``spider_name`` and will "
 "raise a KeyError if not found."
-msgstr ""
+msgstr "指定された名前のSpiderクラスを取得します。 ``spider_name`` という名前のスパイダークラスの、以前にロードされたスパイダーを調べ、見つからない場合はKeyErrorを発生させます。"
 
 #: ../../topics/api.rst:188
 msgid "spider class name"
-msgstr ""
+msgstr "スパイダー・クラス名"
 
 #: ../../topics/api.rst:193
 msgid "Get the names of the available spiders in the project."
-msgstr ""
+msgstr "プロジェクトで利用可能なスパイダーの名前を取得します。"
 
 #: ../../topics/api.rst:197
 msgid ""
 "List the spiders' names that can handle the given request. Will try to "
 "match the request's url against the domains of the spiders."
-msgstr ""
+msgstr "指定されたリクエストを処理できるスパイダーの名前をリストします。リクエストのURLをスパイダーのドメインと照合しようとします。"
 
 #: ../../topics/api.rst:200
 msgid "queried request"
-msgstr ""
+msgstr "クエリされたリクエスト"
 
 #: ../../topics/api.rst:206
 msgid "Signals API"
-msgstr ""
+msgstr "シグナルAPI"
 
 #: of scrapy.signalmanager.SignalManager.connect:1
 msgid "Connect a receiver function to a signal."
-msgstr ""
+msgstr "レシーバー関数をシグナルに接続します。"
 
 #: of scrapy.signalmanager.SignalManager.connect:3
 msgid ""
 "The signal can be any object, although Scrapy comes with some predefined "
 "signals that are documented in the :ref:`topics-signals` section."
-msgstr ""
+msgstr "Scrapyには、 :ref:`topics-signals` 節に記載されている定義済みの信号がいくつか付属していますが、信号は任意のオブジェクトにすることができます。"
 
 #: of scrapy.signalmanager.SignalManager.connect:7
 msgid "the function to be connected"
-msgstr ""
+msgstr "接続される関数"
 
 #: of scrapy.signalmanager.SignalManager.connect:10
 msgid "the signal to connect to"
-msgstr ""
+msgstr "接続するシグナル"
 
 #: of scrapy.signalmanager.SignalManager.disconnect:1
 msgid ""
 "Disconnect a receiver function from a signal. This has the opposite "
 "effect of the :meth:`connect` method, and the arguments are the same."
-msgstr ""
+msgstr "レシーバー関数をシグナルから切断します。これは :meth:`connect` メソッドの逆の効果があり、引数は同じです。"
 
 #: of scrapy.signalmanager.SignalManager.disconnect_all:1
 msgid "Disconnect all receivers from the given signal."
-msgstr ""
+msgstr "指定のシグナルからレシーバーを切断(disconnect)します。"
 
 #: of scrapy.signalmanager.SignalManager.disconnect_all:3
 msgid "the signal to disconnect from"
-msgstr ""
+msgstr "切断対象のシグナル"
 
 #: of scrapy.signalmanager.SignalManager.send_catch_log:1
 msgid "Send a signal, catch exceptions and log them."
-msgstr ""
+msgstr "シグナルを送信し、例外をキャッチしてログに記録します。"
 
 #: of scrapy.signalmanager.SignalManager.send_catch_log:3
 #: scrapy.signalmanager.SignalManager.send_catch_log_deferred:7
 msgid ""
 "The keyword arguments are passed to the signal handlers (connected "
 "through the :meth:`connect` method)."
-msgstr ""
+msgstr "キーワード引数はシグナル・ハンドラーに渡されます( :meth:`connect` メソッドで接続されます)。"
 
 #: of scrapy.signalmanager.SignalManager.send_catch_log_deferred:1
 msgid ""
 "Like :meth:`send_catch_log` but supports returning `deferreds`_ from "
 "signal handlers."
-msgstr ""
+msgstr ":meth:`send_catch_log` に似ていますが、シグナル・ハンドラーから `deferreds`_ を返すことをサポートしています。"
 
 #: of scrapy.signalmanager.SignalManager.send_catch_log_deferred:4
 msgid ""
 "Returns a Deferred that gets fired once all signal handlers deferreds "
 "were fired. Send a signal, catch exceptions and log them."
-msgstr ""
+msgstr "すべてのシグナル・ハンドラの遅延オブジェクトが起動されると起動される遅延オブジェクトを返します。シグナルを送信し、例外をキャッチしてログに記録します。"
 
 #: ../../topics/api.rst:216
 msgid "Stats Collector API"
-msgstr ""
+msgstr "統計収集器API"
 
 #: ../../topics/api.rst:218
 msgid ""
@@ -752,61 +752,61 @@ msgid ""
 "Collector API defined by the "
 ":class:`~scrapy.statscollectors.StatsCollector` class (which they all "
 "inherit from)."
-msgstr ""
+msgstr ":mod:`scrapy.statscollectors` モジュールの下にいくつかの統計収集器があり、それらはすべて :class:`~scrapy.statscollectors.StatsCollector` クラス(すべての継承元)で定義された統計収集器APIを実装します。"
 
 #: ../../topics/api.rst:230
 msgid "Return the value for the given stats key or default if it doesn't exist."
-msgstr ""
+msgstr "指定された統計キーの値を返します。値が存在しない場合はデフォルトを返します。"
 
 #: ../../topics/api.rst:234
 msgid "Get all stats from the currently running spider as a dict."
-msgstr ""
+msgstr "現在実行中のスパイダーからすべての統計を辞書として取得します。"
 
 #: ../../topics/api.rst:238
 msgid "Set the given value for the given stats key."
-msgstr ""
+msgstr "与えられた統計キーに指定の値を設定します。"
 
 #: ../../topics/api.rst:242
 msgid "Override the current stats with the dict passed in ``stats`` argument."
-msgstr ""
+msgstr "``stats`` 引数で渡された辞書で現在の統計を上書きします。"
 
 #: ../../topics/api.rst:246
 msgid ""
 "Increment the value of the given stats key, by the given count, assuming "
 "the start value given (when it's not set)."
-msgstr ""
+msgstr "(設定されていない場合は開始値を想定して、)指定された統計キーの値を指定されたカウントでインクリメントします。"
 
 #: ../../topics/api.rst:251
 msgid ""
 "Set the given value for the given key only if current value for the same "
 "key is lower than value. If there is no current value for the given key, "
 "the value is always set."
-msgstr ""
+msgstr "同じキーの現在の値がvalueより小さい場合にのみ、指定されたキーに指定された値を設定します。指定されたキーに現在の値がない場合、値は常に設定されます。"
 
 #: ../../topics/api.rst:257
 msgid ""
 "Set the given value for the given key only if current value for the same "
 "key is greater than value. If there is no current value for the given "
 "key, the value is always set."
-msgstr ""
+msgstr "同じキーの現在の値がvalueより大きい場合にのみ、指定されたキーに指定された値を設定します。指定されたキーに現在の値がない場合、値は常に設定されます。"
 
 #: ../../topics/api.rst:263
 msgid "Clear all stats."
-msgstr ""
+msgstr "全ての統計をクリアする"
 
 #: ../../topics/api.rst:265
 msgid ""
 "The following methods are not part of the stats collection api but "
 "instead used when implementing custom stats collectors:"
-msgstr ""
+msgstr "次のメソッドは、統計収集APIの一部ではありませんが、代わりにカスタム統計収集器を実装するときに使用されます:"
 
 #: ../../topics/api.rst:270
 msgid "Open the given spider for stats collection."
-msgstr ""
+msgstr "統計収集のために、指定されたスパイダーを開きます。"
 
 #: ../../topics/api.rst:274
 msgid ""
 "Close the given spider. After this is called, no more specific stats can "
 "be accessed or collected."
-msgstr ""
+msgstr "指定されたスパイダーを閉じます。これが呼び出された後、これ以上特定の統計にアクセスしたり収集したりすることはできません。"
 
