@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-05 11:03+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,29 +19,29 @@ msgstr ""
 
 #: ../../topics/extensions.rst:5
 msgid "Extensions"
-msgstr ""
+msgstr "拡張機能"
 
 #: ../../topics/extensions.rst:7
 msgid ""
 "The extensions framework provides a mechanism for inserting your own "
 "custom functionality into Scrapy."
-msgstr ""
+msgstr "拡張フレームワークは、独自のカスタム機能をScrapyに挿入するメカニズムを提供します。"
 
 #: ../../topics/extensions.rst:10
 msgid ""
 "Extensions are just regular classes that are instantiated at Scrapy "
 "startup, when extensions are initialized."
-msgstr ""
+msgstr "拡張機能は、拡張機能が初期化されるときに、Scrapyの起動時にインスタンス化される単なる通常のクラスです。"
 
 #: ../../topics/extensions.rst:14
 msgid "Extension settings"
-msgstr ""
+msgstr "拡張機能の設定"
 
 #: ../../topics/extensions.rst:16
 msgid ""
 "Extensions use the :ref:`Scrapy settings <topics-settings>` to manage "
 "their settings, just like any other Scrapy code."
-msgstr ""
+msgstr "拡張機能は :ref:`Scrapy設定<topics-settings>` を使用して、他のScrapyコードと同様に設定を管理します。"
 
 #: ../../topics/extensions.rst:19
 msgid ""
@@ -50,11 +50,11 @@ msgid ""
 "example, a hypothetic extension to handle `Google Sitemaps`_ would use "
 "settings like ``GOOGLESITEMAP_ENABLED``, ``GOOGLESITEMAP_DEPTH``, and so "
 "on."
-msgstr ""
+msgstr "既存の(および将来の)拡張機能との衝突を避けるために、拡張機能が独自の名前を設定の前に付けるのが慣例です。たとえば、 `Google Sitemaps`_ を処理する仮想拡張機能では、 ``GOOGLESITEMAP_ENABLED`` や ``GOOGLESITEMAP_DEPTH`` などの設定を使用します。"
 
 #: ../../topics/extensions.rst:27
 msgid "Loading & activating extensions"
-msgstr ""
+msgstr "拡張機能の読み込みとアクティブ化"
 
 #: ../../topics/extensions.rst:29
 msgid ""
@@ -62,7 +62,7 @@ msgid ""
 "instance of the extension class. Therefore, all the extension "
 "initialization code must be performed in the class constructor "
 "(``__init__`` method)."
-msgstr ""
+msgstr "拡張機能は、拡張機能クラスの単一インスタンスをインスタンス化することにより、起動時にロードおよびアクティブ化されます。したがって、すべての拡張機能初期化コードはクラス・コンストラクター( ``__init__`` メソッド)で実行する必要があります。"
 
 #: ../../topics/extensions.rst:33
 msgid ""
@@ -70,7 +70,7 @@ msgid ""
 "setting in your Scrapy settings. In :setting:`EXTENSIONS`, each extension"
 " is represented by a string: the full Python path to the extension's "
 "class name. For example::"
-msgstr ""
+msgstr "拡張機能を使用可能にするには、Scrapy設定の :setting:`EXTENSIONS` 設定に追加します。 :setting:`EXTENSIONS` では、各拡張機能は文字列(拡張機能のクラス名への完全なPythonパス)で表されます。例えば以下のようにします::"
 
 #: ../../topics/extensions.rst:43
 msgid ""
@@ -80,7 +80,7 @@ msgid ""
 "is merged with the :setting:`EXTENSIONS_BASE` setting defined in Scrapy "
 "(and not meant to be overridden) and then sorted by order to get the "
 "final sorted list of enabled extensions."
-msgstr ""
+msgstr "ご覧のとおり、 :setting:`EXTENSIONS` 設定はキーが拡張パスであり、その値が拡張機能 **読み込み** 順序値を定義する辞書です。 :setting:`EXTENSIONS` 設定は、Scrapyで定義された :setting:`EXTENSIONS_BASE` 設定とマージされ(但し、オーバーライドされることはありません)、有効な拡張機能の最終ソート・リストを取得するために順序値でソートされます。"
 
 #: ../../topics/extensions.rst:50
 msgid ""
@@ -89,11 +89,11 @@ msgid ""
 "setting defines all extensions with the same order (``0``). However, this"
 " feature can be exploited if you need to add an extension which depends "
 "on other extensions already loaded."
-msgstr ""
+msgstr "通常、拡張機能は相互に依存しないため、ほとんどの場合、読み込み順序は無関係です。 これが :setting:`EXTENSIONS_BASE` 設定がすべての拡張機能を同じ順序値( ``0`` )で定義する理由です。ただし、すでに読み込まれているされている他の拡張機能に依存する拡張機能を追加する必要がある場合、この機能を利用できます。"
 
 #: ../../topics/extensions.rst:57
 msgid "Available, enabled and disabled extensions"
-msgstr ""
+msgstr "利用可能な、デフォルトで有効およびデフォルトで無効な拡張機能"
 
 #: ../../topics/extensions.rst:59
 msgid ""
@@ -101,22 +101,22 @@ msgid ""
 " on a particular setting. For example, the HTTP Cache extension is "
 "available by default but disabled unless the :setting:`HTTPCACHE_ENABLED`"
 " setting is set."
-msgstr ""
+msgstr "利用可能なすべての拡張機能が有効になるわけではありません。それらのいくつかは通常、特定の設定に依存しています。たとえば、HTTPキャッシュ拡張機能はデフォルトで使用可能ですが、 :setting:`HTTPCACHE_ENABLED` 設定が設定されていない限り無効になっています。"
 
 #: ../../topics/extensions.rst:64
 msgid "Disabling an extension"
-msgstr ""
+msgstr "拡張機能を無効にする"
 
 #: ../../topics/extensions.rst:66
 msgid ""
 "In order to disable an extension that comes enabled by default (ie. those"
 " included in the :setting:`EXTENSIONS_BASE` setting) you must set its "
 "order to ``None``. For example::"
-msgstr ""
+msgstr "デフォルトで有効になっている拡張機能(つまり、 :setting:`EXTENSIONS_BASE` 設定に含まれている拡張機能)を無効にするには、その順序値を ``None`` に設定する必要があります。 例えば以下のようにします::"
 
 #: ../../topics/extensions.rst:75
 msgid "Writing your own extension"
-msgstr ""
+msgstr "あなた自身の拡張機能を書く"
 
 #: ../../topics/extensions.rst:77
 msgid ""
@@ -125,118 +125,119 @@ msgid ""
 "``from_crawler`` class method which receives a ``Crawler`` instance. "
 "Through the Crawler object you can access settings, signals, stats, and "
 "also control the crawling behaviour."
-msgstr ""
+msgstr "各拡張機能はPythonクラスです。 Scrapy拡張機能の主なエントリ・ポイント(これにはミドルウェアとパイプラインも含まれます)は、 ``Crawler`` インスタンスを受け取る ``from_crawler`` クラスメソッドです。Crawlerオブジェクトを使用して、設定、信号、統計にアクセスしたり、クロール動作を制御したりできます。"
 
+# ??
 #: ../../topics/extensions.rst:82
 msgid ""
 "Typically, extensions connect to :ref:`signals <topics-signals>` and "
 "perform tasks triggered by them."
-msgstr ""
+msgstr "通常、拡張機能は :ref:`シグナル<topics-signals>` に接続し、それらによってトリガーされるタスクを実行します。"
 
 #: ../../topics/extensions.rst:85
 msgid ""
 "Finally, if the ``from_crawler`` method raises the "
 ":exc:`~scrapy.exceptions.NotConfigured` exception, the extension will be "
 "disabled. Otherwise, the extension will be enabled."
-msgstr ""
+msgstr "最後に、 ``from_crawler`` メソッドが :exc:`~scrapy.exceptions.NotConfigured` 例外を発生させた場合、拡張機能は無効になります。 それ以外の場合、拡張機能は有効になります。"
 
 #: ../../topics/extensions.rst:90
 msgid "Sample extension"
-msgstr ""
+msgstr "拡張機能例"
 
 #: ../../topics/extensions.rst:92
 msgid ""
 "Here we will implement a simple extension to illustrate the concepts "
 "described in the previous section. This extension will log a message "
 "every time:"
-msgstr ""
+msgstr "ここでは、前のセクションで説明した概念を説明するために、簡単な拡張機能を実装します。この拡張機能は毎回メッセージを記録します:"
 
 #: ../../topics/extensions.rst:95
 msgid "a spider is opened"
-msgstr ""
+msgstr "スパイダーがオープンされます"
 
 #: ../../topics/extensions.rst:96
 msgid "a spider is closed"
-msgstr ""
+msgstr "スパイダーがクローズされます"
 
 #: ../../topics/extensions.rst:97
 msgid "a specific number of items are scraped"
-msgstr ""
+msgstr "指定の数のアイテムがスクレイプされます"
 
 #: ../../topics/extensions.rst:99
 msgid ""
 "The extension will be enabled through the ``MYEXT_ENABLED`` setting and "
 "the number of items will be specified through the ``MYEXT_ITEMCOUNT`` "
 "setting."
-msgstr ""
+msgstr "拡張機能は ``MYEXT_ENABLED`` 設定で有効になり、アイテムの数は ``MYEXT_ITEMCOUNT`` 設定で指定されます。"
 
 #: ../../topics/extensions.rst:102
 msgid "Here is the code of such extension::"
-msgstr ""
+msgstr "そのような拡張機能のコードは次のとおりです::"
 
 #: ../../topics/extensions.rst:152
 msgid "Built-in extensions reference"
-msgstr ""
+msgstr "組み込み拡張機能リファレンス"
 
 #: ../../topics/extensions.rst:155
 msgid "General purpose extensions"
-msgstr ""
+msgstr "汎用拡張機能"
 
 #: ../../topics/extensions.rst:158
 msgid "Log Stats extension"
-msgstr ""
+msgstr "ログ統計拡張機能"
 
 #: ../../topics/extensions.rst:165
 msgid "Log basic stats like crawled pages and scraped items."
-msgstr ""
+msgstr "クロールされたページやスクレイプされたアイテムなどの基本的な統計情報を記録します。"
 
 #: ../../topics/extensions.rst:168
 msgid "Core Stats extension"
-msgstr ""
+msgstr "コア統計拡張機能"
 
 #: ../../topics/extensions.rst:175
 msgid ""
 "Enable the collection of core statistics, provided the stats collection "
 "is enabled (see :ref:`topics-stats`)."
-msgstr ""
+msgstr "統計コレクションが有効になっている場合、コア統計のコレクションを有効にします( :ref:`topics-stats` 参照)。"
 
 #: ../../topics/extensions.rst:181
 msgid "Telnet console extension"
-msgstr ""
+msgstr "Telnetコンソール拡張機能"
 
 #: ../../topics/extensions.rst:188
 msgid ""
 "Provides a telnet console for getting into a Python interpreter inside "
 "the currently running Scrapy process, which can be very useful for "
 "debugging."
-msgstr ""
+msgstr "現在実行中のScrapyプロセス内のPythonインタープリターに入るためのTelnetコンソールを提供します。これはデバッグに非常に役立ちます。"
 
 #: ../../topics/extensions.rst:191
 msgid ""
 "The telnet console must be enabled by the "
 ":setting:`TELNETCONSOLE_ENABLED` setting, and the server will listen in "
 "the port specified in :setting:`TELNETCONSOLE_PORT`."
-msgstr ""
+msgstr "telnetコンソールは :setting:`TELNETCONSOLE_ENABLED` 設定を有効にする必要があり、サーバーは :setting:`TELNETCONSOLE_PORT` で指定されたポートでリッスンします。"
 
 #: ../../topics/extensions.rst:198
 msgid "Memory usage extension"
-msgstr ""
+msgstr "メモリ使用量の拡張機能"
 
 #: ../../topics/extensions.rst:205
 msgid "This extension does not work in Windows."
-msgstr ""
+msgstr "この拡張機能はWindowsでは機能しません。"
 
 #: ../../topics/extensions.rst:207
 msgid "Monitors the memory used by the Scrapy process that runs the spider and:"
-msgstr ""
+msgstr "スパイダーを実行するScrapyプロセスが使用するメモリを監視し、そして:"
 
 #: ../../topics/extensions.rst:209
 msgid "sends a notification e-mail when it exceeds a certain value"
-msgstr ""
+msgstr "特定の値を超えたときに通知メールを送信します"
 
 #: ../../topics/extensions.rst:210
 msgid "closes the spider when it exceeds a certain value"
-msgstr ""
+msgstr "特定の値を超えたときにスパイダーを閉じます"
 
 #: ../../topics/extensions.rst:212
 msgid ""
@@ -244,94 +245,94 @@ msgid ""
 " reached (:setting:`MEMUSAGE_WARNING_MB`) and when the maximum value is "
 "reached (:setting:`MEMUSAGE_LIMIT_MB`) which will also cause the spider "
 "to be closed and the Scrapy process to be terminated."
-msgstr ""
+msgstr ":setting:`MEMUSAGE_WARNING_MB` が特定の警告値に達し、かつ、 :setting:`MEMUSAGE_LIMIT_MB` が最大値に達すると通知メールがトリガーされ、スパイダーが閉じられてScrapyプロセスが終了(terminate)します。"
 
 #: ../../topics/extensions.rst:217
 msgid ""
 "This extension is enabled by the :setting:`MEMUSAGE_ENABLED` setting and "
 "can be configured with the following settings:"
-msgstr ""
+msgstr "この拡張機能は :setting:`MEMUSAGE_ENABLED` 設定によって有効になり、以下設定で構成(configure)できます:"
 
 #: ../../topics/extensions.rst:220
 msgid ":setting:`MEMUSAGE_LIMIT_MB`"
-msgstr ""
+msgstr ":setting:`MEMUSAGE_LIMIT_MB`"
 
 #: ../../topics/extensions.rst:221
 msgid ":setting:`MEMUSAGE_WARNING_MB`"
-msgstr ""
+msgstr ":setting:`MEMUSAGE_WARNING_MB`"
 
 #: ../../topics/extensions.rst:222
 msgid ":setting:`MEMUSAGE_NOTIFY_MAIL`"
-msgstr ""
+msgstr ":setting:`MEMUSAGE_NOTIFY_MAIL`"
 
 #: ../../topics/extensions.rst:223
 msgid ":setting:`MEMUSAGE_CHECK_INTERVAL_SECONDS`"
-msgstr ""
+msgstr ":setting:`MEMUSAGE_CHECK_INTERVAL_SECONDS`"
 
 #: ../../topics/extensions.rst:226
 msgid "Memory debugger extension"
-msgstr ""
+msgstr "メモリ・デバッガー拡張機能"
 
 #: ../../topics/extensions.rst:233
 msgid "An extension for debugging memory usage. It collects information about:"
-msgstr ""
+msgstr "メモリ使用量をデバッグするための拡張機能。 以下に関する情報を収集します:"
 
 #: ../../topics/extensions.rst:235
 msgid "objects uncollected by the Python garbage collector"
-msgstr ""
+msgstr "Pythonガベージコレクターによって収集されないオブジェクト"
 
 #: ../../topics/extensions.rst:236
 msgid ""
 "objects left alive that shouldn't. For more info, see :ref:`topics-leaks-"
 "trackrefs`"
-msgstr ""
+msgstr "生存しているべきではないオブジェクト。詳細は :ref:`topics-leaks-trackrefs` 参照。"
 
 #: ../../topics/extensions.rst:238
 msgid ""
 "To enable this extension, turn on the :setting:`MEMDEBUG_ENABLED` "
 "setting. The info will be stored in the stats."
-msgstr ""
+msgstr "この拡張機能を有効にするには、 :setting:`MEMDEBUG_ENABLED` 設定をオンにします。情報は統計に保存されます。"
 
 #: ../../topics/extensions.rst:242
 msgid "Close spider extension"
-msgstr ""
+msgstr "スパイダー拡張機能を閉じる"
 
 #: ../../topics/extensions.rst:249
 msgid ""
 "Closes a spider automatically when some conditions are met, using a "
 "specific closing reason for each condition."
-msgstr ""
+msgstr "各条件に特定の終了理由を使用して、いくつかの条件が満たされたときにスパイダーを自動的に閉じます。"
 
 #: ../../topics/extensions.rst:252
 msgid ""
 "The conditions for closing a spider can be configured through the "
 "following settings:"
-msgstr ""
+msgstr "スパイダーを閉じるための条件は、以下の設定で構成(configure)できます:"
 
 #: ../../topics/extensions.rst:255
 msgid ":setting:`CLOSESPIDER_TIMEOUT`"
-msgstr ""
+msgstr ":setting:`CLOSESPIDER_TIMEOUT`"
 
 #: ../../topics/extensions.rst:256
 msgid ":setting:`CLOSESPIDER_ITEMCOUNT`"
-msgstr ""
+msgstr ":setting:`CLOSESPIDER_ITEMCOUNT`"
 
 #: ../../topics/extensions.rst:257
 msgid ":setting:`CLOSESPIDER_PAGECOUNT`"
-msgstr ""
+msgstr ":setting:`CLOSESPIDER_PAGECOUNT`"
 
 #: ../../topics/extensions.rst:258
 msgid ":setting:`CLOSESPIDER_ERRORCOUNT`"
-msgstr ""
+msgstr ":setting:`CLOSESPIDER_ERRORCOUNT`"
 
 #: ../../topics/extensions.rst:263
 msgid "CLOSESPIDER_TIMEOUT"
-msgstr ""
+msgstr "CLOSESPIDER_TIMEOUT"
 
 #: ../../topics/extensions.rst:265 ../../topics/extensions.rst:277
 #: ../../topics/extensions.rst:293 ../../topics/extensions.rst:307
 msgid "Default: ``0``"
-msgstr ""
+msgstr "デフォルト: ``0``"
 
 #: ../../topics/extensions.rst:267
 msgid ""
@@ -339,11 +340,11 @@ msgid ""
 "open for more than that number of second, it will be automatically closed"
 " with the reason ``closespider_timeout``. If zero (or non set), spiders "
 "won't be closed by timeout."
-msgstr ""
+msgstr "秒数を指定する整数。 スパイダーがその秒数を超えて開いたままの場合、理由を ``closespider_timeout`` として自動的に閉じられます。ゼロ(または設定されていない)の場合、スパイダーはタイムアウトによって閉じられません。"
 
 #: ../../topics/extensions.rst:275
 msgid "CLOSESPIDER_ITEMCOUNT"
-msgstr ""
+msgstr "CLOSESPIDER_ITEMCOUNT"
 
 #: ../../topics/extensions.rst:279
 msgid ""
@@ -353,11 +354,11 @@ msgid ""
 " which  are currently in the downloader queue (up to "
 ":setting:`CONCURRENT_REQUESTS` requests) are still processed. If zero (or"
 " non set), spiders won't be closed by number of passed items."
-msgstr ""
+msgstr "アイテムの数を指定する整数。 スパイダーがその量より多くスクレイピングし、それらのアイテムがアイテム・パイプラインによって渡される場合、スパイダーは理由 ``closespider_itemcount`` によって閉じられます。現在ダウンローダー・キューにあるリクエスト( :setting:`CONCURRENT_REQUESTS` リクエストまで )は引き続き処理されます。ゼロ(または未設定)の場合、スパイダーは渡されたアイテムの数によって制限され超えた分をクローズさせられる事はありません。"
 
 #: ../../topics/extensions.rst:289
 msgid "CLOSESPIDER_PAGECOUNT"
-msgstr ""
+msgstr "CLOSESPIDER_PAGECOUNT"
 
 #: ../../topics/extensions.rst:295
 msgid ""
@@ -365,11 +366,11 @@ msgid ""
 "the spider crawls more than that, the spider will be closed with the "
 "reason ``closespider_pagecount``. If zero (or non set), spiders won't be "
 "closed by number of crawled responses."
-msgstr ""
+msgstr "クロールするレスポンスの最大数を指定する整数。 スパイダーがそれ以上クロールした場合、スパイダーは理由 `` closespider_pagecount`` によって閉じられます。ゼロ(または未設定)の場合、クロールされたレスポンスの数に応じてスパイダーが閉じられることはありません。"
 
 #: ../../topics/extensions.rst:303
 msgid "CLOSESPIDER_ERRORCOUNT"
-msgstr ""
+msgstr "CLOSESPIDER_ERRORCOUNT"
 
 #: ../../topics/extensions.rst:309
 msgid ""
@@ -377,11 +378,11 @@ msgid ""
 " closing the spider. If the spider generates more than that number of "
 "errors, it will be closed with the reason ``closespider_errorcount``. If "
 "zero (or non set), spiders won't be closed by number of errors."
-msgstr ""
+msgstr "スパイダーを閉じる前に受け取るエラーの最大数を指定する整数。 スパイダーがその数を超えるエラーを生成した場合、 ``closespider_errorcount``  の理由で閉じられます。ゼロ(または設定されていない)の場合、スパイダーはエラーの数に応じて閉じられることはありせん。"
 
 #: ../../topics/extensions.rst:315
 msgid "StatsMailer extension"
-msgstr ""
+msgstr "StatsMailer拡張機能"
 
 #: ../../topics/extensions.rst:322
 msgid ""
@@ -389,77 +390,77 @@ msgid ""
 "time a domain has finished scraping, including the Scrapy stats "
 "collected. The email will be sent to all recipients specified in the "
 ":setting:`STATSMAILER_RCPTS` setting."
-msgstr ""
+msgstr "この単純な拡張機能を使用して、収集されたScrapy統計など、ドメインがスクレイピングを完了するたびに通知メールを送信できます。 メールは、 :setting:`STATSMAILER_RCPTS` 設定で指定されたすべての受信者に送信されます。"
 
 #: ../../topics/extensions.rst:331
 msgid "Debugging extensions"
-msgstr ""
+msgstr "拡張機能のデバッグ"
 
 #: ../../topics/extensions.rst:334
 msgid "Stack trace dump extension"
-msgstr ""
+msgstr "拡張機能のスタックトレースをダンプする"
 
 #: ../../topics/extensions.rst:338
 msgid ""
 "Dumps information about the running process when a `SIGQUIT`_ or "
 "`SIGUSR2`_ signal is received. The information dumped is the following:"
-msgstr ""
+msgstr "`SIGQUIT`_ または `SIGUSR2`_ シグナルを受信したときに、実行中のプロセスに関する情報をダンプします。ダンプされる情報は次のとおりです:"
 
 #: ../../topics/extensions.rst:341
 msgid "engine status (using ``scrapy.utils.engine.get_engine_status()``)"
-msgstr ""
+msgstr "エンジンの状態（ ``scrapy.utils.engine.get_engine_status()`` を使用)"
 
 #: ../../topics/extensions.rst:342
 msgid "live references (see :ref:`topics-leaks-trackrefs`)"
-msgstr ""
+msgstr "生存中の参照( :ref:`topics-leaks-trackrefs` を参照 )"
 
 #: ../../topics/extensions.rst:343
 msgid "stack trace of all threads"
-msgstr ""
+msgstr "全てのスレッドのスタックトレース"
 
 #: ../../topics/extensions.rst:345
 msgid ""
 "After the stack trace and engine status is dumped, the Scrapy process "
 "continues running normally."
-msgstr ""
+msgstr "スタック・トレースとエンジン・ステータスがダンプされた後、Scrapyプロセスは正常に実行を続けます。"
 
 #: ../../topics/extensions.rst:348
 msgid ""
 "This extension only works on POSIX-compliant platforms (ie. not Windows),"
 " because the `SIGQUIT`_ and `SIGUSR2`_ signals are not available on "
 "Windows."
-msgstr ""
+msgstr "`SIGQUIT`_ および `SIGUSR2`_ シグナルはWindowsでは利用できないため、この拡張機能はPOSIX準拠のプラットフォーム(つまり、Windowsではない)でのみ機能します。"
 
 #: ../../topics/extensions.rst:351
 msgid "There are at least two ways to send Scrapy the `SIGQUIT`_ signal:"
-msgstr ""
+msgstr "Scrapyに `SIGQUIT`_ シグナルを送信するには、少なくとも2つの方法があります:"
 
 #: ../../topics/extensions.rst:353
 msgid "By pressing Ctrl-\\ while a Scrapy process is running (Linux only?)"
-msgstr ""
+msgstr "Scrapyプロセスの実行中にCtrl-\\を押す(Linuxのみ?)"
 
 #: ../../topics/extensions.rst:354
 msgid ""
 "By running this command (assuming ``<pid>`` is the process id of the "
 "Scrapy process)::"
-msgstr ""
+msgstr "以下のコマンドを実行( ``<pid>`` がScrapyプロセスのプロセスIDであるとして)::"
 
 #: ../../topics/extensions.rst:363
 msgid "Debugger extension"
-msgstr ""
+msgstr "デバッガー拡張機能"
 
 #: ../../topics/extensions.rst:367
 msgid ""
 "Invokes a `Python debugger`_ inside a running Scrapy process when a "
 "`SIGUSR2`_ signal is received. After the debugger is exited, the Scrapy "
 "process continues running normally."
-msgstr ""
+msgstr "`SIGUSR2`_ シグナルを受信すると、実行中のScrapyプロセス内で `Python debugger`_ を呼び出します。 デバッガーが終了した後、Scrapyプロセスは正常に実行を続けます。"
 
 #: ../../topics/extensions.rst:371
 msgid "For more info see `Debugging in Python`_."
-msgstr ""
+msgstr "詳細は `Debugging in Python`_ 参照。"
 
 #: ../../topics/extensions.rst:373
 msgid "This extension only works on POSIX-compliant platforms (ie. not Windows)."
-msgstr ""
+msgstr "この拡張機能はPOSIX準拠のプラットフォームでのみ機能します(つまり、Windowsでは機能しません)。"
 
