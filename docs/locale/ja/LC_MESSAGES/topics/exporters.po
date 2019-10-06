@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 22:00+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-06 18:56+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,24 +19,24 @@ msgstr ""
 
 #: ../../topics/exporters.rst:5
 msgid "Item Exporters"
-msgstr ""
+msgstr "アイテム・エクスポーター"
 
 #: ../../topics/exporters.rst:10
 msgid ""
 "Once you have scraped your items, you often want to persist or export "
 "those items, to use the data in some other application. That is, after "
 "all, the whole purpose of the scraping process."
-msgstr ""
+msgstr "アイテムをスクレイピングしたら、他のアプリケーションでデータを使用するために、それらのアイテムを永続化またはエクスポートすることがよくあります。 つまり、結局のところ、それがスクレイピング・プロセス全体の目的です。"
 
 #: ../../topics/exporters.rst:14
 msgid ""
 "For this purpose Scrapy provides a collection of Item Exporters for "
 "different output formats, such as XML, CSV or JSON."
-msgstr ""
+msgstr "この目的のために、Scrapyは、XML、CSV、JSONなどのさまざまな出力形式のアイテム・エクスポーターのコレクションを提供します。"
 
 #: ../../topics/exporters.rst:18
 msgid "Using Item Exporters"
-msgstr ""
+msgstr "アイテム・エクスポーターの使用"
 
 #: ../../topics/exporters.rst:20
 msgid ""
@@ -44,7 +44,7 @@ msgid ""
 "scraped data see the :ref:`topics-feed-exports`. Otherwise, if you want "
 "to know how Item Exporters work or need more custom functionality (not "
 "covered by the default exports), continue reading below."
-msgstr ""
+msgstr "あなたが急いでいて、アイテム・エクスポータを使用してスクレイプ・データを出力するだけの場合は、 :ref:`topics-feed-exports` を参照してください。それ以外の場合または、アイテム・エクスポータがどのように機能するかを知りたい場合または、またはより多くのカスタム機能(デフォルトのエクスポートではカバーされてない機能)が必要な場合は、以下をお読みください。"
 
 #: ../../topics/exporters.rst:25
 msgid ""
@@ -52,101 +52,101 @@ msgid ""
 "required args. Each Item Exporter requires different arguments, so check "
 "each exporter documentation to be sure, in :ref:`topics-exporters-"
 "reference`. After you have instantiated your exporter, you have to:"
-msgstr ""
+msgstr "アイテム・エクスポーターを使用するには、必要な引数でインスタンス化する必要があります。 各アイテム・エクスポーターには異なる引数が必要なため、 :ref:`topics-exporters-reference` で各エクスポーターのドキュメントを確認してください。エクスポーターをインスタンス化した後、以下の作業が必要です:"
 
 #: ../../topics/exporters.rst:30
 msgid ""
 "1. call the method :meth:`~BaseItemExporter.start_exporting` in order to "
 "signal the beginning of the exporting process"
-msgstr ""
+msgstr "1.エクスポート・プロセスの開始を通知するために、メソッド :meth:`~BaseItem Exporter.start export` を呼び出します。"
 
 #: ../../topics/exporters.rst:33
 msgid ""
 "2. call the :meth:`~BaseItemExporter.export_item` method for each item "
 "you want to export"
-msgstr ""
+msgstr "2.エクスポートする各アイテムに対して :meth:`~BaseItemExporter.export_item` メソッドを呼び出します"
 
 #: ../../topics/exporters.rst:36
 msgid ""
 "3. and finally call the :meth:`~BaseItemExporter.finish_exporting` to "
 "signal the end of the exporting process"
-msgstr ""
+msgstr "3.最後に :meth:`~BaseItem Exporter.finish export` を呼び出して、エクスポート・プロセスの終了を通知します"
 
 #: ../../topics/exporters.rst:39
 msgid ""
 "Here you can see an :doc:`Item Pipeline <item-pipeline>` which uses "
 "multiple Item Exporters to group scraped items to different files "
 "according to the value of one of their fields::"
-msgstr ""
+msgstr "以下の :doc:`アイテム・パイプライン<item-pipeline>` をご覧ください。これは、複数のアイテム・エクスポーターを使用して、それらのフィールドの値に従って、スクレイプされたアイテムを異なるファイルにグループ化します::"
 
 #: ../../topics/exporters.rst:74
 msgid "Serialization of item fields"
-msgstr ""
+msgstr "アイテム・フィールドのシリアル化"
 
 #: ../../topics/exporters.rst:76
 msgid ""
 "By default, the field values are passed unmodified to the underlying "
 "serialization library, and the decision of how to serialize them is "
 "delegated to each particular serialization library."
-msgstr ""
+msgstr "デフォルトでは、フィールド値は変更されずに基礎となるシリアル化ライブラリに渡され、それらをシリアル化する方法の決定は特定の各シリアル化ライブラリに委任されます。"
 
 #: ../../topics/exporters.rst:80
 msgid ""
 "However, you can customize how each field value is serialized *before it "
 "is passed to the serialization library*."
-msgstr ""
+msgstr "ただし、あなたは、各フィールド値をシリアル化する方法を、 **シリアル化ライブラリに渡す前の段階で** カスタマイズできます。"
 
 #: ../../topics/exporters.rst:83
 msgid ""
 "There are two ways to customize how a field will be serialized, which are"
 " described next."
-msgstr ""
+msgstr "フィールドのシリアル化方法をカスタマイズするには、以下の2つの方法があります。"
 
 #: ../../topics/exporters.rst:89
 msgid "1. Declaring a serializer in the field"
-msgstr ""
+msgstr "1. フィールドでシリアライザーを宣言する"
 
 #: ../../topics/exporters.rst:91
 msgid ""
 "If you use :class:`~.Item` you can declare a serializer in the "
 ":ref:`field metadata <topics-items-fields>`. The serializer must be a "
 "callable which receives a value and returns its serialized form."
-msgstr ""
+msgstr "あなたが :class:`~.Item` を使用する場合、 :ref:`フィールド・メタ・データ<topics-items-fields>` でシリアライザーを宣言できます。シリアライザーは、値を受け取り、シリアル化された形式を返す、呼び出し可能オブジェクトでなければなりません。"
 
 #: ../../topics/exporters.rst:95 ../../topics/exporters.rst:116
 msgid "Example::"
-msgstr ""
+msgstr "例::"
 
 #: ../../topics/exporters.rst:108
 msgid "2. Overriding the serialize_field() method"
-msgstr ""
+msgstr "2. serialize_field() メソッドをオーバーライドする"
 
 #: ../../topics/exporters.rst:110
 msgid ""
 "You can also override the :meth:`~BaseItemExporter.serialize_field()` "
 "method to customize how your field value will be exported."
-msgstr ""
+msgstr "あなたは :meth:`~BaseItemExporter.serialize_field()` メソッドをオーバーライドして、フィールド値のエクスポート方法をカスタマイズすることもできます。"
 
 #: ../../topics/exporters.rst:113
 msgid ""
 "Make sure you call the base class "
 ":meth:`~BaseItemExporter.serialize_field()` method after your custom "
 "code."
-msgstr ""
+msgstr "カスタムコードの後に必ずベースクラス :meth:`~BaseItemExporter.serialize_field()` メソッドを呼び出してください。"
 
 #: ../../topics/exporters.rst:130
 msgid "Built-in Item Exporters reference"
-msgstr ""
+msgstr "組み込みアイテム・エクスポーター・リファレンス"
 
 #: ../../topics/exporters.rst:132
 msgid ""
 "Here is a list of the Item Exporters bundled with Scrapy. Some of them "
 "contain output examples, which assume you're exporting these two items::"
-msgstr ""
+msgstr "Scrapyにバンドルされているアイテム・エクスポーターのリストを次に示します。それらの一部には、以下の2つのアイテムをエクスポートすることを想定した出力例が含まれています::"
 
 #: ../../topics/exporters.rst:139
 msgid "BaseItemExporter"
-msgstr ""
+msgstr "BaseItemExporter"
 
 #: ../../topics/exporters.rst:143
 msgid ""
@@ -154,25 +154,25 @@ msgid ""
 "support for common features used by all (concrete) Item Exporters, such "
 "as defining what fields to export, whether to export empty fields, or "
 "which encoding to use."
-msgstr ""
+msgstr "これは、すべてのアイテム・エクスポーターの(抽象的な)基本クラスです。 エクスポートするフィールド、空のフィールドをエクスポートするか、使用するエンコードを定義するなど、すべての(具体的な)アイテム・エクスポーターで使用される共通機能のサポートを提供します。"
 
 #: ../../topics/exporters.rst:148
 msgid ""
 "These features can be configured through the constructor arguments which "
 "populate their respective instance attributes: :attr:`fields_to_export`, "
 ":attr:`export_empty_fields`, :attr:`encoding`, :attr:`indent`."
-msgstr ""
+msgstr "これらの機能は、それぞれのインスタンス属性を設定するコンストラクター引数で構成(configure)できます： :attr:`fields_to_export` 、 :attr:`export_empty_fields` 、 :attr:`encoding` 、 :attr:`indent`"
 
 #: ../../topics/exporters.rst:154
 msgid "Exports the given item. This method must be implemented in subclasses."
-msgstr ""
+msgstr "与えられたアイテムをエクスポートします。このメソッドはサブクラスで実装する必要があります。"
 
 #: ../../topics/exporters.rst:158
 msgid ""
 "Return the serialized value for the given field. You can override this "
 "method (in your custom Item Exporters) if you want to control how a "
 "particular field or value will be serialized/exported."
-msgstr ""
+msgstr "指定のフィールドのシリアル化された値を返します。特定のフィールドまたは値をシリアル化/エクスポートする方法を制御する場合は、カスタム・アイテム・エクスポーターでこのメソッドをオーバーライドできます。"
 
 #: ../../topics/exporters.rst:162
 msgid ""
@@ -181,25 +181,25 @@ msgid ""
 " that serializer to the value. If no serializer is found, it returns the "
 "value unchanged except for ``unicode`` values which are encoded to "
 "``str`` using the encoding declared in the :attr:`encoding` attribute."
-msgstr ""
+msgstr "デフォルトでは、このメソッドは :ref:`項目フィールドで宣言<topics-exporters-serializers>` されたシリアライザーを探し、そして、そのシリアライザーを値に適用した結果を返します。シリアライザーが見つからない場合、 :attr:`encoding` 属性で宣言されたエンコーディングを使用して ``str`` にエンコードされる ``unicode`` 値を除いて、値を変更せずに返します。"
 
 #: ../../topics/exporters.rst of scrapy.exporters.MarshalItemExporter
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../topics/exporters.rst:168
 msgid ""
 "the field being serialized. If a raw dict is being exported (not "
 ":class:`~.Item`) *field* value is an empty dict."
-msgstr ""
+msgstr "シリアル化されているフィールド。生の辞書がエクスポートされる場合( :class:`~.Item` ではなく ) **フィールド** 値は空の辞書です。"
 
 #: ../../topics/exporters.rst:172
 msgid "the name of the field being serialized"
-msgstr ""
+msgstr "シリアル化されるフィールドの名前"
 
 #: ../../topics/exporters.rst:175
 msgid "the value being serialized"
-msgstr ""
+msgstr "シリアル化される値"
 
 #: ../../topics/exporters.rst:179
 msgid ""
@@ -207,7 +207,7 @@ msgid ""
 "this to generate some required header (for example, the "
 ":class:`XmlItemExporter`). You must call this method before exporting any"
 " items."
-msgstr ""
+msgstr "エクスポート・プロセスの開始を通知します。一部のエクスポーターはこれを使用して、必要なヘッダー( :class:`XmlItemExporter` など)を生成します。アイテムをエクスポートする前に、このメソッドを呼び出す必要があります。"
 
 #: ../../topics/exporters.rst:186
 msgid ""
@@ -215,36 +215,36 @@ msgid ""
 "generate some required footer (for example, the "
 ":class:`XmlItemExporter`). You must always call this method after you "
 "have no more items to export."
-msgstr ""
+msgstr "エクスポート・プロセスの終了を通知します。一部のエクスポーターはこれを使用して、必要なフッター(たとえば、 :class:`XmlItemExporter` )を生成します。エクスポートするアイテムがなくなったら、常にこのメソッドを呼び出す必要があります。"
 
 #: ../../topics/exporters.rst:193
 msgid ""
 "A list with the name of the fields that will be exported, or None if you "
 "want to export all fields. Defaults to None."
-msgstr ""
+msgstr "エクスポートされるフィールドの名前のリスト、またはすべてのフィールドをエクスポートする場合はNone。デフォルトはNoneです。"
 
 #: ../../topics/exporters.rst:196
 msgid ""
 "Some exporters (like :class:`CsvItemExporter`) respect the order of the "
 "fields defined in this attribute."
-msgstr ""
+msgstr "一部のエクスポーター( :class:`CsvItemExporter` など)は、この属性で定義されたフィールドの順序を尊重します。"
 
 #: ../../topics/exporters.rst:199
 msgid ""
 "Some exporters may require fields_to_export list in order to export the "
 "data properly when spiders return dicts (not :class:`~Item` instances)."
-msgstr ""
+msgstr "一部のエクスポーターは、スパイダーが辞書を返すときにデータを適切にエクスポートするために、fields_to_exportリストを必要とする場合があります( :class:`~Item` インスタンスではありません)。"
 
 #: ../../topics/exporters.rst:204
 msgid ""
 "Whether to include empty/unpopulated item fields in the exported data. "
 "Defaults to ``False``. Some exporters (like :class:`CsvItemExporter`) "
 "ignore this attribute and always export all empty fields."
-msgstr ""
+msgstr "エクスポートされたデータに空/未入力の項目フィールドを含めるかどうか。デフォルトは ``False`` です。 一部のエクスポーター( :class:`CsvItemExporter` など)はこの属性を無視し、常にすべての空のフィールドをエクスポートします。"
 
 #: ../../topics/exporters.rst:208
 msgid "This option is ignored for dict items."
-msgstr ""
+msgstr "このオプションは、辞書アイテムでは無視されます。"
 
 #: ../../topics/exporters.rst:212
 msgid ""
@@ -252,53 +252,53 @@ msgid ""
 "affects unicode values (which are always serialized to str using this "
 "encoding). Other value types are passed unchanged to the specific "
 "serialization library."
-msgstr ""
+msgstr "ユニコード値をエンコードするために使用されるエンコード。これは、ユニコード値(このエンコードを使用して常にstrにシリアル化される)にのみ影響します。他の値の型は変更されずに特定のシリアル化ライブラリに渡されます。"
 
 #: ../../topics/exporters.rst:219
 msgid ""
 "Amount of spaces used to indent the output on each level. Defaults to "
 "``0``."
-msgstr ""
+msgstr "各レベルで出力をインデントするために使用されるスペースの量。デフォルトは ``0`` です。"
 
 #: ../../topics/exporters.rst:221
 msgid ""
 "``indent=None`` selects the most compact representation, all items in the"
 " same line with no indentation"
-msgstr ""
+msgstr "``indent=None`` は、全てのアイテムを同一行にインテント無しで出力する、最もコンパクトな表現を選択します"
 
 #: ../../topics/exporters.rst:223
 msgid "``indent<=0`` each item on its own line, no indentation"
-msgstr ""
+msgstr "``indent<=0`` はアイテム毎に行を分けますが、インデントはありません"
 
 #: ../../topics/exporters.rst:224
 msgid ""
 "``indent>0`` each item on its own line, indented with the provided "
 "numeric value"
-msgstr ""
+msgstr "``indent>0`` はアイテム毎に行を分け、指定した数値でインデントします"
 
 #: ../../topics/exporters.rst:227
 msgid "PythonItemExporter"
-msgstr ""
+msgstr "PythonItemExporter"
 
 #: of scrapy.exporters.PythonItemExporter:1
 msgid ""
 "This is a base class for item exporters that extends "
 ":class:`BaseItemExporter` with support for nested items."
-msgstr ""
+msgstr "これは、ネストされたアイテムをサポートする :class:`BaseItemExporter` を拡張するアイテム・エクスポーターの基本クラスです。"
 
 #: of scrapy.exporters.PythonItemExporter:4
 msgid ""
 "It serializes items to built-in Python types, so that any serialization "
 "library (e.g. :mod:`json` or msgpack_) can be used on top of it."
-msgstr ""
+msgstr "アイテムをPython組み込み型にシリアル化するため、シリアル化ライブラリ(例: :mod:`json` または msgpack_ )をその上で使用できます。"
 
 #: ../../topics/exporters.rst:235
 msgid "XmlItemExporter"
-msgstr ""
+msgstr "XmlItemExporter"
 
 #: ../../topics/exporters.rst:239
 msgid "Exports Items in XML format to the specified file object."
-msgstr ""
+msgstr "指定のファイルオブジェクトにアイテムをXML形式でエクスポートします。"
 
 #: ../../topics/exporters.rst:241 ../../topics/exporters.rst:298
 #: ../../topics/exporters.rst:330 ../../topics/exporters.rst:352
@@ -307,47 +307,47 @@ msgid ""
 "the file-like object to use for exporting the data. Its ``write`` method "
 "should accept ``bytes`` (a disk file opened in binary mode, a "
 "``io.BytesIO`` object, etc)"
-msgstr ""
+msgstr "データのエクスポートに使用するファイルのようなオブジェクト。 その ``write`` メソッドは ``bytes`` (バイナリ・モードで開かれたディスクファイルや、 ``io.BytesIO`` オブジェクトなど)を受け入れる必要があります"
 
 #: ../../topics/exporters.rst:244
 msgid "The name of root element in the exported XML."
-msgstr ""
+msgstr "エクスポートされたXMLのルート要素の名前。"
 
 #: ../../topics/exporters.rst:247
 msgid "The name of each item element in the exported XML."
-msgstr ""
+msgstr "エクスポートされたXMLの各アイテム要素の名前。"
 
 #: ../../topics/exporters.rst:250 ../../topics/exporters.rst:338
 #: ../../topics/exporters.rst:355
 msgid ""
 "The additional keyword arguments of this constructor are passed to the "
 ":class:`BaseItemExporter` constructor."
-msgstr ""
+msgstr "このコンストラクタの追加のキーワード引数は、 :class:`BaseItemExporter` コンストラクタに渡されます。"
 
 #: ../../topics/exporters.rst:253 ../../topics/exporters.rst:315
 #: ../../topics/exporters.rst:358 ../../topics/exporters.rst:379
 #: ../../topics/exporters.rst:410
 msgid "A typical output of this exporter would be::"
-msgstr ""
+msgstr "このエクスポーターの典型的な出力は次のようになります::"
 
 #: ../../topics/exporters.rst:267
 msgid ""
 "Unless overridden in the :meth:`serialize_field` method, multi-valued "
 "fields are exported by serializing each value inside a ``<value>`` "
 "element. This is for convenience, as multi-valued fields are very common."
-msgstr ""
+msgstr ":meth:`serialize_field` メソッドでオーバーライドされない限り、複数の値を持つフィールドは ``<value>`` 要素内の各値をシリアル化することでエクスポートされます。複数値フィールドは非常に一般的であるため、これは便宜上のものです。"
 
 #: ../../topics/exporters.rst:271
 msgid "For example, the item::"
-msgstr ""
+msgstr "例えば、以下のアイテム::"
 
 #: ../../topics/exporters.rst:275
 msgid "Would be serialized as::"
-msgstr ""
+msgstr "これがシリアル化されると以下のようになります::"
 
 #: ../../topics/exporters.rst:289
 msgid "CsvItemExporter"
-msgstr ""
+msgstr "CsvItemExporter"
 
 #: ../../topics/exporters.rst:293
 msgid ""
@@ -355,20 +355,20 @@ msgid ""
 ":attr:`fields_to_export` attribute is set, it will be used to define the "
 "CSV columns and their order. The :attr:`export_empty_fields` attribute "
 "has no effect on this exporter."
-msgstr ""
+msgstr "与えられたファイルのようなオブジェクトにCSV形式でアイテムをエクスポートします。 :attr:`fields_to_export` 属性が設定されている場合、CSV列とその順序を定義するために使用されます。 :attr:`export_empty_fields` 属性はこのエクスポーターには影響しません。"
 
 #: ../../topics/exporters.rst:301
 msgid ""
 "If enabled, makes the exporter output a header line with the field names "
 "taken from :attr:`BaseItemExporter.fields_to_export` or the first "
 "exported item fields."
-msgstr ""
+msgstr "有効にすると、エクスポーターは :attr:`BaseItemExporter.fields_to_export` または最初にエクスポートされたアイテム・フィールドから取得したフィールド名を含むヘッダー行を出力します。"
 
 #: ../../topics/exporters.rst:306
 msgid ""
 "The char (or chars) that will be used for joining multi-valued fields, if"
 " found."
-msgstr ""
+msgstr "複数値フィールドを結合するために使用される単一文字(または複数の文字)。"
 
 #: ../../topics/exporters.rst:310
 msgid ""
@@ -376,43 +376,43 @@ msgid ""
 ":class:`BaseItemExporter` constructor, and the leftover arguments to the "
 "`csv.writer`_ constructor, so you can use any ``csv.writer`` constructor "
 "argument to customize this exporter."
-msgstr ""
+msgstr "このコンストラクタの追加のキーワード引数は :class:`BaseItemExporter` コンストラクタに渡され、残りの引数は `csv.writer`_ コンストラクタに渡されるため、任意の ``csv.writer`` コンストラクタ引数を使用してエクスポーターをカスタマイズできます。"
 
 #: ../../topics/exporters.rst:324
 msgid "PickleItemExporter"
-msgstr ""
+msgstr "PickleItemExporter"
 
 #: ../../topics/exporters.rst:328
 msgid "Exports Items in pickle format to the given file-like object."
-msgstr ""
+msgstr "アイテムをpickle形式で与えられたファイルのようなオブジェクトにエクスポートします。"
 
 #: ../../topics/exporters.rst:333
 msgid "The pickle protocol to use."
-msgstr ""
+msgstr "使用するpickleプロトコル。"
 
 #: ../../topics/exporters.rst:336
 msgid "For more information, refer to the `pickle module documentation`_."
-msgstr ""
+msgstr "詳細については、 `pickle module documentation`_ を参照してください。"
 
 #: ../../topics/exporters.rst:341
 msgid "Pickle isn't a human readable format, so no output examples are provided."
-msgstr ""
+msgstr "pickleは人間が読める形式ではないため、出力例はありません。"
 
 #: ../../topics/exporters.rst:346
 msgid "PprintItemExporter"
-msgstr ""
+msgstr "PprintItemExporter"
 
 #: ../../topics/exporters.rst:350
 msgid "Exports Items in pretty print format to the specified file object."
-msgstr ""
+msgstr "指定のファイルオブジェクトにきれいな(pretty)印刷形式でアイテムをエクスポートします。"
 
 #: ../../topics/exporters.rst:363
 msgid "Longer lines (when present) are pretty-formatted."
-msgstr ""
+msgstr "(存在する場合)長い行はきれいに(pretty)フォーマットされます。"
 
 #: ../../topics/exporters.rst:366
 msgid "JsonItemExporter"
-msgstr ""
+msgstr "JsonItemExporter"
 
 #: ../../topics/exporters.rst:370
 msgid ""
@@ -421,7 +421,7 @@ msgid ""
 "are passed to the :class:`BaseItemExporter` constructor, and the leftover"
 " arguments to the `JSONEncoder`_ constructor, so you can use any "
 "`JSONEncoder`_ constructor argument to customize this exporter."
-msgstr ""
+msgstr "アイテムをJSON形式で、指定されたファイルのようなオブジェクトにエクスポートし、すべてのオブジェクトをオブジェクトのリストとして書き込みます。追加のコンストラクター引数は :class:`BaseItemExporter` コンストラクターに、残りの引数は `JSONEncoder`_ コンストラクターに渡されるため、任意の `JSONEncoder`_ コンストラクター引数を使用してこのエクスポーターをカスタマイズできます。"
 
 #: ../../topics/exporters.rst:386
 msgid ""
@@ -432,11 +432,11 @@ msgid ""
 "you want the power and simplicity of JSON with a more stream-friendly "
 "format, consider using :class:`JsonLinesItemExporter` instead, or "
 "splitting the output in multiple chunks."
-msgstr ""
+msgstr "JSONは非常にシンプルで柔軟なシリアル化形式ですが、(すべての言語で)JSONパーサ間でインクリメンタル(別名ストリームモード)解析が(もしあれば)十分にサポートされていないため、大量のデータに対して適切に拡張できません。それらのほとんどは、メモリ内のオブジェクト全体を解析するだけです。よりストリーム・フレンドリーな形式でJSONのパワーとシンプルさを望む場合は、代わりに :class:`JsonLinesItemExporter` を使用するか、出力を複数のチャンクに分割することを検討してください。"
 
 #: ../../topics/exporters.rst:397
 msgid "JsonLinesItemExporter"
-msgstr ""
+msgstr "JsonLinesItemExporter"
 
 #: ../../topics/exporters.rst:401
 msgid ""
@@ -445,26 +445,26 @@ msgid ""
 "passed to the :class:`BaseItemExporter` constructor, and the leftover "
 "arguments to the `JSONEncoder`_ constructor, so you can use any "
 "`JSONEncoder`_ constructor argument to customize this exporter."
-msgstr ""
+msgstr "JSON形式のアイテムを、指定されたファイルのようなオブジェクトにエクスポートし、1行にJSONエンコードされたアイテムを1つ書き込みます。追加のコンストラクター引数は :class:`BaseItemExporter` コンストラクターに、残りの引数は `JSONEncoder`_ コンストラクターに渡されるため、任意の `JSONEncoder`_ コンストラクター引数を使用してこのエクスポーターをカスタマイズできます。"
 
 #: ../../topics/exporters.rst:415
 msgid ""
 "Unlike the one produced by :class:`JsonItemExporter`, the format produced"
 " by this exporter is well suited for serializing large amounts of data."
-msgstr ""
+msgstr ":class:`JsonItemExporter` によって生成される形式とは異なり、このエクスポーターによって生成される形式は、大量のデータをシリアル化するのに適しています。"
 
 #: ../../topics/exporters.rst:421
 msgid "MarshalItemExporter"
-msgstr ""
+msgstr "MarshalItemExporter"
 
 #: of scrapy.exporters.MarshalItemExporter:1
 msgid "Exports items in a Python-specific binary format (see :mod:`marshal`)."
-msgstr ""
+msgstr "Python固有のバイナリ形式でアイテムをエクスポートします( :mod:`marshal` 参照)。"
 
 #: of scrapy.exporters.MarshalItemExporter:4
 msgid ""
 "The file-like object to use for exporting the data. Its ``write`` method "
 "should accept :class:`bytes` (a disk file opened in binary mode, a "
 ":class:`~io.BytesIO` object, etc)"
-msgstr ""
+msgstr "データのエクスポートに使用するファイルのようなオブジェクト。 その ``write`` メソッドは :class:`bytes` (バイナリ・モードで開かれたディスク・ファイルや、 :class:`~io.BytesIO` オブジェクトなど)を受け入れる必要があります"
 
