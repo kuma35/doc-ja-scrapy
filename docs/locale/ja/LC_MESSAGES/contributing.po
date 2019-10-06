@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Scrapy package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-06 20:21+0900\n"
+"Last-Translator: kuma35\n"
+"Language: ja_JP\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,79 +19,79 @@ msgstr ""
 
 #: ../../contributing.rst:5
 msgid "Contributing to Scrapy"
-msgstr ""
+msgstr "Scrapyへの貢献"
 
 #: ../../contributing.rst:9
 msgid ""
 "Double check that you are reading the most recent version of this "
 "document at https://docs.scrapy.org/en/master/contributing.html"
-msgstr ""
+msgstr "https://docs.scrapy.org/en/master/contributing.html で、この文書の最新バージョンを読んでいることを再確認してください"
 
 #: ../../contributing.rst:12
 msgid "There are many ways to contribute to Scrapy. Here are some of them:"
-msgstr ""
+msgstr "Scrapyに貢献する方法はたくさんあります。 それらのいくつかを次に示します:"
 
 #: ../../contributing.rst:14
 msgid ""
 "Blog about Scrapy. Tell the world how you're using Scrapy. This will help"
 " newcomers with more examples and will help the Scrapy project to "
 "increase its visibility."
-msgstr ""
+msgstr "Scrapyについてのブログ。Scrapyの使用方法を世界中に伝えましょう。これは、より多くの例により新規参入者を助け、Scrapyプロジェクトの可視性を高めるのに役立ちます。"
 
 #: ../../contributing.rst:18
 msgid ""
 "Report bugs and request features in the `issue tracker`_, trying to "
 "follow the guidelines detailed in `Reporting bugs`_ below."
-msgstr ""
+msgstr "以下の「バグの報告」(`Reporting bugs`_)で詳述されているガイドラインに従うようにして、バグを報告し、 `issue tracker`_ で機能をリクエストします。"
 
 #: ../../contributing.rst:21
 msgid ""
 "Submit patches for new functionalities and/or bug fixes. Please read :ref"
 ":`writing-patches` and `Submitting patches`_ below for details on how to "
 "write and submit a patch."
-msgstr ""
+msgstr "新しい機能やバグ修正のためのパッチを上げてください。パッチの作成方法と送信方法の詳細については、下記の :ref:`writing-patches` と 「パッチの送信」(`Submitting patch`_) をお読みください。"
 
 #: ../../contributing.rst:25
 msgid ""
 "Join the `Scrapy subreddit`_ and share your ideas on how to improve "
 "Scrapy. We're always open to suggestions."
-msgstr ""
+msgstr "`Scrapy subreddit`_ に参加して、Scrapyの改善方法に関するアイデアを共有してください。私たちは常に提案を受け入れています。"
 
 #: ../../contributing.rst:28
 msgid ""
 "Answer Scrapy questions at `Stack Overflow "
 "<https://stackoverflow.com/questions/tagged/scrapy>`__."
-msgstr ""
+msgstr "`Stack Overflow <https://stackoverflow.com/questions/tagged/scrapy>`__ でScrapyの質問に答えてください。"
 
 #: ../../contributing.rst:33
 msgid "Reporting bugs"
-msgstr ""
+msgstr "バグの報告"
 
 #: ../../contributing.rst:37
 msgid ""
 "Please report security issues **only** to scrapy-"
 "security@googlegroups.com. This is a private list only open to trusted "
 "Scrapy developers, and its archives are not public."
-msgstr ""
+msgstr "セキュリティの問題は **scrapy-security@googlegroups.comにのみ** 報告してください。これは信頼できるScrapy開発者のみが利用できるプライベートメーリングリストであり、そのアーカイブは公開されていません。"
 
 #: ../../contributing.rst:41
 msgid ""
 "Well-written bug reports are very helpful, so keep in mind the following "
 "guidelines when you're going to report a new bug."
-msgstr ""
+msgstr "よく書かれたバグレポートは非常に役立ちます。よって、新しいバグを報告するときは以下のガイドラインに留意してください。"
 
 #: ../../contributing.rst:44
 msgid ""
 "check the :ref:`FAQ <faq>` first to see if your issue is addressed in a "
 "well-known question"
-msgstr ""
+msgstr "最初に :ref:`FAQ(よくある質問と回答)<faq>` をチェックして、よく知られている質問で問題が解決されていないかどうかを確認してください"
 
 #: ../../contributing.rst:47
 msgid ""
 "if you have a general question about scrapy usage, please ask it at "
 "`Stack Overflow <https://stackoverflow.com/questions/tagged/scrapy>`__ "
 "(use \"scrapy\" tag)."
-msgstr ""
+msgstr "あなたがScrapyの使用に関する一般的な質問がある場合は、 `Stack Overflow <https://stackoverflow.com/questions/tagged/scrapy>`__ (scrapy タグ付け) で質問してください。"
 
 #: ../../contributing.rst:51
 msgid ""
@@ -100,14 +100,14 @@ msgid ""
 "comments. If you have additional useful information, please leave a "
 "comment, or consider :ref:`sending a pull request <writing-patches>` with"
 " a fix."
-msgstr ""
+msgstr "`open issues`_ をチェックして、問題がすでに報告されているかどうかを確認します。報告されている場合は、そのレポートを閉じないで、チケットの履歴とコメントを確認してください。追加の有用な情報がある場合は、コメントを残すか、修正を含めて :ref:`プル・リクエスト<writing-patches>` を送信することを検討してください。"
 
 #: ../../contributing.rst:56
 msgid ""
 "search the `scrapy-users`_ list and `Scrapy subreddit`_ to see if it has "
 "been discussed there, or if you're not sure if what you're seeing is a "
 "bug. You can also ask in the ``#scrapy`` IRC channel."
-msgstr ""
+msgstr "`scrapy-users`_ リストと `Scrapy subreddit`_ を検索して、そこで議論されているか、表示されているものがバグかどうかわからないかどうかを確認します。 ``#scrapy`` IRCチャンネルで質問することもできます。"
 
 #: ../../contributing.rst:60
 msgid ""
@@ -117,7 +117,7 @@ msgid ""
 "required to reproduce it. See for example StackOverflow's guide on "
 "creating a `Minimal, Complete, and Verifiable example`_ exhibiting the "
 "issue."
-msgstr ""
+msgstr "**完全で再現可能な特定のバグレポート** を作成します。テストケースが小さければ小さいほど良いです。他の開発者にはバグを再現するプロジェクトがないため、再現に必要なすべての関連ファイルを含めてください。たとえば、問題を示す「最小限の、完全な、検証可能な例」を作成するStackOverflowのガイド(`Minimal, Complete, and Verifiable example`_)を参照してください。"
 
 #: ../../contributing.rst:66
 msgid ""
@@ -125,7 +125,7 @@ msgid ""
 "send a pull request which adds a failing test case to the Scrapy testing "
 "suite (see :ref:`submitting-patches`). This is helpful even if you don't "
 "have an intention to fix the issue yourselves."
-msgstr ""
+msgstr "完全で再現可能な例を提供する最も素晴らしい方法は、Scrapyテスト・スイートに失敗したテスト・ケースを追加するプル・リクエストを送信することです( :ref:`submitting-patches` 参照)。これは、自分で問題を解決する意図がない場合でも役立ちます。"
 
 #: ../../contributing.rst:72
 msgid ""
@@ -133,21 +133,21 @@ msgid ""
 " bug know exactly which version and platform it occurred on, which is "
 "often very helpful for reproducing it, or knowing if it was already "
 "fixed."
-msgstr ""
+msgstr "``scrapy version -v`` の出力を含めると、バグに取り組んでいる開発者は、それが発生したバージョンとプラットフォームを正確に知ることができます。これは、バグを再現したり、すでに修正されているかどうかを知るのに非常に役立ちます。"
 
 #: ../../contributing.rst:81
 msgid "Writing patches"
-msgstr ""
+msgstr "パッチを書く"
 
 #: ../../contributing.rst:83
 msgid ""
 "The better a patch is written, the higher the chances that it'll get "
 "accepted and the sooner it will be merged."
-msgstr ""
+msgstr "パッチが適切に作成されるほど、パッチが受け入れられる可能性が高くなり、マージが早くなります。"
 
 #: ../../contributing.rst:85
 msgid "Well-written patches should:"
-msgstr ""
+msgstr "適切なパッチは以下のようにすべきです:"
 
 #: ../../contributing.rst:87
 msgid ""
@@ -156,54 +156,54 @@ msgid ""
 "than one change (or bug fix), please consider submitting one patch per "
 "change. Do not collapse multiple changes into a single patch. For big "
 "changes consider using a patch queue."
-msgstr ""
+msgstr "特定の変更に必要な最小限のコードが含まれています。小さなパッチは、確認とマージが簡単です。したがって、複数の変更(またはバグ修正)を行っている場合は、変更ごとに1つのパッチを提出することを検討してください。複数の変更を1つのパッチにまとめないでください。大きな変更については、パッチ・キュー(patch queue)の使用を検討してください。"
 
 #: ../../contributing.rst:93
 msgid "pass all unit-tests. See `Running tests`_ below."
-msgstr ""
+msgstr "すべての単体テストに合格させます。以下の「テストの実行」(`Running tests`_)を参照してください。"
 
 #: ../../contributing.rst:95
 msgid ""
 "include one (or more) test cases that check the bug fixed or the new "
 "functionality added. See `Writing tests`_ below."
-msgstr ""
+msgstr "修正されたバグまたは追加された新しい機能をチェックする1つ(または複数)のテスト・ケースを含めます。以下の「テストの作成」(`Writing tests`_)を参照してください。"
 
 #: ../../contributing.rst:98
 msgid ""
 "if you're adding or changing a public (documented) API, please include "
 "the documentation changes in the same patch.  See `Documentation "
 "policies`_ below."
-msgstr ""
+msgstr "パブリック(文書化された)APIを追加または変更する場合は、同じパッチに文書ントの変更を含めてください。以下の「文書ポリシー」(`Documentation policies`_)を参照してください。"
 
 #: ../../contributing.rst:102
 msgid ""
 "if you're adding a private API, please add a regular expression to the "
 "``coverage_ignore_pyobjects`` variable of ``docs/conf.py`` to exclude the"
 " new private API from documentation coverage checks."
-msgstr ""
+msgstr "プライベートAPIを追加する場合は、 ``docs/conf.py` の ``coverage_ignore_pyobjects`` 変数に正規表現を追加して、ドキュメント・カバレッジ・チェックから新しいプライベートAPIを除外してください。"
 
 #: ../../contributing.rst:106
 msgid ""
 "To see if your private API is skipped properly, generate a documentation "
 "coverage report as follows::"
-msgstr ""
+msgstr "あなたのプライベートAPIが適切にスキップされているかどうかを確認するには、次のようにドキュメント・カバレッジ・レポートを生成します::"
 
 #: ../../contributing.rst:114
 msgid "Submitting patches"
-msgstr ""
+msgstr "パッチの送信"
 
 #: ../../contributing.rst:116
 msgid ""
 "The best way to submit a patch is to issue a `pull request`_ on GitHub, "
 "optionally creating a new issue first."
-msgstr ""
+msgstr "パッチを送信する最良の方法は、GitHubでプルリクエスト(`pull request`_)を発行することです。オプションで最初に新しい問題を作成します。"
 
 #: ../../contributing.rst:119
 msgid ""
 "Remember to explain what was fixed or the new functionality (what it is, "
 "why it's needed, etc). The more info you include, the easier will be for "
 "core developers to understand and accept your patch."
-msgstr ""
+msgstr "修正された機能または新しい機能(それが何であるか、なぜ必要なのかなど)を忘れずに説明してください。含める情報が多いほど、コア開発者がパッチを理解し、受け入れやすくなります。"
 
 #: ../../contributing.rst:123
 msgid ""
@@ -215,7 +215,7 @@ msgid ""
 "documentation/tests for later, after the idea has been validated and "
 "proven useful. Alternatively, you can start a conversation in the `Scrapy"
 " subreddit`_ to discuss your idea first."
-msgstr ""
+msgstr "パッチを作成する前に新しい機能(またはバグ修正)について議論することもできますが、引数を説明し、主題にいくつかの追加の考えを入れたことを示す準備ができているパッチを用意しておくことは常に良いことです。適切な出発点は、GitHubでプル・リクエストを送信することです。それはあなたのアイデアを説明するのに十分単純であり、アイデアが検証され有用であることが証明された後、ドキュメント/テストを後で残すことができます。または、 `Scrapy subreddit`_ で会話を開始して、最初にアイデアについて話し合うこともできます。"
 
 #: ../../contributing.rst:131
 msgid ""
@@ -228,7 +228,7 @@ msgid ""
 " to address the raised issues. Doing so helps a lot; it is not considered"
 " rude as soon as the original author is acknowledged by keeping his/her "
 "commits."
-msgstr ""
+msgstr "しばしば、解決したい問題に対する既存のプル・リクエストが存在することがありますが、何らかの理由で停止します。多くの場合、プル・リクエストは正しい方向にありますが、変更はScrapyメンテナによってリクエストされ、元のプル・リクエストの作成者にはそれらに対処する時間がありませんでした。この場合、このプルリ・クエストを選択することを検討してください。元のプル・リクエストからのすべてのコミットと、発生した問題に対処するための追加の変更を含む新しいプル・リクエストを開きます。そうすることは非常に役立ちます。元の作者のコミットが認識されるやいなや、彼/彼女のそのコミットを取り込むことは失礼とはみなされません。"
 
 #: ../../contributing.rst:141
 msgid ""
@@ -239,7 +239,7 @@ msgid ""
 "the branch you want to create locally). See also: "
 "https://help.github.com/articles/checking-out-pull-requests-locally"
 "/#modifying-an-inactive-pull-request-locally."
-msgstr ""
+msgstr "既存のプルリクエストをローカル・ブランチにプルするには、 ``git fetch upstream pull/$PR_NUMBER/head:$BRANCH_NAME_TO_CREATE`` を実行します(「upstream」をscrapyリポジトリのリモート名に、「$ PR_NUMBER」をプル・リクエストのID、びローカルに作成するブランチの名前を含む ``$BRANCH_NAME_TO_CREATE`` )。 https://help.github.com/articles/checking-out-pull-requests-locally/#modifying-an-inactive-pull-request-locally も参照してください。"
 
 #: ../../contributing.rst:148
 msgid ""
@@ -248,34 +248,34 @@ msgid ""
 "start_requests\" prefer \"Fix hanging when exception occurs in "
 "start_requests (#411)\" instead of \"Fix for #411\". Complete titles make"
 " it easy to skim through the issue tracker."
-msgstr ""
+msgstr "GitHubプル・リクエストを作成するときは、タイトルを短く、しかし説明的なものにしてください。例えば、バグ #411:\"Scrapy hangs if an exception raises in start_requests\" の場合 \"Fix for #411\" より \"Fix hanging when exception occurs in start_requests (#411)\" が好ましいです。完全なタイトルを使用すると、issue trackerを簡単に確認できます。"
 
 #: ../../contributing.rst:154
 msgid ""
 "Finally, try to keep aesthetic changes (:pep:`8` compliance, unused "
 "imports removal, etc) in separate commits from functional changes. This "
 "will make pull requests easier to review and more likely to get merged."
-msgstr ""
+msgstr "最後に、機能的な変更とは別のコミットで、審美的な変更（ :pep:`8` 対応、未使用のインポートの削除など)を維持するようにしてください。これにより、プル・リクエストの確認が容易になり、マージされる可能性が高くなります。"
 
 #: ../../contributing.rst:159
 msgid "Coding style"
-msgstr ""
+msgstr "コーディング・スタイル"
 
 #: ../../contributing.rst:161
 msgid ""
 "Please follow these coding conventions when writing code for inclusion in"
 " Scrapy:"
-msgstr ""
+msgstr "Scrapyに含めるコードを記述するときは、これらのコーディング規則に従ってください:"
 
 #: ../../contributing.rst:164
 msgid "Unless otherwise specified, follow :pep:`8`."
-msgstr ""
+msgstr "特に指定がない限り、 :pep:`8` に従ってください。"
 
 #: ../../contributing.rst:166
 msgid ""
 "It's OK to use lines longer than 80 chars if it improves the code "
 "readability."
-msgstr ""
+msgstr "コードの可読性を向上させるためであれば、80文字より長い行を使用しても構いません。"
 
 #: ../../contributing.rst:169
 msgid ""
@@ -283,11 +283,11 @@ msgid ""
 "metadata to identify author of the code. See "
 "https://help.github.com/articles/setting-your-username-in-git/ for setup "
 "instructions."
-msgstr ""
+msgstr "貢献するコードにあなたの名前を入れないでください。gitは、コードの作成者を識別するのに十分なメタ・データを提供します。セットアップ手順については、 https://help.github.com/articles/setting-your-username-in-git/ を参照してください。"
 
 #: ../../contributing.rst:177
 msgid "Documentation policies"
-msgstr ""
+msgstr "文書ポリシー"
 
 #: ../../contributing.rst:179
 msgid ""
@@ -296,7 +296,7 @@ msgid ""
 "extension to pull the docstrings. API reference documentation should "
 "follow docstring conventions (`PEP 257`_) and be IDE-friendly: short, to "
 "the point, and it may provide short examples."
-msgstr ""
+msgstr "APIメンバー(クラス、メソッドなど)のリファレンス・ドキュメントについては、docstringsを使用し、Sphinxドキュメントが autodoc_ 拡張を使用してドキュメント文字列をプルすることを確認してください。 APIリファレンス・ドキュメントはdocstringの規則( `PEP 257`_ )に準拠し、IDEフレンドリである必要があります。それは短くて要点を示して短い例を提供します。"
 
 #: ../../contributing.rst:185
 msgid ""
@@ -304,74 +304,74 @@ msgid ""
 "covered in files within the ``docs/`` directory. This includes "
 "documentation that is specific to an API member, but goes beyond API "
 "reference documentation."
-msgstr ""
+msgstr "チュートリアルやトピックなどの他の種類のドキュメントは、 ``docs/`` ディレクトリ内のファイルでカバーする必要があります。これには、APIメンバーに固有のドキュメントが含まれますが、それはAPIリファレンス・ドキュメントを超える解説内容のものです。"
 
 #: ../../contributing.rst:189
 msgid ""
 "In any case, if something is covered in a docstring, use the autodoc_ "
 "extension to pull the docstring into the documentation instead of "
 "duplicating the docstring in files within the ``docs/`` directory."
-msgstr ""
+msgstr "いずれにせよ、docstringで何かが網羅されている場合、 ``docs/`` ディレクトリ内のファイルにdocstringを複製するのではなく、autodoc_ 拡張を使用してdocstringをドキュメントに取り込みます。"
 
 #: ../../contributing.rst:196
 msgid "Tests"
-msgstr ""
+msgstr "テスト"
 
 #: ../../contributing.rst:198
 msgid ""
 "Tests are implemented using the `Twisted unit-testing framework`_, "
 "running tests requires `tox`_."
-msgstr ""
+msgstr "テストは `Twisted unit-testing framework`_ を使用して実装され、テストの実行には `tox`_ が必要です。"
 
 #: ../../contributing.rst:204
 msgid "Running tests"
-msgstr ""
+msgstr "テストを実行する"
 
 #: ../../contributing.rst:206
 msgid "Make sure you have a recent enough `tox`_ installation:"
-msgstr ""
+msgstr "最新の十分な `tox`_ インストールがあることを確認してください:"
 
 #: ../../contributing.rst:208
 msgid "``tox --version``"
-msgstr ""
+msgstr "``tox --version``"
 
 #: ../../contributing.rst:210
 msgid "If your version is older than 1.7.0, please update it first:"
-msgstr ""
+msgstr "バージョンが1.7.0より古い場合は、最初に更新してください:"
 
 #: ../../contributing.rst:212
 msgid "``pip install -U tox``"
-msgstr ""
+msgstr "``pip install -U tox``"
 
 #: ../../contributing.rst:214
 msgid "To run all tests go to the root directory of Scrapy source code and run:"
-msgstr ""
+msgstr "すべてのテストを実行するには、Scrapyソースコードのルートディレクトリに移動して実行します:"
 
 #: ../../contributing.rst:216
 msgid "``tox``"
-msgstr ""
+msgstr "``tox``"
 
 #: ../../contributing.rst:218
 msgid "To run a specific test (say ``tests/test_loader.py``) use:"
-msgstr ""
+msgstr "特定のテスト(たとえば ``tests/test_loader.py``)を実行するには、次を使用します:"
 
 #: ../../contributing.rst:220
 msgid "``tox -- tests/test_loader.py``"
-msgstr ""
+msgstr "``tox -- tests/test_loader.py``"
 
 #: ../../contributing.rst:222
 msgid ""
 "To run the tests on a specific tox_ environment, use ``-e <name>`` with "
 "an environment name from ``tox.ini``. For example, to run the tests with "
 "Python 3.6 use::"
-msgstr ""
+msgstr "特定の tox_ 環境でテストを実行するには、 ``tox.ini`` からの環境名で ``-e <name>`` を使用します。たとえば、Python 3.6でテストを実行するときは次の通りです::"
 
 #: ../../contributing.rst:228
 msgid ""
 "You can also specify a comma-separated list of environmets, and use "
 "`tox’s parallel mode`_ to run the tests on multiple environments in "
 "parallel::"
-msgstr ""
+msgstr "環境のコンマ区切りリストを指定し、 `tox’s parallel mode`_ を使用して、複数の環境でテストを並行して実行することもできます::"
 
 #: ../../contributing.rst:233
 msgid ""
@@ -379,49 +379,49 @@ msgid ""
 "call to tox_. Using ``--`` overrides the default positional arguments "
 "defined in ``tox.ini``, so you must include those default positional "
 "arguments (``scrapy tests``) after ``--`` as well::"
-msgstr ""
+msgstr "コマンドライン・オプションを pytest_ に渡すには、tox_ の呼び出しで ``--`` の後に追加します。 ``--`` を使用すると、 ``tox.ini`` で定義されているデフォルトの位置引数がオーバーライドされるため、これらのデフォルトの位置引数( ``scrapy tests`` )も ``--`` の後に含める必要があります::"
 
 #: ../../contributing.rst:240
 msgid ""
 "You can also use the `pytest-xdist`_ plugin. For example, to run all "
 "tests on the Python 3.6 tox_ environment using all your CPU cores::"
-msgstr ""
+msgstr "`pytest-xdist`_ プラグインを使用することもできます。たとえば、すべてのCPUコアを使用してPython 3.6 tox_ 環境ですべてのテストを実行するには次のようにします::"
 
 #: ../../contributing.rst:245
 msgid ""
 "To see coverage report install `coverage`_ (``pip install coverage``) and"
 " run:"
-msgstr ""
+msgstr "カバレッジ・レポートを表示するには、 `coverage`_ をインストール( ``pip install coverage`` )して実行します:"
 
 #: ../../contributing.rst:247
 msgid "``coverage report``"
-msgstr ""
+msgstr "``coverage report``"
 
 #: ../../contributing.rst:249
 msgid ""
 "see output of ``coverage --help`` for more options like html or xml "
 "report."
-msgstr ""
+msgstr "htmlまたはxmlレポートなどのオプションについては、 ``coverage --help`` の出力を参照してください。"
 
 #: ../../contributing.rst:254
 msgid "Writing tests"
-msgstr ""
+msgstr "テストを書く"
 
 #: ../../contributing.rst:256
 msgid ""
 "All functionality (including new features and bug fixes) must include a "
 "test case to check that it works as expected, so please include tests for"
 " your patches if you want them to get accepted sooner."
-msgstr ""
+msgstr "すべての機能(新機能やバグ修正を含む)に期待どおりに動作することを確認するテストケースを含める必要があります。パッチをより早く受け入れてもらいたい場合は、パッチのテストを含めてください。"
 
 #: ../../contributing.rst:260
 msgid ""
 "Scrapy uses unit-tests, which are located in the `tests/`_ directory. "
 "Their module name typically resembles the full path of the module they're"
 " testing. For example, the item loaders code is in::"
-msgstr ""
+msgstr "Scrapyはユニット・テストを使用します。ユニット・テストは `tests/`_ ディレクトリにあります。それらのモジュール名は通常、テストしているモジュールの完全なパスに似ています。たとえば、アイテム・ローダーのコードは次の通りです::"
 
 #: ../../contributing.rst:266
 msgid "And their unit-tests are in::"
-msgstr ""
+msgstr "そして、それらのユニットテストは以下です::"
 
