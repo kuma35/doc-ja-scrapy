@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-09-16 21:37+0900\n"
+"PO-Revision-Date: 2019-10-08 06:45+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -63,19 +63,19 @@ msgid ""
 "Scrapy is written in Python_. If you're new to the language you might "
 "want to start by getting an idea of what the language is like, to get the"
 " most out of Scrapy."
-msgstr "Scrapyは Python_ で書かれています。 この言語を初めて使用する場合は、Scrapyを最大限に活用するために、その言語がどのようなものであるかを理解することから始めてください。"
+msgstr "Scrapyは Python_ で書かれています。 この言語を初めて使用する場合は、Scrapyを最大限に活用するために、この言語がどのようなものかを理解することから始めてください。"
 
 #: ../../intro/tutorial.rst:25
 msgid ""
 "If you're already familiar with other languages, and want to learn Python"
 " quickly, the `Python Tutorial`_ is a good resource."
-msgstr "すでに他の言語に精通しており、Pythonをすばやく学習したい場合は、 `Python Tutorial`_ (訳注:日本語版 https://docs.python.org/ja/3/tutorial/)が優れたリソースです。"
+msgstr "すでに他の言語に精通しており、Pythonをすばやく学習したい場合は、 `Python Tutorial`_ (訳注:日本語版 https://docs.python.org/ja/3/tutorial/)が優れた文書です。"
 
 #: ../../intro/tutorial.rst:27
 msgid ""
 "If you're new to programming and want to start with Python, the following"
 " books may be useful to you:"
-msgstr "プログラミングが初めてで、Pythonを使い始めたい場合は、以下の書籍が役立ちます。:"
+msgstr "プログラミングが初めてで、Pythonを使い始めたい場合は、以下の書籍が役立ちます:"
 
 #: ../../intro/tutorial.rst:30
 msgid "`Automate the Boring Stuff With Python`_"
@@ -104,11 +104,11 @@ msgstr "プロジェクトの作成"
 msgid ""
 "Before you start scraping, you will have to set up a new Scrapy project. "
 "Enter a directory where you'd like to store your code and run::"
-msgstr "スクレイピングを開始する前に、新しいScrapyプロジェクトをセットアップする必要があります。 あなたのコードを保存して実行するディレクトリを入力してください。::"
+msgstr "スクレイピングを開始する前に、新しいScrapyプロジェクトをセットアップする必要があります。 あなたのコードを保存して実行するディレクトリを入力してください::"
 
 #: ../../intro/tutorial.rst:56
 msgid "This will create a ``tutorial`` directory with the following contents::"
-msgstr "これにより、以下の内容の ``tutorial`` ディレクトリが作成されます。::"
+msgstr "これにより、以下の内容の ``tutorial`` ディレクトリが作成されます::"
 
 #: ../../intro/tutorial.rst:77
 msgid "Our first Spider"
@@ -121,20 +121,20 @@ msgid ""
 ":class:`scrapy.Spider` and define the initial requests to make, "
 "optionally how to follow links in the pages, and how to parse the "
 "downloaded page content to extract data."
-msgstr "スパイダーはユーザーが定義するクラスであり、ScrapyはWebサイト(またはWebサイトのグループ)から情報をスクレイピングするために使用します。 :class:`scrapy.Spider` をサブクラス化し、最初のリクエストを作成し、オプションでページ内のリンクをたどる方法、およびダウンロードしたページコンテンツを解析してデータを抽出する方法を定義する必要があります。"
+msgstr "スパイダーはユーザが定義するクラスであり、ScrapyはWebサイト(またはWebサイトのグループ)から情報をスクレイピングするために使用します。 :class:`scrapy.Spider` をサブクラス化し、最初のリクエストを作成し、オプションでページ内のリンクをたどる方法、およびダウンロードしたページ内容をパースしてデータを抽出する方法を定義する必要があります。"
 
 #: ../../intro/tutorial.rst:85
 msgid ""
 "This is the code for our first Spider. Save it in a file named "
 "``quotes_spider.py`` under the ``tutorial/spiders`` directory in your "
 "project::"
-msgstr "これは、最初のスパイダーのコードです。 プロジェクトの ``tutorial/spiders`` ディレクトリの下の ``quotes_spider.py`` という名前のファイルに保存します。::"
+msgstr "これは、最初のスパイダーのコードです。 プロジェクトの ``tutorial/spiders`` ディレクトリの下の ``quotes_spider.py`` という名前のファイルに保存します::"
 
 #: ../../intro/tutorial.rst:110
 msgid ""
 "As you can see, our Spider subclasses :class:`scrapy.Spider "
 "<scrapy.spiders.Spider>` and defines some attributes and methods:"
-msgstr "ご覧のとおり、スパイダーは :class:`scrapy.Spider<scrapy.spiders.Spider>` をサブクラス化し、いくつかの属性とメソッドを定義しています。:"
+msgstr "ご覧のとおり、スパイダーは :class:`scrapy.Spider<scrapy.spiders.Spider>` をサブクラス化し、いくつかの属性とメソッドを定義しています:"
 
 #: ../../intro/tutorial.rst:113
 msgid ""
@@ -157,7 +157,7 @@ msgid ""
 "handle the response downloaded for each of the requests made. The "
 "response parameter is an instance of :class:`~scrapy.http.TextResponse` "
 "that holds the page content and has further helpful methods to handle it."
-msgstr ":meth:`~scrapy.spiders.Spider.parse` 行われたリクエストごとにダウンロードされたレスポンスを処理するために呼び出されるメソッド。 応答パラメーターは :class:`~scrapy.http.TextResponse` のインスタンスで、ページ内容を保持し、それを処理するためのさらに便利なメソッドを持っています。"
+msgstr ":meth:`~scrapy.spiders.Spider.parse` 行われたリクエストごとにダウンロードされたレスポンスを処理するために呼び出されるメソッド。 リクエスト・パラメーターは :class:`~scrapy.http.TextResponse` のインスタンスで、ページ内容を保持し、さらにそれを処理するための便利なメソッドを持っています。"
 
 #: ../../intro/tutorial.rst:127
 msgid ""
@@ -165,7 +165,7 @@ msgid ""
 "response, extracting the scraped data as dicts and also finding new URLs "
 "to follow and creating new requests (:class:`~scrapy.http.Request`) from "
 "them."
-msgstr ":meth:`~scrapy.spiders.Spider.parse` メソッドは通常、レスポンスを解析し、スクレイプされたデータを辞書として抽出し、フォローする新しいURLを見つけて、それらから新しいリクエスト(:class:`~scrapy.http.Request`)を作成します。"
+msgstr ":meth:`~scrapy.spiders.Spider.parse` メソッドは通常、レスポンスをパースし、スクレイプされたデータを辞書として抽出し、追跡する新しいURLを見つけて、それらから新しいリクエスト(:class:`~scrapy.http.Request`)を作成します。"
 
 #: ../../intro/tutorial.rst:132
 msgid "How to run our spider"
@@ -175,14 +175,14 @@ msgstr "私たちのスパイダーの実行方法"
 msgid ""
 "To put our spider to work, go to the project's top level directory and "
 "run::"
-msgstr "スパイダーを動作させるには、プロジェクトの最上位ディレクトリに移動して、以下を実行します。::"
+msgstr "スパイダーを動作させるには、プロジェクトの最上位ディレクトリに移動して、以下を実行します::"
 
 #: ../../intro/tutorial.rst:138
 msgid ""
 "This command runs the spider with name ``quotes`` that we've just added, "
 "that will send some requests for the ``quotes.toscrape.com`` domain. You "
 "will get an output similar to this::"
-msgstr "このコマンドは、追加したばかりの ``quotes`` という名前のスパイダーを実行し、 ``quotes.toscrape.com`` ドメインへのリクエストを送信します。以下のような出力が得られます。::"
+msgstr "このコマンドは、追加したばかりの ``quotes`` という名前のスパイダーを実行し、 ``quotes.toscrape.com`` ドメインへのリクエストを送信します。以下のような出力が得られます::"
 
 #: ../../intro/tutorial.rst:154
 msgid ""
@@ -195,7 +195,7 @@ msgstr "次に、現在のディレクトリのファイルを確認します。
 msgid ""
 "If you are wondering why we haven't parsed the HTML yet, hold on, we will"
 " cover that soon."
-msgstr "なぜHTMLをまだ解析していないのか疑問に思う方は、すぐにやるからもうちょっと待って。"
+msgstr "なぜまだHTMLをパースしていないのかって？順番に説明するからもうちょい待ってくれ。"
 
 # https://www.eigowithluke.com/under-the-hood/
 # 「under the hood」は「ボンネットの下に」という意味になります。車などが壊れた時に、何の問題があるかを確認するために、エンジンを検査しなければなりません。その時に、以下の英語が使えます。
@@ -222,7 +222,7 @@ msgid ""
 ":class:`~scrapy.http.Response` objects and calls the callback method "
 "associated with the request (in this case, the ``parse`` method) passing "
 "the response as argument."
-msgstr "Scrapyは、スパイダーの ``start_requests`` メソッドによって返される  :class:`scrapy.Request <scrapy.http.Request>` オブジェクトをスケジュールします。 それぞれのレスポンスを受信すると、 :class:`~scrapy.http.Response` オブジェクトをインスタンス化し、リクエストに関連付けられたコールバックメソッド(この場合は ``parse`` メソッド)を呼び出して、レスポンスを引数として渡します。"
+msgstr "Scrapyは、スパイダーの ``start_requests`` メソッドによって返される  :class:`scrapy.Request <scrapy.http.Request>` オブジェクトをスケジュールします。 それぞれのレスポンスを受信すると、 :class:`~scrapy.http.Response` オブジェクトをインスタンス化し、リクエストに関連付けられたコールバック・メソッド(この場合は ``parse`` メソッド)を呼び出して、レスポンスを引数として渡します。"
 
 #: ../../intro/tutorial.rst:173
 msgid "A shortcut to the start_requests method"
@@ -237,7 +237,7 @@ msgid ""
 "URLs. This list will then be used by the default implementation of "
 ":meth:`~scrapy.spiders.Spider.start_requests` to create the initial "
 "requests for your spider::"
-msgstr "URLから :meth:`~scrapy.spiders.Spider.start_requests` オブジェクトを生成する :meth:`~scrapy.spiders.Spider.start_requests` メソッドを実装する代わりに、単にURLのリストで :attr:`~scrapy.spiders.Spider.start_urls` を定義できます。 このリストはそれから :meth:`~scrapy.spiders.Spider.start_requests` のデフォルト実装で使用され、あなたのスパイダーの初期リクエストを作成します。::"
+msgstr "URLから :meth:`~scrapy.spiders.Spider.start_requests` オブジェクトを生成する :meth:`~scrapy.spiders.Spider.start_requests` メソッドを実装する代わりに、単にURLのリストで :attr:`~scrapy.spiders.Spider.start_urls` を定義できます。 このリストはそれから :meth:`~scrapy.spiders.Spider.start_requests` のデフォルト実装で使用され、あなたのスパイダーの初期リクエストを作成します::"
 
 #: ../../intro/tutorial.rst:197
 msgid ""
@@ -246,7 +246,7 @@ msgid ""
 "told Scrapy to do so. This happens because "
 ":meth:`~scrapy.spiders.Spider.parse` is Scrapy's default callback method,"
 " which is called for requests without an explicitly assigned callback."
-msgstr ":meth:`~scrapy.spiders.Spider.parse` メソッドは、Scrapyに明示的に指示していない場合でも、これらのURLの各リクエストを処理するために呼び出されます。 これは、 :meth:`~scrapy.spiders.Spider.parse` がScrapyのデフォルトのコールバックメソッドであり、明示的にコールバックが割り当てられていないリクエストに対して呼び出されるためです。"
+msgstr ":meth:`~scrapy.spiders.Spider.parse` メソッドは、Scrapyに明示的に指示していない場合でも、これらのURLの各リクエストを処理するために呼び出されます。 これは、 :meth:`~scrapy.spiders.Spider.parse` がScrapyのデフォルトのコールバック・メソッドであり、明示的にコールバックが割り当てられていないリクエストに対して呼び出されるためです。"
 
 #: ../../intro/tutorial.rst:205
 msgid "Extracting data"
@@ -256,28 +256,28 @@ msgstr "データの抽出"
 msgid ""
 "The best way to learn how to extract data with Scrapy is trying selectors"
 " using the :ref:`Scrapy shell <topics-shell>`. Run::"
-msgstr "Scrapyでデータを抽出する方法を学ぶ最良の方法は、 :ref:`Scrapyシェル<topics-shell>` を使用してセレクターを試すことです。 以下のように実行します。::"
+msgstr "Scrapyでデータを抽出する方法を学ぶ最良の方法は、 :ref:`Scrapyシェル<topics-shell>` を使用してセレクターを試すことです。 以下のように実行します::"
 
 #: ../../intro/tutorial.rst:214
 msgid ""
 "Remember to always enclose urls in quotes when running Scrapy shell from "
 "command-line, otherwise urls containing arguments (ie. ``&`` character) "
 "will not work."
-msgstr "コマンドラインからScrapyシェルを実行するときは、常にURLをクォーテーション符で囲むことを忘れないでください。そうしないと、引数(つまり、 ``&`` キャラクタ)を含むURLは機能しません。"
+msgstr "コマンドラインからScrapyシェルを実行するときは、常にURLをクォーテーションで囲むことを忘れないでください。そうしないと、引数(つまり、 ``&`` キャラクタ)を含むURLは機能しません。"
 
 #: ../../intro/tutorial.rst:218
 msgid "On Windows, use double quotes instead::"
-msgstr "Windowsでは代わりにダブルクォーテーションを使って下さい。::"
+msgstr "Windowsでは代わりにダブルクォーテーションを使って下さい::"
 
 #: ../../intro/tutorial.rst:222
 msgid "You will see something like::"
-msgstr "あなたは以下のようなものを見る事になるでしょう。::"
+msgstr "あなたは以下のようなものを見る事になるでしょう::"
 
 #: ../../intro/tutorial.rst:240
 msgid ""
 "Using the shell, you can try selecting elements using `CSS`_ with the "
 "response object::"
-msgstr "シェルを使用して、あなたはレスポンスオブジェクトで `CSS`_ を使用して要素の選択を試す事ができます。::"
+msgstr "シェルを使用して、あなたはレスポンス・オブジェクトで `CSS`_ を使用して要素の選択を試す事ができます::"
 
 #: ../../intro/tutorial.rst:246
 msgid ""
@@ -290,7 +290,7 @@ msgstr "``response.css('title')`` を実行した結果は、 :class:`~scrapy.se
 
 #: ../../intro/tutorial.rst:252
 msgid "To extract the text from the title above, you can do::"
-msgstr "上記のタイトルからテキストを抽出するには、以下のようにします。::"
+msgstr "上記のタイトルからテキストを抽出するには、以下のようにします::"
 
 #: ../../intro/tutorial.rst:257
 msgid ""
@@ -298,7 +298,7 @@ msgid ""
 "the CSS query, to mean we want to select only the text elements directly "
 "inside ``<title>`` element.  If we don't specify ``::text``, we'd get the"
 " full title element, including its tags::"
-msgstr "ここで注意すべき点が2つあります。1つは、CSSクエリに ``::text`` を追加したことです。これは、 ``<title>`` 要素内のテキスト要素のみを直接選択することを意味します。 ``::text`` を指定しない場合、そのタグを含む完全なタイトル要素を取得します。::"
+msgstr "ここで注意すべき点が2つあります。1つは、CSSクエリに ``::text`` を追加したことです。これは、 ``<title>`` 要素内のテキスト要素のみを直接選択することを意味します。 ``::text`` を指定しない場合、そのタグを含む完全なタイトル要素を取得します::"
 
 #: ../../intro/tutorial.rst:265
 msgid ""
@@ -306,11 +306,11 @@ msgid ""
 " is possible that a selector returns more than one result, so we extract "
 "them all. When you know you just want the first result, as in this case, "
 "you can do::"
-msgstr "もう1つは、 ``.getall()`` を呼び出した結果がリストであるということです。セレクターが複数の結果を返す可能性があり、そしてそれらの全てを抽出します。この場合のように、最初の結果だけが必要であることがわかったら、次の操作を実行できます。::"
+msgstr "もう1つは、 ``.getall()`` を呼び出した結果がリストであるということです。セレクターが複数の結果を返す可能性があり、そしてそれらの全てを抽出します。この場合のように、最初の結果だけが必要であることがわかったら、次の操作を実行できます::"
 
 #: ../../intro/tutorial.rst:272
 msgid "As an alternative, you could've written::"
-msgstr "代わりに以下のように書くこともできます。::"
+msgstr "代わりに以下のように書くこともできます::"
 
 #: ../../intro/tutorial.rst:277
 msgid ""
@@ -333,7 +333,7 @@ msgid ""
 ":meth:`~scrapy.selector.SelectorList.get` methods, you can also use the "
 ":meth:`~scrapy.selector.SelectorList.re` method to extract using `regular"
 " expressions`_::"
-msgstr ":meth:`~scrapy.selector.SelectorList.getall` メソッドや :meth:`~scrapy.selector.SelectorList.get` メソッドに加えて、正規表現(`regular expressions`_)により抽出する :meth:`~scrapy.selector.SelectorList.re` メソッドも使用できます。::"
+msgstr ":meth:`~scrapy.selector.SelectorList.getall` メソッドや :meth:`~scrapy.selector.SelectorList.get` メソッドに加えて、正規表現(`regular expressions`_)により抽出する :meth:`~scrapy.selector.SelectorList.re` メソッドも使用できます::"
 
 #: ../../intro/tutorial.rst:297
 msgid ""
@@ -342,13 +342,13 @@ msgid ""
 "``view(response)``. You can use your browser's developer tools to inspect"
 " the HTML and come up with a selector (see :ref:`topics-developer-"
 "tools`)."
-msgstr "使用する適切なCSSセレクターを見つけるには、 ``view(response)`` を使用してWebブラウザーのシェルからレスポンスページを開くと便利です。 ブラウザの開発ツールを使用してHTMLを調査し、セレクターを作成できます(:ref:`topics-developer-tools` 参照)。"
+msgstr "使用する適切なCSSセレクターを見つけるには、 ``view(response)`` を使用してWebブラウザーのシェルからレスポンス・ページを開くと便利です。 ブラウザの開発ツールを使用してHTMLを調査し、セレクターを作成できます(:ref:`topics-developer-tools` 参照)。"
 
 #: ../../intro/tutorial.rst:302
 msgid ""
 "`Selector Gadget`_ is also a nice tool to quickly find CSS selector for "
 "visually selected elements, which works in many browsers."
-msgstr "`Selector Gadget`_ 多くのブラウザで動作する、選択された要素のCSSセレクターを視覚的にすばやく探せる素晴らしいツールでもあります。"
+msgstr "`Selector Gadget`_ という、多くのブラウザで動作する、選択された要素のCSSセレクターを視覚的にすばやく探せる素晴らしいツールもあります。"
 
 #: ../../intro/tutorial.rst:310
 msgid "XPath: a brief intro"
@@ -356,7 +356,7 @@ msgstr "XPathの簡単な紹介"
 
 #: ../../intro/tutorial.rst:312
 msgid "Besides `CSS`_, Scrapy selectors also support using `XPath`_ expressions::"
-msgstr "`CSS`_ に加えて、Scrapyセレクターは `XPath`_ 式の使用もサポートしています。::"
+msgstr "`CSS`_ に加えて、Scrapyセレクターは `XPath`_ 式の使用もサポートしています::"
 
 #: ../../intro/tutorial.rst:319
 msgid ""
@@ -364,7 +364,7 @@ msgid ""
 "Selectors. In fact, CSS selectors are converted to XPath under-the-hood. "
 "You can see that if you read closely the text representation of the "
 "selector objects in the shell."
-msgstr "XPath式は非常に強力であり、Scrapyセレクターの基盤です。 実際、CSSセレクターは内部でXPathに変換されます。 シェル内のセレクターオブジェクトのテキスト表現をよく読んでいれば、あなたはそれに気付く事ができるでしょう。"
+msgstr "XPath式は非常に強力であり、Scrapyセレクターの基盤です。 実際、CSSセレクターは内部でXPathに変換されます。 シェル内のセレクター・オブジェクトのテキスト表現をよく読んでいれば、あなたはそれに気付く事ができるでしょう。"
 
 #: ../../intro/tutorial.rst:324
 msgid ""
@@ -375,7 +375,7 @@ msgid ""
 " to the task of scraping, and we encourage you to learn XPath even if you"
 " already know how to construct CSS selectors, it will make scraping much "
 "easier."
-msgstr "CSSセレクターほど一般的ではないかもしれませんが、XPath式は構造をナビゲートするだけでなく、コンテンツを見ることができるため、より強力になります。 XPathを使用すると、「『Next Page』というテキストを含むリンクを選択」というような事ができます。これにより、XPathはスクレイピングのタスクに非常に適合します。CSSセレクターの構築方法を既に知っている場合でも、XPathを学ぶことをお勧めします。"
+msgstr "CSSセレクターほど一般的ではないかもしれませんが、XPath式は構造をナビゲートするだけでなく、内容を探すことができるため、より強力になります。 XPathを使用すると、「『Next Page』というテキストを含むリンクを選択」というような事ができます。これにより、XPathはスクレイピングのタスクに非常に適合します。CSSセレクターの構築方法を既に知っている場合でも、XPathを学ぶことをお勧めします。"
 
 #: ../../intro/tutorial.rst:331
 msgid ""
@@ -401,17 +401,17 @@ msgstr "選択と抽出について少し理解できたので、Webページか
 msgid ""
 "Each quote in http://quotes.toscrape.com is represented by HTML elements "
 "that look like this:"
-msgstr "http://quotes.toscrape.comの各引用は、次のようなHTML要素で表されます。:"
+msgstr "http://quotes.toscrape.com の各引用は、次のようなHTML要素で表されます:"
 
 #: ../../intro/tutorial.rst:367
 msgid ""
 "Let's open up scrapy shell and play a bit to find out how to extract the "
 "data we want::"
-msgstr "Scrapyシェルで少しいじって、必要なデータを抽出する方法を見つけましょう。::"
+msgstr "Scrapyシェルで少しいじって、必要なデータを抽出する方法を見つけましょう::"
 
 #: ../../intro/tutorial.rst:372
 msgid "We get a list of selectors for the quote HTML elements with::"
-msgstr "引用HTML要素のセレクターのリストを取得します。::"
+msgstr "引用HTML要素のセレクターのリストを取得します::"
 
 #: ../../intro/tutorial.rst:376
 msgid ""
@@ -419,25 +419,25 @@ msgid ""
 "further queries over their sub-elements. Let's assign the first selector "
 "to a variable, so that we can run our CSS selectors directly on a "
 "particular quote::"
-msgstr "上記のクエリによって返された各セレクタを使用すると、サブ要素に対してさらにクエリを実行できます。 最初のセレクターを変数に割り当てて、特定の引用でCSSセレクターを直接実行できるようにします。::"
+msgstr "上記のクエリによって返された各セレクタを使用すると、サブ要素に対してさらにクエリを実行できます。 最初のセレクターを変数に割り当てて、特定の引用でCSSセレクターを直接実行できるようにします::"
 
 #: ../../intro/tutorial.rst:382
 msgid ""
 "Now, let's extract ``text``, ``author`` and the ``tags`` from that quote "
 "using the ``quote`` object we just created::"
-msgstr "では、作成したばかりの ``quote`` オブジェクトを使用して、その引用から ``text`` と ``author`` と ``tags`` を抽出しましょう。::"
+msgstr "それでは、作成したばかりの ``quote`` オブジェクトを使用して、その引用から ``text`` と ``author`` と ``tags`` を抽出しましょう::"
 
 #: ../../intro/tutorial.rst:392
 msgid ""
 "Given that the tags are a list of strings, we can use the ``.getall()`` "
 "method to get all of them::"
-msgstr "タグが文字列のリストであることを考えると、 ``.getall()`` メソッドを使用してすべてを取得できます。::"
+msgstr "タグは文字列のリストになっているので、 ``.getall()`` メソッドを使用してそれらすべてを取得できます::"
 
 #: ../../intro/tutorial.rst:399
 msgid ""
 "Having figured out how to extract each bit, we can now iterate over all "
 "the quotes elements and put them together into a Python dictionary::"
-msgstr "各パーツを抽出する方法を考え出したので、すべての引用要素を反復処理して、それらをPython辞書にまとめることができます。::"
+msgstr "各パーツを抽出する方法を考え出したので、すべての引用要素を反復処理して、それらをPython辞書にまとめることができます::"
 
 #: ../../intro/tutorial.rst:413
 msgid "Extracting data in our spider"
@@ -448,18 +448,18 @@ msgid ""
 "Let's get back to our spider. Until now, it doesn't extract any data in "
 "particular, just saves the whole HTML page to a local file. Let's "
 "integrate the extraction logic above into our spider."
-msgstr "私たちのスパイダーに戻りましょう。 これまでは、特にデータを抽出せず、HTMLページ全体をローカルファイルに保存するだけです。 上記の抽出ロジックをスパイダーに組み込みましょう。"
+msgstr "私たちのスパイダーに戻ります。これまでは、特にデータを抽出せず、HTMLページ全体をローカルファイルに保存するだけでした。それでは、ここで、上記の抽出ロジックを私たちのスパイダーに組み込みましょう。"
 
 #: ../../intro/tutorial.rst:419
 msgid ""
 "A Scrapy spider typically generates many dictionaries containing the data"
 " extracted from the page. To do that, we use the ``yield`` Python keyword"
 " in the callback, as you can see below::"
-msgstr "Scrapyスパイダーは通常、ページから抽出されたデータを含む多くのPython辞書を生成します。 これを行うには、以下に示すように、コールバックでPythonキーワード ``yield`` を使用します。::"
+msgstr "Scrapyスパイダーは通常、ページから抽出されたデータを含む多くのPython辞書を生成します。 これを行うには、以下に示すように、コールバックでPythonキーワード ``yield`` を使用します::"
 
 #: ../../intro/tutorial.rst:441
 msgid "If you run this spider, it will output the extracted data with the log::"
-msgstr "あなたがこのスパイダーを実行すると、抽出されたデータがlogとともに出力されます。::"
+msgstr "あなたがこのスパイダーを実行すると、抽出されたデータがlogとともに出力されます::"
 
 #: ../../intro/tutorial.rst:452
 msgid "Storing the scraped data"
@@ -469,7 +469,7 @@ msgstr "スクレイピングしたデータの格納"
 msgid ""
 "The simplest way to store the scraped data is by using :ref:`Feed exports"
 " <topics-feed-exports>`, with the following command::"
-msgstr "スクレイピングされたデータを保存する最も簡単な方法は、 :ref:`フィード・エクスポート<topics-feed-exports>` を以下のコマンドで使用することです。::"
+msgstr "スクレイピングされたデータを保存する最も簡単な方法は、 :ref:`フィード・エクスポート<topics-feed-exports>` を以下のコマンドで使用することです::"
 
 #: ../../intro/tutorial.rst:459
 msgid ""
@@ -486,7 +486,7 @@ msgstr "歴史的な理由により、Scrapyはファイルの内容を上書き
 
 #: ../../intro/tutorial.rst:466
 msgid "You can also use other formats, like `JSON Lines`_::"
-msgstr "`JSON Lines`_ のような他の形式を使用することもできます。::"
+msgstr "`JSON Lines`_ のような他の形式を使用することもできます::"
 
 #: ../../intro/tutorial.rst:470
 msgid ""
@@ -530,30 +530,30 @@ msgid ""
 "First thing is to extract the link to the page we want to follow.  "
 "Examining our page, we can see there is a link to the next page with the "
 "following markup:"
-msgstr "まず、辿りたいページへのリンクを抽出します。 ページを調べると、以下のマークアップを含む、次のページへのリンクがあることがわかります。:"
+msgstr "まず、辿りたいページへのリンクを抽出します。 ページを調べると、以下のマークアップを含む、次のページへのリンクがあることがわかります:"
 
 #: ../../intro/tutorial.rst:508
 msgid "We can try extracting it in the shell::"
-msgstr "私たちはScrapyシェルでこれの抽出を試してみることができます。::"
+msgstr "私たちはScrapyシェルでこれの抽出を試してみることができます::"
 
 #: ../../intro/tutorial.rst:513
 msgid ""
 "This gets the anchor element, but we want the attribute ``href``. For "
 "that, Scrapy supports a CSS extension that lets you select the attribute "
 "contents, like this::"
-msgstr "これはアンカー要素を取得しますが、属性 ``href`` が必要です。 そのために、Scrapyは、次のように属性の内容を選択できるCSS拡張機能をサポートしています。:"
+msgstr "これはアンカー要素を取得しますが、属性 ``href`` が必要です。 そのために、Scrapyは、次のように属性の内容を選択できるCSS拡張機能をサポートしています:"
 
 #: ../../intro/tutorial.rst:520
 msgid ""
 "There is also an ``attrib`` property available (see :ref:`selecting-"
 "attributes` for more)::"
-msgstr "``attrib`` プロパティもあります(詳細については :ref:`selecting-attributes` 参照)。::"
+msgstr "``attrib`` プロパティもあります(詳細については :ref:`selecting-attributes` 参照)::"
 
 #: ../../intro/tutorial.rst:526
 msgid ""
 "Let's see now our spider modified to recursively follow the link to the "
 "next page, extracting data from it::"
-msgstr "次のページへのリンクを再帰的にたどって、そこからデータを抽出するように修正sした私たちのスパイダーを見てみましょう。::"
+msgstr "次のページへのリンクを再帰的にたどって、そこからデータを抽出するように修正sした私たちのスパイダーを見てみましょう::"
 
 #: ../../intro/tutorial.rst:552
 msgid ""
@@ -571,7 +571,7 @@ msgid ""
 "yield a Request in a callback method, Scrapy will schedule that request "
 "to be sent and register a callback method to be executed when that "
 "request finishes."
-msgstr "ここに表示されるのは、リンクをたどるScrapyのメカニズムです。コールバックメソッドでリクエストを生成すると、Scrapyはそのリクエストの送信をスケジュールし、リクエストが終了したときに実行されるコールバックメソッドを登録します。"
+msgstr "ここに表示されるのは、リンクをたどるScrapyのメカニズムです。コールバック・メソッドでリクエストを生成すると、Scrapyはそのリクエストの送信をスケジュールし、リクエストが終了したときに実行されるコールバック・メソッドを登録します。"
 
 #: ../../intro/tutorial.rst:563
 msgid ""
@@ -585,7 +585,7 @@ msgid ""
 "In our example, it creates a sort of loop, following all the links to the"
 " next page until it doesn't find one -- handy for crawling blogs, forums "
 "and other sites with pagination."
-msgstr "この例では、次のページへのすべてのリンクをたどるループを作成します。ループが見つからなくなるまで、ブログ、フォーラム、その他の、ページ分けのあるサイトをクロールするのに便利です。"
+msgstr "この例では、次のページへのすべてのリンクをたどるループを作成します。ループが見つからなくなるまで、ブログやフォーラムやその他、ページ分けのあるサイトをクロールするのに便利です。"
 
 #: ../../intro/tutorial.rst:575
 msgid "A shortcut for creating Requests"
@@ -595,7 +595,7 @@ msgstr "リクエストを作成するためのショートカット"
 msgid ""
 "As a shortcut for creating Request objects you can use "
 ":meth:`response.follow <scrapy.http.TextResponse.follow>`::"
-msgstr "Requestオブジェクトを作成するためのショートカットとして、 :meth:`response.follow <scrapy.http.TextResponse.follow>` を使用できます。::"
+msgstr "Requestオブジェクトを作成するためのショートカットとして、 :meth:`response.follow <scrapy.http.TextResponse.follow>` を使用できます::"
 
 #: ../../intro/tutorial.rst:601
 msgid ""
@@ -608,13 +608,13 @@ msgstr "scrapy.Requestとは異なり、 ``response.follow`` は相対URLに対�
 msgid ""
 "You can also pass a selector to ``response.follow`` instead of a string; "
 "this selector should extract necessary attributes::"
-msgstr "文字列ではなく ``response.follow`` にセレクターを渡すこともできます。 このセレクターは必要な属性を抽出する必要があります。::"
+msgstr "文字列ではなく ``response.follow`` にセレクターを渡すこともできます。 このセレクターは必要な属性を抽出する必要があります::"
 
 #: ../../intro/tutorial.rst:611
 msgid ""
 "For ``<a>`` elements there is a shortcut: ``response.follow`` uses their "
 "href attribute automatically. So the code can be shortened further::"
-msgstr "``<a>`` 要素のためにはショートカットがあります。 ``response.follow`` はhref属性を自動的に使用します。 したがって、コードをさらに短くすることができます。::"
+msgstr "``<a>`` 要素のためのショートカットがあります。 ``response.follow`` はhref属性を自動的に使用します。 したがって、コードをさらに短くすることができます::"
 
 #: ../../intro/tutorial.rst:619
 msgid ""
@@ -632,7 +632,7 @@ msgstr "さらなる例やパターン"
 msgid ""
 "Here is another spider that illustrates callbacks and following links, "
 "this time for scraping author information::"
-msgstr "コールバックと次のリンクを示す別のスパイダーを次に示します。今回は著者情報をスクレイピングするためのものです。::"
+msgstr "コールバックと次のリンクを示す別のスパイダーを次に示します。今回は著者情報をスクレイピングするためのものです::"
 
 #: ../../intro/tutorial.rst:657
 msgid ""
@@ -693,7 +693,7 @@ msgstr "また、一般的なパターンは、 :ref:`コールバックに追�
 msgid ""
 "You can provide command line arguments to your spiders by using the "
 "``-a`` option when running them::"
-msgstr "あなたはスパイダーの実行時に ``-a`` オプションを使用して、スパイダーにコマンドライン引数を提供できます。::"
+msgstr "あなたはスパイダーの実行時に ``-a`` オプションを使用して、スパイダーにコマンドライン引数を提供できます::"
 
 #: ../../intro/tutorial.rst:695
 msgid ""
@@ -706,7 +706,7 @@ msgid ""
 "In this example, the value provided for the ``tag`` argument will be "
 "available via ``self.tag``. You can use this to make your spider fetch "
 "only quotes with a specific tag, building the URL based on the argument::"
-msgstr "この例では、 ``tag`` 引数に指定された値は ``self.tag`` を介して利用できます。 これを使用して、スパイダーに特定のタグを持つ引用のみを読み込み(fetch)させ、引数に基づいてURLを構築できます。:"
+msgstr "この例では、 ``tag`` 引数に指定された値は ``self.tag`` を介して利用できます。 これを使用して、スパイダーに特定のタグを持つ引用のみを読み込み(fetch)させ、引数に基づいてURLを構築できます:"
 
 #: ../../intro/tutorial.rst:727
 msgid ""

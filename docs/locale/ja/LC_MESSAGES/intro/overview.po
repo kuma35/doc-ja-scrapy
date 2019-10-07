@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 08:59+0900\n"
-"PO-Revision-Date: 2019-09-14 02:56+0900\n"
+"PO-Revision-Date: 2019-10-08 07:03+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -27,14 +27,14 @@ msgid ""
 "structured data which can be used for a wide range of useful "
 "applications, like data mining, information processing or historical "
 "archival."
-msgstr "Scrapyは、Webサイトをクロールし、構造化されたデータを抽出するためのアプリケーションフレームワークです。データフレームワークは、データマイニング、情報処理、履歴アーカイブなど、さまざまな有用なアプリケーションに使用できます。"
+msgstr "Scrapyは、Webサイトをクロールし、構造化されたデータを抽出するためのアプリケーション・フレームワークです。データ・フレームワークは、データ・マイニング、情報処理、履歴アーカイブなど、さまざまな有用なアプリケーションに使用できます。"
 
 #: ../../intro/overview.rst:11
 msgid ""
 "Even though Scrapy was originally designed for `web scraping`_, it can "
 "also be used to extract data using APIs (such as `Amazon Associates Web "
 "Services`_) or as a general purpose web crawler."
-msgstr "Scrapyは元々「ウェブスクレイピング(`web scraping`_)」用に設計されていましたが、API(`Amazon Associates Web Services`_ など)を使用してデータを抽出したり、汎用のウェブクローラーとして使用することもできます。"
+msgstr "Scrapyは元々「ウェブ・スクレイピング(`web scraping`_)」用に設計されていましたが、API(`Amazon Associates Web Services`_ など)を使用してデータを抽出したり、汎用のWebクローラーとして使用することもできます。"
 
 # spider=蜘蛛。webが蜘蛛の巣であることからのネーミングと思われる。
 #: ../../intro/overview.rst:17
@@ -56,13 +56,13 @@ msgstr "Scrapyの恩恵を示すために、最も簡単な方法でスパイダ
 msgid ""
 "Here's the code for a spider that scrapes famous quotes from website "
 "http://quotes.toscrape.com, following the pagination::"
-msgstr "以下は、Webサイトhttp://quotes.toscrape.comから有名な引用をスクレイピングするスパイダーのコードです。::"
+msgstr "以下は、Webサイトhttp://quotes.toscrape.comから有名な引用をスクレイピングするスパイダーのコードです::"
 
 #: ../../intro/overview.rst:46
 msgid ""
 "Put this in a text file, name it to something like ``quotes_spider.py`` "
 "and run the spider using the :command:`runspider` command::"
-msgstr "これをテキストファイルに入れ、「quotes_spider.py」などの名前を付けて、 :command:`runspider` コマンドを使用してスパイダーを実行します。::"
+msgstr "これをテキスト・ファイルに入れ、「quotes_spider.py」などの名前を付けて、 :command:`runspider` コマンドを使用してスパイダーを実行します::"
 
 #: ../../intro/overview.rst:52
 msgid ""
@@ -80,7 +80,7 @@ msgid ""
 "When you ran the command ``scrapy runspider quotes_spider.py``, Scrapy "
 "looked for a Spider definition inside it and ran it through its crawler "
 "engine."
-msgstr "あなたがコマンド ``scrapy runspider quotes_spider.py`` を実行すると、Scrapyはその内部でスパイダー定義を探し、そのクローラーエンジンを介して実行しました。"
+msgstr "あなたがコマンド ``scrapy runspider quotes_spider.py`` を実行すると、Scrapyはその内部でスパイダー定義を探し、そのクローラー・エンジンを介して実行しました。"
 
 #: ../../intro/overview.rst:77
 msgid ""
@@ -92,7 +92,7 @@ msgid ""
 "dict with the extracted quote text and author, look for a link to the "
 "next page and schedule another request using the same ``parse`` method as"
 " callback."
-msgstr "クロールは ``start_urls`` 属性で定義されたURL群(この場合、 *humor* カテゴリのquoteのURLのみ)にリクエストを行うことで開始し、デフォルトのコールバックメソッド ``parse`` を呼び出して、引数としてレスポンスオブジェクトを渡します。 ``parse`` コールバックでは、CSSセレクターを使用してquote要素をループし、抽出されたquoteテキストと著者を含むPython dictを生成(yield)し、次のページへのリンクを探し、同一のコールバックメソッド ``parse`` を使用して次のリクエストをスケジュールします。"
+msgstr "クロールは ``start_urls`` 属性で定義されたURL群(この場合、 *humor* カテゴリのquoteのURLのみ)にリクエストを行うことで開始し、デフォルトのコールバック・メソッド ``parse`` を呼び出して、引数としてレスポンス・オブジェクトを渡します。 ``parse`` コールバックでは、CSSセレクターを使用してquote要素をループし、抽出されたquoteテキストと著者を含むPython辞書を生成(yield)し、次のページへのリンクを探し、同一のコールバック・メソッド ``parse`` を使用して次のリクエストをスケジュールします。"
 
 #: ../../intro/overview.rst:85
 msgid ""
@@ -125,7 +125,7 @@ msgid ""
 "example) or the storage backend (FTP or `Amazon S3`_, for example).  You "
 "can also write an :ref:`item pipeline <topics-item-pipeline>` to store "
 "the items in a database."
-msgstr "これは :ref:`フィード・エクスポート<topics-feed-exports>` を使用してJSONファイルを生成します。エクスポート形式(例えばXMLやCSVなど)またはストレージバックエンド(例えば(FTPや `Amazon S3`_ )。あなたは  :ref:`item pipeline <topics-item-pipeline>` を記述して、アイテムをデータベースに保存することもできます。"
+msgstr "これは :ref:`フィード・エクスポート<topics-feed-exports>` を使用してJSONファイルを生成します。エクスポート形式(例えばXMLやCSVなど)またはストレージ・バックエンド(例えば(FTPや `Amazon S3`_ )。あなたは  :ref:`item pipeline <topics-item-pipeline>` を記述して、アイテムをデータベースに保存することもできます。"
 
 #: ../../intro/overview.rst:111
 msgid "What else?"
@@ -136,7 +136,7 @@ msgid ""
 "You've seen how to extract and store items from a website using Scrapy, "
 "but this is just the surface. Scrapy provides a lot of powerful features "
 "for making scraping easy and efficient, such as:"
-msgstr "Scrapyを使用してWebサイトからアイテムを抽出および保存する方法を見てきましたが、これはほんのさわりです。 Scrapyはスクレイピングを簡単かつ効率的にするための次のような強力な機能を多数提供します。:"
+msgstr "Scrapyを使用してWebサイトからアイテムを抽出および保存する方法を見てきましたが、これはほんのさわりです。 Scrapyはスクレイピングを簡単かつ効率的にするための次のような強力な機能を多数提供します:"
 
 #: ../../intro/overview.rst:117
 msgid ""
@@ -187,7 +187,7 @@ msgstr "圧縮、認証、キャッシングなどのHTTP機能"
 
 #: ../../intro/overview.rst:141
 msgid "user-agent spoofing"
-msgstr "user-agentのなりすまし(spoofing)"
+msgstr "ユーザ・エージェントのなりすまし(spoofing)"
 
 #: ../../intro/overview.rst:142
 msgid "robots.txt"
@@ -214,7 +214,7 @@ msgid ""
 "and XML/CSV feeds, a media pipeline for :ref:`automatically downloading "
 "images <topics-media-pipeline>` (or any other media) associated with the "
 "scraped items, a caching DNS resolver, and much more!"
-msgstr "さらに、その他の便利な機能として、サイトマップ(`Sitemaps`_)およびXML/CSVフィードからサイトをクロールするための再利用可能なスパイダーや、 スクレイプされたアイテムに関連付けられている、 :ref:`画像を自動ダウンロード<topics-media-pipeline>` のためのメディアパイプライン(またはその他のメディア)や、DNSリゾルバのキャッシングなど、その他多数あります！"
+msgstr "さらに、その他の便利な機能として、サイトマップ(`Sitemaps`_)およびXML/CSVフィードからサイトをクロールするための再利用可能なスパイダーや、 スクレイプされたアイテムに関連付けられている、 画像(または他の媒体)を自動ダウンロードするための :ref:`媒体パイプライン<topics-media-pipeline>` や、DNSリゾルバのキャッシングなど、その他多数あります！"
 
 #: ../../intro/overview.rst:156
 msgid "What's next?"
@@ -226,5 +226,5 @@ msgid ""
 ":ref:`follow through the tutorial <intro-tutorial>` to learn how to "
 "create a full-blown Scrapy project and `join the community`_. Thanks for "
 "your interest!"
-msgstr "お次は、 :ref:`Scrapyインストール<intro-install>` を行い :ref:`チュートリアル<intro-tutorial>` で本格的なScrapyプロジェクトを作成する方法を学び、Scrapyコミュニティに参加(`join the community`_)します。Scrapyに興味を持ってくれてありがとな！"
+msgstr "お次は、 :ref:`Scrapyインストール<intro-install>` を行い :ref:`チュートリアル<intro-tutorial>` で本格的なScrapyプロジェクトを作成する方法を学び、Scrapyコミュニティに参加(`join the community`_)します。あなたがScrapyに興味を持ってくれてありがうございます！"
 

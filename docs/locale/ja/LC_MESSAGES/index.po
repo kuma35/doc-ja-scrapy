@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-09-12 16:03+0900\n"
+"PO-Revision-Date: 2019-10-08 07:12+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -51,7 +51,7 @@ msgid ""
 "framework, used to crawl websites and extract structured data from their "
 "pages. It can be used for a wide range of purposes, from data mining to "
 "monitoring and automated testing."
-msgstr "Scrapyは高速で高レベルのウェブクロール(`web crawling`_)およびウェブスクレイピング(`web scraping`_)フレームワークであり、ウェブサイトをクロールし、ページから構造化データを抽出するために使用されます。 データマイニングから監視、自動テストまで、幅広い目的に使用できます。"
+msgstr "Scrapyは高速で高レベルのWebクロール(`web crawling`_)およびWebスクレイピング(`web scraping`_)フレームワークであり、Webサイトをクロールし、ページから構造化データを抽出するために使用されます。 データ・マイニングから監視、自動テストまで、幅広い目的に使用できます。"
 
 #: ../../index.rst:16
 msgid "Getting help"
@@ -129,7 +129,7 @@ msgstr ":doc:`topics/commands`"
 
 #: ../../index.rst:83
 msgid "Learn about the command-line tool used to manage your Scrapy project."
-msgstr "Scrapyプロジェクトの管理に使用するコマンドラインツールについて学習します。"
+msgstr "Scrapyプロジェクトの管理に使用するコマンドライン・ツールについて学習します。"
 
 #: ../../index.rst:86
 msgid ":doc:`topics/spiders`"
@@ -219,7 +219,7 @@ msgstr ":doc:`topics/exceptions`"
 
 #: ../../index.rst:116
 msgid "See all available exceptions and their meaning."
-msgstr "存在する全ての例外とその意味"
+msgstr "Scrapyで利用可能な全ての例外とその意味"
 
 #: ../../index.rst:133
 msgid ":doc:`topics/logging`"
@@ -227,7 +227,7 @@ msgstr ":doc:`topics/logging`"
 
 #: ../../index.rst:133
 msgid "Learn how to use Python's builtin logging on Scrapy."
-msgstr "ScrapyでPython組み込みのロギングを使う方法を習います。"
+msgstr "ScrapyでPython組み込みのログ機能を使う方法を習います。"
 
 #: ../../index.rst:136
 msgid ":doc:`topics/stats`"
@@ -235,7 +235,7 @@ msgstr ":doc:`topics/stats`"
 
 #: ../../index.rst:136
 msgid "Collect statistics about your scraping crawler."
-msgstr "あなたのスクレイピングクローラーについての統計情報を収集します。"
+msgstr "あなたのスクレイピング・クローラーの統計を収集します。"
 
 #: ../../index.rst:139
 msgid ":doc:`topics/email`"
@@ -243,7 +243,7 @@ msgstr ":doc:`topics/email`"
 
 #: ../../index.rst:139
 msgid "Send email notifications when certain events occur."
-msgstr "特定のイベントが発生したときに電子メール通知を送信します。"
+msgstr "特定のイベントが発生したときに電子メールを送信します。"
 
 #: ../../index.rst:142
 msgid ":doc:`topics/telnetconsole`"
@@ -267,7 +267,7 @@ msgstr ":doc:`faq`"
 
 #: ../../index.rst:170
 msgid "Get answers to most frequently asked questions."
-msgstr "F.A.Q.に対する回答を得ます。"
+msgstr "よくある質問とその回答。"
 
 #: ../../index.rst:173
 msgid ":doc:`topics/debug`"
@@ -299,7 +299,7 @@ msgstr ":doc:`topics/broad-crawls`"
 
 #: ../../index.rst:182
 msgid "Tune Scrapy for crawling a lot domains in parallel."
-msgstr "多数のドメインを並行してクロールするためのScrapyの調整。"
+msgstr "多数のドメインを並行してクロールするためのScrapyのチューニング。"
 
 #: ../../index.rst:185
 msgid ":doc:`topics/developer-tools`"
@@ -307,7 +307,7 @@ msgstr ":doc:`topics/developer-tools`"
 
 #: ../../index.rst:185
 msgid "Learn how to scrape with your browser's developer tools."
-msgstr "あなたのブラウザの開発ツールを使用してスクレイプする方法を学びます。"
+msgstr "Webブラウザ付属の開発ツールを使用してスクレイプする方法を学びます。"
 
 #: ../../index.rst:188
 msgid ":doc:`topics/dynamic-content`"
@@ -315,7 +315,7 @@ msgstr ":doc:`topics/dynamic-content`"
 
 #: ../../index.rst:188
 msgid "Read webpage data that is loaded dynamically."
-msgstr "動的にロードされるWebページデータを読み取ります。"
+msgstr "動的にロードされるWebページ・データを読み取ります。"
 
 #: ../../index.rst:191
 msgid ":doc:`topics/leaks`"
@@ -323,7 +323,7 @@ msgstr ":doc:`topics/leaks`"
 
 #: ../../index.rst:191
 msgid "Learn how to find and get rid of memory leaks in your crawler."
-msgstr "クローラーで、どのようにメモリリークを探して、そしてどのように取り除くかを学びます。"
+msgstr "クローラーで、どのようにメモリ・リークを探して、そしてどのように取り除くかを学びます。"
 
 #: ../../index.rst:194
 msgid ":doc:`topics/media-pipeline`"
@@ -339,7 +339,7 @@ msgstr ":doc:`topics/deploy`"
 
 #: ../../index.rst:197
 msgid "Deploying your Scrapy spiders and run them in a remote server."
-msgstr "リモートサーバに、あなたのScrapyスパイダーを配置し実行します。"
+msgstr "リモート・サーバに、あなたのScrapyスパイダーを配置し実行します。"
 
 #: ../../index.rst:200
 msgid ":doc:`topics/autothrottle`"
@@ -427,7 +427,7 @@ msgstr ":doc:`news`"
 
 #: ../../index.rst:260
 msgid "See what has changed in recent Scrapy versions."
-msgstr "最近のScrapyバージョンの変更点をご覧ください。"
+msgstr "直近のScrapyバージョンの変更点をご覧ください。"
 
 #: ../../index.rst:263
 msgid ":doc:`contributing`"
