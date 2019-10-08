@@ -264,3 +264,89 @@ All the rest
 
 :doc:`versioning`
     Understand Scrapy versioning and API stability.
+
+===========
+
+総目次
+======
+
+.. toctree::
+   :caption: First steps
+   :maxdepth: 2
+
+   intro/overview
+   intro/install
+   intro/tutorial
+   intro/examples
+
+.. toctree::
+   :caption: Basic concepts
+   :maxdepth: 2
+
+   topics/commands
+   topics/spiders
+   topics/selectors
+   topics/items
+   topics/loaders
+   topics/shell
+   topics/item-pipeline
+   topics/feed-exports
+   topics/request-response
+   topics/link-extractors
+   topics/settings
+   topics/exceptions
+
+.. toctree::
+   :caption: Built-in services
+   :maxdepth: 2
+
+   topics/logging
+   topics/stats
+   topics/email
+   topics/telnetconsole
+   topics/webservice
+
+.. toctree::
+   :caption: Solving specific problems
+   :maxdepth: 2
+
+   faq
+   topics/debug
+   topics/contracts
+   topics/practices
+   topics/broad-crawls
+   topics/developer-tools
+   topics/dynamic-content
+   topics/leaks
+   topics/media-pipeline
+   topics/deploy
+   topics/autothrottle
+   topics/benchmarking
+   topics/jobs
+
+.. toctree::
+   :caption: Extending Scrapy
+   :maxdepth: 2
+
+   topics/architecture
+   topics/downloader-middleware
+   topics/spider-middleware
+   topics/extensions
+   topics/api
+   topics/signals
+   topics/exporters
+
+.. toctree::
+   :caption: All the rest
+   :maxdepth: 1
+
+   news
+   contributing
+   versioning
+
+索引
+====
+
+* :ref:`genindex`
+* :ref:`modindex`
+

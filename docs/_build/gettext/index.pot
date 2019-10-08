@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Scrapy \n"
+"Project-Id-Version: Scrapy 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
+"POT-Creation-Date: 2019-10-08 08:43+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,32 +17,44 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../index.rst:38
+#: ../../index.rst:273
 #: ../../index.rst:36
+#: ../../index.rst:273
 msgid "First steps"
 msgstr ""
 
 #: ../../index.rst:64
+#: ../../index.rst:282
 #: ../../index.rst:62
+#: ../../index.rst:282
 msgid "Basic concepts"
 msgstr ""
 
 #: ../../index.rst:122
+#: ../../index.rst:299
 #: ../../index.rst:120
+#: ../../index.rst:299
 msgid "Built-in services"
 msgstr ""
 
 #: ../../index.rst:151
+#: ../../index.rst:309
 #: ../../index.rst:149
+#: ../../index.rst:309
 msgid "Solving specific problems"
 msgstr ""
 
 #: ../../index.rst:213
+#: ../../index.rst:327
 #: ../../index.rst:211
+#: ../../index.rst:327
 msgid "Extending Scrapy"
 msgstr ""
 
 #: ../../index.rst:251
+#: ../../index.rst:339
 #: ../../index.rst:249
+#: ../../index.rst:339
 msgid "All the rest"
 msgstr ""
 
@@ -434,11 +446,27 @@ msgstr ""
 msgid "Learn how to contribute to the Scrapy project."
 msgstr ""
 
-#: ../../index.rst:265
+#: ../../index.rst:266
 msgid ":doc:`versioning`"
 msgstr ""
 
 #: ../../index.rst:266
 msgid "Understand Scrapy versioning and API stability."
+msgstr ""
+
+#: ../../index.rst:271
+msgid "総目次"
+msgstr ""
+
+#: ../../index.rst:348
+msgid "索引"
+msgstr ""
+
+#: ../../index.rst:350
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:351
+msgid ":ref:`modindex`"
 msgstr ""
 

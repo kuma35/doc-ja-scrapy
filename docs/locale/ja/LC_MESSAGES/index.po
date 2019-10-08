@@ -7,37 +7,38 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-10-08 07:12+0900\n"
+"POT-Creation-Date: 2019-10-08 08:43+0900\n"
+"PO-Revision-Date: 2019-10-08 08:50+0900\n"
 "Last-Translator: kuma35\n"
-"Language-Team: Japanese\n"
 "Language: ja_JP\n"
+"Language-Team: Japanese\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../index.rst:36 ../../index.rst:38
+#: ../../index.rst:36 ../../index.rst:38 ../../index.rst:273
 msgid "First steps"
 msgstr "入門"
 
-#: ../../index.rst:62 ../../index.rst:64
+#: ../../index.rst:62 ../../index.rst:64 ../../index.rst:282
 msgid "Basic concepts"
 msgstr "基本の概念"
 
-#: ../../index.rst:120 ../../index.rst:122
+#: ../../index.rst:120 ../../index.rst:122 ../../index.rst:299
 msgid "Built-in services"
 msgstr "組み込み済サービス群"
 
-#: ../../index.rst:149 ../../index.rst:151
+#: ../../index.rst:149 ../../index.rst:151 ../../index.rst:309
 msgid "Solving specific problems"
 msgstr "特定の問題の解決"
 
-#: ../../index.rst:211 ../../index.rst:213
+#: ../../index.rst:211 ../../index.rst:213 ../../index.rst:327
 msgid "Extending Scrapy"
 msgstr "Scrapyの拡張"
 
-#: ../../index.rst:249 ../../index.rst:251
+#: ../../index.rst:249 ../../index.rst:251 ../../index.rst:339
 msgid "All the rest"
 msgstr "その他すべて"
 
@@ -51,7 +52,10 @@ msgid ""
 "framework, used to crawl websites and extract structured data from their "
 "pages. It can be used for a wide range of purposes, from data mining to "
 "monitoring and automated testing."
-msgstr "Scrapyは高速で高レベルのWebクロール(`web crawling`_)およびWebスクレイピング(`web scraping`_)フレームワークであり、Webサイトをクロールし、ページから構造化データを抽出するために使用されます。 データ・マイニングから監視、自動テストまで、幅広い目的に使用できます。"
+msgstr ""
+"Scrapyは高速で高レベルのWebクロール(`web crawling`_)およびWebスクレイピング(`web "
+"scraping`_)フレームワークであり、Webサイトをクロールし、ページから構造化データを抽出するために使用されます。 "
+"データ・マイニングから監視、自動テストまで、幅広い目的に使用できます。"
 
 #: ../../index.rst:16
 msgid "Getting help"
@@ -73,7 +77,9 @@ msgstr "特定の情報をお探しですか？ それでしたら :ref:`geninde
 
 #: ../../index.rst:22
 msgid "Ask or search questions in `StackOverflow using the scrapy tag`_."
-msgstr "StackOverflowで scrapy タグを付けて質問するか検索します(`StackOverflow using the scrapy tag`_)。"
+msgstr ""
+"StackOverflowで scrapy タグを付けて質問するか検索します(`StackOverflow using the scrapy "
+"tag`_)。"
 
 #: ../../index.rst:23
 msgid "Ask or search questions in the `Scrapy subreddit`_."
@@ -113,7 +119,7 @@ msgstr ":doc:`intro/tutorial`"
 
 #: ../../index.rst:54
 msgid "Write your first Scrapy project."
-msgstr "あたたは最初のScrapyプロジェクトを書きます。"
+msgstr "あなたは最初のScrapyプロジェクトを書きます。"
 
 #: ../../index.rst:57
 msgid ":doc:`intro/examples`"
@@ -283,7 +289,9 @@ msgstr ":doc:`topics/contracts`"
 
 #: ../../index.rst:176
 msgid "Learn how to use contracts for testing your spiders."
-msgstr "スパイダーをテストするためにコントラクト(訳注: ``@url`` などの ``@`` で始まる、テスト用に用意された属性指定子)を使用する方法を学びます。"
+msgstr ""
+"スパイダーをテストするためにコントラクト(訳注: ``@url`` などの ``@`` "
+"で始まる、テスト用に用意された属性指定子)を使用する方法を学びます。"
 
 #: ../../index.rst:179
 msgid ":doc:`topics/practices`"
@@ -437,11 +445,27 @@ msgstr ":doc:`contributing`"
 msgid "Learn how to contribute to the Scrapy project."
 msgstr "Scrapyプロジェクトに貢献する方法を学びます。"
 
-#: ../../index.rst:265
+#: ../../index.rst:266
 msgid ":doc:`versioning`"
 msgstr ":doc:`versioning`"
 
 #: ../../index.rst:266
 msgid "Understand Scrapy versioning and API stability."
 msgstr "Scrapyのバージョン管理とAPIの安定性を理解します。"
+
+#: ../../index.rst:271
+msgid "総目次"
+msgstr "総目次"
+
+#: ../../index.rst:348
+msgid "索引"
+msgstr "索引"
+
+#: ../../index.rst:350
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../index.rst:351
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
 
