@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-09-25 20:17+0900\n"
+"PO-Revision-Date: 2019-10-10 11:08+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -246,7 +246,7 @@ msgstr "その後、オブジェクトで遊んでみましょう::"
 
 #: ../../topics/shell.rst:226
 msgid "Invoking the shell from spiders to inspect responses"
-msgstr "スパイダーからシェルを呼び出して応答を検査する"
+msgstr "スパイダーからシェルを呼び出してレスポンスを検査する"
 
 #: ../../topics/shell.rst:228
 msgid ""
@@ -277,7 +277,7 @@ msgstr "そこから、抽出コードが機能しているかどうかを確認
 msgid ""
 "Nope, it doesn't. So you can open the response in your web browser and "
 "see if it's the response you were expecting::"
-msgstr "Orz.期待したとおりではありません。 したがって、あなたはWebブラウザーでレスポンスを開き、それが期待したレスポンスかどうかを確認できます::"
+msgstr "Orz。期待したとおりではありません。 したがって、あなたはWebブラウザーでレスポンスを開き、それが期待したレスポンスかどうかを確認できます::"
 
 #: ../../topics/shell.rst:277
 msgid ""
