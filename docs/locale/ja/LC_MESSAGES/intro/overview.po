@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 08:59+0900\n"
-"PO-Revision-Date: 2019-10-08 07:03+0900\n"
+"PO-Revision-Date: 2019-10-22 14:55+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -102,7 +102,7 @@ msgid ""
 "and processed, it can send another request or do other things in the "
 "meantime. This also means that other requests can keep going even if some"
 " request fails or an error happens while handling it."
-msgstr "ここで、Scrapyの主な利点の1つに気付きます。リクエストは :ref:`スケジューリングと処理は非同期<topics-architecture>` です。つまり、Scrapyはリクエストが終了して処理されるのを待つ必要がなく、その間に別のリクエストを送信したり、他のことを実行したりできます。 これは、一部のリクエストが失敗したり、処理中にエラーが発生した場合でも、他のリクエストが続行できることも意味します。"
+msgstr "ここで、Scrapyの主な利点の1つに気付きます。リクエストの :ref:`スケジューリングと処理は非同期<topics-architecture>` です。つまり、Scrapyはリクエストが終了して処理されるのを待つ必要がなく、その間に別のリクエストを送信したり、他のことを実行したりできます。 これは、一部のリクエストが失敗したり、処理中にエラーが発生した場合でも、他のリクエストが続行できることも意味します。"
 
 # B&Lポライトネス理論
 # 彼らのポライトネス理論とは、“polite”という一般用語とは異なり、「円滑な人間関係を確立・維持するための言語行動」（宇佐美2002）と定義される、語用論の枠組みの中での概念である。(wikipedia)
@@ -116,7 +116,7 @@ msgid ""
 "requests per domain or per IP, and even :ref:`using an auto-throttling "
 "extension <topics-autothrottle>` that tries to figure out these "
 "automatically."
-msgstr "これにより、非常に高速なクロール（フォールトトレラントな方法で複数の同時要求を同時に送信）が可能になりますが、Scrapyでは :ref:`いくつかの設定<topics-settings-ref>` を通してクロールのポライトネス(訳注:円滑な人間関係を確立・維持するための言語行動)を制御することもできます。各リクエスト間にダウンロード遅延を設定したり、ドメインごとまたはIPごとの同時リクエストの量を制限したり、これらを自動的に把握しようとする :ref:`自動スロットル拡張の使用<topics-autothrottle>` も可能です。"
+msgstr "これにより、非常に高速なクロール(フォールトトレラント(訳注:その構成部品の一部が故障しても正常に処理を続行するシステム)な方法で複数の同時要求を同時に送信)が可能になるけれども、更にScrapyでは :ref:`いくつかの設定<topics-settings-ref>` を通してクロールのポライトネス(訳注:円滑な人間関係を確立・維持するための言語行動)を制御することもできます。各リクエスト間にダウンロード遅延を設定したり、ドメインごとまたはIPごとの同時リクエストの量を制限したり、これらを自動的に把握しようとする :ref:`自動スロットル拡張の使用<topics-autothrottle>` も可能です。"
 
 #: ../../intro/overview.rst:102
 msgid ""
@@ -125,7 +125,7 @@ msgid ""
 "example) or the storage backend (FTP or `Amazon S3`_, for example).  You "
 "can also write an :ref:`item pipeline <topics-item-pipeline>` to store "
 "the items in a database."
-msgstr "これは :ref:`フィード・エクスポート<topics-feed-exports>` を使用してJSONファイルを生成します。エクスポート形式(例えばXMLやCSVなど)またはストレージ・バックエンド(例えば(FTPや `Amazon S3`_ )。あなたは  :ref:`item pipeline <topics-item-pipeline>` を記述して、アイテムをデータベースに保存することもできます。"
+msgstr "これは :ref:`フィード・エクスポート<topics-feed-exports>` を使用してJSONファイルを生成します。エクスポート形式(例えばXMLやCSVなど)またはストレージ・バックエンド(例えば(FTPや `Amazon S3`_ )。あなたは  :ref:`アイテム・パイプライン<topics-item-pipeline>` を記述して、アイテムをデータベースに保存することもできます。"
 
 #: ../../intro/overview.rst:111
 msgid "What else?"
@@ -143,7 +143,7 @@ msgid ""
 "Built-in support for :ref:`selecting and extracting <topics-selectors>` "
 "data from HTML/XML sources using extended CSS selectors and XPath "
 "expressions, with helper methods to extract using regular expressions."
-msgstr "HTML/XMLソースに対して、正規表現を使って抽出するヘルパーメソッドを有する、拡張されたCSSセレクタとXPath式を使ったデータの、組み込み済の :ref:`選択と抽出<topics-selectors>` のサポート。"
+msgstr "HTML/XMLソースからの、データ :ref:`選択と抽出<topics-selectors>` のための拡張CSSセレクターとXPath式の使用と、正規表現を使用して抽出するヘルパー・メソッドを組み込みでサポート。"
 
 #: ../../intro/overview.rst:121
 msgid ""
@@ -157,13 +157,13 @@ msgid ""
 "Built-in support for :ref:`generating feed exports <topics-feed-exports>`"
 " in multiple formats (JSON, CSV, XML) and storing them in multiple "
 "backends (FTP, S3, local filesystem)"
-msgstr "複数の形式(JSON、CSV、XML)で生成し、複数のバックエンド(FTP、S3、ローカルファイルシステム)に保存するための :ref:`フィードエクスポート生成<topics-feed-exports>` を組み込みでサポート。"
+msgstr "複数の形式(JSON、CSV、XML)でのデータ生成と、複数のバックエンド・タイプ(FTP、S3、ローカルファイルシステム)に保存するための :ref:`フィード・エクスポート生成<topics-feed-exports>` を組み込みでサポート。"
 
 #: ../../intro/overview.rst:129
 msgid ""
 "Robust encoding support and auto-detection, for dealing with foreign, "
 "non-standard and broken encoding declarations."
-msgstr "外部の非標準の壊れたエンコーディング宣言を処理するための、堅牢なエンコーディングのサポートと自動検出。"
+msgstr "不明な、非標準や壊れたエンコーディング宣言を処理するための、強力なエンコード支援と自動検出。"
 
 #: ../../intro/overview.rst:132
 msgid ""
@@ -175,7 +175,7 @@ msgstr ":ref:`強力な拡張性サポート<extending-scrapy>` により、 :re
 
 #: ../../intro/overview.rst:137
 msgid "Wide range of built-in extensions and middlewares for handling:"
-msgstr "幅広い組み込みの拡張機能と処理用のミドルウェア:"
+msgstr "広範な組み込み拡張機能と処理用のミドルウェア:"
 
 #: ../../intro/overview.rst:139
 msgid "cookies and session handling"
