@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-10-08 06:45+0900\n"
+"PO-Revision-Date: 2019-10-24 08:01+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -32,7 +32,7 @@ msgid ""
 "We are going to scrape `quotes.toscrape.com "
 "<http://quotes.toscrape.com/>`_, a website that lists quotes from famous "
 "authors."
-msgstr "私たちは `quotes.toscrape.com <http://quotes.toscrape.com/>`_ という、有名な著者からの引用をリストするウェブサイトをスクレイピングします。"
+msgstr "ここでは `quotes.toscrape.com <http://quotes.toscrape.com/>`_ という、有名な著者からの引用をリストするウェブサイトをスクレイピングします。"
 
 #: ../../intro/tutorial.rst:13
 msgid "This tutorial will walk you through these tasks:"
@@ -128,7 +128,7 @@ msgid ""
 "This is the code for our first Spider. Save it in a file named "
 "``quotes_spider.py`` under the ``tutorial/spiders`` directory in your "
 "project::"
-msgstr "これは、最初のスパイダーのコードです。 プロジェクトの ``tutorial/spiders`` ディレクトリの下の ``quotes_spider.py`` という名前のファイルに保存します::"
+msgstr "以下は、最初のスパイダーのコードです。 プロジェクトの ``tutorial/spiders`` ディレクトリの下の ``quotes_spider.py`` という名前のファイルに保存します::"
 
 #: ../../intro/tutorial.rst:110
 msgid ""
@@ -141,7 +141,7 @@ msgid ""
 ":attr:`~scrapy.spiders.Spider.name`: identifies the Spider. It must be "
 "unique within a project, that is, you can't set the same name for "
 "different Spiders."
-msgstr ":attr:`~scrapy.spiders.Spider.name` スパイダーを識別します。 プロジェクト内で一意である必要があります。つまり、異なるスパイダーに同じ名前を設定することはできません。"
+msgstr ":attr:`~scrapy.spiders.Spider.name` は、スパイダーを識別します。 プロジェクト内で一意である必要があります。つまり、異なるスパイダーに同じ名前を設定することはできません。"
 
 #: ../../intro/tutorial.rst:117
 msgid ""
@@ -157,7 +157,7 @@ msgid ""
 "handle the response downloaded for each of the requests made. The "
 "response parameter is an instance of :class:`~scrapy.http.TextResponse` "
 "that holds the page content and has further helpful methods to handle it."
-msgstr ":meth:`~scrapy.spiders.Spider.parse` 行われたリクエストごとにダウンロードされたレスポンスを処理するために呼び出されるメソッド。 リクエスト・パラメーターは :class:`~scrapy.http.TextResponse` のインスタンスで、ページ内容を保持し、さらにそれを処理するための便利なメソッドを持っています。"
+msgstr ":meth:`~scrapy.spiders.Spider.parse` は、行われたリクエストごとにダウンロードされたレスポンスを処理するために呼び出されるメソッドです。 リクエスト・パラメーターは :class:`~scrapy.http.TextResponse` のインスタンスで、ページ内容を保持し、さらにそれを処理するための便利なメソッドを持っています。"
 
 #: ../../intro/tutorial.rst:127
 msgid ""
@@ -553,7 +553,7 @@ msgstr "``attrib`` プロパティもあります(詳細については :ref:`se
 msgid ""
 "Let's see now our spider modified to recursively follow the link to the "
 "next page, extracting data from it::"
-msgstr "次のページへのリンクを再帰的にたどって、そこからデータを抽出するように修正sした私たちのスパイダーを見てみましょう::"
+msgstr "次のページへのリンクを再帰的にたどって、そこからデータを抽出するように修正した私たちのスパイダーを見てみましょう::"
 
 #: ../../intro/tutorial.rst:552
 msgid ""

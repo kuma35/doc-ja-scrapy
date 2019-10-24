@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 22:00+0900\n"
-"PO-Revision-Date: 2019-10-08 08:49+0900\n"
+"PO-Revision-Date: 2019-10-24 10:49+0900\n"
 "Last-Translator: kuma35\n"
 "Language: ja_JP\n"
 "Language-Team: Japanese\n"
@@ -378,16 +378,7 @@ msgid ""
 " "
 ":class:`~scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware`,"
 " may modify the :class:`~scrapy.http.Request` object."
-msgstr ""
-":class:`~scrapy.http.JSONRequest` または :class:`~scrapy.http.XmlRpcRequest`"
-" のような :class:`~scrapy.http.Request` サブクラスから :meth:`from_curl` "
-"を使用し、:class:`~scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware`"
-" または :class:`~scrapy.downloadermiddlewares.useragent.UserAgentMiddleware`"
-" または "
-":class:`~scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware`"
-" のような :ref:`ダウンローダー・ミドルウェア<topics-downloader-middleware>` と "
-":ref:`スパイダー・ミドルウェア<topics-spider-middleware>` "
-"を有効にすることで、:class:`~scrapy.http.Request` オブジェクトを変更できます。"
+msgstr ":class:`~scrapy.http.JSONRequest` または :class:`~scrapy.http.XmlRpcRequest` のような :class:`~scrapy.http.Request` のサブクラスから :meth:`from_curl` を使用し、:class:`~scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware` または :class:`~scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` または :class:`~scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware` のような :ref:`ダウンローダー・ミドルウェア<topics-downloader-middleware>` と :ref:`スパイダー・ミドルウェア<topics-spider-middleware>` を有効にすることで、:class:`~scrapy.http.Request` オブジェクトを変更できます。"
 
 #: ../../topics/request-response.rst:202
 msgid "Passing additional data to callback functions"
@@ -610,13 +601,13 @@ msgstr ""
 
 #: ../../topics/request-response.rst:383
 msgid "Request subclasses"
-msgstr "Requestサブクラス"
+msgstr "Requestのサブクラス"
 
 #: ../../topics/request-response.rst:385
 msgid ""
 "Here is the list of built-in :class:`Request` subclasses. You can also "
 "subclass it to implement your own custom functionality."
-msgstr "以下は組み込みの :class:`Request` サブクラスのリストです。また、サブクラス化して独自のカスタム機能を実装することもできます。"
+msgstr "以下は組み込みの :class:`Request` のサブクラスのリストです。また、サブクラス化して独自のカスタム機能を実装することもできます。"
 
 #: ../../topics/request-response.rst:389
 msgid "FormRequest objects"
@@ -898,10 +889,7 @@ msgid ""
 "2) you can use ``response.text`` from an encoding-aware :ref:`Response "
 "subclass <topics-request-response-ref-response-subclasses>`, such as "
 ":class:`TextResponse`."
-msgstr ""
-"レスポンス・ボディ。 デコードされたテキストにstr(Python2ではユニコード)としてアクセスするには、エンコード対応(encoding-"
-"aware)である、 :class:`TextResponse` のような :ref:`レスポンス・サブクラス<topics-request-"
-"response-ref-response-subclasses>` の ``response.text`` を使用できます。"
+msgstr "レスポンス・ボディ。 デコードされたテキストにstr(Python2ではユニコード)としてアクセスするには、エンコード対応(encoding-aware)である、 :class:`TextResponse` のような :ref:`Responseのサブクラス<topics-request-response-ref-response-subclasses>` の ``response.text`` を使用できます。"
 
 #: ../../topics/request-response.rst:601
 msgid ""
@@ -949,10 +937,7 @@ msgid ""
 "bytes object. If you want the unicode version use "
 ":attr:`TextResponse.text` (only available in :class:`TextResponse` and "
 "subclasses)."
-msgstr ""
-"このResponseのボディ。Response.bodyは常にバイトオ・ブジェクトであることに注意してください。Unicodeバージョンが必要な場合は、"
-" :attr:`TextResponse.text` を使用します( :class:`TextResponse` "
-"と、そのサブクラスでのみ使用可能)。"
+msgstr "このResponseのボディ。Response.bodyは常にバイト・オブジェクトであることに注意してください。Unicodeバージョンが必要な場合は、 :attr:`TextResponse.text` を使用します( :class:`TextResponse` と、そのサブクラスでのみ使用可能)。"
 
 #: ../../topics/request-response.rst:639
 msgid ""
@@ -1042,44 +1027,37 @@ msgstr ""
 msgid ""
 "Constructs an absolute url by combining the Response's :attr:`url` with a"
 " possible relative url."
-msgstr "レスポンスの :attr:`url` と可能な相対URLを組み合わせて、絶対URLを構築します。"
+msgstr "指定の *url* (たぶん相対URL)と レスポンスの :attr:`url` ( ``Response.url`` ) を組み合わせて、絶対URLを構築します。"
 
 #: ../../topics/request-response.rst:693
 msgid ""
 "This is a wrapper over `urlparse.urljoin`_, it's merely an alias for "
 "making this call::"
-msgstr "これは `urlparse.urljoin`_ のラッパーであり、この呼び出しを行うための単なるエイリアスです"
+msgstr "これは `urlparse.urljoin`_ のラッパーであり、以下の呼び出しを行うための単なるエイリアスです::"
 
 #: of scrapy.http.Response.follow:1
 msgid ""
 "Return a :class:`~.Request` instance to follow a link ``url``. It accepts"
 " the same arguments as ``Request.__init__`` method, but ``url`` can be a "
 "relative URL or a ``scrapy.link.Link`` object, not only an absolute URL."
-msgstr ""
-"リンク ``url`` をたどるには :class:`~.Request` インスタンスを返します。 ``Request.__init__`` "
-"メソッドと同じ引数を受け入れますが、 ``url`` は絶対URLだけでなく、相対URLまたは ``scrapy.link.Link`` "
-"オブジェクトでもかまいません。"
+msgstr "リンク ``url`` をたどるための :class:`~.Request` インスタンスを返します。 ``Request.__init__`` メソッドと同じ引数を受け入れますが、 ``url`` は絶対URLだけでなく、相対URLまたは ``scrapy.link.Link`` オブジェクトでもかまいません。"
 
 #: of scrapy.http.Response.follow:6
 msgid ""
 ":class:`~.TextResponse` provides a :meth:`~.TextResponse.follow`  method "
 "which supports selectors in addition to absolute/relative URLs and Link "
 "objects."
-msgstr ""
-":class:`~.TextResponse` は、絶対URLと相対URLとLinkオブジェクトに加えてセレクターをサポートする "
-":meth:`~.TextResponse.follow` メソッドを提供します。"
+msgstr ":class:`~.TextResponse` は、絶対URLと相対URLとLinkオブジェクトに加えてセレクターをサポートする :meth:`~.TextResponse.follow` メソッドを提供します。"
 
 #: ../../topics/request-response.rst:706
 msgid "Response subclasses"
-msgstr "Responseサブクラス"
+msgstr "Responseのサブクラス"
 
 #: ../../topics/request-response.rst:708
 msgid ""
 "Here is the list of available built-in Response subclasses. You can also "
 "subclass the Response class to implement your own functionality."
-msgstr ""
-"使用可能な組み込みResponseサブクラスのリストは以下のとおりです。 "
-"Responseクラスをサブクラス化して、独自の機能を実装することもできます。"
+msgstr "使用可能な組み込みResponseのサブクラスのリストは以下のとおりです。 Responseクラスをサブクラス化して、独自の機能を実装することもできます。"
 
 #: ../../topics/request-response.rst:712
 msgid "TextResponse objects"
