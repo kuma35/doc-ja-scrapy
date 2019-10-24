@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-10-01 02:50+0900\n"
+"PO-Revision-Date: 2019-10-23 07:47+0900\n"
 "Last-Translator: kuma35\n"
 "Language: ja_JP\n"
 "Language-Team: Japanese\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../topics/developer-tools.rst:5
 msgid "Using your browser's Developer Tools for scraping"
-msgstr "スクレイピングにWebブラウザの開発ツールを使う"
+msgstr "Webブラウザの開発ツールを使ってスクレイピングする"
 
 #: ../../topics/developer-tools.rst:7
 msgid ""
