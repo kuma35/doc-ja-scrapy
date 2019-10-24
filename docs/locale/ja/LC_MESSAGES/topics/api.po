@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 22:00+0900\n"
-"PO-Revision-Date: 2019-10-05 22:24+0900\n"
+"PO-Revision-Date: 2019-10-24 10:49+0900\n"
 "Last-Translator: kuma35\n"
 "Language: ja_JP\n"
 "Language-Team: Japanese\n"
@@ -54,7 +54,7 @@ msgid ""
 "The Crawler object must be instantiated with a "
 ":class:`scrapy.spiders.Spider` subclass and a "
 ":class:`scrapy.settings.Settings` object."
-msgstr "Crawlerオブジェクトは、 :class:`scrapy.spiders.Spider` サブクラスと :class:`scrapy.settings.Settings` オブジェクトでインスタンス化する必要があります。"
+msgstr "Crawlerオブジェクトは、 :class:`scrapy.spiders.Spider` のサブクラスと :class:`scrapy.settings.Settings` オブジェクトでインスタンス化する必要があります。"
 
 #: ../../topics/api.rst:39
 msgid "The settings manager of this crawler."
@@ -258,7 +258,7 @@ msgstr "``crawler_or_spidercls`` がクローラーの場合、それがその�
 msgid ""
 "If ``crawler_or_spidercls`` is a Spider subclass, a new Crawler is "
 "constructed for it."
-msgstr "``crawler_or_spidercls`` がSpiderサブクラスである場合、新しいクローラーが構築されます。"
+msgstr "``crawler_or_spidercls`` がSpiderのサブクラスである場合、新しいクローラーが構築されます。"
 
 #: of scrapy.crawler.CrawlerProcess.create_crawler:6
 #: scrapy.crawler.CrawlerRunner.create_crawler:6

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 09:37+0900\n"
-"PO-Revision-Date: 2019-09-23 21:15+0900\n"
+"PO-Revision-Date: 2019-10-24 10:49+0900\n"
 "Last-Translator: kuma35\n"
 "Language: ja_JP\n"
 "Language-Team: Japanese\n"
@@ -479,7 +479,7 @@ msgstr "FEED_EXPORT_FIELDSオプションを使用して、エクスポートす
 msgid ""
 "When FEED_EXPORT_FIELDS is empty or None (default), Scrapy uses fields "
 "defined in dicts or :class:`~.Item` subclasses a spider is yielding."
-msgstr "FEED_EXPORT_FIELDSが空またはNone (デフォルト)の場合、Scrapyは辞書または :class:`~.Item` サブクラスで定義されたフィールドを使用し、スパイダーが生成します。"
+msgstr "FEED_EXPORT_FIELDSが空またはNone (デフォルト)の場合、Scrapyは辞書または :class:`~.Item` のサブクラスで定義されたフィールドを使用し、スパイダーが生成します。"
 
 #: ../../topics/feed-exports.rst:276
 msgid ""
