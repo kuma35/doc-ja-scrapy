@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Scrapy \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 08:43+0900\n"
-"PO-Revision-Date: 2019-10-08 08:50+0900\n"
+"POT-Creation-Date: 2019-11-12 01:37+0900\n"
+"PO-Revision-Date: 2019-11-12 01:39+0900\n"
 "Last-Translator: kuma35\n"
 "Language: ja_JP\n"
 "Language-Team: Japanese\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../index.rst:36 ../../index.rst:38 ../../index.rst:273
+#: ../../index.rst:36 ../../index.rst:38
 msgid "First steps"
 msgstr "入門"
 
-#: ../../index.rst:62 ../../index.rst:64 ../../index.rst:282
+#: ../../index.rst:62 ../../index.rst:64
 msgid "Basic concepts"
 msgstr "基本の概念"
 
-#: ../../index.rst:120 ../../index.rst:122 ../../index.rst:299
+#: ../../index.rst:120 ../../index.rst:122
 msgid "Built-in services"
 msgstr "組み込み済サービス群"
 
-#: ../../index.rst:149 ../../index.rst:151 ../../index.rst:309
+#: ../../index.rst:149 ../../index.rst:151
 msgid "Solving specific problems"
 msgstr "特定の問題の解決"
 
-#: ../../index.rst:211 ../../index.rst:213 ../../index.rst:327
+#: ../../index.rst:211 ../../index.rst:213
 msgid "Extending Scrapy"
 msgstr "Scrapyの拡張"
 
-#: ../../index.rst:249 ../../index.rst:251 ../../index.rst:339
+#: ../../index.rst:249 ../../index.rst:251
 msgid "All the rest"
 msgstr "その他すべて"
 
@@ -445,27 +445,11 @@ msgstr ":doc:`contributing`"
 msgid "Learn how to contribute to the Scrapy project."
 msgstr "Scrapyプロジェクトに貢献する方法を学びます。"
 
-#: ../../index.rst:266
+#: ../../index.rst:265
 msgid ":doc:`versioning`"
 msgstr ":doc:`versioning`"
 
 #: ../../index.rst:266
 msgid "Understand Scrapy versioning and API stability."
 msgstr "Scrapyのバージョン管理とAPIの安定性を理解します。"
-
-#: ../../index.rst:271
-msgid "総目次"
-msgstr "総目次"
-
-#: ../../index.rst:348
-msgid "索引"
-msgstr "索引"
-
-#: ../../index.rst:350
-msgid ":ref:`genindex`"
-msgstr ":ref:`genindex`"
-
-#: ../../index.rst:351
-msgid ":ref:`modindex`"
-msgstr ":ref:`modindex`"
 
